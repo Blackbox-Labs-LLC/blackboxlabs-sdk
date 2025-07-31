@@ -13,6 +13,9 @@ targets:
     blackbox:
         target: typescript
         source: BlackBox API
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/blackbox/api/black-box-api-typescript-code-samples
