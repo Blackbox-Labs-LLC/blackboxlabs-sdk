@@ -1,11 +1,11 @@
 {
-  "name": "blackbox",
+  "name": "blackboxlabs-sdk",
   "version": "0.2.4",
   "author": "Speakeasy",
   "type": "module",
   "tshy": {
     "sourceDialects": [
-      "blackbox/source"
+      "blackboxlabs-sdk/source"
     ],
     "exports": {
       ".": "./src/index.ts",
@@ -39,7 +39,7 @@
   "exports": {
     ".": {
       "import": {
-        "blackbox/source": "./src/index.ts",
+        "blackboxlabs-sdk/source": "./src/index.ts",
         "types": "./dist/esm/index.d.ts",
         "default": "./dist/esm/index.js"
       },
