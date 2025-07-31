@@ -1,0 +1,985 @@
+overlay: 1.0.0
+x-speakeasy-jsonpath: rfc9535
+info:
+  title: Speakeasy Modifications
+  version: 0.0.5
+  x-speakeasy-metadata:
+    after: ""
+    before: ""
+    type: speakeasy-modifications
+actions:
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/tags"]["post"]
+    update:
+      x-speakeasy-name-override: addTags
+    x-speakeasy-metadata:
+      after: sdk.tickets.addTags()
+      before: sdk.tickets.add_tags_to_ticket()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/search"]["get"]
+    update:
+      x-speakeasy-name-override: search
+    x-speakeasy-metadata:
+      after: sdk.messages.search()
+      before: sdk.messages.search_messages()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/settings/{key}"]["get"]
+    update:
+      x-speakeasy-name-override: getSetting
+    x-speakeasy-metadata:
+      after: sdk.organizations.getSetting()
+      before: sdk.organizations.get_organization_setting()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/settings"]["post"]
+    update:
+      x-speakeasy-name-override: setSetting
+    x-speakeasy-metadata:
+      after: sdk.organizations.setSetting()
+      before: sdk.organizations.set_organization_setting()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/messages/{message_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.messages.get()
+      before: sdk.messages.get_message()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}"]["delete"]
+    update:
+      x-speakeasy-group: knowledgeBase
+      x-speakeasy-name-override: deleteArticle
+    x-speakeasy-metadata:
+      after: sdk.knowledgeBase.deleteArticle()
+      before: sdk.knowledge-base.delete_article()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/knowledge-base/public"]["get"]
+    update:
+      x-speakeasy-group: knowledgeBase
+      x-speakeasy-name-override: getPublicArticles
+    x-speakeasy-metadata:
+      after: sdk.knowledgeBase.getPublicArticles()
+      before: sdk.knowledge-base.get_public_articles()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/users/profile"]["get"]
+    update:
+      x-speakeasy-name-override: getProfile
+    x-speakeasy-metadata:
+      after: sdk.users.getProfile()
+      before: sdk.users.get_profile()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tags/popular"]["get"]
+    update:
+      x-speakeasy-name-override: getPopular
+    x-speakeasy-metadata:
+      after: sdk.tags.getPopular()
+      before: sdk.tags.get_popular_tags()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.messages.list()
+      before: sdk.messages.list_ticket_messages()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}"]["put"]
+    update:
+      x-speakeasy-group: knowledgeBase
+      x-speakeasy-name-override: updateArticle
+    x-speakeasy-metadata:
+      after: sdk.knowledgeBase.updateArticle()
+      before: sdk.knowledge-base.update_article()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/auth/disable-2fa"]["post"]
+    update:
+      x-speakeasy-name-override: disable2fa
+    x-speakeasy-metadata:
+      after: sdk.auth.disable2fa()
+      before: sdk.auth.disable_2fa()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/count"]["get"]
+    update:
+      x-speakeasy-name-override: count
+    x-speakeasy-metadata:
+      after: sdk.messages.count()
+      before: sdk.messages.get_message_count()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/settings"]["get"]
+    update:
+      x-speakeasy-name-override: getSettings
+    x-speakeasy-metadata:
+      after: sdk.organizations.getSettings()
+      before: sdk.organizations.get_all_organization_settings()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/members/{member_id}"]["put"]
+    update:
+      x-speakeasy-name-override: updateMembership
+    x-speakeasy-metadata:
+      after: sdk.organizations.updateMembership()
+      before: sdk.organizations.update_membership()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tags/{tag_id}/tickets"]["get"]
+    update:
+      x-speakeasy-name-override: getWithTickets
+    x-speakeasy-metadata:
+      after: sdk.tags.getWithTickets()
+      before: sdk.tags.get_tag_with_tickets()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tags/{tag_id}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.tags.update()
+      before: sdk.tags.update_tag()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/auth/verify-email"]["post"]
+    update:
+      x-speakeasy-name-override: verifyEmail
+    x-speakeasy-metadata:
+      after: sdk.auth.verifyEmail()
+      before: sdk.auth.verify_email()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/auth/reset-password"]["post"]
+    update:
+      x-speakeasy-name-override: resetPassword
+    x-speakeasy-metadata:
+      after: sdk.auth.resetPassword()
+      before: sdk.auth.reset_password()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.tickets.list()
+      before: sdk.tickets.list_tickets()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.messages.create()
+      before: sdk.messages.create_message()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.tickets.get()
+      before: sdk.tickets.get_ticket()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}"]["get"]
+    update:
+      x-speakeasy-group: knowledgeBase
+      x-speakeasy-name-override: getArticle
+    x-speakeasy-metadata:
+      after: sdk.knowledgeBase.getArticle()
+      before: sdk.knowledge-base.get_article()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.organizations.get()
+      before: sdk.organizations.get_organization()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/knowledge-base/articles"]["post"]
+    update:
+      x-speakeasy-group: knowledgeBase
+      x-speakeasy-name-override: createArticle
+    x-speakeasy-metadata:
+      after: sdk.knowledgeBase.createArticle()
+      before: sdk.knowledge-base.create_article()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations"]["get"]
+    update:
+      x-speakeasy-name-override: getAllForUser
+    x-speakeasy-metadata:
+      after: sdk.organizations.getAllForUser()
+      before: sdk.organizations.get_user_organizations()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/latest"]["get"]
+    update:
+      x-speakeasy-name-override: getLatest
+    x-speakeasy-metadata:
+      after: sdk.messages.getLatest()
+      before: sdk.messages.get_latest_message()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/users/password"]["put"]
+    update:
+      x-speakeasy-name-override: changePassword
+    x-speakeasy-metadata:
+      after: sdk.users.changePassword()
+      before: sdk.users.change_password()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/settings/{key}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteSetting
+    x-speakeasy-metadata:
+      after: sdk.organizations.deleteSetting()
+      before: sdk.organizations.delete_organization_setting()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tags"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.tags.list()
+      before: sdk.tags.list_tags()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/auth/enable-2fa"]["post"]
+    update:
+      x-speakeasy-name-override: enable2fa
+    x-speakeasy-metadata:
+      after: sdk.auth.enable2fa()
+      before: sdk.auth.enable_2fa()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/invite"]["post"]
+    update:
+      x-speakeasy-name-override: inviteUser
+    x-speakeasy-metadata:
+      after: sdk.organizations.inviteUser()
+      before: sdk.organizations.invite_user()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.tickets.create()
+      before: sdk.tickets.create_ticket()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/members/{member_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: removeMember
+    x-speakeasy-metadata:
+      after: sdk.organizations.removeMember()
+      before: sdk.organizations.remove_member()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/messages/{message_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.messages.delete()
+      before: sdk.messages.delete_message()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/knowledge-base/articles"]["get"]
+    update:
+      x-speakeasy-group: knowledgeBase
+      x-speakeasy-name-override: listArticles
+    x-speakeasy-metadata:
+      after: sdk.knowledgeBase.listArticles()
+      before: sdk.knowledge-base.list_articles()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tags"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.tags.create()
+      before: sdk.tags.create_tag()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/users/account"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteAccount
+    x-speakeasy-metadata:
+      after: sdk.users.deleteAccount()
+      before: sdk.users.delete_account()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/auth/request-password-reset"]["post"]
+    update:
+      x-speakeasy-name-override: requestPasswordReset
+    x-speakeasy-metadata:
+      after: sdk.auth.requestPasswordReset()
+      before: sdk.auth.request_password_reset()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.organizations.create()
+      before: sdk.organizations.create_organization()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/knowledge-base/search"]["get"]
+    update:
+      x-speakeasy-group: knowledgeBase
+      x-speakeasy-name-override: searchPublicArticles
+    x-speakeasy-metadata:
+      after: sdk.knowledgeBase.searchPublicArticles()
+      before: sdk.knowledge-base.search_public_articles()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/auth/setup-2fa"]["post"]
+    update:
+      x-speakeasy-name-override: setup2fa
+    x-speakeasy-metadata:
+      after: sdk.auth.setup2fa()
+      before: sdk.auth.setup_2fa()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.tickets.delete()
+      before: sdk.tickets.delete_ticket()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/members"]["get"]
+    update:
+      x-speakeasy-name-override: getMembers
+    x-speakeasy-metadata:
+      after: sdk.organizations.getMembers()
+      before: sdk.organizations.get_members()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tags/{tag_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.tags.delete()
+      before: sdk.tags.delete_tag()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/tags"]["delete"]
+    update:
+      x-speakeasy-name-override: removeTags
+    x-speakeasy-metadata:
+      after: sdk.tickets.removeTags()
+      before: sdk.tickets.remove_tags_from_ticket()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tags/{tag_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.tags.get()
+      before: sdk.tags.get_tag()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/users/login-attempts"]["get"]
+    update:
+      x-speakeasy-name-override: getLoginAttempts
+    x-speakeasy-metadata:
+      after: sdk.users.getLoginAttempts()
+      before: sdk.users.get_login_attempts()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/users/profile"]["put"]
+    update:
+      x-speakeasy-name-override: updateProfile
+    x-speakeasy-metadata:
+      after: sdk.users.updateProfile()
+      before: sdk.users.update_profile()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.tickets.update()
+      before: sdk.tickets.update_ticket()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/users/login-history"]["get"]
+    update:
+      x-speakeasy-name-override: getLoginHistory
+    x-speakeasy-metadata:
+      after: sdk.users.getLoginHistory()
+      before: sdk.users.get_login_history()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/accept-invitation"]["post"]
+    update:
+      x-speakeasy-name-override: acceptInvitation
+    x-speakeasy-metadata:
+      after: sdk.organizations.acceptInvitation()
+      before: sdk.organizations.accept_invitation()
+      created_at: 1753927299777
+      reviewed_at: 1753927312886
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/webhooks/{webhook_id}/test"]["post"]
+    update:
+      x-speakeasy-name-override: test
+    x-speakeasy-metadata:
+      after: sdk.webhooks.test()
+      before: sdk.Webhooks.test_webhook()
+      created_at: 1753948814525
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.attachments.list()
+      before: sdk.Attachments.list_message_attachments()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments/{attachment_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.attachments.delete()
+      before: sdk.Attachments.delete_attachment()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/users/api-keys"]["get"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.list()
+      before: sdk.API Keys.list_api_keys()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/analytics/system"]["get"]
+    update:
+      x-speakeasy-name-override: getSystem
+    x-speakeasy-metadata:
+      after: sdk.analytics.getSystem()
+      before: sdk.Analytics.get_system_analytics()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments"]["post"]
+    update:
+      x-speakeasy-name-override: upload
+    x-speakeasy-metadata:
+      after: sdk.attachments.upload()
+      before: sdk.Attachments.upload_attachments()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/users/api-keys/{key_id}"]["get"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.get()
+      before: sdk.API Keys.get_api_key()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/surveys/{survey_id}"]["delete"]
+    update:
+      x-speakeasy-group: csatSurveys
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.csatSurveys.delete()
+      before: sdk.CSAT Surveys.delete_survey()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/surveys/{survey_id}"]["put"]
+    update:
+      x-speakeasy-group: csatSurveys
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.csatSurveys.update()
+      before: sdk.CSAT Surveys.update_survey()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/macros/{macro_id}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.macros.update()
+      before: sdk.Macros.update_macro()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/admin/attachments/stats"]["get"]
+    update:
+      x-speakeasy-name-override: getStats
+    x-speakeasy-metadata:
+      after: sdk.attachments.getStats()
+      before: sdk.Attachments.get_attachment_stats()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/surveys"]["post"]
+    update:
+      x-speakeasy-group: csatSurveys
+      x-speakeasy-name-override: submit
+    x-speakeasy-metadata:
+      after: sdk.csatSurveys.submit()
+      before: sdk.CSAT Surveys.submit_survey()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/webhooks/{webhook_id}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.webhooks.update()
+      before: sdk.Webhooks.update_webhook()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/users/api-keys/{key_id}/revoke"]["post"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: revoke
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.revoke()
+      before: sdk.API Keys.revoke_api_key()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/users/api-keys/{key_id}"]["delete"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.delete()
+      before: sdk.API Keys.delete_api_key()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/macros/{macro_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.macros.delete()
+      before: sdk.Macros.delete_macro()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/surveys"]["get"]
+    update:
+      x-speakeasy-group: csatSurveys
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.csatSurveys.list()
+      before: sdk.CSAT Surveys.list_surveys()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/events/stats"]["get"]
+    update:
+      x-speakeasy-group: eventLogs
+      x-speakeasy-name-override: getStats
+    x-speakeasy-metadata:
+      after: sdk.eventLogs.getStats()
+      before: sdk.Event Logs.get_event_stats()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/events/export"]["get"]
+    update:
+      x-speakeasy-group: eventLogs
+      x-speakeasy-name-override: export
+    x-speakeasy-metadata:
+      after: sdk.eventLogs.export()
+      before: sdk.Event Logs.export_events()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/events/{event_id}"]["get"]
+    update:
+      x-speakeasy-group: eventLogs
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.eventLogs.get()
+      before: sdk.Event Logs.get_event()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/automation/rules"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.automation.create()
+      before: sdk.Automation.create_automation_rule()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/webhooks/send"]["post"]
+    update:
+      x-speakeasy-name-override: send
+    x-speakeasy-metadata:
+      after: sdk.webhooks.send()
+      before: sdk.Webhooks.send_webhooks()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/surveys/export"]["get"]
+    update:
+      x-speakeasy-group: csatSurveys
+      x-speakeasy-name-override: export
+    x-speakeasy-metadata:
+      after: sdk.csatSurveys.export()
+      before: sdk.CSAT Surveys.export_surveys()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/webhooks"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.webhooks.create()
+      before: sdk.Webhooks.create_webhook()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/surveys/analytics"]["get"]
+    update:
+      x-speakeasy-group: csatSurveys
+      x-speakeasy-name-override: getAnalytics
+    x-speakeasy-metadata:
+      after: sdk.csatSurveys.getAnalytics()
+      before: sdk.CSAT Surveys.get_survey_analytics()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/automation/rules/{rule_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.automation.get()
+      before: sdk.Automation.get_automation_rule()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/analytics"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.analytics.get()
+      before: sdk.Analytics.get_organization_analytics()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/events"]["post"]
+    update:
+      x-speakeasy-group: eventLogs
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.eventLogs.create()
+      before: sdk.Event Logs.create_event()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/auth/resend-verification"]["post"]
+    update:
+      x-speakeasy-name-override: resendVerification
+    x-speakeasy-metadata:
+      after: sdk.authentication.resendVerification()
+      before: sdk.Authentication.resend_verification()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/users/api-keys"]["post"]
+    update:
+      x-speakeasy-group: apiKeys
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.apiKeys.create()
+      before: sdk.API Keys.create_api_key()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/automation/rules/{rule_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteRule
+    x-speakeasy-metadata:
+      after: sdk.automation.deleteRule()
+      before: sdk.Automation.delete_automation_rule()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/macros"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.macros.create()
+      before: sdk.Macros.create_macro()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/webhooks/{webhook_id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.webhooks.delete()
+      before: sdk.Webhooks.delete_webhook()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/automation/stats"]["get"]
+    update:
+      x-speakeasy-name-override: getStats
+    x-speakeasy-metadata:
+      after: sdk.automation.getStats()
+      before: sdk.Automation.get_automation_stats()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/macros/render"]["post"]
+    update:
+      x-speakeasy-name-override: render
+    x-speakeasy-metadata:
+      after: sdk.macros.render()
+      before: sdk.Macros.render_macro_template()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/automation/execute"]["post"]
+    update:
+      x-speakeasy-name-override: execute
+    x-speakeasy-metadata:
+      after: sdk.automation.execute()
+      before: sdk.Automation.execute_automation_rules()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/webhooks"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.webhooks.list()
+      before: sdk.Webhooks.list_webhooks()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/automation/rules"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.automation.list()
+      before: sdk.Automation.list_automation_rules()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/surveys/{survey_id}"]["get"]
+    update:
+      x-speakeasy-group: csatSurveys
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.csatSurveys.get()
+      before: sdk.CSAT Surveys.get_survey()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/automation/rules/{rule_id}"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.automation.update()
+      before: sdk.Automation.update_automation_rule()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/webhooks/{webhook_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.webhooks.get()
+      before: sdk.Webhooks.get_webhook()
+      created_at: 1753948814526
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/webhooks/stats"]["get"]
+    update:
+      x-speakeasy-name-override: getStats
+    x-speakeasy-metadata:
+      after: sdk.webhooks.getStats()
+      before: sdk.Webhooks.get_webhook_stats()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/analytics/trends"]["get"]
+    update:
+      x-speakeasy-name-override: getTrends
+    x-speakeasy-metadata:
+      after: sdk.analytics.getTrends()
+      before: sdk.Analytics.get_trend_analytics()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/macros/popular"]["get"]
+    update:
+      x-speakeasy-name-override: getPopular
+    x-speakeasy-metadata:
+      after: sdk.macros.getPopular()
+      before: sdk.Macros.get_popular_macros()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/analytics/agents"]["get"]
+    update:
+      x-speakeasy-name-override: getAgents
+    x-speakeasy-metadata:
+      after: sdk.analytics.getAgents()
+      before: sdk.Analytics.get_agent_analytics()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/attachments/{attachment_id}/download"]["get"]
+    update:
+      x-speakeasy-name-override: download
+    x-speakeasy-metadata:
+      after: sdk.attachments.download()
+      before: sdk.Attachments.download_attachment()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/webhooks/events"]["get"]
+    update:
+      x-speakeasy-name-override: listEvents
+    x-speakeasy-metadata:
+      after: sdk.webhooks.listEvents()
+      before: sdk.Webhooks.list_webhook_events()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/analytics/tickets"]["get"]
+    update:
+      x-speakeasy-name-override: getTickets
+    x-speakeasy-metadata:
+      after: sdk.analytics.getTickets()
+      before: sdk.Analytics.get_ticket_analytics()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/analytics/macros"]["get"]
+    update:
+      x-speakeasy-name-override: getMacros
+    x-speakeasy-metadata:
+      after: sdk.analytics.getMacros()
+      before: sdk.Analytics.get_macro_analytics()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/analytics/knowledge-base"]["get"]
+    update:
+      x-speakeasy-name-override: getKnowledgeBase
+    x-speakeasy-metadata:
+      after: sdk.analytics.getKnowledgeBase()
+      before: sdk.Analytics.get_knowledge_base_analytics()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/macros/{macro_id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.macros.get()
+      before: sdk.Macros.get_macro()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/macros"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.macros.list()
+      before: sdk.Macros.list_macros()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/events"]["get"]
+    update:
+      x-speakeasy-group: eventLogs
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.eventLogs.list()
+      before: sdk.Event Logs.list_events()
+      created_at: 1753948814527
+      reviewed_at: 1753948828589
+      type: method-name
+  - target: $["paths"]["/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments"]["post"]["requestBody"]
+    update:
+      required: true
+    x-speakeasy-metadata:
+      created_at: 1753949299041
+      type: user-edit

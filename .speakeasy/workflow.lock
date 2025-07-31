@@ -1,0 +1,39 @@
+speakeasyVersion: 1.592.2
+sources:
+    BlackBox API:
+        sourceNamespace: black-box-api
+        sourceRevisionDigest: sha256:01326190d3a68afaa587606ebbb2a56d9a9347fa9a3408d898c87d7449c0165f
+        sourceBlobDigest: sha256:8aae909817d664475bd8e05abf9e554ade009a20bccf20913aec6f3c51d92406
+        tags:
+            - latest
+            - 1.0.0
+targets:
+    blackbox:
+        source: BlackBox API
+        sourceNamespace: black-box-api
+        sourceRevisionDigest: sha256:01326190d3a68afaa587606ebbb2a56d9a9347fa9a3408d898c87d7449c0165f
+        sourceBlobDigest: sha256:8aae909817d664475bd8e05abf9e554ade009a20bccf20913aec6f3c51d92406
+        codeSamplesNamespace: black-box-api-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:e7b58d75fe3907bae8f311a161c1871d68003620d3726d7910dfe80318c1c2b3
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        BlackBox API:
+            inputs:
+                - location: ../../../Personal/blackbox/openapi.json
+            overlays:
+                - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            output: .speakeasy/out.openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/blackbox/api/black-box-api
+    targets:
+        blackbox:
+            target: typescript
+            source: BlackBox API
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/blackbox/api/black-box-api-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript (SDK)
+                blocking: false

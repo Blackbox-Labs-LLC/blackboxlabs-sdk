@@ -1,0 +1,21 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    BlackBox API:
+        inputs:
+            - location: ../../../Personal/blackbox/openapi.json
+        overlays:
+            - location: .speakeasy/speakeasy-modifications-overlay.yaml
+        output: .speakeasy/out.openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/blackbox/api/black-box-api
+targets:
+    blackbox:
+        target: typescript
+        source: BlackBox API
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/blackbox/api/black-box-api-typescript-code-samples
+            labelOverride:
+                fixedValue: Typescript (SDK)
+            blocking: false

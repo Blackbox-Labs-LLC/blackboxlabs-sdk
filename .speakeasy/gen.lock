@@ -1,0 +1,1594 @@
+lockVersion: 2.0.0
+id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
+management:
+  docChecksum: a5c259d15e09455cd298dadfc168f75b
+  docVersion: 1.0.0
+  speakeasyVersion: 1.592.2
+  generationVersion: 2.668.4
+  releaseVersion: 0.2.4
+  configChecksum: cd827e9e856a36a09a42057a78ebe6f5
+features:
+  typescript:
+    additionalDependencies: 0.1.0
+    core: 3.21.17
+    defaultEnabledRetries: 0.1.0
+    devContainers: 2.90.0
+    envVarSecurityUsage: 0.1.2
+    globalSecurity: 2.82.13
+    globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
+    globalServerURLs: 2.82.5
+    groups: 2.81.2
+    methodArguments: 0.1.2
+    nameOverrides: 2.81.2
+    nullables: 0.1.1
+    responseFormat: 0.2.3
+    retries: 2.83.0
+    sdkHooks: 0.3.0
+    uploadStreams: 0.1.0
+generatedFiles:
+  - .devcontainer/README.md
+  - .devcontainer/devcontainer.json
+  - .devcontainer/setup.sh
+  - .gitattributes
+  - .npmignore
+  - FUNCTIONS.md
+  - RUNTIMES.md
+  - USAGE.md
+  - docs/lib/utils/retryconfig.md
+  - docs/models/agentactivity.md
+  - docs/models/agentanalytics.md
+  - docs/models/agentperformance.md
+  - docs/models/agentsatisfactionscore.md
+  - docs/models/apiresponseagentanalytics.md
+  - docs/models/apiresponseagentanalyticsdata.md
+  - docs/models/apiresponseapikeyresponse.md
+  - docs/models/apiresponseapikeyresponsedata.md
+  - docs/models/apiresponsearticleresponse.md
+  - docs/models/apiresponsearticleresponsedata.md
+  - docs/models/apiresponseauthresponse.md
+  - docs/models/apiresponseauthresponsedata.md
+  - docs/models/apiresponseautomationruleresponse.md
+  - docs/models/apiresponseautomationruleresponsedata.md
+  - docs/models/apiresponseautomationstats.md
+  - docs/models/apiresponseautomationstatsdata.md
+  - docs/models/apiresponsecreateapikeyresponse.md
+  - docs/models/apiresponsecreateapikeyresponsedata.md
+  - docs/models/apiresponsecsatanalytics.md
+  - docs/models/apiresponsecsatanalyticsdata.md
+  - docs/models/apiresponseeventlogresponse.md
+  - docs/models/apiresponseeventlogresponsedata.md
+  - docs/models/apiresponseeventlogstats.md
+  - docs/models/apiresponseeventlogstatsdata.md
+  - docs/models/apiresponseknowledgebasestats.md
+  - docs/models/apiresponseknowledgebasestatsdata.md
+  - docs/models/apiresponsemacroresponse.md
+  - docs/models/apiresponsemacroresponsedata.md
+  - docs/models/apiresponsemacrotemplateresponse.md
+  - docs/models/apiresponsemacrotemplateresponsedata.md
+  - docs/models/apiresponsemacrousagestats.md
+  - docs/models/apiresponsemacrousagestatsdata.md
+  - docs/models/apiresponsemessageresponse.md
+  - docs/models/apiresponsemessageresponsedata.md
+  - docs/models/apiresponseoptionmessageresponse.md
+  - docs/models/apiresponseoptionmessageresponsedata.md
+  - docs/models/apiresponseoptionorganizationsettingresponse.md
+  - docs/models/apiresponseoptionorganizationsettingresponsedata.md
+  - docs/models/apiresponseorganizationanalytics.md
+  - docs/models/apiresponseorganizationanalyticsdata.md
+  - docs/models/apiresponseorganizationresponse.md
+  - docs/models/apiresponseorganizationresponsedata.md
+  - docs/models/apiresponseorganizationsettingresponse.md
+  - docs/models/apiresponseorganizationsettingresponsedata.md
+  - docs/models/apiresponsesetup2faresponse.md
+  - docs/models/apiresponsesetup2faresponsedata.md
+  - docs/models/apiresponsestring.md
+  - docs/models/apiresponsesurveyexport.md
+  - docs/models/apiresponsesurveyexportdata.md
+  - docs/models/apiresponsesurveyresponse.md
+  - docs/models/apiresponsesurveyresponsedata.md
+  - docs/models/apiresponsesystemusage.md
+  - docs/models/apiresponsesystemusagedata.md
+  - docs/models/apiresponsetagresponse.md
+  - docs/models/apiresponsetagresponsedata.md
+  - docs/models/apiresponsetagwithticketsresponse.md
+  - docs/models/apiresponsetagwithticketsresponsedata.md
+  - docs/models/apiresponseticketanalytics.md
+  - docs/models/apiresponseticketanalyticsdata.md
+  - docs/models/apiresponseticketresponse.md
+  - docs/models/apiresponseticketresponsedata.md
+  - docs/models/apiresponsetimeseriesdata.md
+  - docs/models/apiresponsetimeseriesdatadata.md
+  - docs/models/apiresponseu64.md
+  - docs/models/apiresponseuploadresponse.md
+  - docs/models/apiresponseuploadresponsedata.md
+  - docs/models/apiresponseuserprofileresponse.md
+  - docs/models/apiresponseuserprofileresponsedata.md
+  - docs/models/apiresponsevalue.md
+  - docs/models/apiresponsevecapikeyresponse.md
+  - docs/models/apiresponsevecapikeyresponsedata.md
+  - docs/models/apiresponsevecarticleresponse.md
+  - docs/models/apiresponsevecarticleresponsedata.md
+  - docs/models/apiresponsevecattachmentresponse.md
+  - docs/models/apiresponsevecattachmentresponsedata.md
+  - docs/models/apiresponsevecautomationexecution.md
+  - docs/models/apiresponsevecautomationexecutiondata.md
+  - docs/models/apiresponsevecautomationruleresponse.md
+  - docs/models/apiresponsevecautomationruleresponsedata.md
+  - docs/models/apiresponseveceventlogresponse.md
+  - docs/models/apiresponseveceventlogresponsedata.md
+  - docs/models/apiresponsevecloginattemptresponse.md
+  - docs/models/apiresponsevecloginattemptresponsedata.md
+  - docs/models/apiresponsevecloginhistoryresponse.md
+  - docs/models/apiresponsevecloginhistoryresponsedata.md
+  - docs/models/apiresponsevecmacroresponse.md
+  - docs/models/apiresponsevecmacroresponsedata.md
+  - docs/models/apiresponsevecmembershipresponse.md
+  - docs/models/apiresponsevecmembershipresponsedata.md
+  - docs/models/apiresponsevecmessageresponse.md
+  - docs/models/apiresponsevecmessageresponsedata.md
+  - docs/models/apiresponsevecorganizationresponse.md
+  - docs/models/apiresponsevecorganizationresponsedata.md
+  - docs/models/apiresponsevecorganizationsettingresponse.md
+  - docs/models/apiresponsevecorganizationsettingresponsedata.md
+  - docs/models/apiresponsevecstring.md
+  - docs/models/apiresponsevecsurveyresponse.md
+  - docs/models/apiresponsevecsurveyresponsedata.md
+  - docs/models/apiresponsevectagresponse.md
+  - docs/models/apiresponsevectagresponsedata.md
+  - docs/models/apiresponsevecticketresponse.md
+  - docs/models/apiresponsevecticketresponsedata.md
+  - docs/models/apiresponsevecwebhookdelivery.md
+  - docs/models/apiresponsevecwebhookdeliverydata.md
+  - docs/models/apiresponsevecwebhookresponse.md
+  - docs/models/apiresponsevecwebhookresponsedata.md
+  - docs/models/apiresponsewebhookresponse.md
+  - docs/models/apiresponsewebhookresponsedata.md
+  - docs/models/apiresponsewebhookstats.md
+  - docs/models/apiresponsewebhookstatsdata.md
+  - docs/models/apiresponsewebhooktestresult.md
+  - docs/models/apiresponsewebhooktestresultdata.md
+  - docs/models/articleview.md
+  - docs/models/attachmentresponse.md
+  - docs/models/automationaction.md
+  - docs/models/automationcondition.md
+  - docs/models/automationconditions.md
+  - docs/models/changepasswordrequest.md
+  - docs/models/createapikeyrequest.md
+  - docs/models/createarticlerequest.md
+  - docs/models/createautomationrulerequest.md
+  - docs/models/createeventrequest.md
+  - docs/models/createmacrorequest.md
+  - docs/models/createmessagerequest.md
+  - docs/models/createorganizationrequest.md
+  - docs/models/createtagrequest.md
+  - docs/models/createticketrequest.md
+  - docs/models/createwebhookrequest.md
+  - docs/models/csatanalytics.md
+  - docs/models/dailycount.md
+  - docs/models/enable2farequest.md
+  - docs/models/eventtypecount.md
+  - docs/models/eventtypedelivery.md
+  - docs/models/inviteuserrequest.md
+  - docs/models/issuecategory.md
+  - docs/models/knowledgebasestats.md
+  - docs/models/loginrequest.md
+  - docs/models/macrotemplaterequest.md
+  - docs/models/macrousage.md
+  - docs/models/macrousagestats.md
+  - docs/models/monthlysurveydata.md
+  - docs/models/operations/acceptinvitationrequest.md
+  - docs/models/operations/addtagstoticketrequest.md
+  - docs/models/operations/createarticlerequest.md
+  - docs/models/operations/createautomationrulerequest.md
+  - docs/models/operations/createeventrequest.md
+  - docs/models/operations/createmacrorequest.md
+  - docs/models/operations/createmessagerequest.md
+  - docs/models/operations/createtagrequest.md
+  - docs/models/operations/createticketrequest.md
+  - docs/models/operations/createwebhookrequest.md
+  - docs/models/operations/deleteapikeyrequest.md
+  - docs/models/operations/deletearticlerequest.md
+  - docs/models/operations/deleteattachmentrequest.md
+  - docs/models/operations/deleteautomationrulerequest.md
+  - docs/models/operations/deletemacrorequest.md
+  - docs/models/operations/deletemessagerequest.md
+  - docs/models/operations/deleteorganizationsettingrequest.md
+  - docs/models/operations/deletesurveyrequest.md
+  - docs/models/operations/deletetagrequest.md
+  - docs/models/operations/deleteticketrequest.md
+  - docs/models/operations/deletewebhookrequest.md
+  - docs/models/operations/downloadattachmentrequest.md
+  - docs/models/operations/executeautomationrulesrequest.md
+  - docs/models/operations/exporteventsrequest.md
+  - docs/models/operations/exportsurveysrequest.md
+  - docs/models/operations/getagentanalyticsrequest.md
+  - docs/models/operations/getallorganizationsettingsrequest.md
+  - docs/models/operations/getapikeyrequest.md
+  - docs/models/operations/getarticlerequest.md
+  - docs/models/operations/getautomationrulerequest.md
+  - docs/models/operations/getautomationstatsrequest.md
+  - docs/models/operations/geteventrequest.md
+  - docs/models/operations/geteventstatsrequest.md
+  - docs/models/operations/getknowledgebaseanalyticsrequest.md
+  - docs/models/operations/getlatestmessagerequest.md
+  - docs/models/operations/getloginattemptsrequest.md
+  - docs/models/operations/getloginhistoryrequest.md
+  - docs/models/operations/getmacroanalyticsrequest.md
+  - docs/models/operations/getmacrorequest.md
+  - docs/models/operations/getmembersrequest.md
+  - docs/models/operations/getmessagecountrequest.md
+  - docs/models/operations/getmessagerequest.md
+  - docs/models/operations/getorganizationanalyticsrequest.md
+  - docs/models/operations/getorganizationrequest.md
+  - docs/models/operations/getorganizationsettingrequest.md
+  - docs/models/operations/getpopularmacrosrequest.md
+  - docs/models/operations/getpopulartagsrequest.md
+  - docs/models/operations/getpublicarticlesrequest.md
+  - docs/models/operations/getsurveyanalyticsrequest.md
+  - docs/models/operations/getsurveyrequest.md
+  - docs/models/operations/getsystemanalyticsrequest.md
+  - docs/models/operations/gettagrequest.md
+  - docs/models/operations/gettagwithticketsrequest.md
+  - docs/models/operations/getticketanalyticsrequest.md
+  - docs/models/operations/getticketrequest.md
+  - docs/models/operations/gettrendanalyticsrequest.md
+  - docs/models/operations/getwebhookrequest.md
+  - docs/models/operations/getwebhookstatsrequest.md
+  - docs/models/operations/inviteuserrequest.md
+  - docs/models/operations/listapikeysrequest.md
+  - docs/models/operations/listarticlesrequest.md
+  - docs/models/operations/listautomationrulesrequest.md
+  - docs/models/operations/listeventsrequest.md
+  - docs/models/operations/listmacrosrequest.md
+  - docs/models/operations/listmessageattachmentsrequest.md
+  - docs/models/operations/listsurveysrequest.md
+  - docs/models/operations/listtagsrequest.md
+  - docs/models/operations/listticketmessagesrequest.md
+  - docs/models/operations/listticketsrequest.md
+  - docs/models/operations/listwebhookeventsrequest.md
+  - docs/models/operations/listwebhooksrequest.md
+  - docs/models/operations/removememberrequest.md
+  - docs/models/operations/removetagsfromticketrequest.md
+  - docs/models/operations/rendermacrotemplaterequest.md
+  - docs/models/operations/revokeapikeyrequest.md
+  - docs/models/operations/searchmessagesrequest.md
+  - docs/models/operations/searchpublicarticlesrequest.md
+  - docs/models/operations/sendwebhooksrequest.md
+  - docs/models/operations/setorganizationsettingrequest.md
+  - docs/models/operations/submitsurveyrequest.md
+  - docs/models/operations/testwebhookrequest.md
+  - docs/models/operations/updatearticlerequest.md
+  - docs/models/operations/updateautomationrulerequest.md
+  - docs/models/operations/updatemacrorequest.md
+  - docs/models/operations/updatemembershiprequest.md
+  - docs/models/operations/updatesurveyrequest.md
+  - docs/models/operations/updatetagrequest.md
+  - docs/models/operations/updateticketrequest.md
+  - docs/models/operations/updatewebhookrequest.md
+  - docs/models/operations/uploadattachmentsrequest.md
+  - docs/models/passwordresetrequest.md
+  - docs/models/prioritycount.md
+  - docs/models/registerrequest.md
+  - docs/models/resendverificationrequest.md
+  - docs/models/resetpasswordrequest.md
+  - docs/models/ruleactivity.md
+  - docs/models/scorecount.md
+  - docs/models/security.md
+  - docs/models/setorganizationsettingrequest.md
+  - docs/models/statuscount.md
+  - docs/models/submitsurveyrequest.md
+  - docs/models/surveyresponse.md
+  - docs/models/systemusage.md
+  - docs/models/tagmanagementrequest.md
+  - docs/models/tagticketresponse.md
+  - docs/models/testwebhookrequest.md
+  - docs/models/ticketanalytics.md
+  - docs/models/tickettagresponse.md
+  - docs/models/timeseriesdataset.md
+  - docs/models/triggercount.md
+  - docs/models/updatearticlerequest.md
+  - docs/models/updateautomationrulerequest.md
+  - docs/models/updatemacrorequest.md
+  - docs/models/updatemembershiprequest.md
+  - docs/models/updateprofilerequest.md
+  - docs/models/updatesurveyrequest.md
+  - docs/models/updatetagrequest.md
+  - docs/models/updateticketrequest.md
+  - docs/models/updatewebhookrequest.md
+  - docs/models/usereventcount.md
+  - docs/models/userorginfo.md
+  - docs/models/userorgmembership.md
+  - docs/models/verifyemailrequest.md
+  - docs/models/webhookactivity.md
+  - docs/models/webhookdelivery.md
+  - docs/sdks/analytics/README.md
+  - docs/sdks/apikeys/README.md
+  - docs/sdks/attachments/README.md
+  - docs/sdks/authentication/README.md
+  - docs/sdks/automation/README.md
+  - docs/sdks/blackbox/README.md
+  - docs/sdks/csatsurveys/README.md
+  - docs/sdks/eventlogs/README.md
+  - docs/sdks/knowledgebase/README.md
+  - docs/sdks/macros/README.md
+  - docs/sdks/messages/README.md
+  - docs/sdks/organizations/README.md
+  - docs/sdks/tags/README.md
+  - docs/sdks/tickets/README.md
+  - docs/sdks/users/README.md
+  - docs/sdks/webhooks/README.md
+  - eslint.config.mjs
+  - examples/.env.template
+  - examples/README.md
+  - examples/attachmentsGetStats.example.ts
+  - examples/package.json
+  - jsr.json
+  - package.json
+  - src/core.ts
+  - src/funcs/analyticsGet.ts
+  - src/funcs/analyticsGetAgents.ts
+  - src/funcs/analyticsGetKnowledgeBase.ts
+  - src/funcs/analyticsGetMacros.ts
+  - src/funcs/analyticsGetSystem.ts
+  - src/funcs/analyticsGetTickets.ts
+  - src/funcs/analyticsGetTrends.ts
+  - src/funcs/apiKeysCreate.ts
+  - src/funcs/apiKeysDelete.ts
+  - src/funcs/apiKeysGet.ts
+  - src/funcs/apiKeysList.ts
+  - src/funcs/apiKeysRevoke.ts
+  - src/funcs/attachmentsDelete.ts
+  - src/funcs/attachmentsDownload.ts
+  - src/funcs/attachmentsGetStats.ts
+  - src/funcs/attachmentsList.ts
+  - src/funcs/attachmentsUpload.ts
+  - src/funcs/authenticationDisable2fa.ts
+  - src/funcs/authenticationEnable2fa.ts
+  - src/funcs/authenticationLogin.ts
+  - src/funcs/authenticationLogout.ts
+  - src/funcs/authenticationRegister.ts
+  - src/funcs/authenticationRequestPasswordReset.ts
+  - src/funcs/authenticationResendVerification.ts
+  - src/funcs/authenticationResetPassword.ts
+  - src/funcs/authenticationSetup2fa.ts
+  - src/funcs/authenticationVerifyEmail.ts
+  - src/funcs/automationCreate.ts
+  - src/funcs/automationDeleteRule.ts
+  - src/funcs/automationExecute.ts
+  - src/funcs/automationGet.ts
+  - src/funcs/automationGetStats.ts
+  - src/funcs/automationList.ts
+  - src/funcs/automationUpdate.ts
+  - src/funcs/csatSurveysDelete.ts
+  - src/funcs/csatSurveysExport.ts
+  - src/funcs/csatSurveysGet.ts
+  - src/funcs/csatSurveysGetAnalytics.ts
+  - src/funcs/csatSurveysList.ts
+  - src/funcs/csatSurveysSubmit.ts
+  - src/funcs/csatSurveysUpdate.ts
+  - src/funcs/eventLogsCreate.ts
+  - src/funcs/eventLogsExport.ts
+  - src/funcs/eventLogsGet.ts
+  - src/funcs/eventLogsGetStats.ts
+  - src/funcs/eventLogsList.ts
+  - src/funcs/knowledgeBaseCreateArticle.ts
+  - src/funcs/knowledgeBaseDeleteArticle.ts
+  - src/funcs/knowledgeBaseGetArticle.ts
+  - src/funcs/knowledgeBaseGetPublicArticles.ts
+  - src/funcs/knowledgeBaseListArticles.ts
+  - src/funcs/knowledgeBaseSearchPublicArticles.ts
+  - src/funcs/knowledgeBaseUpdateArticle.ts
+  - src/funcs/macrosCreate.ts
+  - src/funcs/macrosDelete.ts
+  - src/funcs/macrosGet.ts
+  - src/funcs/macrosGetPopular.ts
+  - src/funcs/macrosList.ts
+  - src/funcs/macrosRender.ts
+  - src/funcs/macrosUpdate.ts
+  - src/funcs/messagesCount.ts
+  - src/funcs/messagesCreate.ts
+  - src/funcs/messagesDelete.ts
+  - src/funcs/messagesGet.ts
+  - src/funcs/messagesGetLatest.ts
+  - src/funcs/messagesList.ts
+  - src/funcs/messagesSearch.ts
+  - src/funcs/organizationsAcceptInvitation.ts
+  - src/funcs/organizationsCreate.ts
+  - src/funcs/organizationsDeleteSetting.ts
+  - src/funcs/organizationsGet.ts
+  - src/funcs/organizationsGetAllForUser.ts
+  - src/funcs/organizationsGetMembers.ts
+  - src/funcs/organizationsGetSetting.ts
+  - src/funcs/organizationsGetSettings.ts
+  - src/funcs/organizationsInviteUser.ts
+  - src/funcs/organizationsRemoveMember.ts
+  - src/funcs/organizationsSetSetting.ts
+  - src/funcs/organizationsUpdateMembership.ts
+  - src/funcs/tagsCreate.ts
+  - src/funcs/tagsDelete.ts
+  - src/funcs/tagsGet.ts
+  - src/funcs/tagsGetPopular.ts
+  - src/funcs/tagsGetWithTickets.ts
+  - src/funcs/tagsList.ts
+  - src/funcs/tagsUpdate.ts
+  - src/funcs/ticketsAddTags.ts
+  - src/funcs/ticketsCreate.ts
+  - src/funcs/ticketsDelete.ts
+  - src/funcs/ticketsGet.ts
+  - src/funcs/ticketsList.ts
+  - src/funcs/ticketsRemoveTags.ts
+  - src/funcs/ticketsUpdate.ts
+  - src/funcs/usersChangePassword.ts
+  - src/funcs/usersDeleteAccount.ts
+  - src/funcs/usersGetLoginAttempts.ts
+  - src/funcs/usersGetLoginHistory.ts
+  - src/funcs/usersGetProfile.ts
+  - src/funcs/usersUpdateProfile.ts
+  - src/funcs/webhooksCreate.ts
+  - src/funcs/webhooksDelete.ts
+  - src/funcs/webhooksGet.ts
+  - src/funcs/webhooksGetStats.ts
+  - src/funcs/webhooksList.ts
+  - src/funcs/webhooksListEvents.ts
+  - src/funcs/webhooksSend.ts
+  - src/funcs/webhooksTest.ts
+  - src/funcs/webhooksUpdate.ts
+  - src/hooks/hooks.ts
+  - src/hooks/index.ts
+  - src/hooks/types.ts
+  - src/index.ts
+  - src/lib/base64.ts
+  - src/lib/config.ts
+  - src/lib/dlv.ts
+  - src/lib/encodings.ts
+  - src/lib/env.ts
+  - src/lib/files.ts
+  - src/lib/http.ts
+  - src/lib/is-plain-object.ts
+  - src/lib/logger.ts
+  - src/lib/matchers.ts
+  - src/lib/primitives.ts
+  - src/lib/retries.ts
+  - src/lib/schemas.ts
+  - src/lib/sdks.ts
+  - src/lib/security.ts
+  - src/lib/url.ts
+  - src/models/agentactivity.ts
+  - src/models/agentanalytics.ts
+  - src/models/agentperformance.ts
+  - src/models/agentsatisfactionscore.ts
+  - src/models/apiresponseagentanalytics.ts
+  - src/models/apiresponseapikeyresponse.ts
+  - src/models/apiresponsearticleresponse.ts
+  - src/models/apiresponseauthresponse.ts
+  - src/models/apiresponseautomationruleresponse.ts
+  - src/models/apiresponseautomationstats.ts
+  - src/models/apiresponsecreateapikeyresponse.ts
+  - src/models/apiresponsecsatanalytics.ts
+  - src/models/apiresponseeventlogresponse.ts
+  - src/models/apiresponseeventlogstats.ts
+  - src/models/apiresponseknowledgebasestats.ts
+  - src/models/apiresponsemacroresponse.ts
+  - src/models/apiresponsemacrotemplateresponse.ts
+  - src/models/apiresponsemacrousagestats.ts
+  - src/models/apiresponsemessageresponse.ts
+  - src/models/apiresponseoptionmessageresponse.ts
+  - src/models/apiresponseoptionorganizationsettingresponse.ts
+  - src/models/apiresponseorganizationanalytics.ts
+  - src/models/apiresponseorganizationresponse.ts
+  - src/models/apiresponseorganizationsettingresponse.ts
+  - src/models/apiresponsesetup2faresponse.ts
+  - src/models/apiresponsestring.ts
+  - src/models/apiresponsesurveyexport.ts
+  - src/models/apiresponsesurveyresponse.ts
+  - src/models/apiresponsesystemusage.ts
+  - src/models/apiresponsetagresponse.ts
+  - src/models/apiresponsetagwithticketsresponse.ts
+  - src/models/apiresponseticketanalytics.ts
+  - src/models/apiresponseticketresponse.ts
+  - src/models/apiresponsetimeseriesdata.ts
+  - src/models/apiresponseu64.ts
+  - src/models/apiresponseuploadresponse.ts
+  - src/models/apiresponseuserprofileresponse.ts
+  - src/models/apiresponsevalue.ts
+  - src/models/apiresponsevecapikeyresponse.ts
+  - src/models/apiresponsevecarticleresponse.ts
+  - src/models/apiresponsevecattachmentresponse.ts
+  - src/models/apiresponsevecautomationexecution.ts
+  - src/models/apiresponsevecautomationruleresponse.ts
+  - src/models/apiresponseveceventlogresponse.ts
+  - src/models/apiresponsevecloginattemptresponse.ts
+  - src/models/apiresponsevecloginhistoryresponse.ts
+  - src/models/apiresponsevecmacroresponse.ts
+  - src/models/apiresponsevecmembershipresponse.ts
+  - src/models/apiresponsevecmessageresponse.ts
+  - src/models/apiresponsevecorganizationresponse.ts
+  - src/models/apiresponsevecorganizationsettingresponse.ts
+  - src/models/apiresponsevecstring.ts
+  - src/models/apiresponsevecsurveyresponse.ts
+  - src/models/apiresponsevectagresponse.ts
+  - src/models/apiresponsevecticketresponse.ts
+  - src/models/apiresponsevecwebhookdelivery.ts
+  - src/models/apiresponsevecwebhookresponse.ts
+  - src/models/apiresponsewebhookresponse.ts
+  - src/models/apiresponsewebhookstats.ts
+  - src/models/apiresponsewebhooktestresult.ts
+  - src/models/articleview.ts
+  - src/models/attachmentresponse.ts
+  - src/models/automationaction.ts
+  - src/models/automationcondition.ts
+  - src/models/automationconditions.ts
+  - src/models/changepasswordrequest.ts
+  - src/models/createapikeyrequest.ts
+  - src/models/createarticlerequest.ts
+  - src/models/createautomationrulerequest.ts
+  - src/models/createeventrequest.ts
+  - src/models/createmacrorequest.ts
+  - src/models/createmessagerequest.ts
+  - src/models/createorganizationrequest.ts
+  - src/models/createtagrequest.ts
+  - src/models/createticketrequest.ts
+  - src/models/createwebhookrequest.ts
+  - src/models/csatanalytics.ts
+  - src/models/dailycount.ts
+  - src/models/enable2farequest.ts
+  - src/models/errors/blackboxdefaulterror.ts
+  - src/models/errors/blackboxerror.ts
+  - src/models/errors/httpclienterrors.ts
+  - src/models/errors/index.ts
+  - src/models/errors/responsevalidationerror.ts
+  - src/models/errors/sdkvalidationerror.ts
+  - src/models/eventtypecount.ts
+  - src/models/eventtypedelivery.ts
+  - src/models/index.ts
+  - src/models/inviteuserrequest.ts
+  - src/models/issuecategory.ts
+  - src/models/knowledgebasestats.ts
+  - src/models/loginrequest.ts
+  - src/models/macrotemplaterequest.ts
+  - src/models/macrousage.ts
+  - src/models/macrousagestats.ts
+  - src/models/monthlysurveydata.ts
+  - src/models/operations/acceptinvitation.ts
+  - src/models/operations/addtagstoticket.ts
+  - src/models/operations/createarticle.ts
+  - src/models/operations/createautomationrule.ts
+  - src/models/operations/createevent.ts
+  - src/models/operations/createmacro.ts
+  - src/models/operations/createmessage.ts
+  - src/models/operations/createtag.ts
+  - src/models/operations/createticket.ts
+  - src/models/operations/createwebhook.ts
+  - src/models/operations/deleteapikey.ts
+  - src/models/operations/deletearticle.ts
+  - src/models/operations/deleteattachment.ts
+  - src/models/operations/deleteautomationrule.ts
+  - src/models/operations/deletemacro.ts
+  - src/models/operations/deletemessage.ts
+  - src/models/operations/deleteorganizationsetting.ts
+  - src/models/operations/deletesurvey.ts
+  - src/models/operations/deletetag.ts
+  - src/models/operations/deleteticket.ts
+  - src/models/operations/deletewebhook.ts
+  - src/models/operations/downloadattachment.ts
+  - src/models/operations/executeautomationrules.ts
+  - src/models/operations/exportevents.ts
+  - src/models/operations/exportsurveys.ts
+  - src/models/operations/getagentanalytics.ts
+  - src/models/operations/getallorganizationsettings.ts
+  - src/models/operations/getapikey.ts
+  - src/models/operations/getarticle.ts
+  - src/models/operations/getautomationrule.ts
+  - src/models/operations/getautomationstats.ts
+  - src/models/operations/getevent.ts
+  - src/models/operations/geteventstats.ts
+  - src/models/operations/getknowledgebaseanalytics.ts
+  - src/models/operations/getlatestmessage.ts
+  - src/models/operations/getloginattempts.ts
+  - src/models/operations/getloginhistory.ts
+  - src/models/operations/getmacro.ts
+  - src/models/operations/getmacroanalytics.ts
+  - src/models/operations/getmembers.ts
+  - src/models/operations/getmessage.ts
+  - src/models/operations/getmessagecount.ts
+  - src/models/operations/getorganization.ts
+  - src/models/operations/getorganizationanalytics.ts
+  - src/models/operations/getorganizationsetting.ts
+  - src/models/operations/getpopularmacros.ts
+  - src/models/operations/getpopulartags.ts
+  - src/models/operations/getpublicarticles.ts
+  - src/models/operations/getsurvey.ts
+  - src/models/operations/getsurveyanalytics.ts
+  - src/models/operations/getsystemanalytics.ts
+  - src/models/operations/gettag.ts
+  - src/models/operations/gettagwithtickets.ts
+  - src/models/operations/getticket.ts
+  - src/models/operations/getticketanalytics.ts
+  - src/models/operations/gettrendanalytics.ts
+  - src/models/operations/getwebhook.ts
+  - src/models/operations/getwebhookstats.ts
+  - src/models/operations/index.ts
+  - src/models/operations/inviteuser.ts
+  - src/models/operations/listapikeys.ts
+  - src/models/operations/listarticles.ts
+  - src/models/operations/listautomationrules.ts
+  - src/models/operations/listevents.ts
+  - src/models/operations/listmacros.ts
+  - src/models/operations/listmessageattachments.ts
+  - src/models/operations/listsurveys.ts
+  - src/models/operations/listtags.ts
+  - src/models/operations/listticketmessages.ts
+  - src/models/operations/listtickets.ts
+  - src/models/operations/listwebhookevents.ts
+  - src/models/operations/listwebhooks.ts
+  - src/models/operations/removemember.ts
+  - src/models/operations/removetagsfromticket.ts
+  - src/models/operations/rendermacrotemplate.ts
+  - src/models/operations/revokeapikey.ts
+  - src/models/operations/searchmessages.ts
+  - src/models/operations/searchpublicarticles.ts
+  - src/models/operations/sendwebhooks.ts
+  - src/models/operations/setorganizationsetting.ts
+  - src/models/operations/submitsurvey.ts
+  - src/models/operations/testwebhook.ts
+  - src/models/operations/updatearticle.ts
+  - src/models/operations/updateautomationrule.ts
+  - src/models/operations/updatemacro.ts
+  - src/models/operations/updatemembership.ts
+  - src/models/operations/updatesurvey.ts
+  - src/models/operations/updatetag.ts
+  - src/models/operations/updateticket.ts
+  - src/models/operations/updatewebhook.ts
+  - src/models/operations/uploadattachments.ts
+  - src/models/passwordresetrequest.ts
+  - src/models/prioritycount.ts
+  - src/models/registerrequest.ts
+  - src/models/resendverificationrequest.ts
+  - src/models/resetpasswordrequest.ts
+  - src/models/ruleactivity.ts
+  - src/models/scorecount.ts
+  - src/models/security.ts
+  - src/models/setorganizationsettingrequest.ts
+  - src/models/statuscount.ts
+  - src/models/submitsurveyrequest.ts
+  - src/models/surveyresponse.ts
+  - src/models/systemusage.ts
+  - src/models/tagmanagementrequest.ts
+  - src/models/tagticketresponse.ts
+  - src/models/testwebhookrequest.ts
+  - src/models/ticketanalytics.ts
+  - src/models/tickettagresponse.ts
+  - src/models/timeseriesdataset.ts
+  - src/models/triggercount.ts
+  - src/models/updatearticlerequest.ts
+  - src/models/updateautomationrulerequest.ts
+  - src/models/updatemacrorequest.ts
+  - src/models/updatemembershiprequest.ts
+  - src/models/updateprofilerequest.ts
+  - src/models/updatesurveyrequest.ts
+  - src/models/updatetagrequest.ts
+  - src/models/updateticketrequest.ts
+  - src/models/updatewebhookrequest.ts
+  - src/models/usereventcount.ts
+  - src/models/userorginfo.ts
+  - src/models/userorgmembership.ts
+  - src/models/verifyemailrequest.ts
+  - src/models/webhookactivity.ts
+  - src/models/webhookdelivery.ts
+  - src/sdk/analytics.ts
+  - src/sdk/apikeys.ts
+  - src/sdk/attachments.ts
+  - src/sdk/authentication.ts
+  - src/sdk/automation.ts
+  - src/sdk/csatsurveys.ts
+  - src/sdk/eventlogs.ts
+  - src/sdk/index.ts
+  - src/sdk/knowledgebase.ts
+  - src/sdk/macros.ts
+  - src/sdk/messages.ts
+  - src/sdk/organizations.ts
+  - src/sdk/sdk.ts
+  - src/sdk/tags.ts
+  - src/sdk/tickets.ts
+  - src/sdk/users.ts
+  - src/sdk/webhooks.ts
+  - src/types/async.ts
+  - src/types/blobs.ts
+  - src/types/constdatetime.ts
+  - src/types/enums.ts
+  - src/types/fp.ts
+  - src/types/index.ts
+  - src/types/operations.ts
+  - src/types/rfcdate.ts
+  - src/types/streams.ts
+  - tsconfig.json
+examples:
+  disable_2fa:
+    speakeasy-default-disable-2fa:
+      responses:
+        "200":
+          application/json: {"success": false}
+  enable_2fa:
+    speakeasy-default-enable-2fa:
+      requestBody:
+        application/json: {"totp_code": "<value>"}
+      responses:
+        "200":
+          application/json: {"success": true}
+  login:
+    speakeasy-default-login:
+      requestBody:
+        application/json: {"email": "Aurelie_Ankunding@hotmail.com", "password": "jp4BunfMR9hNyMv"}
+      responses:
+        "200":
+          application/json: {"success": false}
+  logout:
+    speakeasy-default-logout:
+      responses:
+        "200":
+          application/json: {"success": false}
+  register:
+    speakeasy-default-register:
+      requestBody:
+        application/json: {"email": "Evie_Dickens82@hotmail.com", "name": "<value>", "password": "3AT_LxeXY3qOv54"}
+      responses:
+        "201":
+          application/json: {"success": false}
+  request_password_reset:
+    speakeasy-default-request-password-reset:
+      requestBody:
+        application/json: {"email": "Marilie_Block@yahoo.com"}
+      responses:
+        "200":
+          application/json: {"success": true}
+  reset_password:
+    speakeasy-default-reset-password:
+      requestBody:
+        application/json: {"new_password": "<value>", "token": "<value>"}
+      responses:
+        "200":
+          application/json: {"success": true}
+  setup_2fa:
+    speakeasy-default-setup-2fa:
+      responses:
+        "200":
+          application/json: {"success": false}
+  verify_email:
+    speakeasy-default-verify-email:
+      requestBody:
+        application/json: {"token": "<value>"}
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_user_organizations:
+    speakeasy-default-get-user-organizations:
+      responses:
+        "200":
+          application/json: {"success": false}
+  create_organization:
+    speakeasy-default-create-organization:
+      requestBody:
+        application/json: {"domain": "hard-to-find-brace.com", "name": "<value>"}
+      responses:
+        "201":
+          application/json: {"success": false}
+  get_organization:
+    speakeasy-default-get-organization:
+      parameters:
+        path:
+          org_id: "4a5f0d0a-2722-49f4-bfb8-03ade14ee505"
+      responses:
+        "200":
+          application/json: {"success": false}
+  accept_invitation:
+    speakeasy-default-accept-invitation:
+      parameters:
+        path:
+          org_id: "85544615-3097-4631-863a-19163b76201c"
+      responses:
+        "200":
+          application/json: {"success": true}
+  invite_user:
+    speakeasy-default-invite-user:
+      parameters:
+        path:
+          org_id: "e9af35d6-0d79-4d37-b1bb-3a94536e482b"
+      requestBody:
+        application/json: {"email": "Stacy_Beahan49@yahoo.com", "role": "<value>"}
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_members:
+    speakeasy-default-get-members:
+      parameters:
+        path:
+          org_id: "a338f8a1-afd9-4f57-849f-c76fecdff9de"
+      responses:
+        "200":
+          application/json: {"success": false}
+  update_membership:
+    speakeasy-default-update-membership:
+      parameters:
+        path:
+          org_id: "d3b149c3-d413-4cba-8d2d-01cba1dee9f5"
+          member_id: "e6a6b8a3-d8f1-4e1a-9166-49f5051e8a56"
+      requestBody:
+        application/json: {"role": "<value>", "status": "<value>"}
+      responses:
+        "200":
+          application/json: {"success": false}
+  remove_member:
+    speakeasy-default-remove-member:
+      parameters:
+        path:
+          org_id: "501a2871-b19e-4a1a-8116-fb5a410340a0"
+          member_id: "16b8860a-fd24-4b81-b812-dcc7ed4098d5"
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_all_organization_settings:
+    speakeasy-default-get-all-organization-settings:
+      parameters:
+        path:
+          org_id: "b40e719e-e92c-4aaf-92c8-bd159288bb3d"
+      responses:
+        "200":
+          application/json: {"success": true}
+  set_organization_setting:
+    speakeasy-default-set-organization-setting:
+      parameters:
+        path:
+          org_id: "f0df1f27-29ee-4f1a-9dda-025b4406ccf5"
+      requestBody:
+        application/json: {"key": "<key>", "value": "<value>"}
+      responses:
+        "201":
+          application/json: {"success": true}
+  get_organization_setting:
+    speakeasy-default-get-organization-setting:
+      parameters:
+        path:
+          org_id: "18877b37-a04b-47af-b43e-6542a4890f25"
+          key: "<key>"
+      responses:
+        "200":
+          application/json: {"success": false}
+  delete_organization_setting:
+    speakeasy-default-delete-organization-setting:
+      parameters:
+        path:
+          org_id: "00dc388b-7546-40f7-9504-e77239333dda"
+          key: "<key>"
+  list_articles:
+    speakeasy-default-list-articles:
+      parameters:
+        path:
+          org_id: "a49305e5-d673-42cf-a40d-f93828b74be4"
+      responses:
+        "200":
+          application/json: {"success": false}
+  create_article:
+    speakeasy-default-create-article:
+      parameters:
+        path:
+          org_id: "476a557f-fbbf-466b-9c16-88380907acb3"
+      requestBody:
+        application/json: {"content": "<value>", "public": true, "title": "<value>"}
+      responses:
+        "201":
+          application/json: {"success": false}
+  get_article:
+    speakeasy-default-get-article:
+      parameters:
+        path:
+          org_id: "f6bcf119-6de2-4821-b6e7-ad0a016d08d1"
+          article_id: "6602a5a5-c167-41e6-b8e0-37f621f20926"
+      responses:
+        "200":
+          application/json: {"success": true}
+  update_article:
+    speakeasy-default-update-article:
+      parameters:
+        path:
+          org_id: "3f51179e-7cc5-46fa-94b3-aafe1895e2dd"
+          article_id: "b723e445-b2ad-4858-ac12-be6d172dca73"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"success": false}
+  delete_article:
+    speakeasy-default-delete-article:
+      parameters:
+        path:
+          org_id: "164aac5e-e89d-47f0-b02a-d993df9cf2e3"
+          article_id: "59556941-16bd-4b2a-b004-e58c9beef23e"
+  get_public_articles:
+    speakeasy-default-get-public-articles:
+      parameters:
+        path:
+          org_id: "343b52a3-06d5-41f7-bbd9-e0dcf0c7f55e"
+      responses:
+        "200":
+          application/json: {"success": true}
+  search_public_articles:
+    speakeasy-default-search-public-articles:
+      parameters:
+        path:
+          org_id: "210221e2-6aba-44d7-8d1e-2e27e975195e"
+        query:
+          q: "<value>"
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_message:
+    speakeasy-default-get-message:
+      parameters:
+        path:
+          org_id: "555212e0-54c9-4fbb-a756-9c23d7cf1974"
+          message_id: "f7dfbb86-a872-4d89-a685-7062f06e4401"
+      responses:
+        "200":
+          application/json: {"success": false}
+  delete_message:
+    speakeasy-default-delete-message:
+      parameters:
+        path:
+          org_id: "c8e03fdc-7431-430e-8a72-8a7bfcd1358d"
+          message_id: "53486180-d80c-446e-bb3e-913341110f1e"
+  list_ticket_messages:
+    speakeasy-default-list-ticket-messages:
+      parameters:
+        path:
+          org_id: "12d2f739-a6f4-4308-85ac-384032c2343b"
+          ticket_id: "2319475e-0056-4605-9ecb-b1c2a639f707"
+      responses:
+        "200":
+          application/json: {"success": false}
+  create_message:
+    speakeasy-default-create-message:
+      parameters:
+        path:
+          org_id: "4bbce17a-130f-46a5-99bc-529cfd1a0644"
+          ticket_id: "1abf258a-6636-4940-ab90-7f598910a6c6"
+      requestBody:
+        application/json: {"channel": "<value>", "content": "<value>"}
+      responses:
+        "201":
+          application/json: {"success": false}
+  get_message_count:
+    speakeasy-default-get-message-count:
+      parameters:
+        path:
+          org_id: "855bcc8c-a9d9-40c4-9aaa-33ee9a281feb"
+          ticket_id: "940aa8c7-3bef-4c1c-859c-791070c0d385"
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_latest_message:
+    speakeasy-default-get-latest-message:
+      parameters:
+        path:
+          org_id: "4fede711-fd33-479a-9c43-99bdc3dc4253"
+          ticket_id: "cb9b9e39-774c-4365-bda4-3769ddfc5048"
+      responses:
+        "200":
+          application/json: {"success": false}
+  search_messages:
+    speakeasy-default-search-messages:
+      parameters:
+        path:
+          org_id: "12b5c905-8ba5-4205-bdfd-7232de9ca2a8"
+          ticket_id: "c1d87dc5-a425-4868-8949-c84fe1771075"
+        query:
+          q: "<value>"
+      responses:
+        "200":
+          application/json: {"success": true}
+  list_tags:
+    speakeasy-default-list-tags:
+      parameters:
+        path:
+          org_id: "5b6eed27-4aab-4ed3-a9cf-a2e97bcea3f3"
+      responses:
+        "200":
+          application/json: {"success": true}
+  create_tag:
+    speakeasy-default-create-tag:
+      parameters:
+        path:
+          org_id: "d5c1d00b-50a8-4686-93af-80e9abe2cd1d"
+      requestBody:
+        application/json: {"color": "teal", "name": "<value>"}
+      responses:
+        "201":
+          application/json: {"success": true}
+  get_popular_tags:
+    speakeasy-default-get-popular-tags:
+      parameters:
+        path:
+          org_id: "08c3f414-8d58-4ced-88ee-32686c68ef17"
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_tag:
+    speakeasy-default-get-tag:
+      parameters:
+        path:
+          org_id: "bd853e44-332a-4d7e-a259-63fd41a3e6bc"
+          tag_id: "e1c4f9d8-df25-405b-9bc9-2413427a99b5"
+      responses:
+        "200":
+          application/json: {"success": false}
+  update_tag:
+    speakeasy-default-update-tag:
+      parameters:
+        path:
+          org_id: "3efe16b1-0d66-4d5f-a8ca-e057d7d387ac"
+          tag_id: "e9ec2435-68f4-4061-8e00-b87250250a40"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"success": true}
+  delete_tag:
+    speakeasy-default-delete-tag:
+      parameters:
+        path:
+          org_id: "b341f1e3-c8ae-44ec-9177-28d18c307a7a"
+          tag_id: "e0f82c7b-a6e9-4b96-ad6e-cea27133c19a"
+  get_tag_with_tickets:
+    speakeasy-default-get-tag-with-tickets:
+      parameters:
+        path:
+          org_id: "edc31e5b-7ada-42d6-82ea-64fc075344db"
+          tag_id: "e210990e-1f45-4d6f-840b-1c22409ad0d9"
+      responses:
+        "200":
+          application/json: {"success": true}
+  list_tickets:
+    speakeasy-default-list-tickets:
+      parameters:
+        path:
+          org_id: "3d0a34f0-a048-494c-bb7b-b3972e5de0e2"
+      responses:
+        "200":
+          application/json: {"success": false}
+  create_ticket:
+    speakeasy-default-create-ticket:
+      parameters:
+        path:
+          org_id: "c72ded25-514f-4691-b2a5-cbdab94985b2"
+      requestBody:
+        application/json: {"description": "relieve alb regarding absentmindedly tightly intensely", "priority": "<value>", "subject": "<value>"}
+      responses:
+        "201":
+          application/json: {"success": true}
+  get_ticket:
+    speakeasy-default-get-ticket:
+      parameters:
+        path:
+          org_id: "0fc1e174-e3b6-496e-8cd9-bdcdc1ef1929"
+          ticket_id: "b22180c3-de7b-409b-b947-29542a7e563d"
+      responses:
+        "200":
+          application/json: {"success": false}
+  update_ticket:
+    speakeasy-default-update-ticket:
+      parameters:
+        path:
+          org_id: "e4898f91-17f2-43cb-b0bc-965e95f3e535"
+          ticket_id: "29ca9557-f079-4b2b-9cc4-516bb009b11c"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"success": true}
+  delete_ticket:
+    speakeasy-default-delete-ticket:
+      parameters:
+        path:
+          org_id: "208a10c1-d542-4f4d-83da-0c6204faa564"
+          ticket_id: "86180731-445c-4f84-88f8-5ce6bce7f4b6"
+  add_tags_to_ticket:
+    speakeasy-default-add-tags-to-ticket:
+      parameters:
+        path:
+          org_id: "6ef46784-c860-4868-a325-b1e59b233b07"
+          ticket_id: "bc3675c2-2ab9-4120-8144-11e56bee96be"
+      requestBody:
+        application/json: {"tag_ids": []}
+  remove_tags_from_ticket:
+    speakeasy-default-remove-tags-from-ticket:
+      parameters:
+        path:
+          org_id: "ac048e80-c73a-48a1-9816-5b820ee9874a"
+          ticket_id: "5f56fa24-f094-4619-91be-28ac31a98250"
+      requestBody:
+        application/json: {"tag_ids": ["ad8105a5-ad52-46f2-b4dc-a959c72c9227", "b23d84fc-9c21-427a-9311-faf542f6af1a", "dc737710-04bc-4929-bc6b-e75cec182879"]}
+  delete_account:
+    speakeasy-default-delete-account:
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_login_attempts:
+    speakeasy-default-get-login-attempts:
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_login_history:
+    speakeasy-default-get-login-history:
+      responses:
+        "200":
+          application/json: {"success": true}
+  change_password:
+    speakeasy-default-change-password:
+      requestBody:
+        application/json: {"current_password": "<value>", "new_password": "<value>"}
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_profile:
+    speakeasy-default-get-profile:
+      responses:
+        "200":
+          application/json: {"success": false}
+  update_profile:
+    speakeasy-default-update-profile:
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_attachment_stats:
+    speakeasy-default-get-attachment-stats:
+      responses:
+        "200":
+          application/json: {"success": true}
+  download_attachment:
+    speakeasy-default-download-attachment:
+      parameters:
+        path:
+          attachment_id: "e74aabdf-838c-412a-899a-0ad40dfae202"
+  list_message_attachments:
+    speakeasy-default-list-message-attachments:
+      parameters:
+        path:
+          org_id: "269fc05c-76c1-4192-b098-ca8051f6838b"
+          ticket_id: "092cea51-0b37-49c6-889c-b52e71a89765"
+          message_id: "d473ef9c-0087-424c-bf31-c92e3c5dfc1e"
+      responses:
+        "200":
+          application/json: {"success": false}
+  upload_attachments:
+    speakeasy-default-upload-attachments:
+      parameters:
+        path:
+          org_id: "d4685daa-bb2d-4708-a998-e495193d4754"
+          ticket_id: "e94f03a5-65d7-4092-b500-fd8b30fa4583"
+          message_id: "c2f38b71-19bc-4869-9679-a4ba44aebf2b"
+      requestBody:
+        multipart/form-data: "x-file: example.file"
+      responses:
+        "201":
+          application/json: {"success": false}
+  delete_attachment:
+    speakeasy-default-delete-attachment:
+      parameters:
+        path:
+          org_id: "39d09baa-0ce6-47dd-8443-f6f472bd65e7"
+          ticket_id: "ee6d967f-639c-4cc8-8860-493aa3c3a9f8"
+          message_id: "e0fc46f5-1a2c-488b-9f3c-26fed20bcbc8"
+          attachment_id: "02a1e58f-c554-4143-b520-b90b09d1b98f"
+      responses:
+        "200":
+          application/json: {"success": true}
+  resend_verification:
+    speakeasy-default-resend-verification:
+      requestBody:
+        application/json: {"email": "Crawford.Thompson@gmail.com"}
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_organization_analytics:
+    speakeasy-default-get-organization-analytics:
+      parameters:
+        path:
+          org_id: "9b4a4812-0305-4682-8014-bb83e12e1cc7"
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_agent_analytics:
+    speakeasy-default-get-agent-analytics:
+      parameters:
+        path:
+          org_id: "c8d576b3-df6a-4d5e-a4c2-5eabc68ce747"
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_knowledge_base_analytics:
+    speakeasy-default-get-knowledge-base-analytics:
+      parameters:
+        path:
+          org_id: "56e54edb-0a77-4d05-a230-d4c60e414e4d"
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_macro_analytics:
+    speakeasy-default-get-macro-analytics:
+      parameters:
+        path:
+          org_id: "aa8d9032-feac-498e-bf57-1e558e958e06"
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_system_analytics:
+    speakeasy-default-get-system-analytics:
+      parameters:
+        path:
+          org_id: "bcad9e44-5b6e-4ec5-a2da-793094032799"
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_ticket_analytics:
+    speakeasy-default-get-ticket-analytics:
+      parameters:
+        path:
+          org_id: "2a591df6-1858-4a35-b687-94be66657b04"
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_trend_analytics:
+    speakeasy-default-get-trend-analytics:
+      parameters:
+        path:
+          org_id: "88526721-ec3e-456b-a0e1-e597f59dbe7a"
+      responses:
+        "200":
+          application/json: {"success": true}
+  execute_automation_rules:
+    speakeasy-default-execute-automation-rules:
+      parameters:
+        path:
+          org_id: "eb0544f1-ea85-4e7e-9839-461f80a8c9e5"
+        query:
+          trigger: "<value>"
+      responses:
+        "200":
+          application/json: {"success": true}
+  list_automation_rules:
+    speakeasy-default-list-automation-rules:
+      parameters:
+        path:
+          org_id: "bc5ec86d-47af-48be-9c73-917aeddcd2b2"
+      responses:
+        "200":
+          application/json: {"success": false}
+  create_automation_rule:
+    speakeasy-default-create-automation-rule:
+      parameters:
+        path:
+          org_id: "399ee421-a91b-4e9f-bbaf-916c88acd6b3"
+      requestBody:
+        application/json: {"actions": [{"action_type": "<value>", "parameters": {}}], "conditions": {"conditions": [{"field": "<value>", "operator": "<value>", "value": "<value>"}], "logic": "<value>"}, "description": "louse rebuke unless above gee gee save when excluding between", "enabled": false, "name": "<value>", "trigger": "<value>"}
+      responses:
+        "201":
+          application/json: {"success": true}
+  get_automation_rule:
+    speakeasy-default-get-automation-rule:
+      parameters:
+        path:
+          org_id: "e25f3f50-dbf6-413d-8344-41f284ac8435"
+          rule_id: "c7ce15dc-ac71-4a99-a4b6-81abee6c68b5"
+      responses:
+        "200":
+          application/json: {"success": false}
+  update_automation_rule:
+    speakeasy-default-update-automation-rule:
+      parameters:
+        path:
+          org_id: "537dc65f-0d9c-4c14-8452-f14f202be940"
+          rule_id: "5e7d32ee-7516-4d21-b650-666b7cd77f14"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"success": false}
+  delete_automation_rule:
+    speakeasy-default-delete-automation-rule:
+      parameters:
+        path:
+          org_id: "358af71a-5286-440a-9b2f-b05ce47834d2"
+          rule_id: "3aa1ae3c-61a0-4a78-bc10-a988ce62d127"
+  get_automation_stats:
+    speakeasy-default-get-automation-stats:
+      parameters:
+        path:
+          org_id: "2f801dd3-7b99-4453-a372-2a451b6cbbce"
+      responses:
+        "200":
+          application/json: {"success": false}
+  list_events:
+    speakeasy-default-list-events:
+      parameters:
+        path:
+          org_id: "1f64373e-45d7-4458-a38a-44cdd3609a0b"
+      responses:
+        "200":
+          application/json: {"success": false}
+  create_event:
+    speakeasy-default-create-event:
+      parameters:
+        path:
+          org_id: "85bf6539-71f2-4f34-94cd-370d90306f44"
+      requestBody:
+        application/json: {"event_type": "<value>"}
+      responses:
+        "201":
+          application/json: {"success": true}
+  export_events:
+    speakeasy-default-export-events:
+      parameters:
+        path:
+          org_id: "a8cf6683-4825-4407-9d85-a6b2fecda17e"
+  get_event_stats:
+    speakeasy-default-get-event-stats:
+      parameters:
+        path:
+          org_id: "e23589b5-df31-43f6-a9e5-bfb3a0a5b106"
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_event:
+    speakeasy-default-get-event:
+      parameters:
+        path:
+          org_id: "befb34b9-a945-41c7-a451-1b5512a4600f"
+          event_id: "32024c22-11c3-43f7-b7a1-c200d59979fb"
+      responses:
+        "200":
+          application/json: {"success": true}
+  list_macros:
+    speakeasy-default-list-macros:
+      parameters:
+        path:
+          org_id: "d951be70-ee36-4af6-9925-0882249b2f92"
+      responses:
+        "200":
+          application/json: {"success": true}
+  create_macro:
+    speakeasy-default-create-macro:
+      parameters:
+        path:
+          org_id: "5afbf042-8ef3-4dd1-8268-5b7cf47e4067"
+      requestBody:
+        application/json: {"content": "<value>", "description": "why redesign finally outrageous excited segregate", "name": "<value>"}
+      responses:
+        "201":
+          application/json: {"success": true}
+  get_popular_macros:
+    speakeasy-default-get-popular-macros:
+      parameters:
+        path:
+          org_id: "3b519217-95b2-4199-b15b-63abcecb6cb9"
+      responses:
+        "200":
+          application/json: {"success": false}
+  render_macro_template:
+    speakeasy-default-render-macro-template:
+      parameters:
+        path:
+          org_id: "672e8481-e174-418d-9c23-a28a7b2fa0ba"
+      requestBody:
+        application/json: {"macro_id": "c1db7087-b8e8-48bc-a511-7bb191755ca0", "variables": {"key": "<value>", "key1": "<value>", "key2": "<value>"}}
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_macro:
+    speakeasy-default-get-macro:
+      parameters:
+        path:
+          org_id: "adc41988-15d3-483e-9652-905a7a35785e"
+          macro_id: "63c10671-96d0-4d49-b720-2436668f5739"
+      responses:
+        "200":
+          application/json: {"success": false}
+  update_macro:
+    speakeasy-default-update-macro:
+      parameters:
+        path:
+          org_id: "33b59510-35f2-4b87-bc94-f4151dee33d8"
+          macro_id: "71f36807-a98d-40fd-b987-39b797f043ee"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"success": false}
+  delete_macro:
+    speakeasy-default-delete-macro:
+      parameters:
+        path:
+          org_id: "c43a73db-526f-423c-bfc4-a757540720eb"
+          macro_id: "4104291e-edef-4270-8149-0295904f18fb"
+      responses:
+        "200":
+          application/json: {"success": false}
+  list_surveys:
+    speakeasy-default-list-surveys:
+      parameters:
+        path:
+          org_id: "44b20e92-52e4-4b2a-a726-ca76d5a84c3d"
+      responses:
+        "200":
+          application/json: {"success": false}
+  submit_survey:
+    speakeasy-default-submit-survey:
+      parameters:
+        path:
+          org_id: "ed69c959-90e4-401e-a07d-9e12bae5870e"
+      requestBody:
+        application/json: {"score": 869456, "ticket_id": "c7b8edc6-e1da-4eb1-a05a-19c37b1f2675"}
+      responses:
+        "201":
+          application/json: {"success": false}
+  get_survey_analytics:
+    speakeasy-default-get-survey-analytics:
+      parameters:
+        path:
+          org_id: "d43e684d-08e1-4ee0-940e-a4860e8f4956"
+      responses:
+        "200":
+          application/json: {"success": false}
+  export_surveys:
+    speakeasy-default-export-surveys:
+      parameters:
+        path:
+          org_id: "faff5325-06a7-4cc9-8662-137cba59b24a"
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_survey:
+    speakeasy-default-get-survey:
+      parameters:
+        path:
+          org_id: "6da394fa-bfb3-42b0-af10-b0962c1ff057"
+          survey_id: "a75795e6-b61e-4ff5-9d9c-8f874b9d1e27"
+      responses:
+        "200":
+          application/json: {"success": false}
+  update_survey:
+    speakeasy-default-update-survey:
+      parameters:
+        path:
+          org_id: "8bfbe943-ef2e-42a2-b4df-ae1799ae2947"
+          survey_id: "3a589f93-33d7-4fe2-bff7-132e32b738c5"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"success": false}
+  delete_survey:
+    speakeasy-default-delete-survey:
+      parameters:
+        path:
+          org_id: "3a6b3ece-1d0f-4023-9c91-5c570a61ebf7"
+          survey_id: "c1158240-382b-4368-920d-35aa48a5cf5d"
+  list_webhooks:
+    speakeasy-default-list-webhooks:
+      parameters:
+        path:
+          org_id: "e9dfdb22-6596-40c9-bdfc-dba6a979fb90"
+      responses:
+        "200":
+          application/json: {"success": false}
+  create_webhook:
+    speakeasy-default-create-webhook:
+      parameters:
+        path:
+          org_id: "714cbba3-fec7-4feb-a485-4dc2fd7f6c84"
+      requestBody:
+        application/json: {"description": "https://api.example.com/webhooks/blackbox", "enabled": false, "events": ["<value 1>"], "name": "<value>", "url": "https://filthy-bob.org/"}
+      responses:
+        "201":
+          application/json: {"success": true}
+  list_webhook_events:
+    speakeasy-default-list-webhook-events:
+      parameters:
+        path:
+          org_id: "c215a8b6-b73d-4e73-874e-ef7f068a8887"
+      responses:
+        "200":
+          application/json: {"success": true}
+  send_webhooks:
+    speakeasy-default-send-webhooks:
+      parameters:
+        path:
+          org_id: "edab07ed-3f9c-4963-ab4e-812e887f7f26"
+        query:
+          event_type: "<value>"
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_webhook_stats:
+    speakeasy-default-get-webhook-stats:
+      parameters:
+        path:
+          org_id: "f6e4b02b-41bb-4674-85aa-1462c364d207"
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_webhook:
+    speakeasy-default-get-webhook:
+      parameters:
+        path:
+          org_id: "888ebb53-ad21-4816-92bf-722bde1a4e56"
+          webhook_id: "456fca8e-a3f6-4db3-928e-5736492e157e"
+      responses:
+        "200":
+          application/json: {"success": true}
+  update_webhook:
+    speakeasy-default-update-webhook:
+      parameters:
+        path:
+          org_id: "15944d35-8a04-413b-b321-863951b7b156"
+          webhook_id: "f90b8b41-0826-4510-8acc-ed58bb0506a1"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"success": false}
+  delete_webhook:
+    speakeasy-default-delete-webhook:
+      parameters:
+        path:
+          org_id: "04ba438d-8bd2-4105-92da-cf3d80cbe9a9"
+          webhook_id: "daa18fad-aa78-4d16-b304-ba76ac3031cd"
+  test_webhook:
+    speakeasy-default-test-webhook:
+      parameters:
+        path:
+          org_id: "f48fb607-f729-4b50-b107-33a303512e4a"
+          webhook_id: "2a7ff1c2-2c53-450c-8fc8-0cb541edc23b"
+      requestBody:
+        application/json: {"event_type": "<value>"}
+      responses:
+        "200":
+          application/json: {"success": false}
+  list_api_keys:
+    speakeasy-default-list-api-keys:
+      responses:
+        "200":
+          application/json: {"success": false}
+  create_api_key:
+    speakeasy-default-create-api-key:
+      requestBody:
+        application/json: {"name": "<value>", "scopes": ["<value 1>"]}
+      responses:
+        "201":
+          application/json: {"success": false}
+  get_api_key:
+    speakeasy-default-get-api-key:
+      parameters:
+        path:
+          key_id: "66760d63-bc4c-4eba-9f66-728d076e4afd"
+      responses:
+        "200":
+          application/json: {"success": true}
+  delete_api_key:
+    speakeasy-default-delete-api-key:
+      parameters:
+        path:
+          key_id: "d30aa790-7049-4dd6-9089-24cd5bc5bd07"
+      responses:
+        "200":
+          application/json: {"success": false}
+  revoke_api_key:
+    speakeasy-default-revoke-api-key:
+      parameters:
+        path:
+          key_id: "70d05b12-db01-4e93-afb7-c26ecf254345"
+      responses:
+        "200":
+          application/json: {"success": true}
+examplesVersion: 1.0.2
