@@ -10,7 +10,7 @@ sources:
         registry:
             location: registry.speakeasyapi.dev/blackbox/api/black-box-api
 targets:
-    blackbox:
+    blackboxlabs-sdk:
         target: typescript
         source: BlackBox API
         publish:
