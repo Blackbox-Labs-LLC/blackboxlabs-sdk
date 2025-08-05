@@ -11,7 +11,18 @@ import { Params, pathToFunc } from "./url.js";
  * Contains the list of servers available to the SDK
  */
 export const ServerList = [
-  "/",
+  /**
+   * Local development server
+   */
+  "http://localhost:8080",
+  /**
+   * Staging server
+   */
+  "https://staging.api.blckbox.dev",
+  /**
+   * Production server
+   */
+  "https://api.blckbox.dev",
 ] as const;
 
 export type SDKOptions = {
@@ -23,9 +34,9 @@ export type SDKOptions = {
    */
   serverIdx?: number | undefined;
   /**
-   * Specifies the server URL to be used by the SDK
+   * Allows overriding the default server URL used by the SDK
    */
-  serverURL: string;
+  serverURL?: string | undefined;
   /**
    * Allows overriding the default user agent used by the SDK
    */
@@ -58,7 +69,7 @@ export function serverURLFromOptions(options: SDKOptions): URL | null {
 export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "1.0.0",
-  sdkVersion: "0.2.4",
-  genVersion: "2.668.4",
-  userAgent: "speakeasy-sdk/typescript 0.2.4 2.668.4 1.0.0 blackbox",
+  sdkVersion: "0.2.5",
+  genVersion: "2.672.0",
+  userAgent: "speakeasy-sdk/typescript 0.2.5 2.672.0 1.0.0 blackbox",
 } as const;

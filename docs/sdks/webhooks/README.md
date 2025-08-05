@@ -26,7 +26,6 @@ Real-time event notifications, external integrations, and webhook management
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -52,7 +51,6 @@ import { webhooksList } from "blackbox/funcs/webhooksList.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -99,7 +97,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -134,7 +131,6 @@ import { webhooksCreate } from "blackbox/funcs/webhooksCreate.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -190,7 +186,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -216,7 +211,6 @@ import { webhooksListEvents } from "blackbox/funcs/webhooksListEvents.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -263,7 +257,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -290,7 +283,6 @@ import { webhooksSend } from "blackbox/funcs/webhooksSend.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -338,7 +330,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -364,7 +355,6 @@ import { webhooksGetStats } from "blackbox/funcs/webhooksGetStats.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -411,7 +401,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -438,7 +427,6 @@ import { webhooksGet } from "blackbox/funcs/webhooksGet.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -486,7 +474,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -514,7 +501,6 @@ import { webhooksUpdate } from "blackbox/funcs/webhooksUpdate.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -563,7 +549,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -590,7 +575,6 @@ import { webhooksDelete } from "blackbox/funcs/webhooksDelete.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -638,7 +622,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -668,7 +651,6 @@ import { webhooksTest } from "blackbox/funcs/webhooksTest.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 

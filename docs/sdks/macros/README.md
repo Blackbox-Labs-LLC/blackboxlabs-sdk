@@ -24,7 +24,6 @@ Reusable response templates, quick actions, and productivity tools
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -50,7 +49,6 @@ import { macrosList } from "blackbox/funcs/macrosList.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -97,7 +95,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -128,7 +125,6 @@ import { macrosCreate } from "blackbox/funcs/macrosCreate.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -180,7 +176,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -206,7 +201,6 @@ import { macrosGetPopular } from "blackbox/funcs/macrosGetPopular.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -253,7 +247,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -287,7 +280,6 @@ import { macrosRender } from "blackbox/funcs/macrosRender.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -342,7 +334,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -369,7 +360,6 @@ import { macrosGet } from "blackbox/funcs/macrosGet.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -417,7 +407,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -445,7 +434,6 @@ import { macrosUpdate } from "blackbox/funcs/macrosUpdate.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -494,7 +482,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -521,7 +508,6 @@ import { macrosDelete } from "blackbox/funcs/macrosDelete.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 

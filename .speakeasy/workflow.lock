@@ -1,27 +1,28 @@
-speakeasyVersion: 1.592.2
+speakeasyVersion: 1.596.1
 sources:
     BlackBox API:
         sourceNamespace: black-box-api
-        sourceRevisionDigest: sha256:01326190d3a68afaa587606ebbb2a56d9a9347fa9a3408d898c87d7449c0165f
-        sourceBlobDigest: sha256:8aae909817d664475bd8e05abf9e554ade009a20bccf20913aec6f3c51d92406
+        sourceRevisionDigest: sha256:234b00a3770d552079ce128498739ada2fe14e370e18990dfe9da4b1299adf72
+        sourceBlobDigest: sha256:a8dccf6d96e339bbe28d5bdd0851df278a20fde16b233252594d0422a23918bf
         tags:
             - latest
+            - speakeasy-sdk-regen-1754361205
             - 1.0.0
 targets:
     blackbox:
         source: BlackBox API
         sourceNamespace: black-box-api
-        sourceRevisionDigest: sha256:01326190d3a68afaa587606ebbb2a56d9a9347fa9a3408d898c87d7449c0165f
-        sourceBlobDigest: sha256:8aae909817d664475bd8e05abf9e554ade009a20bccf20913aec6f3c51d92406
+        sourceRevisionDigest: sha256:234b00a3770d552079ce128498739ada2fe14e370e18990dfe9da4b1299adf72
+        sourceBlobDigest: sha256:a8dccf6d96e339bbe28d5bdd0851df278a20fde16b233252594d0422a23918bf
         codeSamplesNamespace: black-box-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:e7b58d75fe3907bae8f311a161c1871d68003620d3726d7910dfe80318c1c2b3
+        codeSamplesRevisionDigest: sha256:4915b05cca0b43edb0a5972fab376c846d02c246f1f768f53976ef40af362704
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         BlackBox API:
             inputs:
-                - location: ../../../Personal/blackbox/openapi.json
+                - location: https://staging-api.blckbox.dev/api-docs/openapi.json
             overlays:
                 - location: .speakeasy/speakeasy-modifications-overlay.yaml
             output: .speakeasy/out.openapi.yaml
@@ -31,6 +32,9 @@ workflow:
         blackbox:
             target: typescript
             source: BlackBox API
+            publish:
+                npm:
+                    token: $npm_token
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/blackbox/api/black-box-api-typescript-code-samples

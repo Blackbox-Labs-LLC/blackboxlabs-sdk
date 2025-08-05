@@ -27,7 +27,6 @@ User authentication, registration, password management, and multi-factor authent
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -51,7 +50,6 @@ import { authenticationDisable2fa } from "blackbox/funcs/authenticationDisable2f
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -95,7 +93,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -121,7 +118,6 @@ import { authenticationEnable2fa } from "blackbox/funcs/authenticationEnable2fa.
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -168,7 +164,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -195,7 +190,6 @@ import { authenticationLogin } from "blackbox/funcs/authenticationLogin.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -243,7 +237,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -267,7 +260,6 @@ import { authenticationLogout } from "blackbox/funcs/authenticationLogout.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -311,7 +303,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -339,7 +330,6 @@ import { authenticationRegister } from "blackbox/funcs/authenticationRegister.js
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -388,7 +378,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -414,7 +403,6 @@ import { authenticationRequestPasswordReset } from "blackbox/funcs/authenticatio
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -461,7 +449,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -487,7 +474,6 @@ import { authenticationResendVerification } from "blackbox/funcs/authenticationR
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -534,7 +520,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -561,7 +546,6 @@ import { authenticationResetPassword } from "blackbox/funcs/authenticationResetP
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -609,7 +593,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -633,7 +616,6 @@ import { authenticationSetup2fa } from "blackbox/funcs/authenticationSetup2fa.js
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -677,7 +659,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -703,7 +684,6 @@ import { authenticationVerifyEmail } from "blackbox/funcs/authenticationVerifyEm
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 

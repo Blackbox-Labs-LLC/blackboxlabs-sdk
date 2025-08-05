@@ -24,7 +24,6 @@ Intelligent workflow automation with triggers, conditions, and actions
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -51,7 +50,6 @@ import { automationExecute } from "blackbox/funcs/automationExecute.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -99,7 +97,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -125,7 +122,6 @@ import { automationList } from "blackbox/funcs/automationList.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -172,7 +168,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -222,7 +217,6 @@ import { automationCreate } from "blackbox/funcs/automationCreate.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -293,7 +287,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -320,7 +313,6 @@ import { automationGet } from "blackbox/funcs/automationGet.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -368,7 +360,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -396,7 +387,6 @@ import { automationUpdate } from "blackbox/funcs/automationUpdate.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -445,7 +435,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -472,7 +461,6 @@ import { automationDeleteRule } from "blackbox/funcs/automationDeleteRule.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -520,7 +508,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -546,7 +533,6 @@ import { automationGetStats } from "blackbox/funcs/automationGetStats.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 

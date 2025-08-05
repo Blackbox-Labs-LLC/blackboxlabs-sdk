@@ -22,7 +22,6 @@ File upload, download, and management for ticket communications
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -46,7 +45,6 @@ import { attachmentsGetStats } from "blackbox/funcs/attachmentsGetStats.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -90,7 +88,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -116,7 +113,6 @@ import { attachmentsDownload } from "blackbox/funcs/attachmentsDownload.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -163,7 +159,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -191,7 +186,6 @@ import { attachmentsList } from "blackbox/funcs/attachmentsList.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -241,7 +235,6 @@ import { Blackbox } from "blackbox";
 import { openAsBlob } from "node:fs";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -271,7 +264,6 @@ import { openAsBlob } from "node:fs";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -321,7 +313,6 @@ run();
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -350,7 +341,6 @@ import { attachmentsDelete } from "blackbox/funcs/attachmentsDelete.js";
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const blackbox = new BlackboxCore({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 

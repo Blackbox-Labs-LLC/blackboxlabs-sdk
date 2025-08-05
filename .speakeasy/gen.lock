@@ -1,16 +1,19 @@
 lockVersion: 2.0.0
 id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
 management:
-  docChecksum: a5c259d15e09455cd298dadfc168f75b
+  docChecksum: 430a6f371413e112f5d48251c3b1efd1
   docVersion: 1.0.0
-  speakeasyVersion: 1.592.2
-  generationVersion: 2.668.4
-  releaseVersion: 0.2.4
-  configChecksum: cd827e9e856a36a09a42057a78ebe6f5
+  speakeasyVersion: 1.596.1
+  generationVersion: 2.672.0
+  releaseVersion: 0.2.5
+  configChecksum: a65e5e2c6e25864255c2c9bdea595347
+  repoURL: https://github.com/Blackbox-Labs-LLC/blackbox-sdk-typescript.git
+  installationURL: https://github.com/Blackbox-Labs-LLC/blackbox-sdk-typescript
+  published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.21.17
+    core: 3.21.19
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.1.2

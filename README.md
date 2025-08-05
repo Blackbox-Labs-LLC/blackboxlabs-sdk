@@ -33,6 +33,7 @@ Blackbox Customer Support API: Enterprise-grade customer support and ticketing s
   * [File uploads](#file-uploads)
   * [Retries](#retries)
   * [Error Handling](#error-handling)
+  * [Server Selection](#server-selection)
   * [Custom HTTP Client](#custom-http-client)
   * [Debugging](#debugging)
 * [Development](#development)
@@ -44,34 +45,30 @@ Blackbox Customer Support API: Enterprise-grade customer support and ticketing s
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
-> [!TIP]
-> To finish publishing your SDK to npm and others you must [run your first generation action](https://www.speakeasy.com/docs/github-setup#step-by-step-guide).
-
-
 The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [bun](https://bun.sh/) or [yarn](https://classic.yarnpkg.com/en/) package managers.
 
 ### NPM
 
 ```bash
-npm add <UNSET>
+npm add blackbox
 ```
 
 ### PNPM
 
 ```bash
-pnpm add <UNSET>
+pnpm add blackbox
 ```
 
 ### Bun
 
 ```bash
-bun add <UNSET>
+bun add blackbox
 ```
 
 ### Yarn
 
 ```bash
-yarn add <UNSET> zod
+yarn add blackbox zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
@@ -96,7 +93,6 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -127,7 +123,6 @@ To authenticate with the API the `blackboxAuthToken` parameter must be set when 
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -451,7 +446,6 @@ import { Blackbox } from "blackbox";
 import { openAsBlob } from "node:fs";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -481,7 +475,6 @@ To change the default retry strategy for a single API call, simply provide a ret
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -511,7 +504,6 @@ If you'd like to override the default retry strategy for all operations that sup
 import { Blackbox } from "blackbox";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   retryConfig: {
     strategy: "backoff",
     backoff: {
@@ -555,7 +547,6 @@ import { Blackbox } from "blackbox";
 import * as errors from "blackbox/models/errors";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.example.com",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 
@@ -599,6 +590,61 @@ run();
 
 </details>
 <!-- End Error Handling [errors] -->
+
+<!-- Start Server Selection [server] -->
+## Server Selection
+
+### Select Server by Index
+
+You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| #   | Server                            | Description              |
+| --- | --------------------------------- | ------------------------ |
+| 0   | `http://localhost:8080`           | Local development server |
+| 1   | `https://staging.api.blckbox.dev` | Staging server           |
+| 2   | `https://api.blckbox.dev`         | Production server        |
+
+#### Example
+
+```typescript
+import { Blackbox } from "blackbox";
+
+const blackbox = new Blackbox({
+  serverIdx: 2,
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.attachments.getStats();
+
+  console.log(result);
+}
+
+run();
+
+```
+
+### Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
+```typescript
+import { Blackbox } from "blackbox";
+
+const blackbox = new Blackbox({
+  serverURL: "https://api.blckbox.dev",
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.attachments.getStats();
+
+  console.log(result);
+}
+
+run();
+
+```
+<!-- End Server Selection [server] -->
 
 <!-- Start Custom HTTP Client [http-client] -->
 ## Custom HTTP Client

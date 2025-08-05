@@ -13,6 +13,12 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class EventLogs extends ClientSDK {
+  /**
+   * List tickets with filtering
+   *
+   * @remarks
+   * Retrieves a paginated list of tickets with optional filtering by status, priority, assignment, creator, and tags. Results are ordered by creation date (newest first).
+   */
   async list(
     request: operations.ListEventsRequest,
     options?: RequestOptions,
@@ -24,6 +30,12 @@ export class EventLogs extends ClientSDK {
     ));
   }
 
+  /**
+   * Create a new support ticket
+   *
+   * @remarks
+   * Creates a new support ticket in the specified organization. The ticket will be assigned to the authenticated user as the creator and can optionally be assigned to another team member.
+   */
   async create(
     request: operations.CreateEventRequest,
     options?: RequestOptions,
@@ -57,6 +69,12 @@ export class EventLogs extends ClientSDK {
     ));
   }
 
+  /**
+   * Get ticket details
+   *
+   * @remarks
+   * Retrieves detailed information about a specific ticket including its current status, assignment, tags, and metadata.
+   */
   async get(
     request: operations.GetEventRequest,
     options?: RequestOptions,
