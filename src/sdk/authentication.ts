@@ -60,7 +60,7 @@ export class Authentication extends ClientSDK {
   async register(
     request: models.RegisterRequest,
     options?: RequestOptions,
-  ): Promise<models.ApiResponseString> {
+  ): Promise<models.ApiResponseRegisterResponse> {
     return unwrapAsync(authenticationRegister(
       this,
       request,

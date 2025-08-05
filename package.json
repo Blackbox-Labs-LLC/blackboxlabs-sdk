@@ -1,6 +1,6 @@
 {
   "name": "blackboxlabs-sdk",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "author": "Speakeasy",
   "type": "module",
   "tshy": {
@@ -21,7 +21,7 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Blackbox-Labs-LLC/blackbox-sdk-typescript.git"
+    "url": "https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk.git"
   },
   "scripts": {
     "lint": "eslint --cache --max-warnings=0 src",

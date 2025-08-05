@@ -1,14 +1,14 @@
 lockVersion: 2.0.0
 id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
 management:
-  docChecksum: 430a6f371413e112f5d48251c3b1efd1
+  docChecksum: d036478b4f5cb9dae740a3a8d5d0716f
   docVersion: 1.0.0
   speakeasyVersion: 1.596.1
   generationVersion: 2.672.0
-  releaseVersion: 0.2.6
-  configChecksum: be2d206b52aaef55058bb692b0270f7c
-  repoURL: https://github.com/Blackbox-Labs-LLC/blackbox-sdk-typescript.git
-  installationURL: https://github.com/Blackbox-Labs-LLC/blackbox-sdk-typescript
+  releaseVersion: 0.2.7
+  configChecksum: b6e24780cd027b514b94225d40622fa3
+  repoURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk.git
+  installationURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk
   published: true
 features:
   typescript:
@@ -83,6 +83,8 @@ generatedFiles:
   - docs/models/apiresponseorganizationresponsedata.md
   - docs/models/apiresponseorganizationsettingresponse.md
   - docs/models/apiresponseorganizationsettingresponsedata.md
+  - docs/models/apiresponseregisterresponse.md
+  - docs/models/apiresponseregisterresponsedata.md
   - docs/models/apiresponsesetup2faresponse.md
   - docs/models/apiresponsesetup2faresponsedata.md
   - docs/models/apiresponsestring.md
@@ -130,6 +132,8 @@ generatedFiles:
   - docs/models/apiresponsevecmembershipresponsedata.md
   - docs/models/apiresponsevecmessageresponse.md
   - docs/models/apiresponsevecmessageresponsedata.md
+  - docs/models/apiresponsevecorganizationbydomainresponse.md
+  - docs/models/apiresponsevecorganizationbydomainresponsedata.md
   - docs/models/apiresponsevecorganizationresponse.md
   - docs/models/apiresponsevecorganizationresponsedata.md
   - docs/models/apiresponsevecorganizationsettingresponse.md
@@ -174,6 +178,7 @@ generatedFiles:
   - docs/models/eventtypedelivery.md
   - docs/models/inviteuserrequest.md
   - docs/models/issuecategory.md
+  - docs/models/joinorganizationrequest.md
   - docs/models/knowledgebasestats.md
   - docs/models/loginrequest.md
   - docs/models/macrotemplaterequest.md
@@ -205,6 +210,7 @@ generatedFiles:
   - docs/models/operations/executeautomationrulesrequest.md
   - docs/models/operations/exporteventsrequest.md
   - docs/models/operations/exportsurveysrequest.md
+  - docs/models/operations/findorganizationsbyemaildomainrequest.md
   - docs/models/operations/getagentanalyticsrequest.md
   - docs/models/operations/getallorganizationsettingsrequest.md
   - docs/models/operations/getapikeyrequest.md
@@ -399,12 +405,14 @@ generatedFiles:
   - src/funcs/organizationsAcceptInvitation.ts
   - src/funcs/organizationsCreate.ts
   - src/funcs/organizationsDeleteSetting.ts
+  - src/funcs/organizationsFindOrganizationsByEmailDomain.ts
   - src/funcs/organizationsGet.ts
   - src/funcs/organizationsGetAllForUser.ts
   - src/funcs/organizationsGetMembers.ts
   - src/funcs/organizationsGetSetting.ts
   - src/funcs/organizationsGetSettings.ts
   - src/funcs/organizationsInviteUser.ts
+  - src/funcs/organizationsJoinOrganization.ts
   - src/funcs/organizationsRemoveMember.ts
   - src/funcs/organizationsSetSetting.ts
   - src/funcs/organizationsUpdateMembership.ts
@@ -481,6 +489,7 @@ generatedFiles:
   - src/models/apiresponseorganizationanalytics.ts
   - src/models/apiresponseorganizationresponse.ts
   - src/models/apiresponseorganizationsettingresponse.ts
+  - src/models/apiresponseregisterresponse.ts
   - src/models/apiresponsesetup2faresponse.ts
   - src/models/apiresponsestring.ts
   - src/models/apiresponsesurveyexport.ts
@@ -506,6 +515,7 @@ generatedFiles:
   - src/models/apiresponsevecmacroresponse.ts
   - src/models/apiresponsevecmembershipresponse.ts
   - src/models/apiresponsevecmessageresponse.ts
+  - src/models/apiresponsevecorganizationbydomainresponse.ts
   - src/models/apiresponsevecorganizationresponse.ts
   - src/models/apiresponsevecorganizationsettingresponse.ts
   - src/models/apiresponsevecstring.ts
@@ -547,6 +557,7 @@ generatedFiles:
   - src/models/index.ts
   - src/models/inviteuserrequest.ts
   - src/models/issuecategory.ts
+  - src/models/joinorganizationrequest.ts
   - src/models/knowledgebasestats.ts
   - src/models/loginrequest.ts
   - src/models/macrotemplaterequest.ts
@@ -578,6 +589,7 @@ generatedFiles:
   - src/models/operations/executeautomationrules.ts
   - src/models/operations/exportevents.ts
   - src/models/operations/exportsurveys.ts
+  - src/models/operations/findorganizationsbyemaildomain.ts
   - src/models/operations/getagentanalytics.ts
   - src/models/operations/getallorganizationsettings.ts
   - src/models/operations/getapikey.ts
@@ -1594,4 +1606,19 @@ examples:
       responses:
         "200":
           application/json: {"success": true}
+  find_organizations_by_email_domain:
+    speakeasy-default-find-organizations-by-email-domain:
+      parameters:
+        query:
+          email: "Corine19@yahoo.com"
+      responses:
+        "200":
+          application/json: {"success": false}
+  join_organization:
+    speakeasy-default-join-organization:
+      requestBody:
+        application/json: {"org_id": "e4d724fe-54bd-460a-ae9e-0a46cae348e1"}
+      responses:
+        "200":
+          application/json: {"success": false}
 examplesVersion: 1.0.2

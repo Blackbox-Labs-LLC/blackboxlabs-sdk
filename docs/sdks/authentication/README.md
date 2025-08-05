@@ -361,7 +361,7 @@ run();
 
 ### Response
 
-**Promise\<[models.ApiResponseString](../../models/apiresponsestring.md)\>**
+**Promise\<[models.ApiResponseRegisterResponse](../../models/apiresponseregisterresponse.md)\>**
 
 ### Errors
 
