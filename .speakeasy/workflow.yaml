@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     BlackBox API:
         inputs:
-            - location: ../../../Personal/blackbox/openapi.json
+            - location: https://staging-api.blckbox.dev/api-docs/openapi.json
         overlays:
             - location: .speakeasy/speakeasy-modifications-overlay.yaml
         output: .speakeasy/out.openapi.yaml
