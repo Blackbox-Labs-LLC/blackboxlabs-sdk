@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetEventRequest } from "blackbox/models/operations";
+import { GetEventRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: GetEventRequest = {
   orgId: "e823b056-e722-4b82-9f8a-5c9a5ab2b485",

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { IssueCategory } from "blackbox/models";
+import { IssueCategory } from "blackboxlabs-sdk/models";
 
 let value: IssueCategory = {
   averageScore: 1363.32,

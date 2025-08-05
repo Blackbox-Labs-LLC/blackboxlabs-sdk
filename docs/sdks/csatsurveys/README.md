@@ -41,8 +41,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { csatSurveysList } from "blackbox/funcs/csatSurveysList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { csatSurveysList } from "blackboxlabs-sdk/funcs/csatSurveysList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -116,8 +116,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { csatSurveysSubmit } from "blackbox/funcs/csatSurveysSubmit.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { csatSurveysSubmit } from "blackboxlabs-sdk/funcs/csatSurveysSubmit.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -191,8 +191,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { csatSurveysGetAnalytics } from "blackbox/funcs/csatSurveysGetAnalytics.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { csatSurveysGetAnalytics } from "blackboxlabs-sdk/funcs/csatSurveysGetAnalytics.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -262,8 +262,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { csatSurveysExport } from "blackbox/funcs/csatSurveysExport.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { csatSurveysExport } from "blackboxlabs-sdk/funcs/csatSurveysExport.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -334,8 +334,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { csatSurveysGet } from "blackbox/funcs/csatSurveysGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { csatSurveysGet } from "blackboxlabs-sdk/funcs/csatSurveysGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -408,8 +408,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { csatSurveysUpdate } from "blackbox/funcs/csatSurveysUpdate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { csatSurveysUpdate } from "blackboxlabs-sdk/funcs/csatSurveysUpdate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -482,8 +482,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { csatSurveysDelete } from "blackbox/funcs/csatSurveysDelete.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { csatSurveysDelete } from "blackboxlabs-sdk/funcs/csatSurveysDelete.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

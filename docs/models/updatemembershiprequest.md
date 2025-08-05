@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateMembershipRequest } from "blackbox/models";
+import { UpdateMembershipRequest } from "blackboxlabs-sdk/models";
 
 let value: UpdateMembershipRequest = {
   role: "<value>",

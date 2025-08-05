@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ScoreCount } from "blackbox/models";
+import { ScoreCount } from "blackboxlabs-sdk/models";
 
 let value: ScoreCount = {
   count: 156129,

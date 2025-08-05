@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateEventRequest } from "blackbox/models";
+import { CreateEventRequest } from "blackboxlabs-sdk/models";
 
 let value: CreateEventRequest = {
   eventType: "<value>",

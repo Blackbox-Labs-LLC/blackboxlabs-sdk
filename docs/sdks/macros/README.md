@@ -43,8 +43,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { macrosList } from "blackbox/funcs/macrosList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { macrosList } from "blackboxlabs-sdk/funcs/macrosList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -119,8 +119,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { macrosCreate } from "blackbox/funcs/macrosCreate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { macrosCreate } from "blackboxlabs-sdk/funcs/macrosCreate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -195,8 +195,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { macrosGetPopular } from "blackbox/funcs/macrosGetPopular.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { macrosGetPopular } from "blackboxlabs-sdk/funcs/macrosGetPopular.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -274,8 +274,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { macrosRender } from "blackbox/funcs/macrosRender.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { macrosRender } from "blackboxlabs-sdk/funcs/macrosRender.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -354,8 +354,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { macrosGet } from "blackbox/funcs/macrosGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { macrosGet } from "blackboxlabs-sdk/funcs/macrosGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -428,8 +428,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { macrosUpdate } from "blackbox/funcs/macrosUpdate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { macrosUpdate } from "blackboxlabs-sdk/funcs/macrosUpdate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -502,8 +502,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { macrosDelete } from "blackbox/funcs/macrosDelete.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { macrosDelete } from "blackboxlabs-sdk/funcs/macrosDelete.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

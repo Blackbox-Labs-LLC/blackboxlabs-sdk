@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetKnowledgeBaseAnalyticsRequest } from "blackbox/models/operations";
+import { GetKnowledgeBaseAnalyticsRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: GetKnowledgeBaseAnalyticsRequest = {
   orgId: "2d2eb7aa-50c5-4c80-9f3f-172f05a5dfea",

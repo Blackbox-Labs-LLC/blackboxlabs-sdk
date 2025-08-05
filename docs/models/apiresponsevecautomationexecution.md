@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseVecAutomationExecution } from "blackbox/models";
+import { ApiResponseVecAutomationExecution } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseVecAutomationExecution = {
   success: false,

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseSystemUsageData } from "blackbox/models";
+import { ApiResponseSystemUsageData } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseSystemUsageData = {
   activeSessions: 968754,

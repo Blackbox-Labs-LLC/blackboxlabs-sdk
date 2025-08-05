@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AttachmentResponse } from "blackbox/models";
+import { AttachmentResponse } from "blackboxlabs-sdk/models";
 
 let value: AttachmentResponse = {
   contentType: "<value>",

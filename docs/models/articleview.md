@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ArticleView } from "blackbox/models";
+import { ArticleView } from "blackboxlabs-sdk/models";
 
 let value: ArticleView = {
   articleId: "408e6a49-459b-4d35-83eb-0a9efec23838",

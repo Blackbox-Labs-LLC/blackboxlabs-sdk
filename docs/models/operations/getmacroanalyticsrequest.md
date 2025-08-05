@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetMacroAnalyticsRequest } from "blackbox/models/operations";
+import { GetMacroAnalyticsRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: GetMacroAnalyticsRequest = {
   orgId: "2266fdd5-fcca-49eb-a2fe-dfabc9b3692f",

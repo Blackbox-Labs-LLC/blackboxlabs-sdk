@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseOptionMessageResponseData } from "blackbox/models";
+import { ApiResponseOptionMessageResponseData } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseOptionMessageResponseData = {
   channel: "<value>",

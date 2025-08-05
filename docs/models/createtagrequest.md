@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateTagRequest } from "blackbox/models";
+import { CreateTagRequest } from "blackboxlabs-sdk/models";
 
 let value: CreateTagRequest = {
   color: "tan",

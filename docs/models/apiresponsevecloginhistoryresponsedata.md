@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseVecLoginHistoryResponseData } from "blackbox/models";
+import { ApiResponseVecLoginHistoryResponseData } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseVecLoginHistoryResponseData = {
   id: "ecdd96ef-302c-4eef-95b2-92547ffc5424",

@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.596.1
   generationVersion: 2.672.0
-  releaseVersion: 0.2.5
-  configChecksum: a65e5e2c6e25864255c2c9bdea595347
+  releaseVersion: 0.2.6
+  configChecksum: be2d206b52aaef55058bb692b0270f7c
   repoURL: https://github.com/Blackbox-Labs-LLC/blackbox-sdk-typescript.git
   installationURL: https://github.com/Blackbox-Labs-LLC/blackbox-sdk-typescript
   published: true

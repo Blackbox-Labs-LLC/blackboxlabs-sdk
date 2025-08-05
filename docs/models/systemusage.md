@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SystemUsage } from "blackbox/models";
+import { SystemUsage } from "blackboxlabs-sdk/models";
 
 let value: SystemUsage = {
   activeSessions: 85200,

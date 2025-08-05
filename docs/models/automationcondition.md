@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AutomationCondition } from "blackbox/models";
+import { AutomationCondition } from "blackboxlabs-sdk/models";
 
 let value: AutomationCondition = {
   field: "<value>",

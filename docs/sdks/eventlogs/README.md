@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { eventLogsList } from "blackbox/funcs/eventLogsList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { eventLogsList } from "blackboxlabs-sdk/funcs/eventLogsList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -113,8 +113,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { eventLogsCreate } from "blackbox/funcs/eventLogsCreate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { eventLogsCreate } from "blackboxlabs-sdk/funcs/eventLogsCreate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -187,8 +187,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { eventLogsExport } from "blackbox/funcs/eventLogsExport.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { eventLogsExport } from "blackboxlabs-sdk/funcs/eventLogsExport.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -258,8 +258,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { eventLogsGetStats } from "blackbox/funcs/eventLogsGetStats.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { eventLogsGetStats } from "blackboxlabs-sdk/funcs/eventLogsGetStats.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -330,8 +330,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { eventLogsGet } from "blackbox/funcs/eventLogsGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { eventLogsGet } from "blackboxlabs-sdk/funcs/eventLogsGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

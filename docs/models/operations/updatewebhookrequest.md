@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateWebhookRequest } from "blackbox/models/operations";
+import { UpdateWebhookRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: UpdateWebhookRequest = {
   orgId: "f5aa9e8d-33b8-4ea9-a2a0-4723114fb58c",

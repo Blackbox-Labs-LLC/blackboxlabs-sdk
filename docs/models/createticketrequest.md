@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateTicketRequest } from "blackbox/models";
+import { CreateTicketRequest } from "blackboxlabs-sdk/models";
 
 let value: CreateTicketRequest = {
   description: "inborn gah probe",

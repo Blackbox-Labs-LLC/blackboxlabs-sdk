@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateWebhookRequest } from "blackbox/models";
+import { CreateWebhookRequest } from "blackboxlabs-sdk/models";
 
 let value: CreateWebhookRequest = {
   description: "https://api.example.com/webhooks/blackbox",

@@ -1,5 +1,5 @@
 {
-  "name": "blackbox-examples",
+  "name": "blackboxlabs-sdk-examples",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,6 @@
     "tsx": "^4.19.2"
   },
   "dependencies": {
-    "blackbox": "file:.."
+    "blackboxlabs-sdk": "file:.."
   }
 }

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateMessageRequest } from "blackbox/models";
+import { CreateMessageRequest } from "blackboxlabs-sdk/models";
 
 let value: CreateMessageRequest = {
   channel: "<value>",

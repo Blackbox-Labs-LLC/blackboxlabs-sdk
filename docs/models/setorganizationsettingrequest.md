@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SetOrganizationSettingRequest } from "blackbox/models";
+import { SetOrganizationSettingRequest } from "blackboxlabs-sdk/models";
 
 let value: SetOrganizationSettingRequest = {
   key: "<key>",

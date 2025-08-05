@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RuleActivity } from "blackbox/models";
+import { RuleActivity } from "blackboxlabs-sdk/models";
 
 let value: RuleActivity = {
   executionCount: 620423,

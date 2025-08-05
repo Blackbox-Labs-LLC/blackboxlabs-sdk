@@ -1,6 +1,6 @@
-# blackbox Examples
+# blackboxlabs-sdk Examples
 
-This directory contains example scripts demonstrating how to use the blackbox SDK.
+This directory contains example scripts demonstrating how to use the blackboxlabs-sdk SDK.
 
 ## Prerequisites
 

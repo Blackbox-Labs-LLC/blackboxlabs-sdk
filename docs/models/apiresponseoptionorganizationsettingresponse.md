@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseOptionOrganizationSettingResponse } from "blackbox/models";
+import { ApiResponseOptionOrganizationSettingResponse } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseOptionOrganizationSettingResponse = {
   success: false,

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateMessageRequest } from "blackbox/models/operations";
+import { CreateMessageRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: CreateMessageRequest = {
   orgId: "26e3a13d-b759-4549-8143-9c6f4cf19020",

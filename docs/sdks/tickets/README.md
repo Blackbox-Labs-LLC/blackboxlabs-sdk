@@ -45,8 +45,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { ticketsList } from "blackbox/funcs/ticketsList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { ticketsList } from "blackboxlabs-sdk/funcs/ticketsList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -123,8 +123,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { ticketsCreate } from "blackbox/funcs/ticketsCreate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { ticketsCreate } from "blackboxlabs-sdk/funcs/ticketsCreate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -202,8 +202,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { ticketsGet } from "blackbox/funcs/ticketsGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { ticketsGet } from "blackboxlabs-sdk/funcs/ticketsGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -276,8 +276,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { ticketsUpdate } from "blackbox/funcs/ticketsUpdate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { ticketsUpdate } from "blackboxlabs-sdk/funcs/ticketsUpdate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -350,8 +350,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { ticketsDelete } from "blackbox/funcs/ticketsDelete.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { ticketsDelete } from "blackboxlabs-sdk/funcs/ticketsDelete.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -426,8 +426,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { ticketsAddTags } from "blackbox/funcs/ticketsAddTags.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { ticketsAddTags } from "blackboxlabs-sdk/funcs/ticketsAddTags.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -509,8 +509,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { ticketsRemoveTags } from "blackbox/funcs/ticketsRemoveTags.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { ticketsRemoveTags } from "blackboxlabs-sdk/funcs/ticketsRemoveTags.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseWebhookTestResultData } from "blackbox/models";
+import { ApiResponseWebhookTestResultData } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseWebhookTestResultData = {
   responseTimeMs: 144162,

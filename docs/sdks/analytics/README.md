@@ -43,8 +43,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { analyticsGet } from "blackbox/funcs/analyticsGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { analyticsGet } from "blackboxlabs-sdk/funcs/analyticsGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -114,8 +114,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { analyticsGetAgents } from "blackbox/funcs/analyticsGetAgents.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { analyticsGetAgents } from "blackboxlabs-sdk/funcs/analyticsGetAgents.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -185,8 +185,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { analyticsGetKnowledgeBase } from "blackbox/funcs/analyticsGetKnowledgeBase.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { analyticsGetKnowledgeBase } from "blackboxlabs-sdk/funcs/analyticsGetKnowledgeBase.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -256,8 +256,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { analyticsGetMacros } from "blackbox/funcs/analyticsGetMacros.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { analyticsGetMacros } from "blackboxlabs-sdk/funcs/analyticsGetMacros.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -327,8 +327,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { analyticsGetSystem } from "blackbox/funcs/analyticsGetSystem.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { analyticsGetSystem } from "blackboxlabs-sdk/funcs/analyticsGetSystem.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -398,8 +398,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { analyticsGetTickets } from "blackbox/funcs/analyticsGetTickets.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { analyticsGetTickets } from "blackboxlabs-sdk/funcs/analyticsGetTickets.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -469,8 +469,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { analyticsGetTrends } from "blackbox/funcs/analyticsGetTrends.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { analyticsGetTrends } from "blackboxlabs-sdk/funcs/analyticsGetTrends.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

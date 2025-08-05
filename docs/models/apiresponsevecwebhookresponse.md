@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseVecWebhookResponse } from "blackbox/models";
+import { ApiResponseVecWebhookResponse } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseVecWebhookResponse = {
   success: false,

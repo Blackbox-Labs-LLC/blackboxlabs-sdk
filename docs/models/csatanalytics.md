@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CSATAnalytics } from "blackbox/models";
+import { CSATAnalytics } from "blackboxlabs-sdk/models";
 
 let value: CSATAnalytics = {
   agentSatisfaction: [],

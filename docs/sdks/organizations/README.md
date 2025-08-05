@@ -46,8 +46,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsGetAllForUser } from "blackbox/funcs/organizationsGetAllForUser.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsGetAllForUser } from "blackboxlabs-sdk/funcs/organizationsGetAllForUser.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -115,8 +115,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsCreate } from "blackbox/funcs/organizationsCreate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsCreate } from "blackboxlabs-sdk/funcs/organizationsCreate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -187,8 +187,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsGet } from "blackbox/funcs/organizationsGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsGet } from "blackboxlabs-sdk/funcs/organizationsGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -258,8 +258,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsAcceptInvitation } from "blackbox/funcs/organizationsAcceptInvitation.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsAcceptInvitation } from "blackboxlabs-sdk/funcs/organizationsAcceptInvitation.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -333,8 +333,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsInviteUser } from "blackbox/funcs/organizationsInviteUser.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsInviteUser } from "blackboxlabs-sdk/funcs/organizationsInviteUser.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -408,8 +408,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsGetMembers } from "blackbox/funcs/organizationsGetMembers.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsGetMembers } from "blackboxlabs-sdk/funcs/organizationsGetMembers.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -484,8 +484,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsUpdateMembership } from "blackbox/funcs/organizationsUpdateMembership.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsUpdateMembership } from "blackboxlabs-sdk/funcs/organizationsUpdateMembership.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -561,8 +561,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsRemoveMember } from "blackbox/funcs/organizationsRemoveMember.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsRemoveMember } from "blackboxlabs-sdk/funcs/organizationsRemoveMember.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -633,8 +633,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsGetSettings } from "blackbox/funcs/organizationsGetSettings.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsGetSettings } from "blackboxlabs-sdk/funcs/organizationsGetSettings.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -708,8 +708,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsSetSetting } from "blackbox/funcs/organizationsSetSetting.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsSetSetting } from "blackboxlabs-sdk/funcs/organizationsSetSetting.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -784,8 +784,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsGetSetting } from "blackbox/funcs/organizationsGetSetting.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsGetSetting } from "blackboxlabs-sdk/funcs/organizationsGetSetting.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -857,8 +857,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { organizationsDeleteSetting } from "blackbox/funcs/organizationsDeleteSetting.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsDeleteSetting } from "blackboxlabs-sdk/funcs/organizationsDeleteSetting.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

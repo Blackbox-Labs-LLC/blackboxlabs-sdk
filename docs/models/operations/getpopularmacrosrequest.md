@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetPopularMacrosRequest } from "blackbox/models/operations";
+import { GetPopularMacrosRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: GetPopularMacrosRequest = {
   orgId: "911edda3-d6b4-4094-b5f9-0f7b7710834f",

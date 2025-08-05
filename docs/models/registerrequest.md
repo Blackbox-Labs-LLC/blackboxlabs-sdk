@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RegisterRequest } from "blackbox/models";
+import { RegisterRequest } from "blackboxlabs-sdk/models";
 
 let value: RegisterRequest = {
   email: "Thora98@hotmail.com",

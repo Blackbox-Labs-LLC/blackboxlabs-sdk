@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DailyCount } from "blackbox/models";
+import { DailyCount } from "blackboxlabs-sdk/models";
 
 let value: DailyCount = {
   count: 951948,

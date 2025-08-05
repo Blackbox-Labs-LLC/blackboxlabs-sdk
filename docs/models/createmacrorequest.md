@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateMacroRequest } from "blackbox/models";
+import { CreateMacroRequest } from "blackboxlabs-sdk/models";
 
 let value: CreateMacroRequest = {
   content: "<value>",

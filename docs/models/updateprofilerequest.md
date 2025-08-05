@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateProfileRequest } from "blackbox/models";
+import { UpdateProfileRequest } from "blackboxlabs-sdk/models";
 
 let value: UpdateProfileRequest = {};
 ```

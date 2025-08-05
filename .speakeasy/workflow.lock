@@ -6,7 +6,6 @@ sources:
         sourceBlobDigest: sha256:a8dccf6d96e339bbe28d5bdd0851df278a20fde16b233252594d0422a23918bf
         tags:
             - latest
-            - speakeasy-sdk-regen-1754361205
             - 1.0.0
 targets:
     blackbox:
@@ -16,6 +15,13 @@ targets:
         sourceBlobDigest: sha256:a8dccf6d96e339bbe28d5bdd0851df278a20fde16b233252594d0422a23918bf
         codeSamplesNamespace: black-box-api-typescript-code-samples
         codeSamplesRevisionDigest: sha256:4915b05cca0b43edb0a5972fab376c846d02c246f1f768f53976ef40af362704
+    blackboxlabs-sdk:
+        source: BlackBox API
+        sourceNamespace: black-box-api
+        sourceRevisionDigest: sha256:234b00a3770d552079ce128498739ada2fe14e370e18990dfe9da4b1299adf72
+        sourceBlobDigest: sha256:a8dccf6d96e339bbe28d5bdd0851df278a20fde16b233252594d0422a23918bf
+        codeSamplesNamespace: black-box-api-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:a3ea0ec662053ecd3ba8393bbada651e13027a2966b48eb32f5338993b815f1e
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -29,7 +35,7 @@ workflow:
             registry:
                 location: registry.speakeasyapi.dev/blackbox/api/black-box-api
     targets:
-        blackbox:
+        blackboxlabs-sdk:
             target: typescript
             source: BlackBox API
             publish:

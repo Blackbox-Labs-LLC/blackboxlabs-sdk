@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { VerifyEmailRequest } from "blackbox/models";
+import { VerifyEmailRequest } from "blackboxlabs-sdk/models";
 
 let value: VerifyEmailRequest = {
   token: "<value>",

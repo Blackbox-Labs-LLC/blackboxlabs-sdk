@@ -19,8 +19,8 @@ specific category of applications.
 ## Example
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { attachmentsGetStats } from "blackbox/funcs/attachmentsGetStats.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { attachmentsGetStats } from "blackboxlabs-sdk/funcs/attachmentsGetStats.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

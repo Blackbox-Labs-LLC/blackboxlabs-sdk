@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseVecEventLogResponseData } from "blackbox/models";
+import { ApiResponseVecEventLogResponseData } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseVecEventLogResponseData = {
   createdAt: "1704386760132",

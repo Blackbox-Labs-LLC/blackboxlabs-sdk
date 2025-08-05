@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UserOrgMembership } from "blackbox/models";
+import { UserOrgMembership } from "blackboxlabs-sdk/models";
 
 let value: UserOrgMembership = {
   joinedAt: "<value>",

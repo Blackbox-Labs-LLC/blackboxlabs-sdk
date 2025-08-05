@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateMacroRequest } from "blackbox/models/operations";
+import { CreateMacroRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: CreateMacroRequest = {
   orgId: "4e37d0c1-f5d2-4db2-9ef2-e8903c746025",

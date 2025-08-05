@@ -37,8 +37,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { apiKeysList } from "blackbox/funcs/apiKeysList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { apiKeysList } from "blackboxlabs-sdk/funcs/apiKeysList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -109,8 +109,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { apiKeysCreate } from "blackbox/funcs/apiKeysCreate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { apiKeysCreate } from "blackboxlabs-sdk/funcs/apiKeysCreate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -183,8 +183,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { apiKeysGet } from "blackbox/funcs/apiKeysGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { apiKeysGet } from "blackboxlabs-sdk/funcs/apiKeysGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -254,8 +254,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { apiKeysDelete } from "blackbox/funcs/apiKeysDelete.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { apiKeysDelete } from "blackboxlabs-sdk/funcs/apiKeysDelete.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -325,8 +325,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { apiKeysRevoke } from "blackbox/funcs/apiKeysRevoke.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { apiKeysRevoke } from "blackboxlabs-sdk/funcs/apiKeysRevoke.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

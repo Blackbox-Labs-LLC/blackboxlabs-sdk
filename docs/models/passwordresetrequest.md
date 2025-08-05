@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PasswordResetRequest } from "blackbox/models";
+import { PasswordResetRequest } from "blackboxlabs-sdk/models";
 
 let value: PasswordResetRequest = {
   email: "Kiana.Gislason@gmail.com",

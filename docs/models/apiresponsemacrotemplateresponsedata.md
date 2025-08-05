@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseMacroTemplateResponseData } from "blackbox/models";
+import { ApiResponseMacroTemplateResponseData } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseMacroTemplateResponseData = {
   macroId: "a2fbe537-35ef-4ccf-997d-2a7816cc362f",

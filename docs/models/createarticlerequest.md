@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateArticleRequest } from "blackbox/models";
+import { CreateArticleRequest } from "blackboxlabs-sdk/models";
 
 let value: CreateArticleRequest = {
   content: "<value>",

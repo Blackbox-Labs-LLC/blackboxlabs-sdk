@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { WebhookDelivery } from "blackbox/models";
+import { WebhookDelivery } from "blackboxlabs-sdk/models";
 
 let value: WebhookDelivery = {
   attemptCount: 683948,

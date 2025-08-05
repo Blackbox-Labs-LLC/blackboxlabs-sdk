@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SurveyResponse } from "blackbox/models";
+import { SurveyResponse } from "blackboxlabs-sdk/models";
 
 let value: SurveyResponse = {
   createdAt: "1714938060726",

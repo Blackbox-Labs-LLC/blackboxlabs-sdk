@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RenderMacroTemplateRequest } from "blackbox/models/operations";
+import { RenderMacroTemplateRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: RenderMacroTemplateRequest = {
   orgId: "de48de87-390c-476e-a127-f0ee4409951a",

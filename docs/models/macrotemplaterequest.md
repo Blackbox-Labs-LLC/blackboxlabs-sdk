@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { MacroTemplateRequest } from "blackbox/models";
+import { MacroTemplateRequest } from "blackboxlabs-sdk/models";
 
 let value: MacroTemplateRequest = {
   macroId: "31029d6c-f17c-4763-9ebb-e312c1af946b",

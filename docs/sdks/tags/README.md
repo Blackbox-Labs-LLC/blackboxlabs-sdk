@@ -43,8 +43,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { tagsList } from "blackbox/funcs/tagsList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { tagsList } from "blackboxlabs-sdk/funcs/tagsList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -118,8 +118,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { tagsCreate } from "blackbox/funcs/tagsCreate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { tagsCreate } from "blackboxlabs-sdk/funcs/tagsCreate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -193,8 +193,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { tagsGetPopular } from "blackbox/funcs/tagsGetPopular.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { tagsGetPopular } from "blackboxlabs-sdk/funcs/tagsGetPopular.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -265,8 +265,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { tagsGet } from "blackbox/funcs/tagsGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { tagsGet } from "blackboxlabs-sdk/funcs/tagsGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -339,8 +339,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { tagsUpdate } from "blackbox/funcs/tagsUpdate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { tagsUpdate } from "blackboxlabs-sdk/funcs/tagsUpdate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -413,8 +413,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { tagsDelete } from "blackbox/funcs/tagsDelete.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { tagsDelete } from "blackboxlabs-sdk/funcs/tagsDelete.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -486,8 +486,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { tagsGetWithTickets } from "blackbox/funcs/tagsGetWithTickets.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { tagsGetWithTickets } from "blackboxlabs-sdk/funcs/tagsGetWithTickets.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

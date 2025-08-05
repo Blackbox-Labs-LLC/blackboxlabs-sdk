@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UserOrgInfo } from "blackbox/models";
+import { UserOrgInfo } from "blackboxlabs-sdk/models";
 
 let value: UserOrgInfo = {
   domain: "portly-mozzarella.net",

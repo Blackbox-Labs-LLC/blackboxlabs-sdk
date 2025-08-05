@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TagManagementRequest } from "blackbox/models";
+import { TagManagementRequest } from "blackboxlabs-sdk/models";
 
 let value: TagManagementRequest = {
   tagIds: [],

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AutomationAction } from "blackbox/models";
+import { AutomationAction } from "blackboxlabs-sdk/models";
 
 let value: AutomationAction = {
   actionType: "<value>",

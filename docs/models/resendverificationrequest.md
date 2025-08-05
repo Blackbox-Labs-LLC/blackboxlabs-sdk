@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ResendVerificationRequest } from "blackbox/models";
+import { ResendVerificationRequest } from "blackboxlabs-sdk/models";
 
 let value: ResendVerificationRequest = {
   email: "Myah.Renner@gmail.com",

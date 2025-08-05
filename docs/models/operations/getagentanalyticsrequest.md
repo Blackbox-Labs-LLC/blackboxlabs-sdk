@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetAgentAnalyticsRequest } from "blackbox/models/operations";
+import { GetAgentAnalyticsRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: GetAgentAnalyticsRequest = {
   orgId: "666a8497-aa8a-43a8-a757-82ea9cb511ed",

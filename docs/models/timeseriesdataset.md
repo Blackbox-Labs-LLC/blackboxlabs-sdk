@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TimeSeriesDataset } from "blackbox/models";
+import { TimeSeriesDataset } from "blackboxlabs-sdk/models";
 
 let value: TimeSeriesDataset = {
   color: "sky blue",

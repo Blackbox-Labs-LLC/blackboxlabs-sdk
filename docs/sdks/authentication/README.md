@@ -44,8 +44,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationDisable2fa } from "blackbox/funcs/authenticationDisable2fa.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationDisable2fa } from "blackboxlabs-sdk/funcs/authenticationDisable2fa.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -112,8 +112,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationEnable2fa } from "blackbox/funcs/authenticationEnable2fa.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationEnable2fa } from "blackboxlabs-sdk/funcs/authenticationEnable2fa.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -184,8 +184,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationLogin } from "blackbox/funcs/authenticationLogin.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationLogin } from "blackboxlabs-sdk/funcs/authenticationLogin.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -254,8 +254,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationLogout } from "blackbox/funcs/authenticationLogout.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationLogout } from "blackboxlabs-sdk/funcs/authenticationLogout.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -324,8 +324,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationRegister } from "blackbox/funcs/authenticationRegister.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationRegister } from "blackboxlabs-sdk/funcs/authenticationRegister.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -397,8 +397,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationRequestPasswordReset } from "blackbox/funcs/authenticationRequestPasswordReset.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationRequestPasswordReset } from "blackboxlabs-sdk/funcs/authenticationRequestPasswordReset.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -468,8 +468,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationResendVerification } from "blackbox/funcs/authenticationResendVerification.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationResendVerification } from "blackboxlabs-sdk/funcs/authenticationResendVerification.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -540,8 +540,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationResetPassword } from "blackbox/funcs/authenticationResetPassword.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationResetPassword } from "blackboxlabs-sdk/funcs/authenticationResetPassword.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -610,8 +610,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationSetup2fa } from "blackbox/funcs/authenticationSetup2fa.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationSetup2fa } from "blackboxlabs-sdk/funcs/authenticationSetup2fa.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -678,8 +678,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { authenticationVerifyEmail } from "blackbox/funcs/authenticationVerifyEmail.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { authenticationVerifyEmail } from "blackboxlabs-sdk/funcs/authenticationVerifyEmail.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

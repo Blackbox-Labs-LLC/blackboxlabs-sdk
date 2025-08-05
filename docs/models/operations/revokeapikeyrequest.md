@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { RevokeApiKeyRequest } from "blackbox/models/operations";
+import { RevokeApiKeyRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: RevokeApiKeyRequest = {
   keyId: "2fb3500e-ef19-4b19-aa7d-f4fbfdfa0ac4",

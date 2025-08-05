@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateApiKeyRequest } from "blackbox/models";
+import { CreateApiKeyRequest } from "blackboxlabs-sdk/models";
 
 let value: CreateApiKeyRequest = {
   name: "<value>",

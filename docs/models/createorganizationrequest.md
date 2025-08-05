@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { CreateOrganizationRequest } from "blackbox/models";
+import { CreateOrganizationRequest } from "blackboxlabs-sdk/models";
 
 let value: CreateOrganizationRequest = {
   domain: "damp-cutover.net",

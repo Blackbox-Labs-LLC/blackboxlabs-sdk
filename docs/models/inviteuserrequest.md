@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { InviteUserRequest } from "blackbox/models";
+import { InviteUserRequest } from "blackboxlabs-sdk/models";
 
 let value: InviteUserRequest = {
   email: "Mac_OConner@yahoo.com",

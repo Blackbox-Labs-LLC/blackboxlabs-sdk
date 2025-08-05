@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { AgentActivity } from "blackbox/models";
+import { AgentActivity } from "blackboxlabs-sdk/models";
 
 let value: AgentActivity = {
   agentId: "7c251a3f-e2ea-4075-b1c2-6e02f9dc8651",

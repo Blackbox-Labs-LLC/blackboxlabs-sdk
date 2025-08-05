@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TagTicketResponse } from "blackbox/models";
+import { TagTicketResponse } from "blackboxlabs-sdk/models";
 
 let value: TagTicketResponse = {
   createdAt: "1733898118386",

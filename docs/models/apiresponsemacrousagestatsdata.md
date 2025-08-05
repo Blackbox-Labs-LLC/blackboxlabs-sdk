@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseMacroUsageStatsData } from "blackbox/models";
+import { ApiResponseMacroUsageStatsData } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseMacroUsageStatsData = {
   macrosUsedThisMonth: 609991,

@@ -40,8 +40,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { usersDeleteAccount } from "blackbox/funcs/usersDeleteAccount.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { usersDeleteAccount } from "blackboxlabs-sdk/funcs/usersDeleteAccount.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -106,8 +106,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { usersGetLoginAttempts } from "blackbox/funcs/usersGetLoginAttempts.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { usersGetLoginAttempts } from "blackboxlabs-sdk/funcs/usersGetLoginAttempts.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -173,8 +173,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { usersGetLoginHistory } from "blackbox/funcs/usersGetLoginHistory.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { usersGetLoginHistory } from "blackboxlabs-sdk/funcs/usersGetLoginHistory.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -243,8 +243,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { usersChangePassword } from "blackbox/funcs/usersChangePassword.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { usersChangePassword } from "blackboxlabs-sdk/funcs/usersChangePassword.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -313,8 +313,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { usersGetProfile } from "blackbox/funcs/usersGetProfile.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { usersGetProfile } from "blackboxlabs-sdk/funcs/usersGetProfile.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -379,8 +379,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { usersUpdateProfile } from "blackbox/funcs/usersUpdateProfile.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { usersUpdateProfile } from "blackboxlabs-sdk/funcs/usersUpdateProfile.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

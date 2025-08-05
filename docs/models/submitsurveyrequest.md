@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { SubmitSurveyRequest } from "blackbox/models";
+import { SubmitSurveyRequest } from "blackboxlabs-sdk/models";
 
 let value: SubmitSurveyRequest = {
   score: 16037,

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseTagWithTicketsResponseData } from "blackbox/models";
+import { ApiResponseTagWithTicketsResponseData } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseTagWithTicketsResponseData = {
   color: "salmon",

@@ -41,8 +41,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { knowledgeBaseListArticles } from "blackbox/funcs/knowledgeBaseListArticles.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { knowledgeBaseListArticles } from "blackboxlabs-sdk/funcs/knowledgeBaseListArticles.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -117,8 +117,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { knowledgeBaseCreateArticle } from "blackbox/funcs/knowledgeBaseCreateArticle.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { knowledgeBaseCreateArticle } from "blackboxlabs-sdk/funcs/knowledgeBaseCreateArticle.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -194,8 +194,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { knowledgeBaseGetArticle } from "blackbox/funcs/knowledgeBaseGetArticle.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { knowledgeBaseGetArticle } from "blackboxlabs-sdk/funcs/knowledgeBaseGetArticle.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -268,8 +268,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { knowledgeBaseUpdateArticle } from "blackbox/funcs/knowledgeBaseUpdateArticle.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { knowledgeBaseUpdateArticle } from "blackboxlabs-sdk/funcs/knowledgeBaseUpdateArticle.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -342,8 +342,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { knowledgeBaseDeleteArticle } from "blackbox/funcs/knowledgeBaseDeleteArticle.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { knowledgeBaseDeleteArticle } from "blackboxlabs-sdk/funcs/knowledgeBaseDeleteArticle.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -414,8 +414,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { knowledgeBaseGetPublicArticles } from "blackbox/funcs/knowledgeBaseGetPublicArticles.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { knowledgeBaseGetPublicArticles } from "blackboxlabs-sdk/funcs/knowledgeBaseGetPublicArticles.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -486,8 +486,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { knowledgeBaseSearchPublicArticles } from "blackbox/funcs/knowledgeBaseSearchPublicArticles.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { knowledgeBaseSearchPublicArticles } from "blackboxlabs-sdk/funcs/knowledgeBaseSearchPublicArticles.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

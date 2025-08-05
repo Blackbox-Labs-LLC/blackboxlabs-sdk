@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetLoginAttemptsRequest } from "blackbox/models/operations";
+import { GetLoginAttemptsRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: GetLoginAttemptsRequest = {};
 ```

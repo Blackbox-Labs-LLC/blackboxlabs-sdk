@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { PriorityCount } from "blackbox/models";
+import { PriorityCount } from "blackboxlabs-sdk/models";
 
 let value: PriorityCount = {
   count: 820003,

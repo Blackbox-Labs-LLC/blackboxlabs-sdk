@@ -44,8 +44,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { messagesGet } from "blackbox/funcs/messagesGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { messagesGet } from "blackboxlabs-sdk/funcs/messagesGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -117,8 +117,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { messagesDelete } from "blackbox/funcs/messagesDelete.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { messagesDelete } from "blackboxlabs-sdk/funcs/messagesDelete.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -190,8 +190,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { messagesList } from "blackbox/funcs/messagesList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { messagesList } from "blackboxlabs-sdk/funcs/messagesList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -267,8 +267,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { messagesCreate } from "blackbox/funcs/messagesCreate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { messagesCreate } from "blackboxlabs-sdk/funcs/messagesCreate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -344,8 +344,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { messagesCount } from "blackbox/funcs/messagesCount.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { messagesCount } from "blackboxlabs-sdk/funcs/messagesCount.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -417,8 +417,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { messagesGetLatest } from "blackbox/funcs/messagesGetLatest.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { messagesGetLatest } from "blackboxlabs-sdk/funcs/messagesGetLatest.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -491,8 +491,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { messagesSearch } from "blackbox/funcs/messagesSearch.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { messagesSearch } from "blackboxlabs-sdk/funcs/messagesSearch.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

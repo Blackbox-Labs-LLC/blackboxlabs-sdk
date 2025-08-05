@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { DeleteWebhookRequest } from "blackbox/models/operations";
+import { DeleteWebhookRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: DeleteWebhookRequest = {
   orgId: "76a37d66-e5f5-49d2-86bd-a10aea3555e8",

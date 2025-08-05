@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ApiResponseVecWebhookDeliveryData } from "blackbox/models";
+import { ApiResponseVecWebhookDeliveryData } from "blackboxlabs-sdk/models";
 
 let value: ApiResponseVecWebhookDeliveryData = {
   attemptCount: 713611,

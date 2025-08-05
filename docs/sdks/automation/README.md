@@ -44,8 +44,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { automationExecute } from "blackbox/funcs/automationExecute.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { automationExecute } from "blackboxlabs-sdk/funcs/automationExecute.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -116,8 +116,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { automationList } from "blackbox/funcs/automationList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { automationList } from "blackboxlabs-sdk/funcs/automationList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -211,8 +211,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { automationCreate } from "blackbox/funcs/automationCreate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { automationCreate } from "blackboxlabs-sdk/funcs/automationCreate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -307,8 +307,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { automationGet } from "blackbox/funcs/automationGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { automationGet } from "blackboxlabs-sdk/funcs/automationGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -381,8 +381,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { automationUpdate } from "blackbox/funcs/automationUpdate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { automationUpdate } from "blackboxlabs-sdk/funcs/automationUpdate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -455,8 +455,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { automationDeleteRule } from "blackbox/funcs/automationDeleteRule.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { automationDeleteRule } from "blackboxlabs-sdk/funcs/automationDeleteRule.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -527,8 +527,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { automationGetStats } from "blackbox/funcs/automationGetStats.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { automationGetStats } from "blackboxlabs-sdk/funcs/automationGetStats.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

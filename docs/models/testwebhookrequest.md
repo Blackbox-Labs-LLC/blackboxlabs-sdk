@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TestWebhookRequest } from "blackbox/models";
+import { TestWebhookRequest } from "blackboxlabs-sdk/models";
 
 let value: TestWebhookRequest = {
   eventType: "<value>",

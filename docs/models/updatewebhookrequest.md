@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateWebhookRequest } from "blackbox/models";
+import { UpdateWebhookRequest } from "blackboxlabs-sdk/models";
 
 let value: UpdateWebhookRequest = {};
 ```

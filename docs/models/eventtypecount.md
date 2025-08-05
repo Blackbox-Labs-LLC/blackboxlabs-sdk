@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { EventTypeCount } from "blackbox/models";
+import { EventTypeCount } from "blackboxlabs-sdk/models";
 
 let value: EventTypeCount = {
   count: 951249,

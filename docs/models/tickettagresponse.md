@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { TicketTagResponse } from "blackbox/models";
+import { TicketTagResponse } from "blackboxlabs-sdk/models";
 
 let value: TicketTagResponse = {
   color: "fuchsia",

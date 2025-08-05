@@ -542,7 +542,7 @@ run();
 ### Example
 ```typescript
 import { Blackbox } from "blackboxlabs-sdk";
-import * as errors from "blackbox/models/errors";
+import * as errors from "blackboxlabs-sdk/models/errors";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -663,7 +663,7 @@ to log errors:
 
 ```typescript
 import { Blackbox } from "blackboxlabs-sdk";
-import { HTTPClient } from "blackbox/lib/http";
+import { HTTPClient } from "blackboxlabs-sdk/lib/http";
 
 const httpClient = new HTTPClient({
   // fetcher takes a function that has the same signature as native `fetch`.

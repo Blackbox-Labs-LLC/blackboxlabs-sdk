@@ -45,8 +45,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { webhooksList } from "blackbox/funcs/webhooksList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { webhooksList } from "blackboxlabs-sdk/funcs/webhooksList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -125,8 +125,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { webhooksCreate } from "blackbox/funcs/webhooksCreate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { webhooksCreate } from "blackboxlabs-sdk/funcs/webhooksCreate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -205,8 +205,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { webhooksListEvents } from "blackbox/funcs/webhooksListEvents.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { webhooksListEvents } from "blackboxlabs-sdk/funcs/webhooksListEvents.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -277,8 +277,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { webhooksSend } from "blackbox/funcs/webhooksSend.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { webhooksSend } from "blackboxlabs-sdk/funcs/webhooksSend.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -349,8 +349,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { webhooksGetStats } from "blackbox/funcs/webhooksGetStats.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { webhooksGetStats } from "blackboxlabs-sdk/funcs/webhooksGetStats.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -421,8 +421,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { webhooksGet } from "blackbox/funcs/webhooksGet.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { webhooksGet } from "blackboxlabs-sdk/funcs/webhooksGet.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -495,8 +495,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { webhooksUpdate } from "blackbox/funcs/webhooksUpdate.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { webhooksUpdate } from "blackboxlabs-sdk/funcs/webhooksUpdate.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -569,8 +569,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { webhooksDelete } from "blackbox/funcs/webhooksDelete.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { webhooksDelete } from "blackboxlabs-sdk/funcs/webhooksDelete.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -645,8 +645,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { webhooksTest } from "blackbox/funcs/webhooksTest.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { webhooksTest } from "blackboxlabs-sdk/funcs/webhooksTest.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

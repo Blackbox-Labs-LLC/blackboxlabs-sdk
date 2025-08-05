@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { attachmentsGetStats } from "blackbox/funcs/attachmentsGetStats.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { attachmentsGetStats } from "blackboxlabs-sdk/funcs/attachmentsGetStats.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -107,8 +107,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { attachmentsDownload } from "blackbox/funcs/attachmentsDownload.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { attachmentsDownload } from "blackboxlabs-sdk/funcs/attachmentsDownload.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -180,8 +180,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { attachmentsList } from "blackbox/funcs/attachmentsList.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { attachmentsList } from "blackboxlabs-sdk/funcs/attachmentsList.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -257,8 +257,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { attachmentsUpload } from "blackbox/funcs/attachmentsUpload.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { attachmentsUpload } from "blackboxlabs-sdk/funcs/attachmentsUpload.js";
 import { openAsBlob } from "node:fs";
 
 // Use `BlackboxCore` for best tree-shaking performance.
@@ -335,8 +335,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { BlackboxCore } from "blackbox/core.js";
-import { attachmentsDelete } from "blackbox/funcs/attachmentsDelete.js";
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { attachmentsDelete } from "blackboxlabs-sdk/funcs/attachmentsDelete.js";
 
 // Use `BlackboxCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

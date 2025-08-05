@@ -5,13 +5,13 @@
 import dotenv from "dotenv";
 dotenv.config();
 /**
- * Example usage of the blackbox SDK
+ * Example usage of the blackboxlabs-sdk SDK
  *
  * To run this example from the examples directory:
  * npm run build && npx tsx attachmentsGetStats.ts
  */
 
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

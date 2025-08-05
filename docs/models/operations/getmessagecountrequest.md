@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetMessageCountRequest } from "blackbox/models/operations";
+import { GetMessageCountRequest } from "blackboxlabs-sdk/models/operations";
 
 let value: GetMessageCountRequest = {
   orgId: "3c846352-eafb-42f6-8493-d0dcb3d4cfa5",
