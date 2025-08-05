@@ -27,6 +27,7 @@ export * from "./downloadattachment.js";
 export * from "./executeautomationrules.js";
 export * from "./exportevents.js";
 export * from "./exportsurveys.js";
+export * from "./findorganizationsbyemaildomain.js";
 export * from "./getagentanalytics.js";
 export * from "./getallorganizationsettings.js";
 export * from "./getapikey.js";

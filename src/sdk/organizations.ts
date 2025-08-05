@@ -5,12 +5,14 @@
 import { organizationsAcceptInvitation } from "../funcs/organizationsAcceptInvitation.js";
 import { organizationsCreate } from "../funcs/organizationsCreate.js";
 import { organizationsDeleteSetting } from "../funcs/organizationsDeleteSetting.js";
+import { organizationsFindOrganizationsByEmailDomain } from "../funcs/organizationsFindOrganizationsByEmailDomain.js";
 import { organizationsGet } from "../funcs/organizationsGet.js";
 import { organizationsGetAllForUser } from "../funcs/organizationsGetAllForUser.js";
 import { organizationsGetMembers } from "../funcs/organizationsGetMembers.js";
 import { organizationsGetSetting } from "../funcs/organizationsGetSetting.js";
 import { organizationsGetSettings } from "../funcs/organizationsGetSettings.js";
 import { organizationsInviteUser } from "../funcs/organizationsInviteUser.js";
+import { organizationsJoinOrganization } from "../funcs/organizationsJoinOrganization.js";
 import { organizationsRemoveMember } from "../funcs/organizationsRemoveMember.js";
 import { organizationsSetSetting } from "../funcs/organizationsSetSetting.js";
 import { organizationsUpdateMembership } from "../funcs/organizationsUpdateMembership.js";
@@ -29,6 +31,12 @@ export class Organizations extends ClientSDK {
     ));
   }
 
+  /**
+   * Create a new support ticket
+   *
+   * @remarks
+   * Creates a new support ticket in the specified organization. The ticket will be assigned to the authenticated user as the creator and can optionally be assigned to another team member.
+   */
   async create(
     request: models.CreateOrganizationRequest,
     options?: RequestOptions,
@@ -40,6 +48,34 @@ export class Organizations extends ClientSDK {
     ));
   }
 
+  async findOrganizationsByEmailDomain(
+    request: operations.FindOrganizationsByEmailDomainRequest,
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseVecOrganizationByDomainResponse> {
+    return unwrapAsync(organizationsFindOrganizationsByEmailDomain(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async joinOrganization(
+    request: models.JoinOrganizationRequest,
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseString> {
+    return unwrapAsync(organizationsJoinOrganization(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  /**
+   * Get ticket details
+   *
+   * @remarks
+   * Retrieves detailed information about a specific ticket including its current status, assignment, tags, and metadata.
+   */
   async get(
     request: operations.GetOrganizationRequest,
     options?: RequestOptions,

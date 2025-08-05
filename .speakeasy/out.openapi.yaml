@@ -154,7 +154,7 @@ paths:
           description: "User registered successfully"
           content:
             "application/json":
-              schema: {"$ref": "#/components/schemas/ApiResponse_String"}
+              schema: {"$ref": "#/components/schemas/ApiResponse_RegisterResponse"}
         "400":
           description: "Invalid input"
         "409":
@@ -297,6 +297,52 @@ paths:
       security:
         - blackbox_auth_token: []
       x-speakeasy-name-override: "create"
+  "/api/v0/organizations/by-domain":
+    get:
+      tags:
+        - "Organizations"
+      operationId: "find_organizations_by_email_domain"
+      parameters:
+        - name: "email"
+          in: "query"
+          description: "Email address to find organizations for"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "Organizations found for email domain"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_Vec_OrganizationByDomainResponse"}
+        "400":
+          description: "Invalid email format"
+  "/api/v0/organizations/join":
+    post:
+      tags:
+        - "Organizations"
+      operationId: "join_organization"
+      requestBody:
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/JoinOrganizationRequest"}
+        required: true
+      responses:
+        "200":
+          description: "Successfully joined organization"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_String"}
+        "400":
+          description: "Invalid input or already a member"
+        "401":
+          description: "Not authenticated"
+        "403":
+          description: "Domain-based joining not allowed or email verification required"
+        "404":
+          description: "Organization not found"
+      security:
+        - blackbox_auth_token: []
   "/api/v0/organizations/{org_id}":
     get:
       tags:
@@ -4823,6 +4869,34 @@ components:
             - "null"
         "success":
           type: "boolean"
+    "ApiResponse_RegisterResponse":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "object"
+          required:
+            - "user_id"
+            - "session_token"
+            - "email_verified"
+            - "two_fa_enabled"
+          properties:
+            "email_verified":
+              type: "boolean"
+            "session_token":
+              type: "string"
+            "two_fa_enabled":
+              type: "boolean"
+            "user_id":
+              type: "string"
+              format: "uuid"
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
     "ApiResponse_Setup2FAResponse":
       type: "object"
       required:
@@ -5745,6 +5819,39 @@ components:
               "ticket_id":
                 type: "string"
                 format: "uuid"
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
+    "ApiResponse_Vec_OrganizationByDomainResponse":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "array"
+          items:
+            type: "object"
+            required:
+              - "id"
+              - "name"
+              - "domain"
+              - "allow_domain_join"
+              - "created_at"
+            properties:
+              "allow_domain_join":
+                type: "boolean"
+              "created_at":
+                type: "string"
+              "domain":
+                type: "string"
+              "id":
+                type: "string"
+                format: "uuid"
+              "name":
+                type: "string"
         "message":
           type:
             - "string"
@@ -7046,6 +7153,14 @@ components:
           type: "integer"
           format: "int64"
           minimum: 0
+    "JoinOrganizationRequest":
+      type: "object"
+      required:
+        - "org_id"
+      properties:
+        "org_id":
+          type: "string"
+          format: "uuid"
     "KnowledgeBaseStats":
       type: "object"
       required:
@@ -7374,6 +7489,26 @@ components:
         "macro_usage_stats": {"$ref": "#/components/schemas/MacroUsageStats"}
         "system_usage": {"$ref": "#/components/schemas/SystemUsage"}
         "ticket_analytics": {"$ref": "#/components/schemas/TicketAnalytics"}
+    "OrganizationByDomainResponse":
+      type: "object"
+      required:
+        - "id"
+        - "name"
+        - "domain"
+        - "allow_domain_join"
+        - "created_at"
+      properties:
+        "allow_domain_join":
+          type: "boolean"
+        "created_at":
+          type: "string"
+        "domain":
+          type: "string"
+        "id":
+          type: "string"
+          format: "uuid"
+        "name":
+          type: "string"
     "OrganizationDetail":
       type: "object"
       required:
@@ -7463,6 +7598,23 @@ components:
           type: "string"
         "password":
           type: "string"
+    "RegisterResponse":
+      type: "object"
+      required:
+        - "user_id"
+        - "session_token"
+        - "email_verified"
+        - "two_fa_enabled"
+      properties:
+        "email_verified":
+          type: "boolean"
+        "session_token":
+          type: "string"
+        "two_fa_enabled":
+          type: "boolean"
+        "user_id":
+          type: "string"
+          format: "uuid"
     "ResendVerificationRequest":
       type: "object"
       required:
