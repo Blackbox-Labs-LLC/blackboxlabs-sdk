@@ -20,7 +20,7 @@ User profile management, login history, and account settings
 
 <!-- UsageSnippet language="typescript" operationID="delete_account" method="delete" path="/api/v0/users/account" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -86,7 +86,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_login_attempts" method="get" path="/api/v0/users/login-attempts" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -153,7 +153,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_login_history" method="get" path="/api/v0/users/login-history" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -220,7 +220,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="change_password" method="put" path="/api/v0/users/password" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -293,7 +293,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_profile" method="get" path="/api/v0/users/profile" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -359,7 +359,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="update_profile" method="put" path="/api/v0/users/profile" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

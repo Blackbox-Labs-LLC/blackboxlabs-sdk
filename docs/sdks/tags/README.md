@@ -21,7 +21,7 @@ Ticket categorization, organization, and metadata management
 
 <!-- UsageSnippet language="typescript" operationID="list_tags" method="get" path="/api/v0/organizations/{org_id}/tags" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -92,7 +92,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="create_tag" method="post" path="/api/v0/organizations/{org_id}/tags" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -171,7 +171,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_popular_tags" method="get" path="/api/v0/organizations/{org_id}/tags/popular" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -242,7 +242,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_tag" method="get" path="/api/v0/organizations/{org_id}/tags/{tag_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -315,7 +315,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="update_tag" method="put" path="/api/v0/organizations/{org_id}/tags/{tag_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -390,7 +390,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_tag" method="delete" path="/api/v0/organizations/{org_id}/tags/{tag_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -463,7 +463,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_tag_with_tickets" method="get" path="/api/v0/organizations/{org_id}/tags/{tag_id}/tickets" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

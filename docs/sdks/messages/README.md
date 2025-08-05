@@ -21,7 +21,7 @@ Ticket communication, threaded conversations, and message history
 
 <!-- UsageSnippet language="typescript" operationID="get_message" method="get" path="/api/v0/organizations/{org_id}/messages/{message_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -94,7 +94,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_message" method="delete" path="/api/v0/organizations/{org_id}/messages/{message_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -167,7 +167,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="list_ticket_messages" method="get" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -240,7 +240,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="create_message" method="post" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -321,7 +321,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_message_count" method="get" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/count" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -394,7 +394,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_latest_message" method="get" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/latest" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -467,7 +467,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="search_messages" method="get" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/search" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

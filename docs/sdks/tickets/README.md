@@ -23,7 +23,7 @@ Retrieves a paginated list of tickets with optional filtering by status, priorit
 
 <!-- UsageSnippet language="typescript" operationID="list_tickets" method="get" path="/api/v0/organizations/{org_id}/tickets" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -96,7 +96,7 @@ Creates a new support ticket in the specified organization. The ticket will be a
 
 <!-- UsageSnippet language="typescript" operationID="create_ticket" method="post" path="/api/v0/organizations/{org_id}/tickets" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -179,7 +179,7 @@ Retrieves detailed information about a specific ticket including its current sta
 
 <!-- UsageSnippet language="typescript" operationID="get_ticket" method="get" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -252,7 +252,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="update_ticket" method="put" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -327,7 +327,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_ticket" method="delete" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -400,7 +400,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="add_tags_to_ticket" method="post" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/tags" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -479,7 +479,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="remove_tags_from_ticket" method="delete" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/tags" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

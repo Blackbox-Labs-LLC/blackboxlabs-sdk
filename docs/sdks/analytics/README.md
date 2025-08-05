@@ -21,7 +21,7 @@ Real-time metrics, performance insights, and business intelligence
 
 <!-- UsageSnippet language="typescript" operationID="get_organization_analytics" method="get" path="/api/v0/organizations/{org_id}/analytics" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -92,7 +92,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_agent_analytics" method="get" path="/api/v0/organizations/{org_id}/analytics/agents" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -163,7 +163,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_knowledge_base_analytics" method="get" path="/api/v0/organizations/{org_id}/analytics/knowledge-base" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -234,7 +234,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_macro_analytics" method="get" path="/api/v0/organizations/{org_id}/analytics/macros" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -305,7 +305,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_system_analytics" method="get" path="/api/v0/organizations/{org_id}/analytics/system" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -376,7 +376,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_ticket_analytics" method="get" path="/api/v0/organizations/{org_id}/analytics/tickets" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -447,7 +447,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_trend_analytics" method="get" path="/api/v0/organizations/{org_id}/analytics/trends" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

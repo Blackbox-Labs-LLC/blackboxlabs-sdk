@@ -19,7 +19,7 @@
 
 <!-- UsageSnippet language="typescript" operationID="list_articles" method="get" path="/api/v0/organizations/{org_id}/knowledge-base/articles" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -90,7 +90,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="create_article" method="post" path="/api/v0/organizations/{org_id}/knowledge-base/articles" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -171,7 +171,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_article" method="get" path="/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -244,7 +244,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="update_article" method="put" path="/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -319,7 +319,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_article" method="delete" path="/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -392,7 +392,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_public_articles" method="get" path="/api/v0/organizations/{org_id}/knowledge-base/public" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -463,7 +463,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="search_public_articles" method="get" path="/api/v0/organizations/{org_id}/knowledge-base/search" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

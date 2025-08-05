@@ -21,7 +21,7 @@ Intelligent workflow automation with triggers, conditions, and actions
 
 <!-- UsageSnippet language="typescript" operationID="execute_automation_rules" method="post" path="/api/v0/organizations/{org_id}/automation/execute" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -94,7 +94,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="list_automation_rules" method="get" path="/api/v0/organizations/{org_id}/automation/rules" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -165,7 +165,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="create_automation_rule" method="post" path="/api/v0/organizations/{org_id}/automation/rules" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -284,7 +284,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_automation_rule" method="get" path="/api/v0/organizations/{org_id}/automation/rules/{rule_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -357,7 +357,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="update_automation_rule" method="put" path="/api/v0/organizations/{org_id}/automation/rules/{rule_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -432,7 +432,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_automation_rule" method="delete" path="/api/v0/organizations/{org_id}/automation/rules/{rule_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -505,7 +505,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_automation_stats" method="get" path="/api/v0/organizations/{org_id}/automation/stats" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

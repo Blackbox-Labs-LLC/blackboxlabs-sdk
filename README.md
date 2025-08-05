@@ -11,8 +11,6 @@ Developer-friendly & type-safe Typescript SDK specifically catered to leverage *
 
 
 <br /><br />
-> [!IMPORTANT]
-> This SDK is not yet ready for production use. To complete setup please follow the steps outlined in your [workspace](https://app.speakeasy.com/org/blackbox/api). Delete this section before > publishing to a package manager.
 
 <!-- Start Summary [summary] -->
 ## Summary
@@ -50,25 +48,25 @@ The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https
 ### NPM
 
 ```bash
-npm add blackbox
+npm add blackboxlabs-sdk
 ```
 
 ### PNPM
 
 ```bash
-pnpm add blackbox
+pnpm add blackboxlabs-sdk
 ```
 
 ### Bun
 
 ```bash
-bun add blackbox
+bun add blackboxlabs-sdk
 ```
 
 ### Yarn
 
 ```bash
-yarn add blackbox zod
+yarn add blackboxlabs-sdk zod
 
 # Note that Yarn does not install peer dependencies automatically. You will need
 # to install zod as shown above.
@@ -90,7 +88,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 ### Example
 
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -120,7 +118,7 @@ This SDK supports the following security scheme globally:
 
 To authenticate with the API the `blackboxAuthToken` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -442,7 +440,7 @@ Certain SDK methods accept files as part of a multi-part request. It is possible
 > - **Node.js v18:** A file stream can be created using the `fileFrom` helper from [`fetch-blob/from.js`](https://www.npmjs.com/package/fetch-blob).
 
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 import { openAsBlob } from "node:fs";
 
 const blackbox = new Blackbox({
@@ -472,7 +470,7 @@ Some of the endpoints in this SDK support retries.  If you use the SDK without a
 
 To change the default retry strategy for a single API call, simply provide a retryConfig object to the call:
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -501,7 +499,7 @@ run();
 
 If you'd like to override the default retry strategy for all operations that support retries, you can provide a retryConfig at SDK initialization:
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   retryConfig: {
@@ -543,7 +541,7 @@ run();
 
 ### Example
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 import * as errors from "blackbox/models/errors";
 
 const blackbox = new Blackbox({
@@ -607,7 +605,7 @@ You can override the default server globally by passing a server index to the `s
 #### Example
 
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   serverIdx: 2,
@@ -628,7 +626,7 @@ run();
 
 The default server can also be overridden globally by passing a URL to the `serverURL: string` optional parameter when initializing the SDK client instance. For example:
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   serverURL: "https://api.blckbox.dev",
@@ -664,7 +662,7 @@ custom header and a timeout to requests and how to use the `"requestError"` hook
 to log errors:
 
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 import { HTTPClient } from "blackbox/lib/http";
 
 const httpClient = new HTTPClient({
@@ -706,7 +704,7 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 > Beware that debug logging will reveal secrets, like API tokens in headers, in log messages printed to a console or files. It's recommended to use this feature only during local development and not in production.
 
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const sdk = new Blackbox({ debugLogger: console });
 ```

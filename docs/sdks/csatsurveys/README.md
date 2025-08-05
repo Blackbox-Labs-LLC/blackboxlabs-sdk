@@ -19,7 +19,7 @@
 
 <!-- UsageSnippet language="typescript" operationID="list_surveys" method="get" path="/api/v0/organizations/{org_id}/surveys" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -90,7 +90,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="submit_survey" method="post" path="/api/v0/organizations/{org_id}/surveys" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -169,7 +169,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_survey_analytics" method="get" path="/api/v0/organizations/{org_id}/surveys/analytics" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -240,7 +240,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="export_surveys" method="get" path="/api/v0/organizations/{org_id}/surveys/export" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -311,7 +311,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_survey" method="get" path="/api/v0/organizations/{org_id}/surveys/{survey_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -384,7 +384,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="update_survey" method="put" path="/api/v0/organizations/{org_id}/surveys/{survey_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -459,7 +459,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_survey" method="delete" path="/api/v0/organizations/{org_id}/surveys/{survey_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

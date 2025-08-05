@@ -17,7 +17,7 @@
 
 <!-- UsageSnippet language="typescript" operationID="list_events" method="get" path="/api/v0/organizations/{org_id}/events" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -88,7 +88,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="create_event" method="post" path="/api/v0/organizations/{org_id}/events" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -165,7 +165,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="export_events" method="get" path="/api/v0/organizations/{org_id}/events/export" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -236,7 +236,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_event_stats" method="get" path="/api/v0/organizations/{org_id}/events/stats" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -307,7 +307,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_event" method="get" path="/api/v0/organizations/{org_id}/events/{event_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

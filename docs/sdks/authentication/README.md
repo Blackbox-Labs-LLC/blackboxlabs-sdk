@@ -24,7 +24,7 @@ User authentication, registration, password management, and multi-factor authent
 
 <!-- UsageSnippet language="typescript" operationID="disable_2fa" method="post" path="/api/v0/auth/disable-2fa" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -90,7 +90,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="enable_2fa" method="post" path="/api/v0/auth/enable-2fa" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -161,7 +161,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="login" method="post" path="/api/v0/auth/login" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -234,7 +234,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="logout" method="post" path="/api/v0/auth/logout" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -300,7 +300,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="register" method="post" path="/api/v0/auth/register" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -375,7 +375,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="request_password_reset" method="post" path="/api/v0/auth/request-password-reset" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -446,7 +446,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="resend_verification" method="post" path="/api/v0/auth/resend-verification" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -517,7 +517,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="reset_password" method="post" path="/api/v0/auth/reset-password" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -590,7 +590,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="setup_2fa" method="post" path="/api/v0/auth/setup-2fa" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -656,7 +656,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="verify_email" method="post" path="/api/v0/auth/verify-email" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

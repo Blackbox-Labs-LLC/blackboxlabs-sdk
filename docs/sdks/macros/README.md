@@ -21,7 +21,7 @@ Reusable response templates, quick actions, and productivity tools
 
 <!-- UsageSnippet language="typescript" operationID="list_macros" method="get" path="/api/v0/organizations/{org_id}/macros" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -92,7 +92,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="create_macro" method="post" path="/api/v0/organizations/{org_id}/macros" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -173,7 +173,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_popular_macros" method="get" path="/api/v0/organizations/{org_id}/macros/popular" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -244,7 +244,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="render_macro_template" method="post" path="/api/v0/organizations/{org_id}/macros/render" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -331,7 +331,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_macro" method="get" path="/api/v0/organizations/{org_id}/macros/{macro_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -404,7 +404,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="update_macro" method="put" path="/api/v0/organizations/{org_id}/macros/{macro_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -479,7 +479,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_macro" method="delete" path="/api/v0/organizations/{org_id}/macros/{macro_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

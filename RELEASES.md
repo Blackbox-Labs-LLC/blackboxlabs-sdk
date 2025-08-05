@@ -8,4 +8,4 @@ Based on:
 ### Generated
 - [typescript v0.2.5] .
 ### Releases
-- [NPM v0.2.5] https://www.npmjs.com/package/blackbox/v/0.2.5 - .
+- [NPM v0.2.5] https://www.npmjs.com/package/blackboxlabs-sdk/v/0.2.5 - .

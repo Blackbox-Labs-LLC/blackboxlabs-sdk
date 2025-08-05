@@ -23,7 +23,7 @@ Real-time event notifications, external integrations, and webhook management
 
 <!-- UsageSnippet language="typescript" operationID="list_webhooks" method="get" path="/api/v0/organizations/{org_id}/webhooks" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -94,7 +94,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="create_webhook" method="post" path="/api/v0/organizations/{org_id}/webhooks" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -183,7 +183,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="list_webhook_events" method="get" path="/api/v0/organizations/{org_id}/webhooks/events" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -254,7 +254,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="send_webhooks" method="post" path="/api/v0/organizations/{org_id}/webhooks/send" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -327,7 +327,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_webhook_stats" method="get" path="/api/v0/organizations/{org_id}/webhooks/stats" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -398,7 +398,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_webhook" method="get" path="/api/v0/organizations/{org_id}/webhooks/{webhook_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -471,7 +471,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="update_webhook" method="put" path="/api/v0/organizations/{org_id}/webhooks/{webhook_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -546,7 +546,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_webhook" method="delete" path="/api/v0/organizations/{org_id}/webhooks/{webhook_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -619,7 +619,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="test_webhook" method="post" path="/api/v0/organizations/{org_id}/webhooks/{webhook_id}/test" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

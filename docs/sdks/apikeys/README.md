@@ -17,7 +17,7 @@
 
 <!-- UsageSnippet language="typescript" operationID="list_api_keys" method="get" path="/api/v0/users/api-keys" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -84,7 +84,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="create_api_key" method="post" path="/api/v0/users/api-keys" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -161,7 +161,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="get_api_key" method="get" path="/api/v0/users/api-keys/{key_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -232,7 +232,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_api_key" method="delete" path="/api/v0/users/api-keys/{key_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -303,7 +303,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="revoke_api_key" method="post" path="/api/v0/users/api-keys/{key_id}/revoke" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",

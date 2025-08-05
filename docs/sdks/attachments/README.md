@@ -19,7 +19,7 @@ File upload, download, and management for ticket communications
 
 <!-- UsageSnippet language="typescript" operationID="get_attachment_stats" method="get" path="/api/v0/admin/attachments/stats" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -85,7 +85,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="download_attachment" method="get" path="/api/v0/attachments/{attachment_id}/download" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -156,7 +156,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="list_message_attachments" method="get" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
@@ -231,7 +231,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="upload_attachments" method="post" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 import { openAsBlob } from "node:fs";
 
 const blackbox = new Blackbox({
@@ -310,7 +310,7 @@ run();
 
 <!-- UsageSnippet language="typescript" operationID="delete_attachment" method="delete" path="/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments/{attachment_id}" -->
 ```typescript
-import { Blackbox } from "blackbox";
+import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
