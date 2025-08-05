@@ -1,11 +1,11 @@
 {
-  "name": "blackboxlabs-sdk",
-  "version": "0.2.4",
+  "name": "blackbox",
+  "version": "0.2.5",
   "author": "Speakeasy",
   "type": "module",
   "tshy": {
     "sourceDialects": [
-      "blackboxlabs-sdk/source"
+      "blackbox/source"
     ],
     "exports": {
       ".": "./src/index.ts",
@@ -19,6 +19,10 @@
     }
   },
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blackbox-Labs-LLC/blackbox-sdk-typescript.git"
+  },
   "scripts": {
     "lint": "eslint --cache --max-warnings=0 src",
     "build": "tshy",
@@ -39,7 +43,7 @@
   "exports": {
     ".": {
       "import": {
-        "blackboxlabs-sdk/source": "./src/index.ts",
+        "blackbox/source": "./src/index.ts",
         "types": "./dist/esm/index.d.ts",
         "default": "./dist/esm/index.js"
       },

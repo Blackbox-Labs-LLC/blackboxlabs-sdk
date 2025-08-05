@@ -10,6 +10,13 @@ info:
     name: "Apache License 2.0"
     url: "https://www.apache.org/licenses/LICENSE-2.0"
   version: "1.0.0"
+servers:
+  - url: "http://localhost:8080"
+    description: "Local development server"
+  - url: "https://staging.api.blckbox.dev"
+    description: "Staging server"
+  - url: "https://api.blckbox.dev"
+    description: "Production server"
 paths:
   "/api/v0/admin/attachments/stats":
     get:
