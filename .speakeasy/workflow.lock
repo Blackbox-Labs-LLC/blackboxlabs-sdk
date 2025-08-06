@@ -1,12 +1,12 @@
-speakeasyVersion: 1.596.1
+speakeasyVersion: 1.598.0
 sources:
     BlackBox API:
         sourceNamespace: black-box-api
-        sourceRevisionDigest: sha256:11c509c8de728b929462691df8410c025cb8bc0742b1237e48a73aba3f6157b4
-        sourceBlobDigest: sha256:8fa84929806ff0a28920973d2c41b8e4ae8415115e893e0dbb8163f9bafc4863
+        sourceRevisionDigest: sha256:2d27a328b10b98239a4cba1faf002d973701faf9d37898b5b59f70756a9bd5ab
+        sourceBlobDigest: sha256:d7a8ae189520c8344821def7ae940b461d9ae9b7f9b5f43f1943a3606a841b73
         tags:
             - latest
-            - speakeasy-sdk-regen-1754390766
+            - speakeasy-sdk-regen-1754441310
             - 1.0.0
 targets:
     blackbox:
@@ -19,10 +19,10 @@ targets:
     blackboxlabs-sdk:
         source: BlackBox API
         sourceNamespace: black-box-api
-        sourceRevisionDigest: sha256:11c509c8de728b929462691df8410c025cb8bc0742b1237e48a73aba3f6157b4
-        sourceBlobDigest: sha256:8fa84929806ff0a28920973d2c41b8e4ae8415115e893e0dbb8163f9bafc4863
+        sourceRevisionDigest: sha256:2d27a328b10b98239a4cba1faf002d973701faf9d37898b5b59f70756a9bd5ab
+        sourceBlobDigest: sha256:d7a8ae189520c8344821def7ae940b461d9ae9b7f9b5f43f1943a3606a841b73
         codeSamplesNamespace: black-box-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:342395db6868d1e3185b6806ea1c59f47f97db8b5b8705dd8b0d34780e8cce5c
+        codeSamplesRevisionDigest: sha256:57b0f50e455f55c7fcdee5461456e04c42439dafc738748d997a37bb08a21c78
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
