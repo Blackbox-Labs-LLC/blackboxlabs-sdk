@@ -3,9 +3,9 @@ info:
   title: "Blackbox Customer Support API"
   description: "Enterprise-grade customer support and ticketing system with advanced analytics, automation, and integrations. Built for modern teams who need powerful, scalable support infrastructure."
   contact:
-    name: "Blackbox Support"
-    url: "https://blackbox.com/support"
-    email: "support@blackbox.com"
+    name: "Blackbox Labs LLC"
+    url: "https://blckbox.dev/support"
+    email: "support@blckbox.dev"
   license:
     name: "Apache License 2.0"
     url: "https://www.apache.org/licenses/LICENSE-2.0"
