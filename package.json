@@ -1,6 +1,6 @@
 {
   "name": "blackboxlabs-sdk",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "author": "Speakeasy",
   "type": "module",
   "tshy": {

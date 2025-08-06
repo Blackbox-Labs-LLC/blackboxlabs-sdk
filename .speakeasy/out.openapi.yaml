@@ -11,12 +11,12 @@ info:
     url: "https://www.apache.org/licenses/LICENSE-2.0"
   version: "1.0.0"
 servers:
-  - url: "http://localhost:8080"
-    description: "Local development server"
-  - url: "https://staging.api.blckbox.dev"
-    description: "Staging server"
   - url: "https://api.blckbox.dev"
     description: "Production server"
+  - url: "https://staging.api.blckbox.dev"
+    description: "Staging server"
+  - url: "http://localhost:8080"
+    description: "Local development server"
 paths:
   "/api/v0/admin/attachments/stats":
     get:
@@ -8655,9 +8655,9 @@ components:
           format: "uuid"
   securitySchemes:
     "blackbox_auth_token":
-      type: "apiKey"
-      in: "cookie"
-      name: "blackbox_auth_token"
+      type: "http"
+      scheme: "bearer"
+      description: "Authentication via session token"
 tags:
   - name: "Authentication"
     description: "User authentication, registration, password management, and multi-factor authentication"

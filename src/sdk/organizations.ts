@@ -31,6 +31,12 @@ export class Organizations extends ClientSDK {
     ));
   }
 
+  /**
+   * Create a new support ticket
+   *
+   * @remarks
+   * Creates a new support ticket in the specified organization. The ticket will be assigned to the authenticated user as the creator and can optionally be assigned to another team member.
+   */
   async create(
     request: models.CreateOrganizationRequest,
     options?: RequestOptions,
@@ -64,6 +70,12 @@ export class Organizations extends ClientSDK {
     ));
   }
 
+  /**
+   * Get ticket details
+   *
+   * @remarks
+   * Retrieves detailed information about a specific ticket including its current status, assignment, tags, and metadata.
+   */
   async get(
     request: operations.GetOrganizationRequest,
     options?: RequestOptions,
