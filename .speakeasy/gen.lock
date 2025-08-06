@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
 management:
-  docChecksum: d70ecb81b885024c42f0547d849a8b76
+  docChecksum: dc071eca37888a0cbcf2150acf882fed
   docVersion: 1.0.0
   speakeasyVersion: 1.598.0
   generationVersion: 2.674.1
-  releaseVersion: 0.2.8
-  configChecksum: fa7b5a1bf0f0e6b81c86fa69b8fddc7d
+  releaseVersion: 0.2.9
+  configChecksum: e9c9d59ffba42fbcf7ceb36bd24ab6a8
   repoURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk.git
   installationURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk
   published: true

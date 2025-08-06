@@ -12,17 +12,17 @@ import { Params, pathToFunc } from "./url.js";
  */
 export const ServerList = [
   /**
-   * Local development server
+   * Production server
    */
-  "http://localhost:8080",
+  "https://api.blckbox.dev",
   /**
    * Staging server
    */
   "https://staging.api.blckbox.dev",
   /**
-   * Production server
+   * Local development server
    */
-  "https://api.blckbox.dev",
+  "http://localhost:8080",
 ] as const;
 
 export type SDKOptions = {
@@ -69,7 +69,7 @@ export function serverURLFromOptions(options: SDKOptions): URL | null {
 export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "1.0.0",
-  sdkVersion: "0.2.8",
+  sdkVersion: "0.2.9",
   genVersion: "2.674.1",
-  userAgent: "speakeasy-sdk/typescript 0.2.8 2.674.1 1.0.0 blackboxlabs-sdk",
+  userAgent: "speakeasy-sdk/typescript 0.2.9 2.674.1 1.0.0 blackboxlabs-sdk",
 } as const;

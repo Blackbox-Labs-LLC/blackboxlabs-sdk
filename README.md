@@ -112,9 +112,9 @@ run();
 
 This SDK supports the following security scheme globally:
 
-| Name                | Type   | Scheme  | Environment Variable           |
-| ------------------- | ------ | ------- | ------------------------------ |
-| `blackboxAuthToken` | apiKey | API key | `BLACKBOX_BLACKBOX_AUTH_TOKEN` |
+| Name                | Type | Scheme      | Environment Variable           |
+| ------------------- | ---- | ----------- | ------------------------------ |
+| `blackboxAuthToken` | http | HTTP Bearer | `BLACKBOX_BLACKBOX_AUTH_TOKEN` |
 
 To authenticate with the API the `blackboxAuthToken` parameter must be set when initializing the SDK client instance. For example:
 ```typescript
@@ -602,9 +602,9 @@ You can override the default server globally by passing a server index to the `s
 
 | #   | Server                            | Description              |
 | --- | --------------------------------- | ------------------------ |
-| 0   | `http://localhost:8080`           | Local development server |
+| 0   | `https://api.blckbox.dev`         | Production server        |
 | 1   | `https://staging.api.blckbox.dev` | Staging server           |
-| 2   | `https://api.blckbox.dev`         | Production server        |
+| 2   | `http://localhost:8080`           | Local development server |
 
 #### Example
 
@@ -633,7 +633,7 @@ The default server can also be overridden globally by passing a URL to the `serv
 import { Blackbox } from "blackboxlabs-sdk";
 
 const blackbox = new Blackbox({
-  serverURL: "https://api.blckbox.dev",
+  serverURL: "http://localhost:8080",
   blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
 });
 

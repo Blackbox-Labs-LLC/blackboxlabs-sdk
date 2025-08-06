@@ -242,8 +242,8 @@ export function resolveGlobalSecurity(
   return resolveSecurity(
     [
       {
-        fieldName: "blackbox_auth_token",
-        type: "apiKey:cookie",
+        fieldName: "Authorization",
+        type: "http:bearer",
         value: security?.blackboxAuthToken
           ?? env().BLACKBOX_BLACKBOX_AUTH_TOKEN,
       },
