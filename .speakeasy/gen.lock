@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
 management:
-  docChecksum: 8d2ff625612aa88430ff4e6bc34d9b41
+  docChecksum: ca56ead8e12b401ae4cd5e273459fb3d
   docVersion: 1.0.0
-  speakeasyVersion: 1.598.3
+  speakeasyVersion: 1.598.4
   generationVersion: 2.674.3
-  releaseVersion: 0.2.11
-  configChecksum: 91492ae4e0dff33e1379befe6dfc022b
+  releaseVersion: 0.2.12
+  configChecksum: b331d8da432f3bc309be5ea339e1d518
   repoURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk.git
   installationURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk
   published: true
@@ -89,6 +89,12 @@ generatedFiles:
   - docs/models/apiresponseorganizationsettingresponsedata.md
   - docs/models/apiresponseregisterresponse.md
   - docs/models/apiresponseregisterresponsedata.md
+  - docs/models/apiresponsesessioninfo.md
+  - docs/models/apiresponsesessioninfodata.md
+  - docs/models/apiresponsesessionlistresponse.md
+  - docs/models/apiresponsesessionlistresponsedata.md
+  - docs/models/apiresponsesessionstats.md
+  - docs/models/apiresponsesessionstatsdata.md
   - docs/models/apiresponsesetup2faresponse.md
   - docs/models/apiresponsesetup2faresponsedata.md
   - docs/models/apiresponsestring.md
@@ -184,6 +190,7 @@ generatedFiles:
   - docs/models/enable2farequest.md
   - docs/models/eventtypecount.md
   - docs/models/eventtypedelivery.md
+  - docs/models/extendsessionrequest.md
   - docs/models/inviteuserrequest.md
   - docs/models/issuecategory.md
   - docs/models/joinorganizationrequest.md
@@ -218,6 +225,7 @@ generatedFiles:
   - docs/models/operations/executeautomationrulesrequest.md
   - docs/models/operations/exporteventsrequest.md
   - docs/models/operations/exportsurveysrequest.md
+  - docs/models/operations/extendsessionrequest.md
   - docs/models/operations/findorganizationsbyemaildomainrequest.md
   - docs/models/operations/getagentanalyticsrequest.md
   - docs/models/operations/getallorganizationsettingsrequest.md
@@ -242,6 +250,7 @@ generatedFiles:
   - docs/models/operations/getpopularmacrosrequest.md
   - docs/models/operations/getpopulartagsrequest.md
   - docs/models/operations/getpublicarticlesrequest.md
+  - docs/models/operations/getsessionrequest.md
   - docs/models/operations/getsurveyanalyticsrequest.md
   - docs/models/operations/getsurveyrequest.md
   - docs/models/operations/getsystemanalyticsrequest.md
@@ -270,6 +279,7 @@ generatedFiles:
   - docs/models/operations/removetagsfromticketrequest.md
   - docs/models/operations/rendermacrotemplaterequest.md
   - docs/models/operations/revokeapikeyrequest.md
+  - docs/models/operations/revokesessionrequest.md
   - docs/models/operations/searchmessagesrequest.md
   - docs/models/operations/searchpublicarticlesrequest.md
   - docs/models/operations/sendwebhooksrequest.md
@@ -290,9 +300,11 @@ generatedFiles:
   - docs/models/registerrequest.md
   - docs/models/resendverificationrequest.md
   - docs/models/resetpasswordrequest.md
+  - docs/models/revokeallsessionsrequest.md
   - docs/models/ruleactivity.md
   - docs/models/scorecount.md
   - docs/models/security.md
+  - docs/models/sessioninfo.md
   - docs/models/setorganizationsettingrequest.md
   - docs/models/statuscount.md
   - docs/models/submitsurveyrequest.md
@@ -333,6 +345,7 @@ generatedFiles:
   - docs/sdks/macros/README.md
   - docs/sdks/messages/README.md
   - docs/sdks/organizations/README.md
+  - docs/sdks/sessionmanagement/README.md
   - docs/sdks/tags/README.md
   - docs/sdks/tickets/README.md
   - docs/sdks/users/README.md
@@ -429,6 +442,13 @@ generatedFiles:
   - src/funcs/organizationsRemoveMember.ts
   - src/funcs/organizationsSetSetting.ts
   - src/funcs/organizationsUpdateMembership.ts
+  - src/funcs/sessionManagementCleanupExpiredSessions.ts
+  - src/funcs/sessionManagementExtendSession.ts
+  - src/funcs/sessionManagementGetSession.ts
+  - src/funcs/sessionManagementGetSessionStats.ts
+  - src/funcs/sessionManagementListSessions.ts
+  - src/funcs/sessionManagementRevokeAllSessions.ts
+  - src/funcs/sessionManagementRevokeSession.ts
   - src/funcs/tagsCreate.ts
   - src/funcs/tagsDelete.ts
   - src/funcs/tagsGet.ts
@@ -505,6 +525,9 @@ generatedFiles:
   - src/models/apiresponseorganizationresponse.ts
   - src/models/apiresponseorganizationsettingresponse.ts
   - src/models/apiresponseregisterresponse.ts
+  - src/models/apiresponsesessioninfo.ts
+  - src/models/apiresponsesessionlistresponse.ts
+  - src/models/apiresponsesessionstats.ts
   - src/models/apiresponsesetup2faresponse.ts
   - src/models/apiresponsestring.ts
   - src/models/apiresponsesurveyexport.ts
@@ -572,6 +595,7 @@ generatedFiles:
   - src/models/errors/sdkvalidationerror.ts
   - src/models/eventtypecount.ts
   - src/models/eventtypedelivery.ts
+  - src/models/extendsessionrequest.ts
   - src/models/index.ts
   - src/models/inviteuserrequest.ts
   - src/models/issuecategory.ts
@@ -607,6 +631,7 @@ generatedFiles:
   - src/models/operations/executeautomationrules.ts
   - src/models/operations/exportevents.ts
   - src/models/operations/exportsurveys.ts
+  - src/models/operations/extendsession.ts
   - src/models/operations/findorganizationsbyemaildomain.ts
   - src/models/operations/getagentanalytics.ts
   - src/models/operations/getallorganizationsettings.ts
@@ -631,6 +656,7 @@ generatedFiles:
   - src/models/operations/getpopularmacros.ts
   - src/models/operations/getpopulartags.ts
   - src/models/operations/getpublicarticles.ts
+  - src/models/operations/getsession.ts
   - src/models/operations/getsurvey.ts
   - src/models/operations/getsurveyanalytics.ts
   - src/models/operations/getsystemanalytics.ts
@@ -660,6 +686,7 @@ generatedFiles:
   - src/models/operations/removetagsfromticket.ts
   - src/models/operations/rendermacrotemplate.ts
   - src/models/operations/revokeapikey.ts
+  - src/models/operations/revokesession.ts
   - src/models/operations/searchmessages.ts
   - src/models/operations/searchpublicarticles.ts
   - src/models/operations/sendwebhooks.ts
@@ -680,9 +707,11 @@ generatedFiles:
   - src/models/registerrequest.ts
   - src/models/resendverificationrequest.ts
   - src/models/resetpasswordrequest.ts
+  - src/models/revokeallsessionsrequest.ts
   - src/models/ruleactivity.ts
   - src/models/scorecount.ts
   - src/models/security.ts
+  - src/models/sessioninfo.ts
   - src/models/setorganizationsettingrequest.ts
   - src/models/statuscount.ts
   - src/models/submitsurveyrequest.ts
@@ -724,6 +753,7 @@ generatedFiles:
   - src/sdk/messages.ts
   - src/sdk/organizations.ts
   - src/sdk/sdk.ts
+  - src/sdk/sessionmanagement.ts
   - src/sdk/tags.ts
   - src/sdk/tickets.ts
   - src/sdk/users.ts
@@ -1665,4 +1695,42 @@ examples:
       responses:
         "200":
           application/json: {"success": false}
+  list_sessions:
+    speakeasy-default-list-sessions:
+      responses:
+        "200":
+          application/json: {"success": true}
+  cleanup_expired_sessions: {}
+  revoke_all_sessions:
+    speakeasy-default-revoke-all-sessions:
+      requestBody:
+        application/json: {"keep_current": false}
+  get_session_stats:
+    speakeasy-default-get-session-stats:
+      responses:
+        "200":
+          application/json: {"success": false}
+  get_session:
+    speakeasy-default-get-session:
+      parameters:
+        path:
+          session_id: "97cae342-9da6-452e-85ab-ec6438bfcd90"
+      responses:
+        "200":
+          application/json: {"success": false}
+  revoke_session:
+    speakeasy-default-revoke-session:
+      parameters:
+        path:
+          session_id: "fe603112-c194-45c1-90cf-513753aa0744"
+  extend_session:
+    speakeasy-default-extend-session:
+      parameters:
+        path:
+          session_id: "07fd44a8-744f-491f-8c7d-18e2c7e25afb"
+      requestBody:
+        application/json: {"extension_hours": 861018}
+      responses:
+        "200":
+          application/json: {"success": true}
 examplesVersion: 1.0.2

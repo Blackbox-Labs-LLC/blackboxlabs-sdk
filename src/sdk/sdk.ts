@@ -15,6 +15,7 @@ import { KnowledgeBase } from "./knowledgebase.js";
 import { Macros } from "./macros.js";
 import { Messages } from "./messages.js";
 import { Organizations } from "./organizations.js";
+import { SessionManagement } from "./sessionmanagement.js";
 import { Tags } from "./tags.js";
 import { Tickets } from "./tickets.js";
 import { Users } from "./users.js";
@@ -89,6 +90,11 @@ export class Blackbox extends ClientSDK {
   private _webhooks?: Webhooks;
   get webhooks(): Webhooks {
     return (this._webhooks ??= new Webhooks(this._options));
+  }
+
+  private _sessionManagement?: SessionManagement;
+  get sessionManagement(): SessionManagement {
+    return (this._sessionManagement ??= new SessionManagement(this._options));
   }
 
   private _users?: Users;

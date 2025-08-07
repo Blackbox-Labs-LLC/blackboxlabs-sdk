@@ -3704,6 +3704,127 @@ paths:
       security:
         - blackbox_auth_token: []
       x-speakeasy-name-override: "test"
+  "/api/v0/sessions":
+    get:
+      tags:
+        - "Session Management"
+      operationId: "list_sessions"
+      responses:
+        "200":
+          description: "List of user sessions"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_SessionListResponse"}
+        "401":
+          description: "Unauthorized"
+  "/api/v0/sessions/cleanup":
+    post:
+      tags:
+        - "Session Management"
+      operationId: "cleanup_expired_sessions"
+      responses:
+        "200":
+          description: "Expired sessions cleaned up"
+        "401":
+          description: "Unauthorized"
+  "/api/v0/sessions/revoke-all":
+    post:
+      tags:
+        - "Session Management"
+      operationId: "revoke_all_sessions"
+      requestBody:
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/RevokeAllSessionsRequest"}
+        required: true
+      responses:
+        "200":
+          description: "Sessions revoked successfully"
+        "401":
+          description: "Unauthorized"
+  "/api/v0/sessions/stats":
+    get:
+      tags:
+        - "Session Management"
+      operationId: "get_session_stats"
+      responses:
+        "200":
+          description: "Session statistics"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_SessionStats"}
+        "401":
+          description: "Unauthorized"
+  "/api/v0/sessions/{session_id}":
+    get:
+      tags:
+        - "Session Management"
+      operationId: "get_session"
+      parameters:
+        - name: "session_id"
+          in: "path"
+          description: "Session ID"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      responses:
+        "200":
+          description: "Session details"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_SessionInfo"}
+        "401":
+          description: "Unauthorized"
+        "404":
+          description: "Session not found"
+    delete:
+      tags:
+        - "Session Management"
+      operationId: "revoke_session"
+      parameters:
+        - name: "session_id"
+          in: "path"
+          description: "Session ID"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      responses:
+        "200":
+          description: "Session revoked successfully"
+        "401":
+          description: "Unauthorized"
+        "404":
+          description: "Session not found"
+  "/api/v0/sessions/{session_id}/extend":
+    post:
+      tags:
+        - "Session Management"
+      operationId: "extend_session"
+      parameters:
+        - name: "session_id"
+          in: "path"
+          description: "Session ID"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      requestBody:
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/ExtendSessionRequest"}
+        required: true
+      responses:
+        "200":
+          description: "Session extended successfully"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_SessionInfo"}
+        "401":
+          description: "Unauthorized"
+        "404":
+          description: "Session not found"
   "/api/v0/users/account":
     delete:
       tags:
@@ -5011,6 +5132,100 @@ components:
             "user_id":
               type: "string"
               format: "uuid"
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
+    "ApiResponse_SessionInfo":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "object"
+          required:
+            - "id"
+            - "user_id"
+            - "token"
+            - "created_at"
+            - "expires_at"
+            - "user_agent"
+            - "ip_address"
+            - "is_current"
+          properties:
+            "created_at":
+              type: "string"
+            "expires_at":
+              type: "string"
+            "id":
+              type: "string"
+              format: "uuid"
+            "ip_address":
+              type: "string"
+            "is_current":
+              type: "boolean"
+            "token":
+              type: "string"
+            "user_agent":
+              type: "string"
+            "user_id":
+              type: "string"
+              format: "uuid"
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
+    "ApiResponse_SessionListResponse":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "object"
+          required:
+            - "sessions"
+            - "total"
+          properties:
+            "sessions":
+              type: "array"
+              items: {"$ref": "#/components/schemas/SessionInfo"}
+            "total":
+              type: "integer"
+              minimum: 0
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
+    "ApiResponse_SessionStats":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "object"
+          required:
+            - "total_sessions"
+            - "active_sessions"
+            - "expired_sessions"
+          properties:
+            "active_sessions":
+              type: "integer"
+              format: "int64"
+              minimum: 0
+            "expired_sessions":
+              type: "integer"
+              format: "int64"
+              minimum: 0
+            "total_sessions":
+              type: "integer"
+              format: "int64"
+              minimum: 0
         "message":
           type:
             - "string"
@@ -7343,6 +7558,15 @@ components:
         "success_rate":
           type: "number"
           format: "double"
+    "ExtendSessionRequest":
+      type: "object"
+      required:
+        - "extension_hours"
+      properties:
+        "extension_hours":
+          type: "integer"
+          format: "int32"
+          minimum: 0
     "InviteUserRequest":
       type: "object"
       required:
@@ -7848,6 +8072,21 @@ components:
           type: "string"
         "token":
           type: "string"
+    "RevokeAllSessionsRequest":
+      type: "object"
+      required:
+        - "keep_current"
+      properties:
+        "keep_current":
+          type: "boolean"
+    "RevokeSessionRequest":
+      type: "object"
+      required:
+        - "session_id"
+      properties:
+        "session_id":
+          type: "string"
+          format: "uuid"
     "RuleActivity":
       type: "object"
       required:
@@ -7885,6 +8124,67 @@ components:
         "score":
           type: "integer"
           format: "int32"
+    "SessionInfo":
+      type: "object"
+      required:
+        - "id"
+        - "user_id"
+        - "token"
+        - "created_at"
+        - "expires_at"
+        - "user_agent"
+        - "ip_address"
+        - "is_current"
+      properties:
+        "created_at":
+          type: "string"
+        "expires_at":
+          type: "string"
+        "id":
+          type: "string"
+          format: "uuid"
+        "ip_address":
+          type: "string"
+        "is_current":
+          type: "boolean"
+        "token":
+          type: "string"
+        "user_agent":
+          type: "string"
+        "user_id":
+          type: "string"
+          format: "uuid"
+    "SessionListResponse":
+      type: "object"
+      required:
+        - "sessions"
+        - "total"
+      properties:
+        "sessions":
+          type: "array"
+          items: {"$ref": "#/components/schemas/SessionInfo"}
+        "total":
+          type: "integer"
+          minimum: 0
+    "SessionStats":
+      type: "object"
+      required:
+        - "total_sessions"
+        - "active_sessions"
+        - "expired_sessions"
+      properties:
+        "active_sessions":
+          type: "integer"
+          format: "int64"
+          minimum: 0
+        "expired_sessions":
+          type: "integer"
+          format: "int64"
+          minimum: 0
+        "total_sessions":
+          type: "integer"
+          format: "int64"
+          minimum: 0
     "SetOrganizationSettingRequest":
       type: "object"
       required:
