@@ -1,4 +1,4 @@
-speakeasyVersion: 1.598.0
+speakeasyVersion: 1.598.3
 sources:
     BlackBox API:
         sourceNamespace: black-box-api
@@ -6,7 +6,7 @@ sources:
         sourceBlobDigest: sha256:3fd47221e31aa8ff0b34f1b85fdef7dd8b5af371476b65d3b8a63641162173a0
         tags:
             - latest
-            - speakeasy-sdk-regen-1754460086
+            - speakeasy-sdk-regen-1754527785
             - 1.0.0
 targets:
     blackbox:
@@ -22,7 +22,7 @@ targets:
         sourceRevisionDigest: sha256:70d3ad0723ee2b9666ea3541c4b6b034f8d537d25992dcd18a2e64e0b5f38442
         sourceBlobDigest: sha256:3fd47221e31aa8ff0b34f1b85fdef7dd8b5af371476b65d3b8a63641162173a0
         codeSamplesNamespace: black-box-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:ccac9cd768bdbeddbe35ad2c5c6d159b5de7b1c5bd229f5266139f86ae56b4ae
+        codeSamplesRevisionDigest: sha256:f3ac5a0aae99c4a3b40f856b920bc5a17d9094c10944f0684e49f4172b5b015c
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
