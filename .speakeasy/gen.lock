@@ -3,17 +3,17 @@ id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
 management:
   docChecksum: dc071eca37888a0cbcf2150acf882fed
   docVersion: 1.0.0
-  speakeasyVersion: 1.598.0
-  generationVersion: 2.674.1
-  releaseVersion: 0.2.9
-  configChecksum: e9c9d59ffba42fbcf7ceb36bd24ab6a8
+  speakeasyVersion: 1.598.3
+  generationVersion: 2.674.3
+  releaseVersion: 0.2.10
+  configChecksum: 6b4a195bfbafc0bb537c2ef37b6faefc
   repoURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk.git
   installationURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk
   published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
-    core: 3.21.19
+    core: 3.21.20
     defaultEnabledRetries: 0.1.0
     devContainers: 2.90.0
     envVarSecurityUsage: 0.1.2
