@@ -262,6 +262,16 @@ run();
 * [getSetting](docs/sdks/organizations/README.md#getsetting)
 * [deleteSetting](docs/sdks/organizations/README.md#deletesetting)
 
+### [sessionManagement](docs/sdks/sessionmanagement/README.md)
+
+* [listSessions](docs/sdks/sessionmanagement/README.md#listsessions)
+* [cleanupExpiredSessions](docs/sdks/sessionmanagement/README.md#cleanupexpiredsessions)
+* [revokeAllSessions](docs/sdks/sessionmanagement/README.md#revokeallsessions)
+* [getSessionStats](docs/sdks/sessionmanagement/README.md#getsessionstats)
+* [getSession](docs/sdks/sessionmanagement/README.md#getsession)
+* [revokeSession](docs/sdks/sessionmanagement/README.md#revokesession)
+* [extendSession](docs/sdks/sessionmanagement/README.md#extendsession)
+
 ### [tags](docs/sdks/tags/README.md)
 
 * [list](docs/sdks/tags/README.md#list)
@@ -405,6 +415,13 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`organizationsRemoveMember`](docs/sdks/organizations/README.md#removemember)
 - [`organizationsSetSetting`](docs/sdks/organizations/README.md#setsetting)
 - [`organizationsUpdateMembership`](docs/sdks/organizations/README.md#updatemembership)
+- [`sessionManagementCleanupExpiredSessions`](docs/sdks/sessionmanagement/README.md#cleanupexpiredsessions)
+- [`sessionManagementExtendSession`](docs/sdks/sessionmanagement/README.md#extendsession)
+- [`sessionManagementGetSession`](docs/sdks/sessionmanagement/README.md#getsession)
+- [`sessionManagementGetSessionStats`](docs/sdks/sessionmanagement/README.md#getsessionstats)
+- [`sessionManagementListSessions`](docs/sdks/sessionmanagement/README.md#listsessions)
+- [`sessionManagementRevokeAllSessions`](docs/sdks/sessionmanagement/README.md#revokeallsessions)
+- [`sessionManagementRevokeSession`](docs/sdks/sessionmanagement/README.md#revokesession)
 - [`tagsCreate`](docs/sdks/tags/README.md#create)
 - [`tagsDelete`](docs/sdks/tags/README.md#delete)
 - [`tagsGet`](docs/sdks/tags/README.md#get)
