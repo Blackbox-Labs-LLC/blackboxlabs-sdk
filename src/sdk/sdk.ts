@@ -8,6 +8,7 @@ import { ApiKeys } from "./apikeys.js";
 import { Attachments } from "./attachments.js";
 import { Authentication } from "./authentication.js";
 import { Automation } from "./automation.js";
+import { Client } from "./client.js";
 import { CsatSurveys } from "./csatsurveys.js";
 import { EventLogs } from "./eventlogs.js";
 import { KnowledgeBase } from "./knowledgebase.js";
@@ -28,6 +29,11 @@ export class Blackbox extends ClientSDK {
   private _authentication?: Authentication;
   get authentication(): Authentication {
     return (this._authentication ??= new Authentication(this._options));
+  }
+
+  private _client?: Client;
+  get client(): Client {
+    return (this._client ??= new Client(this._options));
   }
 
   private _organizations?: Organizations;

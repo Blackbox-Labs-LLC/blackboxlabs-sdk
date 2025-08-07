@@ -59,6 +59,7 @@ export * from "./gettagwithtickets.js";
 export * from "./getticket.js";
 export * from "./getticketanalytics.js";
 export * from "./gettrendanalytics.js";
+export * from "./getusertickets.js";
 export * from "./getwebhook.js";
 export * from "./getwebhookstats.js";
 export * from "./inviteuser.js";

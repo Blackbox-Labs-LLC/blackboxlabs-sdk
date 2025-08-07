@@ -257,6 +257,72 @@ paths:
         "400":
           description: "Invalid or expired verification token"
       x-speakeasy-name-override: "verifyEmail"
+  "/api/v0/client/identify":
+    post:
+      tags:
+        - "Client"
+      operationId: "identify_user"
+      requestBody:
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/ClientIdentifyRequest"}
+        required: true
+      responses:
+        "200":
+          description: "User identified successfully"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_ClientUserResponse"}
+        "400":
+          description: "Invalid input"
+        "404":
+          description: "Organization not found"
+  "/api/v0/client/message":
+    post:
+      tags:
+        - "Client"
+      operationId: "send_message"
+      requestBody:
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/ClientMessageRequest"}
+        required: true
+      responses:
+        "201":
+          description: "Message sent successfully"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_ClientTicketResponse"}
+        "400":
+          description: "Invalid input"
+        "404":
+          description: "Organization or user not found"
+  "/api/v0/client/tickets/{user_id}":
+    get:
+      tags:
+        - "Client"
+      operationId: "get_user_tickets"
+      parameters:
+        - name: "user_id"
+          in: "path"
+          description: "User ID"
+          required: true
+          schema:
+            type: "string"
+        - name: "org_domain"
+          in: "query"
+          description: "Organization domain"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        "200":
+          description: "User tickets"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_Vec_ClientTicketResponse"}
+        "404":
+          description: "Organization not found"
   "/api/v0/organizations":
     get:
       tags:
@@ -4400,6 +4466,60 @@ components:
             - "null"
         "success":
           type: "boolean"
+    "ApiResponse_ClientTicketResponse":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "object"
+          required:
+            - "ticket_id"
+            - "status"
+            - "created_at"
+          properties:
+            "created_at":
+              type: "string"
+            "status":
+              type: "string"
+            "ticket_id":
+              type: "string"
+              format: "uuid"
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
+    "ApiResponse_ClientUserResponse":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "object"
+          required:
+            - "user_id"
+            - "is_authenticated"
+          properties:
+            "email":
+              type:
+                - "string"
+                - "null"
+            "is_authenticated":
+              type: "boolean"
+            "name":
+              type:
+                - "string"
+                - "null"
+            "user_id":
+              type: "string"
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
     "ApiResponse_CreateApiKeyResponse":
       type: "object"
       required:
@@ -5571,6 +5691,33 @@ components:
                 type: "string"
               "updated_at":
                 type: "string"
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
+    "ApiResponse_Vec_ClientTicketResponse":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "array"
+          items:
+            type: "object"
+            required:
+              - "ticket_id"
+              - "status"
+              - "created_at"
+            properties:
+              "created_at":
+                type: "string"
+              "status":
+                type: "string"
+              "ticket_id":
+                type: "string"
+                format: "uuid"
         "message":
           type:
             - "string"
@@ -6770,6 +6917,75 @@ components:
         "current_password":
           type: "string"
         "new_password":
+          type: "string"
+    "ClientIdentifyRequest":
+      type: "object"
+      required:
+        - "org_domain"
+      properties:
+        "anonymous_id":
+          type:
+            - "string"
+            - "null"
+        "email":
+          type:
+            - "string"
+            - "null"
+        "name":
+          type:
+            - "string"
+            - "null"
+        "org_domain":
+          type: "string"
+        "user_id":
+          type:
+            - "string"
+            - "null"
+    "ClientMessageRequest":
+      type: "object"
+      required:
+        - "user_id"
+        - "message"
+        - "org_domain"
+      properties:
+        "message":
+          type: "string"
+        "metadata": {}
+        "org_domain":
+          type: "string"
+        "user_id":
+          type: "string"
+    "ClientTicketResponse":
+      type: "object"
+      required:
+        - "ticket_id"
+        - "status"
+        - "created_at"
+      properties:
+        "created_at":
+          type: "string"
+        "status":
+          type: "string"
+        "ticket_id":
+          type: "string"
+          format: "uuid"
+    "ClientUserResponse":
+      type: "object"
+      required:
+        - "user_id"
+        - "is_authenticated"
+      properties:
+        "email":
+          type:
+            - "string"
+            - "null"
+        "is_authenticated":
+          type: "boolean"
+        "name":
+          type:
+            - "string"
+            - "null"
+        "user_id":
           type: "string"
     "CreateApiKeyRequest":
       type: "object"

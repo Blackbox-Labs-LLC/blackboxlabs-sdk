@@ -191,6 +191,12 @@ run();
 * [getStats](docs/sdks/automation/README.md#getstats)
 
 
+### [client](docs/sdks/client/README.md)
+
+* [identifyUser](docs/sdks/client/README.md#identifyuser)
+* [sendMessage](docs/sdks/client/README.md#sendmessage)
+* [getUserTickets](docs/sdks/client/README.md#getusertickets)
+
 ### [csatSurveys](docs/sdks/csatsurveys/README.md)
 
 * [list](docs/sdks/csatsurveys/README.md#list)
@@ -349,6 +355,9 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`automationGetStats`](docs/sdks/automation/README.md#getstats)
 - [`automationList`](docs/sdks/automation/README.md#list)
 - [`automationUpdate`](docs/sdks/automation/README.md#update)
+- [`clientGetUserTickets`](docs/sdks/client/README.md#getusertickets)
+- [`clientIdentifyUser`](docs/sdks/client/README.md#identifyuser)
+- [`clientSendMessage`](docs/sdks/client/README.md#sendmessage)
 - [`csatSurveysDelete`](docs/sdks/csatsurveys/README.md#delete)
 - [`csatSurveysExport`](docs/sdks/csatsurveys/README.md#export)
 - [`csatSurveysGet`](docs/sdks/csatsurveys/README.md#get)
