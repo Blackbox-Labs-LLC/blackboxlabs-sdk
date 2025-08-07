@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
 management:
-  docChecksum: dc071eca37888a0cbcf2150acf882fed
+  docChecksum: 8d2ff625612aa88430ff4e6bc34d9b41
   docVersion: 1.0.0
   speakeasyVersion: 1.598.3
   generationVersion: 2.674.3
-  releaseVersion: 0.2.10
-  configChecksum: 6b4a195bfbafc0bb537c2ef37b6faefc
+  releaseVersion: 0.2.11
+  configChecksum: 91492ae4e0dff33e1379befe6dfc022b
   repoURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk.git
   installationURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk
   published: true
@@ -55,6 +55,10 @@ generatedFiles:
   - docs/models/apiresponseautomationruleresponsedata.md
   - docs/models/apiresponseautomationstats.md
   - docs/models/apiresponseautomationstatsdata.md
+  - docs/models/apiresponseclientticketresponse.md
+  - docs/models/apiresponseclientticketresponsedata.md
+  - docs/models/apiresponseclientuserresponse.md
+  - docs/models/apiresponseclientuserresponsedata.md
   - docs/models/apiresponsecreateapikeyresponse.md
   - docs/models/apiresponsecreateapikeyresponsedata.md
   - docs/models/apiresponsecsatanalytics.md
@@ -120,6 +124,8 @@ generatedFiles:
   - docs/models/apiresponsevecautomationexecutiondata.md
   - docs/models/apiresponsevecautomationruleresponse.md
   - docs/models/apiresponsevecautomationruleresponsedata.md
+  - docs/models/apiresponsevecclientticketresponse.md
+  - docs/models/apiresponsevecclientticketresponsedata.md
   - docs/models/apiresponseveceventlogresponse.md
   - docs/models/apiresponseveceventlogresponsedata.md
   - docs/models/apiresponsevecloginattemptresponse.md
@@ -161,6 +167,8 @@ generatedFiles:
   - docs/models/automationcondition.md
   - docs/models/automationconditions.md
   - docs/models/changepasswordrequest.md
+  - docs/models/clientidentifyrequest.md
+  - docs/models/clientmessagerequest.md
   - docs/models/createapikeyrequest.md
   - docs/models/createarticlerequest.md
   - docs/models/createautomationrulerequest.md
@@ -242,6 +250,7 @@ generatedFiles:
   - docs/models/operations/getticketanalyticsrequest.md
   - docs/models/operations/getticketrequest.md
   - docs/models/operations/gettrendanalyticsrequest.md
+  - docs/models/operations/getuserticketsrequest.md
   - docs/models/operations/getwebhookrequest.md
   - docs/models/operations/getwebhookstatsrequest.md
   - docs/models/operations/inviteuserrequest.md
@@ -317,6 +326,7 @@ generatedFiles:
   - docs/sdks/authentication/README.md
   - docs/sdks/automation/README.md
   - docs/sdks/blackbox/README.md
+  - docs/sdks/client/README.md
   - docs/sdks/csatsurveys/README.md
   - docs/sdks/eventlogs/README.md
   - docs/sdks/knowledgebase/README.md
@@ -369,6 +379,9 @@ generatedFiles:
   - src/funcs/automationGetStats.ts
   - src/funcs/automationList.ts
   - src/funcs/automationUpdate.ts
+  - src/funcs/clientGetUserTickets.ts
+  - src/funcs/clientIdentifyUser.ts
+  - src/funcs/clientSendMessage.ts
   - src/funcs/csatSurveysDelete.ts
   - src/funcs/csatSurveysExport.ts
   - src/funcs/csatSurveysGet.ts
@@ -475,6 +488,8 @@ generatedFiles:
   - src/models/apiresponseauthresponse.ts
   - src/models/apiresponseautomationruleresponse.ts
   - src/models/apiresponseautomationstats.ts
+  - src/models/apiresponseclientticketresponse.ts
+  - src/models/apiresponseclientuserresponse.ts
   - src/models/apiresponsecreateapikeyresponse.ts
   - src/models/apiresponsecsatanalytics.ts
   - src/models/apiresponseeventlogresponse.ts
@@ -509,6 +524,7 @@ generatedFiles:
   - src/models/apiresponsevecattachmentresponse.ts
   - src/models/apiresponsevecautomationexecution.ts
   - src/models/apiresponsevecautomationruleresponse.ts
+  - src/models/apiresponsevecclientticketresponse.ts
   - src/models/apiresponseveceventlogresponse.ts
   - src/models/apiresponsevecloginattemptresponse.ts
   - src/models/apiresponsevecloginhistoryresponse.ts
@@ -533,6 +549,8 @@ generatedFiles:
   - src/models/automationcondition.ts
   - src/models/automationconditions.ts
   - src/models/changepasswordrequest.ts
+  - src/models/clientidentifyrequest.ts
+  - src/models/clientmessagerequest.ts
   - src/models/createapikeyrequest.ts
   - src/models/createarticlerequest.ts
   - src/models/createautomationrulerequest.ts
@@ -621,6 +639,7 @@ generatedFiles:
   - src/models/operations/getticket.ts
   - src/models/operations/getticketanalytics.ts
   - src/models/operations/gettrendanalytics.ts
+  - src/models/operations/getusertickets.ts
   - src/models/operations/getwebhook.ts
   - src/models/operations/getwebhookstats.ts
   - src/models/operations/index.ts
@@ -696,6 +715,7 @@ generatedFiles:
   - src/sdk/attachments.ts
   - src/sdk/authentication.ts
   - src/sdk/automation.ts
+  - src/sdk/client.ts
   - src/sdk/csatsurveys.ts
   - src/sdk/eventlogs.ts
   - src/sdk/index.ts
@@ -1618,6 +1638,30 @@ examples:
     speakeasy-default-join-organization:
       requestBody:
         application/json: {"org_id": "e4d724fe-54bd-460a-ae9e-0a46cae348e1"}
+      responses:
+        "200":
+          application/json: {"success": false}
+  identify_user:
+    speakeasy-default-identify-user:
+      requestBody:
+        application/json: {"org_domain": "<value>"}
+      responses:
+        "200":
+          application/json: {"success": false}
+  send_message:
+    speakeasy-default-send-message:
+      requestBody:
+        application/json: {"message": "<value>", "org_domain": "<value>", "user_id": "<id>"}
+      responses:
+        "201":
+          application/json: {"success": false}
+  get_user_tickets:
+    speakeasy-default-get-user-tickets:
+      parameters:
+        path:
+          user_id: "<id>"
+        query:
+          org_domain: "<value>"
       responses:
         "200":
           application/json: {"success": false}
