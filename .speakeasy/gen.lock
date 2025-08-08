@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
 management:
-  docChecksum: a865f86c0eadd53f4c14e4e260740b1c
+  docChecksum: 654a2f739b85655d6122a684d5661b95
   docVersion: 1.0.0
   speakeasyVersion: 1.599.0
   generationVersion: 2.675.0
-  releaseVersion: 0.2.13
-  configChecksum: 462783197fccf763c3191be97fa79047
+  releaseVersion: 0.2.14
+  configChecksum: c36177f8ba4f08904c4bc91372fad519
   repoURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk.git
   installationURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk
   published: true
@@ -154,6 +154,8 @@ generatedFiles:
   - docs/models/apiresponsevecorganizationresponsedata.md
   - docs/models/apiresponsevecorganizationsettingresponse.md
   - docs/models/apiresponsevecorganizationsettingresponsedata.md
+  - docs/models/apiresponsevecpermissioncatalogentry.md
+  - docs/models/apiresponsevecpermissioncatalogentrydata.md
   - docs/models/apiresponsevecroleresponse.md
   - docs/models/apiresponsevecroleresponsedata.md
   - docs/models/apiresponsevecstring.md
@@ -456,6 +458,7 @@ generatedFiles:
   - src/funcs/organizationsGetAllForUser.ts
   - src/funcs/organizationsGetEffectivePermissions.ts
   - src/funcs/organizationsGetMembers.ts
+  - src/funcs/organizationsGetPermissionsCatalog.ts
   - src/funcs/organizationsGetRole.ts
   - src/funcs/organizationsGetSetting.ts
   - src/funcs/organizationsGetSettings.ts
@@ -584,6 +587,7 @@ generatedFiles:
   - src/models/apiresponsevecorganizationbydomainresponse.ts
   - src/models/apiresponsevecorganizationresponse.ts
   - src/models/apiresponsevecorganizationsettingresponse.ts
+  - src/models/apiresponsevecpermissioncatalogentry.ts
   - src/models/apiresponsevecroleresponse.ts
   - src/models/apiresponsevecstring.ts
   - src/models/apiresponsevecsurveyresponse.ts
@@ -1846,4 +1850,9 @@ examples:
       responses:
         "200":
           application/json: {"success": true}
+  get_permissions_catalog:
+    speakeasy-default-get-permissions-catalog:
+      responses:
+        "200":
+          application/json: {"success": false}
 examplesVersion: 1.0.2

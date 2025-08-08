@@ -29,6 +29,7 @@ Multi-tenant organization management, member invitations, and settings
 * [setSetting](#setsetting)
 * [getSetting](#getsetting)
 * [deleteSetting](#deletesetting)
+* [getPermissionsCatalog](#getpermissionscatalog)
 
 ## getAllForUser
 
@@ -1646,6 +1647,72 @@ run();
 ### Response
 
 **Promise\<void\>**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
+
+## getPermissionsCatalog
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="get_permissions_catalog" method="get" path="/api/v0/permissions/catalog" -->
+```typescript
+import { Blackbox } from "blackboxlabs-sdk";
+
+const blackbox = new Blackbox({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.organizations.getPermissionsCatalog();
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsGetPermissionsCatalog } from "blackboxlabs-sdk/funcs/organizationsGetPermissionsCatalog.js";
+
+// Use `BlackboxCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const blackbox = new BlackboxCore({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await organizationsGetPermissionsCatalog(blackbox);
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("organizationsGetPermissionsCatalog failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[models.ApiResponseVecPermissionCatalogEntry](../../models/apiresponsevecpermissioncatalogentry.md)\>**
 
 ### Errors
 

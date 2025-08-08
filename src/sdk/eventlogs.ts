@@ -13,12 +13,6 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class EventLogs extends ClientSDK {
-  /**
-   * List tickets with filtering
-   *
-   * @remarks
-   * Retrieves a paginated list of tickets with optional filtering by status, priority, assignment, creator, and tags. Results are ordered by creation date (newest first).
-   */
   async list(
     request: operations.ListEventsRequest,
     options?: RequestOptions,
@@ -30,12 +24,6 @@ export class EventLogs extends ClientSDK {
     ));
   }
 
-  /**
-   * Create a tag
-   *
-   * @remarks
-   * Requires permission: MANAGE_TAGS
-   */
   async create(
     request: operations.CreateEventRequest,
     options?: RequestOptions,
@@ -69,12 +57,6 @@ export class EventLogs extends ClientSDK {
     ));
   }
 
-  /**
-   * Get ticket details
-   *
-   * @remarks
-   * Retrieves detailed information about a specific ticket including its current status, assignment, tags, and metadata.
-   */
   async get(
     request: operations.GetEventRequest,
     options?: RequestOptions,

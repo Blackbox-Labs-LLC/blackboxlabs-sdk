@@ -269,6 +269,7 @@ run();
 * [setSetting](docs/sdks/organizations/README.md#setsetting)
 * [getSetting](docs/sdks/organizations/README.md#getsetting)
 * [deleteSetting](docs/sdks/organizations/README.md#deletesetting)
+* [getPermissionsCatalog](docs/sdks/organizations/README.md#getpermissionscatalog)
 
 ### [sessionManagement](docs/sdks/sessionmanagement/README.md)
 
@@ -420,6 +421,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`organizationsGetAllForUser`](docs/sdks/organizations/README.md#getallforuser)
 - [`organizationsGetEffectivePermissions`](docs/sdks/organizations/README.md#geteffectivepermissions)
 - [`organizationsGetMembers`](docs/sdks/organizations/README.md#getmembers)
+- [`organizationsGetPermissionsCatalog`](docs/sdks/organizations/README.md#getpermissionscatalog)
 - [`organizationsGetRole`](docs/sdks/organizations/README.md#getrole)
 - [`organizationsGetSetting`](docs/sdks/organizations/README.md#getsetting)
 - [`organizationsGetSettings`](docs/sdks/organizations/README.md#getsettings)

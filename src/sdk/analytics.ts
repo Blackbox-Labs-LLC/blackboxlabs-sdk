@@ -15,6 +15,12 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Analytics extends ClientSDK {
+  /**
+   * Get ticket details
+   *
+   * @remarks
+   * Retrieves detailed information about a specific ticket including its current status, assignment, tags, and metadata.
+   */
   async get(
     request: operations.GetOrganizationAnalyticsRequest,
     options?: RequestOptions,

@@ -13,6 +13,7 @@ import { organizationsGet } from "../funcs/organizationsGet.js";
 import { organizationsGetAllForUser } from "../funcs/organizationsGetAllForUser.js";
 import { organizationsGetEffectivePermissions } from "../funcs/organizationsGetEffectivePermissions.js";
 import { organizationsGetMembers } from "../funcs/organizationsGetMembers.js";
+import { organizationsGetPermissionsCatalog } from "../funcs/organizationsGetPermissionsCatalog.js";
 import { organizationsGetRole } from "../funcs/organizationsGetRole.js";
 import { organizationsGetSetting } from "../funcs/organizationsGetSetting.js";
 import { organizationsGetSettings } from "../funcs/organizationsGetSettings.js";
@@ -40,10 +41,10 @@ export class Organizations extends ClientSDK {
   }
 
   /**
-   * Create a new support ticket
+   * Create a tag
    *
    * @remarks
-   * Creates a new support ticket in the specified organization. The ticket will be assigned to the authenticated user as the creator and can optionally be assigned to another team member.
+   * Requires permission: MANAGE_TAGS
    */
   async create(
     request: models.CreateOrganizationRequest,
@@ -278,6 +279,15 @@ export class Organizations extends ClientSDK {
     return unwrapAsync(organizationsDeleteSetting(
       this,
       request,
+      options,
+    ));
+  }
+
+  async getPermissionsCatalog(
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseVecPermissionCatalogEntry> {
+    return unwrapAsync(organizationsGetPermissionsCatalog(
+      this,
       options,
     ));
   }
