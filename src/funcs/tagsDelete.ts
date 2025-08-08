@@ -25,6 +25,12 @@ import * as operations from "../models/operations/index.js";
 import { APICall, APIPromise } from "../types/async.js";
 import { Result } from "../types/fp.js";
 
+/**
+ * Delete a tag
+ *
+ * @remarks
+ * Requires permission: MANAGE_TAGS
+ */
 export function tagsDelete(
   client: BlackboxCore,
   request: operations.DeleteTagRequest,

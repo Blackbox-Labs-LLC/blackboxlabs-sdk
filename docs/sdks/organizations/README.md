@@ -17,6 +17,14 @@ Multi-tenant organization management, member invitations, and settings
 * [getMembers](#getmembers)
 * [updateMembership](#updatemembership)
 * [removeMember](#removemember)
+* [getEffectivePermissions](#geteffectivepermissions)
+* [listRoles](#listroles)
+* [createRole](#createrole)
+* [getRole](#getrole)
+* [updateRole](#updaterole)
+* [deleteRole](#deleterole)
+* [assignRole](#assignrole)
+* [revokeRole](#revokerole)
 * [getSettings](#getsettings)
 * [setSetting](#setsetting)
 * [getSetting](#getsetting)
@@ -735,6 +743,606 @@ run();
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                                                                                      | [operations.RemoveMemberRequest](../../models/operations/removememberrequest.md)                                                                                               | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[models.ApiResponseString](../../models/apiresponsestring.md)\>**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
+
+## getEffectivePermissions
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="get_effective_permissions" method="get" path="/api/v0/organizations/{org_id}/permissions/effective" -->
+```typescript
+import { Blackbox } from "blackboxlabs-sdk";
+
+const blackbox = new Blackbox({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.organizations.getEffectivePermissions({
+    orgId: "418e7107-8fb5-4f9f-84c2-5c71bdaf2a12",
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsGetEffectivePermissions } from "blackboxlabs-sdk/funcs/organizationsGetEffectivePermissions.js";
+
+// Use `BlackboxCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const blackbox = new BlackboxCore({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await organizationsGetEffectivePermissions(blackbox, {
+    orgId: "418e7107-8fb5-4f9f-84c2-5c71bdaf2a12",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("organizationsGetEffectivePermissions failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.GetEffectivePermissionsRequest](../../models/operations/geteffectivepermissionsrequest.md)                                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[models.ApiResponseEffectivePermissionsResponse](../../models/apiresponseeffectivepermissionsresponse.md)\>**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
+
+## listRoles
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="list_roles" method="get" path="/api/v0/organizations/{org_id}/roles" -->
+```typescript
+import { Blackbox } from "blackboxlabs-sdk";
+
+const blackbox = new Blackbox({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.organizations.listRoles({
+    orgId: "0a65906a-4e00-4e16-8aa0-3821f1253e55",
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsListRoles } from "blackboxlabs-sdk/funcs/organizationsListRoles.js";
+
+// Use `BlackboxCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const blackbox = new BlackboxCore({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await organizationsListRoles(blackbox, {
+    orgId: "0a65906a-4e00-4e16-8aa0-3821f1253e55",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("organizationsListRoles failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.ListRolesRequest](../../models/operations/listrolesrequest.md)                                                                                                     | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[models.ApiResponseVecRoleResponse](../../models/apiresponsevecroleresponse.md)\>**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
+
+## createRole
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="create_role" method="post" path="/api/v0/organizations/{org_id}/roles" -->
+```typescript
+import { Blackbox } from "blackboxlabs-sdk";
+
+const blackbox = new Blackbox({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.organizations.createRole({
+    orgId: "7963d8f7-369d-43dc-8ae7-ed140414638f",
+    createRoleRequest: {
+      name: "<value>",
+      permissions: 14710,
+    },
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsCreateRole } from "blackboxlabs-sdk/funcs/organizationsCreateRole.js";
+
+// Use `BlackboxCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const blackbox = new BlackboxCore({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await organizationsCreateRole(blackbox, {
+    orgId: "7963d8f7-369d-43dc-8ae7-ed140414638f",
+    createRoleRequest: {
+      name: "<value>",
+      permissions: 14710,
+    },
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("organizationsCreateRole failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.CreateRoleRequest](../../models/operations/createrolerequest.md)                                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[models.ApiResponseRoleResponse](../../models/apiresponseroleresponse.md)\>**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
+
+## getRole
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="get_role" method="get" path="/api/v0/organizations/{org_id}/roles/{role_id}" -->
+```typescript
+import { Blackbox } from "blackboxlabs-sdk";
+
+const blackbox = new Blackbox({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.organizations.getRole({
+    orgId: "dc2a3959-50ac-4611-ae78-d04d1203f676",
+    roleId: "6cc27dd7-f5d7-4ed0-b4c3-c50505482eca",
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsGetRole } from "blackboxlabs-sdk/funcs/organizationsGetRole.js";
+
+// Use `BlackboxCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const blackbox = new BlackboxCore({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await organizationsGetRole(blackbox, {
+    orgId: "dc2a3959-50ac-4611-ae78-d04d1203f676",
+    roleId: "6cc27dd7-f5d7-4ed0-b4c3-c50505482eca",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("organizationsGetRole failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.GetRoleRequest](../../models/operations/getrolerequest.md)                                                                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[models.ApiResponseRoleResponse](../../models/apiresponseroleresponse.md)\>**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
+
+## updateRole
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="update_role" method="put" path="/api/v0/organizations/{org_id}/roles/{role_id}" -->
+```typescript
+import { Blackbox } from "blackboxlabs-sdk";
+
+const blackbox = new Blackbox({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.organizations.updateRole({
+    orgId: "6a722352-3cc6-42f1-9655-8ae17030f441",
+    roleId: "986b5f5c-bba3-4b08-9ba5-a3a6bd401f04",
+    updateRoleRequest: {},
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsUpdateRole } from "blackboxlabs-sdk/funcs/organizationsUpdateRole.js";
+
+// Use `BlackboxCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const blackbox = new BlackboxCore({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await organizationsUpdateRole(blackbox, {
+    orgId: "6a722352-3cc6-42f1-9655-8ae17030f441",
+    roleId: "986b5f5c-bba3-4b08-9ba5-a3a6bd401f04",
+    updateRoleRequest: {},
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("organizationsUpdateRole failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.UpdateRoleRequest](../../models/operations/updaterolerequest.md)                                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[models.ApiResponseRoleResponse](../../models/apiresponseroleresponse.md)\>**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
+
+## deleteRole
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="delete_role" method="delete" path="/api/v0/organizations/{org_id}/roles/{role_id}" -->
+```typescript
+import { Blackbox } from "blackboxlabs-sdk";
+
+const blackbox = new Blackbox({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  await blackbox.organizations.deleteRole({
+    orgId: "357dd0af-2faf-4258-804a-e559464754de",
+    roleId: "640e7e34-c5f2-40c0-a6db-51e1b3c63f9e",
+  });
+
+
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsDeleteRole } from "blackboxlabs-sdk/funcs/organizationsDeleteRole.js";
+
+// Use `BlackboxCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const blackbox = new BlackboxCore({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await organizationsDeleteRole(blackbox, {
+    orgId: "357dd0af-2faf-4258-804a-e559464754de",
+    roleId: "640e7e34-c5f2-40c0-a6db-51e1b3c63f9e",
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    
+  } else {
+    console.log("organizationsDeleteRole failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.DeleteRoleRequest](../../models/operations/deleterolerequest.md)                                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<void\>**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
+
+## assignRole
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="assign_role" method="post" path="/api/v0/organizations/{org_id}/roles/{role_id}/assign" -->
+```typescript
+import { Blackbox } from "blackboxlabs-sdk";
+
+const blackbox = new Blackbox({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.organizations.assignRole({
+    orgId: "a7a8a6a1-9c63-4398-958a-50e248304ba0",
+    roleId: "3234dc24-0ef6-4718-8e74-e6b0131a61a1",
+    assignRoleRequest: {
+      userId: "7339dd48-79e1-47a2-a271-6d3ffcb9966e",
+    },
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsAssignRole } from "blackboxlabs-sdk/funcs/organizationsAssignRole.js";
+
+// Use `BlackboxCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const blackbox = new BlackboxCore({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await organizationsAssignRole(blackbox, {
+    orgId: "a7a8a6a1-9c63-4398-958a-50e248304ba0",
+    roleId: "3234dc24-0ef6-4718-8e74-e6b0131a61a1",
+    assignRoleRequest: {
+      userId: "7339dd48-79e1-47a2-a271-6d3ffcb9966e",
+    },
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("organizationsAssignRole failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.AssignRoleRequest](../../models/operations/assignrolerequest.md)                                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
+| `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
+| `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
+
+### Response
+
+**Promise\<[models.ApiResponseString](../../models/apiresponsestring.md)\>**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
+
+## revokeRole
+
+### Example Usage
+
+<!-- UsageSnippet language="typescript" operationID="revoke_role" method="post" path="/api/v0/organizations/{org_id}/roles/{role_id}/revoke" -->
+```typescript
+import { Blackbox } from "blackboxlabs-sdk";
+
+const blackbox = new Blackbox({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const result = await blackbox.organizations.revokeRole({
+    orgId: "0b5af395-5a62-4fda-be3f-10080fcbd43e",
+    roleId: "faac4588-aa6b-4c49-a785-eb9f4627ca89",
+    assignRoleRequest: {
+      userId: "ccd7f66a-4bbb-42ce-bf3b-a6cf819d3d0d",
+    },
+  });
+
+  console.log(result);
+}
+
+run();
+```
+
+### Standalone function
+
+The standalone function version of this method:
+
+```typescript
+import { BlackboxCore } from "blackboxlabs-sdk/core.js";
+import { organizationsRevokeRole } from "blackboxlabs-sdk/funcs/organizationsRevokeRole.js";
+
+// Use `BlackboxCore` for best tree-shaking performance.
+// You can create one instance of it to use across an application.
+const blackbox = new BlackboxCore({
+  blackboxAuthToken: process.env["BLACKBOX_BLACKBOX_AUTH_TOKEN"] ?? "",
+});
+
+async function run() {
+  const res = await organizationsRevokeRole(blackbox, {
+    orgId: "0b5af395-5a62-4fda-be3f-10080fcbd43e",
+    roleId: "faac4588-aa6b-4c49-a785-eb9f4627ca89",
+    assignRoleRequest: {
+      userId: "ccd7f66a-4bbb-42ce-bf3b-a6cf819d3d0d",
+    },
+  });
+  if (res.ok) {
+    const { value: result } = res;
+    console.log(result);
+  } else {
+    console.log("organizationsRevokeRole failed:", res.error);
+  }
+}
+
+run();
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                                      | [operations.RevokeRoleRequest](../../models/operations/revokerolerequest.md)                                                                                                   | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |

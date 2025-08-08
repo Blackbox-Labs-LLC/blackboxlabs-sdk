@@ -15,7 +15,7 @@ Developer-friendly & type-safe Typescript SDK specifically catered to leverage *
 <!-- Start Summary [summary] -->
 ## Summary
 
-Blackbox Customer Support API: Enterprise-grade customer support and ticketing system with advanced analytics, automation, and integrations. Built for modern teams who need powerful, scalable support infrastructure.
+Blackbox Customer Support API: Seamless support, smart automation, and total clarity for your team.
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
@@ -257,6 +257,14 @@ run();
 * [getMembers](docs/sdks/organizations/README.md#getmembers)
 * [updateMembership](docs/sdks/organizations/README.md#updatemembership)
 * [removeMember](docs/sdks/organizations/README.md#removemember)
+* [getEffectivePermissions](docs/sdks/organizations/README.md#geteffectivepermissions)
+* [listRoles](docs/sdks/organizations/README.md#listroles)
+* [createRole](docs/sdks/organizations/README.md#createrole)
+* [getRole](docs/sdks/organizations/README.md#getrole)
+* [updateRole](docs/sdks/organizations/README.md#updaterole)
+* [deleteRole](docs/sdks/organizations/README.md#deleterole)
+* [assignRole](docs/sdks/organizations/README.md#assignrole)
+* [revokeRole](docs/sdks/organizations/README.md#revokerole)
 * [getSettings](docs/sdks/organizations/README.md#getsettings)
 * [setSetting](docs/sdks/organizations/README.md#setsetting)
 * [getSetting](docs/sdks/organizations/README.md#getsetting)
@@ -275,11 +283,11 @@ run();
 ### [tags](docs/sdks/tags/README.md)
 
 * [list](docs/sdks/tags/README.md#list)
-* [create](docs/sdks/tags/README.md#create)
+* [create](docs/sdks/tags/README.md#create) - Create a tag
 * [getPopular](docs/sdks/tags/README.md#getpopular)
 * [get](docs/sdks/tags/README.md#get)
-* [update](docs/sdks/tags/README.md#update)
-* [delete](docs/sdks/tags/README.md#delete)
+* [update](docs/sdks/tags/README.md#update) - Update a tag
+* [delete](docs/sdks/tags/README.md#delete) - Delete a tag
 * [getWithTickets](docs/sdks/tags/README.md#getwithtickets)
 
 ### [tickets](docs/sdks/tickets/README.md)
@@ -402,19 +410,27 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`messagesList`](docs/sdks/messages/README.md#list)
 - [`messagesSearch`](docs/sdks/messages/README.md#search)
 - [`organizationsAcceptInvitation`](docs/sdks/organizations/README.md#acceptinvitation)
+- [`organizationsAssignRole`](docs/sdks/organizations/README.md#assignrole)
 - [`organizationsCreate`](docs/sdks/organizations/README.md#create)
+- [`organizationsCreateRole`](docs/sdks/organizations/README.md#createrole)
+- [`organizationsDeleteRole`](docs/sdks/organizations/README.md#deleterole)
 - [`organizationsDeleteSetting`](docs/sdks/organizations/README.md#deletesetting)
 - [`organizationsFindOrganizationsByEmailDomain`](docs/sdks/organizations/README.md#findorganizationsbyemaildomain)
 - [`organizationsGet`](docs/sdks/organizations/README.md#get)
 - [`organizationsGetAllForUser`](docs/sdks/organizations/README.md#getallforuser)
+- [`organizationsGetEffectivePermissions`](docs/sdks/organizations/README.md#geteffectivepermissions)
 - [`organizationsGetMembers`](docs/sdks/organizations/README.md#getmembers)
+- [`organizationsGetRole`](docs/sdks/organizations/README.md#getrole)
 - [`organizationsGetSetting`](docs/sdks/organizations/README.md#getsetting)
 - [`organizationsGetSettings`](docs/sdks/organizations/README.md#getsettings)
 - [`organizationsInviteUser`](docs/sdks/organizations/README.md#inviteuser)
 - [`organizationsJoinOrganization`](docs/sdks/organizations/README.md#joinorganization)
+- [`organizationsListRoles`](docs/sdks/organizations/README.md#listroles)
 - [`organizationsRemoveMember`](docs/sdks/organizations/README.md#removemember)
+- [`organizationsRevokeRole`](docs/sdks/organizations/README.md#revokerole)
 - [`organizationsSetSetting`](docs/sdks/organizations/README.md#setsetting)
 - [`organizationsUpdateMembership`](docs/sdks/organizations/README.md#updatemembership)
+- [`organizationsUpdateRole`](docs/sdks/organizations/README.md#updaterole)
 - [`sessionManagementCleanupExpiredSessions`](docs/sdks/sessionmanagement/README.md#cleanupexpiredsessions)
 - [`sessionManagementExtendSession`](docs/sdks/sessionmanagement/README.md#extendsession)
 - [`sessionManagementGetSession`](docs/sdks/sessionmanagement/README.md#getsession)
@@ -422,13 +438,13 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 - [`sessionManagementListSessions`](docs/sdks/sessionmanagement/README.md#listsessions)
 - [`sessionManagementRevokeAllSessions`](docs/sdks/sessionmanagement/README.md#revokeallsessions)
 - [`sessionManagementRevokeSession`](docs/sdks/sessionmanagement/README.md#revokesession)
-- [`tagsCreate`](docs/sdks/tags/README.md#create)
-- [`tagsDelete`](docs/sdks/tags/README.md#delete)
+- [`tagsCreate`](docs/sdks/tags/README.md#create) - Create a tag
+- [`tagsDelete`](docs/sdks/tags/README.md#delete) - Delete a tag
 - [`tagsGet`](docs/sdks/tags/README.md#get)
 - [`tagsGetPopular`](docs/sdks/tags/README.md#getpopular)
 - [`tagsGetWithTickets`](docs/sdks/tags/README.md#getwithtickets)
 - [`tagsList`](docs/sdks/tags/README.md#list)
-- [`tagsUpdate`](docs/sdks/tags/README.md#update)
+- [`tagsUpdate`](docs/sdks/tags/README.md#update) - Update a tag
 - [`ticketsAddTags`](docs/sdks/tickets/README.md#addtags)
 - [`ticketsCreate`](docs/sdks/tickets/README.md#create) - Create a new support ticket
 - [`ticketsDelete`](docs/sdks/tickets/README.md#delete)

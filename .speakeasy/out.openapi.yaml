@@ -1,7 +1,7 @@
 openapi: "3.1.0"
 info:
   title: "Blackbox Customer Support API"
-  description: "Enterprise-grade customer support and ticketing system with advanced analytics, automation, and integrations. Built for modern teams who need powerful, scalable support infrastructure."
+  description: "Seamless support, smart automation, and total clarity for your team."
   contact:
     name: "Blackbox Labs LLC"
     url: "https://blckbox.dev/support"
@@ -1981,6 +1981,210 @@ paths:
       security:
         - blackbox_auth_token: []
       x-speakeasy-name-override: "delete"
+  "/api/v0/organizations/{org_id}/permissions/effective":
+    get:
+      tags:
+        - "Organizations"
+      operationId: "get_effective_permissions"
+      parameters:
+        - name: "org_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      responses:
+        "200":
+          description: "Effective permissions"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_EffectivePermissionsResponse"}
+      security:
+        - blackbox_auth_token: []
+  "/api/v0/organizations/{org_id}/roles":
+    get:
+      tags:
+        - "Organizations"
+      operationId: "list_roles"
+      parameters:
+        - name: "org_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      responses:
+        "200":
+          description: "List roles"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_Vec_RoleResponse"}
+      security:
+        - blackbox_auth_token: []
+    post:
+      tags:
+        - "Organizations"
+      operationId: "create_role"
+      parameters:
+        - name: "org_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      requestBody:
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/CreateRoleRequest"}
+        required: true
+      responses:
+        "201":
+          description: "Role created"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_RoleResponse"}
+      security:
+        - blackbox_auth_token: []
+  "/api/v0/organizations/{org_id}/roles/{role_id}":
+    get:
+      tags:
+        - "Organizations"
+      operationId: "get_role"
+      parameters:
+        - name: "org_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+        - name: "role_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      responses:
+        "200":
+          description: "Role"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_RoleResponse"}
+      security:
+        - blackbox_auth_token: []
+    put:
+      tags:
+        - "Organizations"
+      operationId: "update_role"
+      parameters:
+        - name: "org_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+        - name: "role_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      requestBody:
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/UpdateRoleRequest"}
+        required: true
+      responses:
+        "200":
+          description: "Updated"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_RoleResponse"}
+      security:
+        - blackbox_auth_token: []
+    delete:
+      tags:
+        - "Organizations"
+      operationId: "delete_role"
+      parameters:
+        - name: "org_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+        - name: "role_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      responses:
+        "204":
+          description: "Deleted"
+      security:
+        - blackbox_auth_token: []
+  "/api/v0/organizations/{org_id}/roles/{role_id}/assign":
+    post:
+      tags:
+        - "Organizations"
+      operationId: "assign_role"
+      parameters:
+        - name: "org_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+        - name: "role_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      requestBody:
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/AssignRoleRequest"}
+        required: true
+      responses:
+        "200":
+          description: "Assigned"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_String"}
+      security:
+        - blackbox_auth_token: []
+  "/api/v0/organizations/{org_id}/roles/{role_id}/revoke":
+    post:
+      tags:
+        - "Organizations"
+      operationId: "revoke_role"
+      parameters:
+        - name: "org_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+        - name: "role_id"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+            format: "uuid"
+      requestBody:
+        content:
+          "application/json":
+            schema: {"$ref": "#/components/schemas/AssignRoleRequest"}
+        required: true
+      responses:
+        "200":
+          description: "Revoked"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_String"}
+      security:
+        - blackbox_auth_token: []
   "/api/v0/organizations/{org_id}/settings":
     get:
       tags:
@@ -2500,6 +2704,8 @@ paths:
     post:
       tags:
         - "Tags"
+      summary: "Create a tag"
+      description: "Requires permission: MANAGE_TAGS"
       operationId: "create_tag"
       parameters:
         - name: "org_id"
@@ -2597,6 +2803,8 @@ paths:
     put:
       tags:
         - "Tags"
+      summary: "Update a tag"
+      description: "Requires permission: MANAGE_TAGS"
       operationId: "update_tag"
       parameters:
         - name: "org_id"
@@ -2636,6 +2844,8 @@ paths:
     delete:
       tags:
         - "Tags"
+      summary: "Delete a tag"
+      description: "Requires permission: MANAGE_TAGS"
       operationId: "delete_tag"
       parameters:
         - name: "org_id"
@@ -4678,6 +4888,26 @@ components:
             - "null"
         "success":
           type: "boolean"
+    "ApiResponse_EffectivePermissionsResponse":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "object"
+          required:
+            - "effective_permissions"
+          properties:
+            "effective_permissions":
+              type: "integer"
+              format: "int64"
+              minimum: 0
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
     "ApiResponse_EventLogResponse":
       type: "object"
       required:
@@ -5132,6 +5362,53 @@ components:
             "user_id":
               type: "string"
               format: "uuid"
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
+    "ApiResponse_RoleResponse":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "object"
+          required:
+            - "id"
+            - "organization_id"
+            - "name"
+            - "color"
+            - "position"
+            - "permissions"
+            - "managed"
+            - "created_at"
+            - "updated_at"
+          properties:
+            "color":
+              type: "string"
+            "created_at":
+              type: "string"
+            "id":
+              type: "string"
+              format: "uuid"
+            "managed":
+              type: "boolean"
+            "name":
+              type: "string"
+            "organization_id":
+              type: "string"
+              format: "uuid"
+            "permissions":
+              type: "integer"
+              format: "int64"
+              minimum: 0
+            "position":
+              type: "integer"
+              format: "int32"
+            "updated_at":
+              type: "string"
         "message":
           type:
             - "string"
@@ -6282,6 +6559,55 @@ components:
             - "null"
         "success":
           type: "boolean"
+    "ApiResponse_Vec_RoleResponse":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "array"
+          items:
+            type: "object"
+            required:
+              - "id"
+              - "organization_id"
+              - "name"
+              - "color"
+              - "position"
+              - "permissions"
+              - "managed"
+              - "created_at"
+              - "updated_at"
+            properties:
+              "color":
+                type: "string"
+              "created_at":
+                type: "string"
+              "id":
+                type: "string"
+                format: "uuid"
+              "managed":
+                type: "boolean"
+              "name":
+                type: "string"
+              "organization_id":
+                type: "string"
+                format: "uuid"
+              "permissions":
+                type: "integer"
+                format: "int64"
+                minimum: 0
+              "position":
+                type: "integer"
+                format: "int32"
+              "updated_at":
+                type: "string"
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
     "ApiResponse_Vec_String":
       type: "object"
       required:
@@ -6830,6 +7156,14 @@ components:
           type: "integer"
           format: "int64"
           minimum: 0
+    "AssignRoleRequest":
+      type: "object"
+      required:
+        - "user_id"
+      properties:
+        "user_id":
+          type: "string"
+          format: "uuid"
     "AttachmentResponse":
       type: "object"
       required:
@@ -7334,6 +7668,31 @@ components:
           type: "string"
         "name":
           type: "string"
+    "CreateRoleRequest":
+      type: "object"
+      required:
+        - "name"
+        - "permissions"
+      properties:
+        "color":
+          type:
+            - "string"
+            - "null"
+        "managed":
+          type:
+            - "boolean"
+            - "null"
+        "name":
+          type: "string"
+        "permissions":
+          type: "integer"
+          format: "int64"
+          minimum: 0
+        "position":
+          type:
+            - "integer"
+            - "null"
+          format: "int32"
     "CreateTagRequest":
       type: "object"
       required:
@@ -7416,6 +7775,15 @@ components:
           minimum: 0
         "date":
           type: "string"
+    "EffectivePermissionsResponse":
+      type: "object"
+      required:
+        - "effective_permissions"
+      properties:
+        "effective_permissions":
+          type: "integer"
+          format: "int64"
+          minimum: 0
     "Enable2FARequest":
       type: "object"
       required:
@@ -8087,6 +8455,42 @@ components:
         "session_id":
           type: "string"
           format: "uuid"
+    "RoleResponse":
+      type: "object"
+      required:
+        - "id"
+        - "organization_id"
+        - "name"
+        - "color"
+        - "position"
+        - "permissions"
+        - "managed"
+        - "created_at"
+        - "updated_at"
+      properties:
+        "color":
+          type: "string"
+        "created_at":
+          type: "string"
+        "id":
+          type: "string"
+          format: "uuid"
+        "managed":
+          type: "boolean"
+        "name":
+          type: "string"
+        "organization_id":
+          type: "string"
+          format: "uuid"
+        "permissions":
+          type: "integer"
+          format: "int64"
+          minimum: 0
+        "position":
+          type: "integer"
+          format: "int32"
+        "updated_at":
+          type: "string"
     "RuleActivity":
       type: "object"
       required:
@@ -8745,6 +9149,28 @@ components:
           type:
             - "string"
             - "null"
+    "UpdateRoleRequest":
+      type: "object"
+      properties:
+        "color":
+          type:
+            - "string"
+            - "null"
+        "name":
+          type:
+            - "string"
+            - "null"
+        "permissions":
+          type:
+            - "integer"
+            - "null"
+          format: "int64"
+          minimum: 0
+        "position":
+          type:
+            - "integer"
+            - "null"
+          format: "int32"
     "UpdateSurveyRequest":
       type: "object"
       properties:

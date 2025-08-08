@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
 management:
-  docChecksum: ca56ead8e12b401ae4cd5e273459fb3d
+  docChecksum: a865f86c0eadd53f4c14e4e260740b1c
   docVersion: 1.0.0
-  speakeasyVersion: 1.598.4
-  generationVersion: 2.674.3
-  releaseVersion: 0.2.12
-  configChecksum: b331d8da432f3bc309be5ea339e1d518
+  speakeasyVersion: 1.599.0
+  generationVersion: 2.675.0
+  releaseVersion: 0.2.13
+  configChecksum: 462783197fccf763c3191be97fa79047
   repoURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk.git
   installationURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk
   published: true
@@ -63,6 +63,8 @@ generatedFiles:
   - docs/models/apiresponsecreateapikeyresponsedata.md
   - docs/models/apiresponsecsatanalytics.md
   - docs/models/apiresponsecsatanalyticsdata.md
+  - docs/models/apiresponseeffectivepermissionsresponse.md
+  - docs/models/apiresponseeffectivepermissionsresponsedata.md
   - docs/models/apiresponseeventlogresponse.md
   - docs/models/apiresponseeventlogresponsedata.md
   - docs/models/apiresponseeventlogstats.md
@@ -89,6 +91,8 @@ generatedFiles:
   - docs/models/apiresponseorganizationsettingresponsedata.md
   - docs/models/apiresponseregisterresponse.md
   - docs/models/apiresponseregisterresponsedata.md
+  - docs/models/apiresponseroleresponse.md
+  - docs/models/apiresponseroleresponsedata.md
   - docs/models/apiresponsesessioninfo.md
   - docs/models/apiresponsesessioninfodata.md
   - docs/models/apiresponsesessionlistresponse.md
@@ -150,6 +154,8 @@ generatedFiles:
   - docs/models/apiresponsevecorganizationresponsedata.md
   - docs/models/apiresponsevecorganizationsettingresponse.md
   - docs/models/apiresponsevecorganizationsettingresponsedata.md
+  - docs/models/apiresponsevecroleresponse.md
+  - docs/models/apiresponsevecroleresponsedata.md
   - docs/models/apiresponsevecstring.md
   - docs/models/apiresponsevecsurveyresponse.md
   - docs/models/apiresponsevecsurveyresponsedata.md
@@ -168,6 +174,7 @@ generatedFiles:
   - docs/models/apiresponsewebhooktestresult.md
   - docs/models/apiresponsewebhooktestresultdata.md
   - docs/models/articleview.md
+  - docs/models/assignrolerequest.md
   - docs/models/attachmentresponse.md
   - docs/models/automationaction.md
   - docs/models/automationcondition.md
@@ -182,6 +189,7 @@ generatedFiles:
   - docs/models/createmacrorequest.md
   - docs/models/createmessagerequest.md
   - docs/models/createorganizationrequest.md
+  - docs/models/createrolerequest.md
   - docs/models/createtagrequest.md
   - docs/models/createticketrequest.md
   - docs/models/createwebhookrequest.md
@@ -202,11 +210,13 @@ generatedFiles:
   - docs/models/monthlysurveydata.md
   - docs/models/operations/acceptinvitationrequest.md
   - docs/models/operations/addtagstoticketrequest.md
+  - docs/models/operations/assignrolerequest.md
   - docs/models/operations/createarticlerequest.md
   - docs/models/operations/createautomationrulerequest.md
   - docs/models/operations/createeventrequest.md
   - docs/models/operations/createmacrorequest.md
   - docs/models/operations/createmessagerequest.md
+  - docs/models/operations/createrolerequest.md
   - docs/models/operations/createtagrequest.md
   - docs/models/operations/createticketrequest.md
   - docs/models/operations/createwebhookrequest.md
@@ -217,6 +227,7 @@ generatedFiles:
   - docs/models/operations/deletemacrorequest.md
   - docs/models/operations/deletemessagerequest.md
   - docs/models/operations/deleteorganizationsettingrequest.md
+  - docs/models/operations/deleterolerequest.md
   - docs/models/operations/deletesurveyrequest.md
   - docs/models/operations/deletetagrequest.md
   - docs/models/operations/deleteticketrequest.md
@@ -233,6 +244,7 @@ generatedFiles:
   - docs/models/operations/getarticlerequest.md
   - docs/models/operations/getautomationrulerequest.md
   - docs/models/operations/getautomationstatsrequest.md
+  - docs/models/operations/geteffectivepermissionsrequest.md
   - docs/models/operations/geteventrequest.md
   - docs/models/operations/geteventstatsrequest.md
   - docs/models/operations/getknowledgebaseanalyticsrequest.md
@@ -250,6 +262,7 @@ generatedFiles:
   - docs/models/operations/getpopularmacrosrequest.md
   - docs/models/operations/getpopulartagsrequest.md
   - docs/models/operations/getpublicarticlesrequest.md
+  - docs/models/operations/getrolerequest.md
   - docs/models/operations/getsessionrequest.md
   - docs/models/operations/getsurveyanalyticsrequest.md
   - docs/models/operations/getsurveyrequest.md
@@ -269,6 +282,7 @@ generatedFiles:
   - docs/models/operations/listeventsrequest.md
   - docs/models/operations/listmacrosrequest.md
   - docs/models/operations/listmessageattachmentsrequest.md
+  - docs/models/operations/listrolesrequest.md
   - docs/models/operations/listsurveysrequest.md
   - docs/models/operations/listtagsrequest.md
   - docs/models/operations/listticketmessagesrequest.md
@@ -279,6 +293,7 @@ generatedFiles:
   - docs/models/operations/removetagsfromticketrequest.md
   - docs/models/operations/rendermacrotemplaterequest.md
   - docs/models/operations/revokeapikeyrequest.md
+  - docs/models/operations/revokerolerequest.md
   - docs/models/operations/revokesessionrequest.md
   - docs/models/operations/searchmessagesrequest.md
   - docs/models/operations/searchpublicarticlesrequest.md
@@ -290,6 +305,7 @@ generatedFiles:
   - docs/models/operations/updateautomationrulerequest.md
   - docs/models/operations/updatemacrorequest.md
   - docs/models/operations/updatemembershiprequest.md
+  - docs/models/operations/updaterolerequest.md
   - docs/models/operations/updatesurveyrequest.md
   - docs/models/operations/updatetagrequest.md
   - docs/models/operations/updateticketrequest.md
@@ -322,6 +338,7 @@ generatedFiles:
   - docs/models/updatemacrorequest.md
   - docs/models/updatemembershiprequest.md
   - docs/models/updateprofilerequest.md
+  - docs/models/updaterolerequest.md
   - docs/models/updatesurveyrequest.md
   - docs/models/updatetagrequest.md
   - docs/models/updateticketrequest.md
@@ -429,19 +446,27 @@ generatedFiles:
   - src/funcs/messagesList.ts
   - src/funcs/messagesSearch.ts
   - src/funcs/organizationsAcceptInvitation.ts
+  - src/funcs/organizationsAssignRole.ts
   - src/funcs/organizationsCreate.ts
+  - src/funcs/organizationsCreateRole.ts
+  - src/funcs/organizationsDeleteRole.ts
   - src/funcs/organizationsDeleteSetting.ts
   - src/funcs/organizationsFindOrganizationsByEmailDomain.ts
   - src/funcs/organizationsGet.ts
   - src/funcs/organizationsGetAllForUser.ts
+  - src/funcs/organizationsGetEffectivePermissions.ts
   - src/funcs/organizationsGetMembers.ts
+  - src/funcs/organizationsGetRole.ts
   - src/funcs/organizationsGetSetting.ts
   - src/funcs/organizationsGetSettings.ts
   - src/funcs/organizationsInviteUser.ts
   - src/funcs/organizationsJoinOrganization.ts
+  - src/funcs/organizationsListRoles.ts
   - src/funcs/organizationsRemoveMember.ts
+  - src/funcs/organizationsRevokeRole.ts
   - src/funcs/organizationsSetSetting.ts
   - src/funcs/organizationsUpdateMembership.ts
+  - src/funcs/organizationsUpdateRole.ts
   - src/funcs/sessionManagementCleanupExpiredSessions.ts
   - src/funcs/sessionManagementExtendSession.ts
   - src/funcs/sessionManagementGetSession.ts
@@ -512,6 +537,7 @@ generatedFiles:
   - src/models/apiresponseclientuserresponse.ts
   - src/models/apiresponsecreateapikeyresponse.ts
   - src/models/apiresponsecsatanalytics.ts
+  - src/models/apiresponseeffectivepermissionsresponse.ts
   - src/models/apiresponseeventlogresponse.ts
   - src/models/apiresponseeventlogstats.ts
   - src/models/apiresponseknowledgebasestats.ts
@@ -525,6 +551,7 @@ generatedFiles:
   - src/models/apiresponseorganizationresponse.ts
   - src/models/apiresponseorganizationsettingresponse.ts
   - src/models/apiresponseregisterresponse.ts
+  - src/models/apiresponseroleresponse.ts
   - src/models/apiresponsesessioninfo.ts
   - src/models/apiresponsesessionlistresponse.ts
   - src/models/apiresponsesessionstats.ts
@@ -557,6 +584,7 @@ generatedFiles:
   - src/models/apiresponsevecorganizationbydomainresponse.ts
   - src/models/apiresponsevecorganizationresponse.ts
   - src/models/apiresponsevecorganizationsettingresponse.ts
+  - src/models/apiresponsevecroleresponse.ts
   - src/models/apiresponsevecstring.ts
   - src/models/apiresponsevecsurveyresponse.ts
   - src/models/apiresponsevectagresponse.ts
@@ -567,6 +595,7 @@ generatedFiles:
   - src/models/apiresponsewebhookstats.ts
   - src/models/apiresponsewebhooktestresult.ts
   - src/models/articleview.ts
+  - src/models/assignrolerequest.ts
   - src/models/attachmentresponse.ts
   - src/models/automationaction.ts
   - src/models/automationcondition.ts
@@ -581,6 +610,7 @@ generatedFiles:
   - src/models/createmacrorequest.ts
   - src/models/createmessagerequest.ts
   - src/models/createorganizationrequest.ts
+  - src/models/createrolerequest.ts
   - src/models/createtagrequest.ts
   - src/models/createticketrequest.ts
   - src/models/createwebhookrequest.ts
@@ -608,11 +638,13 @@ generatedFiles:
   - src/models/monthlysurveydata.ts
   - src/models/operations/acceptinvitation.ts
   - src/models/operations/addtagstoticket.ts
+  - src/models/operations/assignrole.ts
   - src/models/operations/createarticle.ts
   - src/models/operations/createautomationrule.ts
   - src/models/operations/createevent.ts
   - src/models/operations/createmacro.ts
   - src/models/operations/createmessage.ts
+  - src/models/operations/createrole.ts
   - src/models/operations/createtag.ts
   - src/models/operations/createticket.ts
   - src/models/operations/createwebhook.ts
@@ -623,6 +655,7 @@ generatedFiles:
   - src/models/operations/deletemacro.ts
   - src/models/operations/deletemessage.ts
   - src/models/operations/deleteorganizationsetting.ts
+  - src/models/operations/deleterole.ts
   - src/models/operations/deletesurvey.ts
   - src/models/operations/deletetag.ts
   - src/models/operations/deleteticket.ts
@@ -639,6 +672,7 @@ generatedFiles:
   - src/models/operations/getarticle.ts
   - src/models/operations/getautomationrule.ts
   - src/models/operations/getautomationstats.ts
+  - src/models/operations/geteffectivepermissions.ts
   - src/models/operations/getevent.ts
   - src/models/operations/geteventstats.ts
   - src/models/operations/getknowledgebaseanalytics.ts
@@ -656,6 +690,7 @@ generatedFiles:
   - src/models/operations/getpopularmacros.ts
   - src/models/operations/getpopulartags.ts
   - src/models/operations/getpublicarticles.ts
+  - src/models/operations/getrole.ts
   - src/models/operations/getsession.ts
   - src/models/operations/getsurvey.ts
   - src/models/operations/getsurveyanalytics.ts
@@ -676,6 +711,7 @@ generatedFiles:
   - src/models/operations/listevents.ts
   - src/models/operations/listmacros.ts
   - src/models/operations/listmessageattachments.ts
+  - src/models/operations/listroles.ts
   - src/models/operations/listsurveys.ts
   - src/models/operations/listtags.ts
   - src/models/operations/listticketmessages.ts
@@ -686,6 +722,7 @@ generatedFiles:
   - src/models/operations/removetagsfromticket.ts
   - src/models/operations/rendermacrotemplate.ts
   - src/models/operations/revokeapikey.ts
+  - src/models/operations/revokerole.ts
   - src/models/operations/revokesession.ts
   - src/models/operations/searchmessages.ts
   - src/models/operations/searchpublicarticles.ts
@@ -697,6 +734,7 @@ generatedFiles:
   - src/models/operations/updateautomationrule.ts
   - src/models/operations/updatemacro.ts
   - src/models/operations/updatemembership.ts
+  - src/models/operations/updaterole.ts
   - src/models/operations/updatesurvey.ts
   - src/models/operations/updatetag.ts
   - src/models/operations/updateticket.ts
@@ -729,6 +767,7 @@ generatedFiles:
   - src/models/updatemacrorequest.ts
   - src/models/updatemembershiprequest.ts
   - src/models/updateprofilerequest.ts
+  - src/models/updaterolerequest.ts
   - src/models/updatesurveyrequest.ts
   - src/models/updatetagrequest.ts
   - src/models/updateticketrequest.ts
@@ -1730,6 +1769,80 @@ examples:
           session_id: "07fd44a8-744f-491f-8c7d-18e2c7e25afb"
       requestBody:
         application/json: {"extension_hours": 861018}
+      responses:
+        "200":
+          application/json: {"success": true}
+  get_effective_permissions:
+    speakeasy-default-get-effective-permissions:
+      parameters:
+        path:
+          org_id: "418e7107-8fb5-4f9f-84c2-5c71bdaf2a12"
+      responses:
+        "200":
+          application/json: {"success": true}
+  list_roles:
+    speakeasy-default-list-roles:
+      parameters:
+        path:
+          org_id: "0a65906a-4e00-4e16-8aa0-3821f1253e55"
+      responses:
+        "200":
+          application/json: {"success": true}
+  create_role:
+    speakeasy-default-create-role:
+      parameters:
+        path:
+          org_id: "7963d8f7-369d-43dc-8ae7-ed140414638f"
+      requestBody:
+        application/json: {"name": "<value>", "permissions": 14710}
+      responses:
+        "201":
+          application/json: {"success": true}
+  get_role:
+    speakeasy-default-get-role:
+      parameters:
+        path:
+          org_id: "dc2a3959-50ac-4611-ae78-d04d1203f676"
+          role_id: "6cc27dd7-f5d7-4ed0-b4c3-c50505482eca"
+      responses:
+        "200":
+          application/json: {"success": false}
+  update_role:
+    speakeasy-default-update-role:
+      parameters:
+        path:
+          org_id: "6a722352-3cc6-42f1-9655-8ae17030f441"
+          role_id: "986b5f5c-bba3-4b08-9ba5-a3a6bd401f04"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {"success": false}
+  delete_role:
+    speakeasy-default-delete-role:
+      parameters:
+        path:
+          org_id: "357dd0af-2faf-4258-804a-e559464754de"
+          role_id: "640e7e34-c5f2-40c0-a6db-51e1b3c63f9e"
+  assign_role:
+    speakeasy-default-assign-role:
+      parameters:
+        path:
+          org_id: "a7a8a6a1-9c63-4398-958a-50e248304ba0"
+          role_id: "3234dc24-0ef6-4718-8e74-e6b0131a61a1"
+      requestBody:
+        application/json: {"user_id": "7339dd48-79e1-47a2-a271-6d3ffcb9966e"}
+      responses:
+        "200":
+          application/json: {"success": true}
+  revoke_role:
+    speakeasy-default-revoke-role:
+      parameters:
+        path:
+          org_id: "0b5af395-5a62-4fda-be3f-10080fcbd43e"
+          role_id: "faac4588-aa6b-4c49-a785-eb9f4627ca89"
+      requestBody:
+        application/json: {"user_id": "ccd7f66a-4bbb-42ce-bf3b-a6cf819d3d0d"}
       responses:
         "200":
           application/json: {"success": true}
