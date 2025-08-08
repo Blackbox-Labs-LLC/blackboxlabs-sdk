@@ -8,11 +8,11 @@ Ticket categorization, organization, and metadata management
 ### Available Operations
 
 * [list](#list)
-* [create](#create)
+* [create](#create) - Create a tag
 * [getPopular](#getpopular)
 * [get](#get)
-* [update](#update)
-* [delete](#delete)
+* [update](#update) - Update a tag
+* [delete](#delete) - Delete a tag
 * [getWithTickets](#getwithtickets)
 
 ## list
@@ -87,6 +87,8 @@ run();
 | errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## create
+
+Requires permission: MANAGE_TAGS
 
 ### Example Usage
 
@@ -311,6 +313,8 @@ run();
 
 ## update
 
+Requires permission: MANAGE_TAGS
+
 ### Example Usage
 
 <!-- UsageSnippet language="typescript" operationID="update_tag" method="put" path="/api/v0/organizations/{org_id}/tags/{tag_id}" -->
@@ -385,6 +389,8 @@ run();
 | errors.BlackboxDefaultError | 4XX, 5XX                    | \*/\*                       |
 
 ## delete
+
+Requires permission: MANAGE_TAGS
 
 ### Example Usage
 

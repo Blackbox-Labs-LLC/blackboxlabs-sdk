@@ -3,19 +3,27 @@
  */
 
 import { organizationsAcceptInvitation } from "../funcs/organizationsAcceptInvitation.js";
+import { organizationsAssignRole } from "../funcs/organizationsAssignRole.js";
 import { organizationsCreate } from "../funcs/organizationsCreate.js";
+import { organizationsCreateRole } from "../funcs/organizationsCreateRole.js";
+import { organizationsDeleteRole } from "../funcs/organizationsDeleteRole.js";
 import { organizationsDeleteSetting } from "../funcs/organizationsDeleteSetting.js";
 import { organizationsFindOrganizationsByEmailDomain } from "../funcs/organizationsFindOrganizationsByEmailDomain.js";
 import { organizationsGet } from "../funcs/organizationsGet.js";
 import { organizationsGetAllForUser } from "../funcs/organizationsGetAllForUser.js";
+import { organizationsGetEffectivePermissions } from "../funcs/organizationsGetEffectivePermissions.js";
 import { organizationsGetMembers } from "../funcs/organizationsGetMembers.js";
+import { organizationsGetRole } from "../funcs/organizationsGetRole.js";
 import { organizationsGetSetting } from "../funcs/organizationsGetSetting.js";
 import { organizationsGetSettings } from "../funcs/organizationsGetSettings.js";
 import { organizationsInviteUser } from "../funcs/organizationsInviteUser.js";
 import { organizationsJoinOrganization } from "../funcs/organizationsJoinOrganization.js";
+import { organizationsListRoles } from "../funcs/organizationsListRoles.js";
 import { organizationsRemoveMember } from "../funcs/organizationsRemoveMember.js";
+import { organizationsRevokeRole } from "../funcs/organizationsRevokeRole.js";
 import { organizationsSetSetting } from "../funcs/organizationsSetSetting.js";
 import { organizationsUpdateMembership } from "../funcs/organizationsUpdateMembership.js";
+import { organizationsUpdateRole } from "../funcs/organizationsUpdateRole.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as models from "../models/index.js";
 import * as operations from "../models/operations/index.js";
@@ -31,6 +39,12 @@ export class Organizations extends ClientSDK {
     ));
   }
 
+  /**
+   * Create a new support ticket
+   *
+   * @remarks
+   * Creates a new support ticket in the specified organization. The ticket will be assigned to the authenticated user as the creator and can optionally be assigned to another team member.
+   */
   async create(
     request: models.CreateOrganizationRequest,
     options?: RequestOptions,
@@ -64,6 +78,12 @@ export class Organizations extends ClientSDK {
     ));
   }
 
+  /**
+   * Get ticket details
+   *
+   * @remarks
+   * Retrieves detailed information about a specific ticket including its current status, assignment, tags, and metadata.
+   */
   async get(
     request: operations.GetOrganizationRequest,
     options?: RequestOptions,
@@ -124,6 +144,94 @@ export class Organizations extends ClientSDK {
     options?: RequestOptions,
   ): Promise<models.ApiResponseString> {
     return unwrapAsync(organizationsRemoveMember(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async getEffectivePermissions(
+    request: operations.GetEffectivePermissionsRequest,
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseEffectivePermissionsResponse> {
+    return unwrapAsync(organizationsGetEffectivePermissions(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async listRoles(
+    request: operations.ListRolesRequest,
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseVecRoleResponse> {
+    return unwrapAsync(organizationsListRoles(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async createRole(
+    request: operations.CreateRoleRequest,
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseRoleResponse> {
+    return unwrapAsync(organizationsCreateRole(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async getRole(
+    request: operations.GetRoleRequest,
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseRoleResponse> {
+    return unwrapAsync(organizationsGetRole(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async updateRole(
+    request: operations.UpdateRoleRequest,
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseRoleResponse> {
+    return unwrapAsync(organizationsUpdateRole(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async deleteRole(
+    request: operations.DeleteRoleRequest,
+    options?: RequestOptions,
+  ): Promise<void> {
+    return unwrapAsync(organizationsDeleteRole(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async assignRole(
+    request: operations.AssignRoleRequest,
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseString> {
+    return unwrapAsync(organizationsAssignRole(
+      this,
+      request,
+      options,
+    ));
+  }
+
+  async revokeRole(
+    request: operations.RevokeRoleRequest,
+    options?: RequestOptions,
+  ): Promise<models.ApiResponseString> {
+    return unwrapAsync(organizationsRevokeRole(
       this,
       request,
       options,
