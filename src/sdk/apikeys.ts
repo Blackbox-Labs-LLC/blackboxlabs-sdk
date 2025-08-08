@@ -31,10 +31,10 @@ export class ApiKeys extends ClientSDK {
   }
 
   /**
-   * Create a tag
+   * Create a new support ticket
    *
    * @remarks
-   * Requires permission: MANAGE_TAGS
+   * Creates a new support ticket in the specified organization. The ticket will be assigned to the authenticated user as the creator and can optionally be assigned to another team member.
    */
   async create(
     request: models.CreateApiKeyRequest,
@@ -64,12 +64,6 @@ export class ApiKeys extends ClientSDK {
     ));
   }
 
-  /**
-   * Delete a tag
-   *
-   * @remarks
-   * Requires permission: MANAGE_TAGS
-   */
   async delete(
     request: operations.DeleteApiKeyRequest,
     options?: RequestOptions,

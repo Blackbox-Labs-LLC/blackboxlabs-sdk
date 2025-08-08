@@ -63,6 +63,7 @@ export * from "./apiresponsevecmessageresponse.js";
 export * from "./apiresponsevecorganizationbydomainresponse.js";
 export * from "./apiresponsevecorganizationresponse.js";
 export * from "./apiresponsevecorganizationsettingresponse.js";
+export * from "./apiresponsevecpermissioncatalogentry.js";
 export * from "./apiresponsevecroleresponse.js";
 export * from "./apiresponsevecstring.js";
 export * from "./apiresponsevecsurveyresponse.js";

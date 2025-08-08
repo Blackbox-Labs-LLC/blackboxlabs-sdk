@@ -3914,6 +3914,17 @@ paths:
       security:
         - blackbox_auth_token: []
       x-speakeasy-name-override: "test"
+  "/api/v0/permissions/catalog":
+    get:
+      tags:
+        - "Organizations"
+      operationId: "get_permissions_catalog"
+      responses:
+        "200":
+          description: "Permission bitmask catalog"
+          content:
+            "application/json":
+              schema: {"$ref": "#/components/schemas/ApiResponse_Vec_PermissionCatalogEntry"}
   "/api/v0/sessions":
     get:
       tags:
@@ -6559,6 +6570,31 @@ components:
             - "null"
         "success":
           type: "boolean"
+    "ApiResponse_Vec_PermissionCatalogEntry":
+      type: "object"
+      required:
+        - "success"
+      properties:
+        "data":
+          type: "array"
+          items:
+            type: "object"
+            required:
+              - "key"
+              - "value"
+            properties:
+              "key":
+                type: "string"
+              "value":
+                type: "integer"
+                format: "int64"
+                minimum: 0
+        "message":
+          type:
+            - "string"
+            - "null"
+        "success":
+          type: "boolean"
     "ApiResponse_Vec_RoleResponse":
       type: "object"
       required:
@@ -8377,6 +8413,18 @@ components:
       properties:
         "email":
           type: "string"
+    "PermissionCatalogEntry":
+      type: "object"
+      required:
+        - "key"
+        - "value"
+      properties:
+        "key":
+          type: "string"
+        "value":
+          type: "integer"
+          format: "int64"
+          minimum: 0
     "PriorityCount":
       type: "object"
       required:
