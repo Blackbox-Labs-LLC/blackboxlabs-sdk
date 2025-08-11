@@ -1,0 +1,21 @@
+{
+  "name": "blackboxlabs-sdk",
+  "author": "Blackbox Labs",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "module": "src/client/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun run index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@hey-api/openapi-ts": "^0.80.8"
+  }
+}
