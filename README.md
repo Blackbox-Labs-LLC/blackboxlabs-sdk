@@ -1,15 +1,35 @@
 # blackboxlabs-sdk
 
-To install dependencies:
+Auto Generated SDK
+
+<!-- Start SDK Installation [installation] -->
+## SDK Installation
+
+The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [bun](https://bun.sh/) or [yarn](https://classic.yarnpkg.com/en/) package managers.
+
+### NPM
 
 ```bash
-bun install
+npm add blackboxlabs-sdk
 ```
 
-To run:
+### PNPM
 
 ```bash
-bun run index.ts
+pnpm add blackboxlabs-sdk
 ```
 
-This project was created using `bun init` in bun v1.2.19. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+### Bun
+
+```bash
+bun add blackboxlabs-sdk
+```
+
+### Yarn
+
+```bash
+yarn add blackboxlabs-sdk zod
+
+# Note that Yarn does not install peer dependencies automatically. You will need
+# to install zod as shown above.
+```
