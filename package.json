@@ -3,7 +3,6 @@
   "author": "Blackbox Labs",
   "version": "1.0.0",
   "license": "MIT",
-  "private": true,
   "module": "src/client/index.ts",
   "type": "module",
   "scripts": {
