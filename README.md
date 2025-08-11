@@ -28,8 +28,5 @@ bun add blackboxlabs-sdk
 ### Yarn
 
 ```bash
-yarn add blackboxlabs-sdk zod
-
-# Note that Yarn does not install peer dependencies automatically. You will need
-# to install zod as shown above.
+yarn add blackboxlabs-sdk
 ```
