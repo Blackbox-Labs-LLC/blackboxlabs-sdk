@@ -15,12 +15,6 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class Tags extends ClientSDK {
-  /**
-   * List tickets with filtering
-   *
-   * @remarks
-   * Retrieves a paginated list of tickets with optional filtering by status, priority, assignment, creator, and tags. Results are ordered by creation date (newest first).
-   */
   async list(
     request: operations.ListTagsRequest,
     options?: RequestOptions,
@@ -60,12 +54,6 @@ export class Tags extends ClientSDK {
     ));
   }
 
-  /**
-   * Get ticket details
-   *
-   * @remarks
-   * Retrieves detailed information about a specific ticket including its current status, assignment, tags, and metadata.
-   */
   async get(
     request: operations.GetTagRequest,
     options?: RequestOptions,

@@ -6402,7 +6402,6 @@ components:
               - "user_id"
               - "user_name"
               - "user_email"
-              - "role"
               - "status"
               - "created_at"
             properties:
@@ -6416,8 +6415,6 @@ components:
                   - "string"
                   - "null"
                 format: "uuid"
-              "role":
-                type: "string"
               "status":
                 type: "string"
               "user_email":
@@ -8221,7 +8218,6 @@ components:
         - "user_id"
         - "user_name"
         - "user_email"
-        - "role"
         - "status"
         - "created_at"
       properties:
@@ -8235,8 +8231,6 @@ components:
             - "string"
             - "null"
           format: "uuid"
-        "role":
-          type: "string"
         "status":
           type: "string"
         "user_email":
@@ -9179,11 +9173,8 @@ components:
     "UpdateMembershipRequest":
       type: "object"
       required:
-        - "role"
         - "status"
       properties:
-        "role":
-          type: "string"
         "status":
           type: "string"
     "UpdateProfileRequest":
@@ -9339,7 +9330,6 @@ components:
         - "id"
         - "name"
         - "domain"
-        - "role"
       properties:
         "domain":
           type: "string"
@@ -9348,15 +9338,12 @@ components:
           format: "uuid"
         "name":
           type: "string"
-        "role":
-          type: "string"
     "UserOrgMembership":
       type: "object"
       required:
         - "organization_id"
         - "organization_name"
         - "organization_domain"
-        - "role"
         - "status"
         - "joined_at"
       properties:
@@ -9368,8 +9355,6 @@ components:
           type: "string"
           format: "uuid"
         "organization_name":
-          type: "string"
-        "role":
           type: "string"
         "status":
           type: "string"

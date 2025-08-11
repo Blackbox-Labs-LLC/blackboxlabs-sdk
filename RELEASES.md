@@ -89,3 +89,13 @@ Based on:
 - [typescript v0.2.14] .
 ### Releases
 - [NPM v0.2.14] https://www.npmjs.com/package/blackboxlabs-sdk/v/0.2.14 - .
+
+## 2025-08-11 00:50:29
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.600.2 (2.677.3) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v0.2.15] .
+### Releases
+- [NPM v0.2.15] https://www.npmjs.com/package/blackboxlabs-sdk/v/0.2.15 - .

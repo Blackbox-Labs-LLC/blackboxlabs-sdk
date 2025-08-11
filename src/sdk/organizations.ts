@@ -40,12 +40,6 @@ export class Organizations extends ClientSDK {
     ));
   }
 
-  /**
-   * Create a tag
-   *
-   * @remarks
-   * Requires permission: MANAGE_TAGS
-   */
   async create(
     request: models.CreateOrganizationRequest,
     options?: RequestOptions,
@@ -79,12 +73,6 @@ export class Organizations extends ClientSDK {
     ));
   }
 
-  /**
-   * Get ticket details
-   *
-   * @remarks
-   * Retrieves detailed information about a specific ticket including its current status, assignment, tags, and metadata.
-   */
   async get(
     request: operations.GetOrganizationRequest,
     options?: RequestOptions,

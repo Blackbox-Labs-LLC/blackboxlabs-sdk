@@ -10,7 +10,6 @@ let value: UserOrgMembership = {
   organizationDomain: "<value>",
   organizationId: "43904b6f-3170-497d-aa22-c81c58366b39",
   organizationName: "<value>",
-  role: "<value>",
   status: "<value>",
 };
 ```
@@ -23,5 +22,4 @@ let value: UserOrgMembership = {
 | `organizationDomain` | *string*             | :heavy_check_mark:   | N/A                  |
 | `organizationId`     | *string*             | :heavy_check_mark:   | N/A                  |
 | `organizationName`   | *string*             | :heavy_check_mark:   | N/A                  |
-| `role`               | *string*             | :heavy_check_mark:   | N/A                  |
 | `status`             | *string*             | :heavy_check_mark:   | N/A                  |

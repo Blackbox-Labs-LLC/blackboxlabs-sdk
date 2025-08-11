@@ -11,7 +11,6 @@ export type UserOrgInfo = {
   domain: string;
   id: string;
   name: string;
-  role: string;
 };
 
 /** @internal */
@@ -23,7 +22,6 @@ export const UserOrgInfo$inboundSchema: z.ZodType<
   domain: z.string(),
   id: z.string(),
   name: z.string(),
-  role: z.string(),
 });
 
 /** @internal */
@@ -31,7 +29,6 @@ export type UserOrgInfo$Outbound = {
   domain: string;
   id: string;
   name: string;
-  role: string;
 };
 
 /** @internal */
@@ -43,7 +40,6 @@ export const UserOrgInfo$outboundSchema: z.ZodType<
   domain: z.string(),
   id: z.string(),
   name: z.string(),
-  role: z.string(),
 });
 
 /**

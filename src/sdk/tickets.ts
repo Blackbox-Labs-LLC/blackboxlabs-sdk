@@ -66,6 +66,12 @@ export class Tickets extends ClientSDK {
     ));
   }
 
+  /**
+   * Update a tag
+   *
+   * @remarks
+   * Requires permission: MANAGE_TAGS
+   */
   async update(
     request: operations.UpdateTicketRequest,
     options?: RequestOptions,
@@ -77,6 +83,12 @@ export class Tickets extends ClientSDK {
     ));
   }
 
+  /**
+   * Delete a tag
+   *
+   * @remarks
+   * Requires permission: MANAGE_TAGS
+   */
   async delete(
     request: operations.DeleteTicketRequest,
     options?: RequestOptions,

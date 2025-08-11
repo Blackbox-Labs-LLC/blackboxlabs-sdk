@@ -12,7 +12,6 @@ export type ApiResponseVecMembershipResponseData = {
   createdAt: string;
   id: string;
   invitedBy?: string | null | undefined;
-  role: string;
   status: string;
   userEmail: string;
   userId: string;
@@ -34,7 +33,6 @@ export const ApiResponseVecMembershipResponseData$inboundSchema: z.ZodType<
   created_at: z.string(),
   id: z.string(),
   invited_by: z.nullable(z.string()).optional(),
-  role: z.string(),
   status: z.string(),
   user_email: z.string(),
   user_id: z.string(),
@@ -54,7 +52,6 @@ export type ApiResponseVecMembershipResponseData$Outbound = {
   created_at: string;
   id: string;
   invited_by?: string | null | undefined;
-  role: string;
   status: string;
   user_email: string;
   user_id: string;
@@ -70,7 +67,6 @@ export const ApiResponseVecMembershipResponseData$outboundSchema: z.ZodType<
   createdAt: z.string(),
   id: z.string(),
   invitedBy: z.nullable(z.string()).optional(),
-  role: z.string(),
   status: z.string(),
   userEmail: z.string(),
   userId: z.string(),

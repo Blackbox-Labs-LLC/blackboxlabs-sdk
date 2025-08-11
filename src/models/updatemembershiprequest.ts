@@ -8,7 +8,6 @@ import { Result as SafeParseResult } from "../types/fp.js";
 import { SDKValidationError } from "./errors/sdkvalidationerror.js";
 
 export type UpdateMembershipRequest = {
-  role: string;
   status: string;
 };
 
@@ -18,13 +17,11 @@ export const UpdateMembershipRequest$inboundSchema: z.ZodType<
   z.ZodTypeDef,
   unknown
 > = z.object({
-  role: z.string(),
   status: z.string(),
 });
 
 /** @internal */
 export type UpdateMembershipRequest$Outbound = {
-  role: string;
   status: string;
 };
 
@@ -34,7 +31,6 @@ export const UpdateMembershipRequest$outboundSchema: z.ZodType<
   z.ZodTypeDef,
   UpdateMembershipRequest
 > = z.object({
-  role: z.string(),
   status: z.string(),
 });
 

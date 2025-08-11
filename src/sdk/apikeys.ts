@@ -13,12 +13,6 @@ import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class ApiKeys extends ClientSDK {
-  /**
-   * List tickets with filtering
-   *
-   * @remarks
-   * Retrieves a paginated list of tickets with optional filtering by status, priority, assignment, creator, and tags. Results are ordered by creation date (newest first).
-   */
   async list(
     request?: operations.ListApiKeysRequest | undefined,
     options?: RequestOptions,
@@ -31,10 +25,10 @@ export class ApiKeys extends ClientSDK {
   }
 
   /**
-   * Create a new support ticket
+   * Create a tag
    *
    * @remarks
-   * Creates a new support ticket in the specified organization. The ticket will be assigned to the authenticated user as the creator and can optionally be assigned to another team member.
+   * Requires permission: MANAGE_TAGS
    */
   async create(
     request: models.CreateApiKeyRequest,
@@ -47,12 +41,6 @@ export class ApiKeys extends ClientSDK {
     ));
   }
 
-  /**
-   * Get ticket details
-   *
-   * @remarks
-   * Retrieves detailed information about a specific ticket including its current status, assignment, tags, and metadata.
-   */
   async get(
     request: operations.GetApiKeyRequest,
     options?: RequestOptions,
@@ -64,6 +52,12 @@ export class ApiKeys extends ClientSDK {
     ));
   }
 
+  /**
+   * Delete a tag
+   *
+   * @remarks
+   * Requires permission: MANAGE_TAGS
+   */
   async delete(
     request: operations.DeleteApiKeyRequest,
     options?: RequestOptions,

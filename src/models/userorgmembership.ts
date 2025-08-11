@@ -13,7 +13,6 @@ export type UserOrgMembership = {
   organizationDomain: string;
   organizationId: string;
   organizationName: string;
-  role: string;
   status: string;
 };
 
@@ -27,7 +26,6 @@ export const UserOrgMembership$inboundSchema: z.ZodType<
   organization_domain: z.string(),
   organization_id: z.string(),
   organization_name: z.string(),
-  role: z.string(),
   status: z.string(),
 }).transform((v) => {
   return remap$(v, {
@@ -44,7 +42,6 @@ export type UserOrgMembership$Outbound = {
   organization_domain: string;
   organization_id: string;
   organization_name: string;
-  role: string;
   status: string;
 };
 
@@ -58,7 +55,6 @@ export const UserOrgMembership$outboundSchema: z.ZodType<
   organizationDomain: z.string(),
   organizationId: z.string(),
   organizationName: z.string(),
-  role: z.string(),
   status: z.string(),
 }).transform((v) => {
   return remap$(v, {

@@ -12,7 +12,6 @@ let value: ApiResponseAuthResponseData = {
       domain: "enchanting-armchair.org",
       id: "d4167720-b7b5-43e0-97c7-42e63bed0b1e",
       name: "<value>",
-      role: "<value>",
     },
   ],
   sessionToken: "<value>",

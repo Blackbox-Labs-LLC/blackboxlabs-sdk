@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 2d776aad-7dac-49c5-aab7-ba94ff58dfc2
 management:
-  docChecksum: 654a2f739b85655d6122a684d5661b95
+  docChecksum: 214756ed82fe1d98fdae5e14b5e189c5
   docVersion: 1.0.0
-  speakeasyVersion: 1.599.0
-  generationVersion: 2.675.0
-  releaseVersion: 0.2.14
-  configChecksum: c36177f8ba4f08904c4bc91372fad519
+  speakeasyVersion: 1.600.2
+  generationVersion: 2.677.3
+  releaseVersion: 0.2.15
+  configChecksum: 0f4d1fa37fc8c6a3d1eed9492e466781
   repoURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk.git
   installationURL: https://github.com/Blackbox-Labs-LLC/blackboxlabs-sdk
   published: true
@@ -922,7 +922,7 @@ examples:
           org_id: "d3b149c3-d413-4cba-8d2d-01cba1dee9f5"
           member_id: "e6a6b8a3-d8f1-4e1a-9166-49f5051e8a56"
       requestBody:
-        application/json: {"role": "<value>", "status": "<value>"}
+        application/json: {"status": "<value>"}
       responses:
         "200":
           application/json: {"success": false}

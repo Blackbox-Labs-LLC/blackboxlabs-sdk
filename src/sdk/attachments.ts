@@ -33,12 +33,6 @@ export class Attachments extends ClientSDK {
     ));
   }
 
-  /**
-   * List tickets with filtering
-   *
-   * @remarks
-   * Retrieves a paginated list of tickets with optional filtering by status, priority, assignment, creator, and tags. Results are ordered by creation date (newest first).
-   */
   async list(
     request: operations.ListMessageAttachmentsRequest,
     options?: RequestOptions,
@@ -61,12 +55,6 @@ export class Attachments extends ClientSDK {
     ));
   }
 
-  /**
-   * Delete a tag
-   *
-   * @remarks
-   * Requires permission: MANAGE_TAGS
-   */
   async delete(
     request: operations.DeleteAttachmentRequest,
     options?: RequestOptions,

@@ -621,7 +621,6 @@ async function run() {
     orgId: "d3b149c3-d413-4cba-8d2d-01cba1dee9f5",
     memberId: "e6a6b8a3-d8f1-4e1a-9166-49f5051e8a56",
     updateMembershipRequest: {
-      role: "<value>",
       status: "<value>",
     },
   });
@@ -651,7 +650,6 @@ async function run() {
     orgId: "d3b149c3-d413-4cba-8d2d-01cba1dee9f5",
     memberId: "e6a6b8a3-d8f1-4e1a-9166-49f5051e8a56",
     updateMembershipRequest: {
-      role: "<value>",
       status: "<value>",
     },
   });
