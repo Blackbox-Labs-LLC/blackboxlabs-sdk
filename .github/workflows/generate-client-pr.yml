@@ -1,0 +1,57 @@
+name: Generate SDK and open PR
+
+on:
+  push:
+    branches-ignore:
+      - 'ci/regen-client**'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
+
+jobs:
+  generate-and-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Generate client
+        run: bun run build
+
+      - name: Create PR with generated client
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(client): regenerate SDK"
+          title: "chore(client): regenerate SDK"
+          body: |
+            Automated regeneration of the SDK from the latest OpenAPI schema.
+          branch: "ci/regen-client"
+          branch-suffix: "timestamp"
+          base: "main"
+          labels: "automated, sdk"
+          add-paths: |
+            src/client/**
+            bun.lock
+            package.json
+          committer: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
+          delete-branch: true
+          draft: false
+          signoff: false
+          skip-if-empty: true
+
+
