@@ -27,12 +27,112 @@ export type AgentPerformance = {
     tickets_resolved: number;
 };
 
+export type AgentPresence = {
+    current_ticket?: string | null;
+    status: string;
+    user_id: string;
+};
+
 export type AgentSatisfactionScore = {
     agent_id: string;
     agent_name: string;
     average_score: number;
     satisfaction_rate: number;
     total_surveys: number;
+};
+
+export type AiClassificationRequest = {
+    ticket_id: string;
+};
+
+export type AiClassificationResponse = {
+    escalation_risk?: string | null;
+    intents: Array<string>;
+    suggested_priority?: string | null;
+    tags: Array<string>;
+};
+
+export type AiKbSuggestRequest = {
+    query?: string | null;
+    ticket_id: string;
+};
+
+export type AiKbSuggestResponse = {
+    suggestions: Array<KbCitation>;
+};
+
+export type AiRedactRequest = {
+    text: string;
+};
+
+export type AiRedactResponse = {
+    redacted_text: string;
+    redactions: Array<RedactionSpan>;
+};
+
+export type AiRewriteRequest = {
+    style?: string | null;
+    text: string;
+    tone: string;
+};
+
+export type AiRewriteResponse = {
+    rewritten_text: string;
+};
+
+export type AiSuggestionRequest = {
+    locale?: string | null;
+    max_tokens?: number | null;
+    message_context?: string | null;
+    style?: string | null;
+    ticket_id: string;
+    tone?: string | null;
+};
+
+export type AiSuggestionResponse = {
+    latency_ms: number;
+    model: string;
+    suggestions: Array<AiText>;
+};
+
+export type AiSummaryRequest = {
+    locale?: string | null;
+    num_messages?: number | null;
+    ticket_id: string;
+};
+
+export type AiSummaryResponse = {
+    key_points: Array<string>;
+    sentiment: string;
+    summary: string;
+    todos: Array<string>;
+};
+
+export type AiTelemetryRequest = {
+    accepted?: boolean | null;
+    edited?: boolean | null;
+    event: string;
+    feedback?: string | null;
+    message_id?: string | null;
+    suggestion_id?: string | null;
+    ticket_id?: string | null;
+};
+
+export type AiText = {
+    citations?: Array<KbCitation> | null;
+    content: string;
+    id: string;
+    style?: string | null;
+    tone?: string | null;
+};
+
+export type AiTranslateRequest = {
+    target_locale: string;
+    text: string;
+};
+
+export type AiTranslateResponse = {
+    translated_text: string;
 };
 
 export type AnalyticsTimeRange = {
@@ -63,6 +163,71 @@ export type ApiResponseAgentAnalytics = {
         average_tickets_per_agent: number;
         top_performers: Array<AgentPerformance>;
         total_agents: number;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseAiClassificationResponse = {
+    data?: {
+        escalation_risk?: string | null;
+        intents: Array<string>;
+        suggested_priority?: string | null;
+        tags: Array<string>;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseAiKbSuggestResponse = {
+    data?: {
+        suggestions: Array<KbCitation>;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseAiRedactResponse = {
+    data?: {
+        redacted_text: string;
+        redactions: Array<RedactionSpan>;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseAiRewriteResponse = {
+    data?: {
+        rewritten_text: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseAiSuggestionResponse = {
+    data?: {
+        latency_ms: number;
+        model: string;
+        suggestions: Array<AiText>;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseAiSummaryResponse = {
+    data?: {
+        key_points: Array<string>;
+        sentiment: string;
+        summary: string;
+        todos: Array<string>;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseAiTranslateResponse = {
+    data?: {
+        translated_text: string;
     };
     message?: string | null;
     success: boolean;
@@ -193,9 +358,32 @@ export type ApiResponseCreateApiKeyResponse = {
     success: boolean;
 };
 
+export type ApiResponseDraftResponse = {
+    data?: {
+        attachments?: unknown;
+        content: string;
+        created_at: string;
+        id: string;
+        organization_id: string;
+        ticket_id: string;
+        updated_at: string;
+        user_id: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
 export type ApiResponseEffectivePermissionsResponse = {
     data?: {
         effective_permissions: number;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseEmptyResponse = {
+    data?: {
+        [key: string]: unknown;
     };
     message?: string | null;
     success: boolean;
@@ -241,6 +429,21 @@ export type ApiResponseKnowledgeBaseStats = {
     success: boolean;
 };
 
+export type ApiResponseMacroExperimentResponse = {
+    data?: {
+        created_at: string;
+        id: string;
+        macro_id: string;
+        metrics: unknown;
+        name: string;
+        status: string;
+        updated_at: string;
+        variants: unknown;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
 export type ApiResponseMacroResponse = {
     data?: {
         content: string;
@@ -279,6 +482,20 @@ export type ApiResponseMacroUsageStats = {
     success: boolean;
 };
 
+export type ApiResponseMacroVariantResponse = {
+    data?: {
+        channel: string;
+        content: string;
+        created_at: string;
+        id: string;
+        locale: string;
+        macro_id: string;
+        updated_at: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
 export type ApiResponseMessageResponse = {
     data?: {
         attachments?: unknown;
@@ -289,6 +506,22 @@ export type ApiResponseMessageResponse = {
         sender_name: string;
         sent_at: string;
         ticket_id: string;
+        visibility: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseOptionDraftResponse = {
+    data?: null | {
+        attachments?: unknown;
+        content: string;
+        created_at: string;
+        id: string;
+        organization_id: string;
+        ticket_id: string;
+        updated_at: string;
+        user_id: string;
     };
     message?: string | null;
     success: boolean;
@@ -304,6 +537,7 @@ export type ApiResponseOptionMessageResponse = {
         sender_name: string;
         sent_at: string;
         ticket_id: string;
+        visibility: string;
     };
     message?: string | null;
     success: boolean;
@@ -356,6 +590,17 @@ export type ApiResponseOrganizationSettingResponse = {
     success: boolean;
 };
 
+export type ApiResponsePresenceHeartbeatResponse = {
+    data?: {
+        collisions: Array<CollisionInfo>;
+        current_ticket?: string | null;
+        status: string;
+        user_id: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
 export type ApiResponseRegisterResponse = {
     data?: {
         email_verified: boolean;
@@ -377,6 +622,33 @@ export type ApiResponseRoleResponse = {
         organization_id: string;
         permissions: number;
         position: number;
+        updated_at: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseRoutingRuleResponse = {
+    data?: {
+        actions: unknown;
+        conditions: unknown;
+        enabled: boolean;
+        id: string;
+        name: string;
+        priority: number;
+        strategy: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseSavedViewResponse = {
+    data?: {
+        created_at: string;
+        filters: unknown;
+        id: string;
+        is_shared: boolean;
+        name: string;
         updated_at: string;
     };
     message?: string | null;
@@ -423,6 +695,21 @@ export type ApiResponseSetup2FaResponse = {
         qr_code_svg: string;
         qr_code_url: string;
         secret: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseSlaPolicyResponse = {
+    data?: {
+        conditions: unknown;
+        created_at: string;
+        description?: string | null;
+        id: string;
+        is_active: boolean;
+        name: string;
+        targets: unknown;
+        updated_at: string;
     };
     message?: string | null;
     success: boolean;
@@ -524,7 +811,9 @@ export type ApiResponseTicketResponse = {
         created_by: string;
         created_by_name: string;
         description: string;
+        draft?: null | DraftResponse;
         id: string;
+        messages?: Array<MessageResponse> | null;
         priority: string;
         status: string;
         subject: string;
@@ -539,6 +828,15 @@ export type ApiResponseTimeSeriesData = {
     data?: {
         datasets: Array<TimeSeriesDataset>;
         labels: Array<string>;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseTypingUsersResponse = {
+    data?: {
+        ticket_id: string;
+        user_ids: Array<string>;
     };
     message?: string | null;
     success: boolean;
@@ -569,6 +867,28 @@ export type ApiResponseUserProfileResponse = {
 
 export type ApiResponseValue = {
     data?: unknown;
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseVecAgentPresence = {
+    data?: Array<{
+        current_ticket?: string | null;
+        status: string;
+        user_id: string;
+    }>;
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseVecAgentSatisfactionScore = {
+    data?: Array<{
+        agent_id: string;
+        agent_name: string;
+        average_score: number;
+        satisfaction_rate: number;
+        total_surveys: number;
+    }>;
     message?: string | null;
     success: boolean;
 };
@@ -660,6 +980,17 @@ export type ApiResponseVecClientTicketResponse = {
     success: boolean;
 };
 
+export type ApiResponseVecCsatByMacroItem = {
+    data?: Array<{
+        average_score: number;
+        macro_id: string;
+        macro_name: string;
+        total_surveys: number;
+    }>;
+    message?: string | null;
+    success: boolean;
+};
+
 export type ApiResponseVecEventLogResponse = {
     data?: Array<{
         created_at: string;
@@ -699,6 +1030,21 @@ export type ApiResponseVecLoginHistoryResponse = {
     success: boolean;
 };
 
+export type ApiResponseVecMacroExperimentResponse = {
+    data?: Array<{
+        created_at: string;
+        id: string;
+        macro_id: string;
+        metrics: unknown;
+        name: string;
+        status: string;
+        updated_at: string;
+        variants: unknown;
+    }>;
+    message?: string | null;
+    success: boolean;
+};
+
 export type ApiResponseVecMacroResponse = {
     data?: Array<{
         content: string;
@@ -709,6 +1055,20 @@ export type ApiResponseVecMacroResponse = {
         id: string;
         name: string;
         organization_id: string;
+        updated_at: string;
+    }>;
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseVecMacroVariantResponse = {
+    data?: Array<{
+        channel: string;
+        content: string;
+        created_at: string;
+        id: string;
+        locale: string;
+        macro_id: string;
         updated_at: string;
     }>;
     message?: string | null;
@@ -739,6 +1099,7 @@ export type ApiResponseVecMessageResponse = {
         sender_name: string;
         sent_at: string;
         ticket_id: string;
+        visibility: string;
     }>;
     message?: string | null;
     success: boolean;
@@ -804,6 +1165,48 @@ export type ApiResponseVecRoleResponse = {
     success: boolean;
 };
 
+export type ApiResponseVecRoutingRuleResponse = {
+    data?: Array<{
+        actions: unknown;
+        conditions: unknown;
+        enabled: boolean;
+        id: string;
+        name: string;
+        priority: number;
+        strategy: string;
+    }>;
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseVecSavedViewResponse = {
+    data?: Array<{
+        created_at: string;
+        filters: unknown;
+        id: string;
+        is_shared: boolean;
+        name: string;
+        updated_at: string;
+    }>;
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseVecSlaPolicyResponse = {
+    data?: Array<{
+        conditions: unknown;
+        created_at: string;
+        description?: string | null;
+        id: string;
+        is_active: boolean;
+        name: string;
+        targets: unknown;
+        updated_at: string;
+    }>;
+    message?: string | null;
+    success: boolean;
+};
+
 export type ApiResponseVecString = {
     data?: Array<string>;
     message?: string | null;
@@ -845,7 +1248,9 @@ export type ApiResponseVecTicketResponse = {
         created_by: string;
         created_by_name: string;
         description: string;
+        draft?: null | DraftResponse;
         id: string;
+        messages?: Array<MessageResponse> | null;
         priority: string;
         status: string;
         subject: string;
@@ -894,6 +1299,15 @@ export type ApiResponseVecWebhookResponse = {
         success_count: number;
         updated_at: string;
         url: string;
+    }>;
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseVecWorkloadEntry = {
+    data?: Array<{
+        open_tickets: number;
+        user_id: string;
     }>;
     message?: string | null;
     success: boolean;
@@ -1072,6 +1486,15 @@ export type AutomationStats = {
     trigger_distribution: Array<TriggerCount>;
 };
 
+export type BulkTicketUpdateRequest = {
+    add_tag_ids?: Array<string> | null;
+    assigned_to?: string | null;
+    priority?: string | null;
+    remove_tag_ids?: Array<string> | null;
+    status?: string | null;
+    ticket_ids: Array<string>;
+};
+
 export type CsatAnalytics = {
     agent_satisfaction: Array<AgentSatisfactionScore>;
     average_score: number;
@@ -1118,6 +1541,11 @@ export type ClientUserResponse = {
     user_id: string;
 };
 
+export type CollisionInfo = {
+    ticket_id: string;
+    user_id: string;
+};
+
 export type CreateApiKeyRequest = {
     expires_in_days?: number | null;
     name: string;
@@ -1155,16 +1583,29 @@ export type CreateEventRequest = {
     user_id?: string | null;
 };
 
+export type CreateMacroExperimentRequest = {
+    name: string;
+    status?: string | null;
+    variants: unknown;
+};
+
 export type CreateMacroRequest = {
     content: string;
     description: string;
     name: string;
 };
 
+export type CreateMacroVariantRequest = {
+    channel: string;
+    content: string;
+    locale: string;
+};
+
 export type CreateMessageRequest = {
     attachments?: unknown;
     channel: string;
     content: string;
+    visibility?: string | null;
 };
 
 export type CreateOrganizationRequest = {
@@ -1178,6 +1619,23 @@ export type CreateRoleRequest = {
     name: string;
     permissions: number;
     position?: number | null;
+};
+
+export type CreateRoutingRuleRequest = {
+    actions: unknown;
+    conditions: unknown;
+    enabled?: boolean | null;
+    name: string;
+    priority?: number | null;
+    strategy: string;
+};
+
+export type CreateSlaPolicyRequest = {
+    conditions: unknown;
+    description?: string | null;
+    is_active?: boolean | null;
+    name: string;
+    targets: unknown;
 };
 
 export type CreateTagRequest = {
@@ -1205,13 +1663,35 @@ export type CreateWebhookRequest = {
     url: string;
 };
 
+export type CsatByMacroItem = {
+    average_score: number;
+    macro_id: string;
+    macro_name: string;
+    total_surveys: number;
+};
+
 export type DailyCount = {
     count: number;
     date: string;
 };
 
+export type DraftResponse = {
+    attachments?: unknown;
+    content: string;
+    created_at: string;
+    id: string;
+    organization_id: string;
+    ticket_id: string;
+    updated_at: string;
+    user_id: string;
+};
+
 export type EffectivePermissionsResponse = {
     effective_permissions: number;
+};
+
+export type EmptyResponse = {
+    [key: string]: unknown;
 };
 
 export type Enable2FaRequest = {
@@ -1219,8 +1699,10 @@ export type Enable2FaRequest = {
 };
 
 export type EventLogListFilter = {
+    cursor?: string | null;
     event_type?: string | null;
     from_date?: string | null;
+    limit?: number | null;
     page?: number | null;
     per_page?: number | null;
     ticket_id?: string | null;
@@ -1279,11 +1761,22 @@ export type JoinOrganizationRequest = {
     org_id: string;
 };
 
+export type KbCitation = {
+    article_id: string;
+    snippet: string;
+    title: string;
+    url?: string | null;
+};
+
 export type KnowledgeBaseStats = {
     articles_created_this_month: number;
     most_viewed_articles: Array<ArticleView>;
     public_articles: number;
     total_articles: number;
+};
+
+export type LockRequest = {
+    ttl_seconds: number;
 };
 
 export type LoginAttemptResponse = {
@@ -1308,6 +1801,17 @@ export type LoginRequest = {
     totp_code?: string | null;
 };
 
+export type MacroExperimentResponse = {
+    created_at: string;
+    id: string;
+    macro_id: string;
+    metrics: unknown;
+    name: string;
+    status: string;
+    updated_at: string;
+    variants: unknown;
+};
+
 export type MacroListFilter = {
     created_by?: string | null;
     page?: number | null;
@@ -1328,7 +1832,11 @@ export type MacroResponse = {
 };
 
 export type MacroTemplateRequest = {
+    channel?: string | null;
+    locale?: string | null;
     macro_id: string;
+    ticket_id?: string | null;
+    user_id?: string | null;
     variables: {
         [key: string]: string;
     };
@@ -1354,6 +1862,16 @@ export type MacroUsageStats = {
     total_macros: number;
 };
 
+export type MacroVariantResponse = {
+    channel: string;
+    content: string;
+    created_at: string;
+    id: string;
+    locale: string;
+    macro_id: string;
+    updated_at: string;
+};
+
 export type MembershipResponse = {
     created_at: string;
     id: string;
@@ -1364,8 +1882,14 @@ export type MembershipResponse = {
     user_name: string;
 };
 
+export type MergeTicketsRequest = {
+    merged_ticket_id: string;
+    primary_ticket_id: string;
+};
+
 export type MessageListFilter = {
     channel?: string | null;
+    include_internal?: boolean | null;
     page?: number | null;
     per_page?: number | null;
     sender_id?: string | null;
@@ -1380,6 +1904,7 @@ export type MessageResponse = {
     sender_name: string;
     sent_at: string;
     ticket_id: string;
+    visibility: string;
 };
 
 export type MonthlySurveyData = {
@@ -1436,10 +1961,28 @@ export type PermissionCatalogEntry = {
     value: number;
 };
 
+export type PresenceHeartbeatRequest = {
+    current_ticket?: string | null;
+    status: string;
+};
+
+export type PresenceHeartbeatResponse = {
+    collisions: Array<CollisionInfo>;
+    current_ticket?: string | null;
+    status: string;
+    user_id: string;
+};
+
 export type PriorityCount = {
     count: number;
     percentage: number;
     priority: string;
+};
+
+export type RedactionSpan = {
+    end: number;
+    label: string;
+    start: number;
 };
 
 export type RegisterRequest = {
@@ -1484,11 +2027,36 @@ export type RoleResponse = {
     updated_at: string;
 };
 
+export type RoutingRuleResponse = {
+    actions: unknown;
+    conditions: unknown;
+    enabled: boolean;
+    id: string;
+    name: string;
+    priority: number;
+    strategy: string;
+};
+
 export type RuleActivity = {
     execution_count: number;
     rule_id: string;
     rule_name: string;
     success_rate: number;
+};
+
+export type SavedViewRequest = {
+    filters: unknown;
+    is_shared?: boolean | null;
+    name: string;
+};
+
+export type SavedViewResponse = {
+    created_at: string;
+    filters: unknown;
+    id: string;
+    is_shared: boolean;
+    name: string;
+    updated_at: string;
 };
 
 export type ScoreCount = {
@@ -1529,6 +2097,17 @@ export type Setup2FaResponse = {
     qr_code_svg: string;
     qr_code_url: string;
     secret: string;
+};
+
+export type SlaPolicyResponse = {
+    conditions: unknown;
+    created_at: string;
+    description?: string | null;
+    id: string;
+    is_active: boolean;
+    name: string;
+    targets: unknown;
+    updated_at: string;
 };
 
 export type StatusCount = {
@@ -1647,7 +2226,9 @@ export type TicketResponse = {
     created_by: string;
     created_by_name: string;
     description: string;
+    draft?: null | DraftResponse;
     id: string;
+    messages?: Array<MessageResponse> | null;
     priority: string;
     status: string;
     subject: string;
@@ -1677,6 +2258,15 @@ export type TriggerCount = {
     trigger: string;
 };
 
+export type TypingUpdateRequest = {
+    typing: boolean;
+};
+
+export type TypingUsersResponse = {
+    ticket_id: string;
+    user_ids: Array<string>;
+};
+
 export type UpdateArticleRequest = {
     content?: string | null;
     public?: boolean | null;
@@ -1692,10 +2282,23 @@ export type UpdateAutomationRuleRequest = {
     trigger?: string | null;
 };
 
+export type UpdateMacroExperimentRequest = {
+    metrics?: unknown;
+    name?: string | null;
+    status?: string | null;
+    variants?: unknown;
+};
+
 export type UpdateMacroRequest = {
     content?: string | null;
     description?: string | null;
     name?: string | null;
+};
+
+export type UpdateMacroVariantRequest = {
+    channel?: string | null;
+    content?: string | null;
+    locale?: string | null;
 };
 
 export type UpdateMembershipRequest = {
@@ -1714,6 +2317,23 @@ export type UpdateRoleRequest = {
     position?: number | null;
 };
 
+export type UpdateRoutingRuleRequest = {
+    actions?: unknown;
+    conditions?: unknown;
+    enabled?: boolean | null;
+    name?: string | null;
+    priority?: number | null;
+    strategy?: string | null;
+};
+
+export type UpdateSlaPolicyRequest = {
+    conditions?: unknown;
+    description?: string | null;
+    is_active?: boolean | null;
+    name?: string | null;
+    targets?: unknown;
+};
+
 export type UpdateSurveyRequest = {
     comment?: string | null;
     score?: number | null;
@@ -1730,6 +2350,7 @@ export type UpdateTicketRequest = {
     priority?: string | null;
     status?: string | null;
     subject?: string | null;
+    version?: number | null;
 };
 
 export type UpdateWebhookRequest = {
@@ -1747,6 +2368,11 @@ export type UpdateWebhookRequest = {
 export type UploadResponse = {
     attachments: Array<AttachmentResponse>;
     message: string;
+};
+
+export type UpsertDraftRequest = {
+    attachments?: unknown;
+    content: string;
 };
 
 export type UserEventCount = {
@@ -1852,6 +2478,11 @@ export type WebhookTestResult = {
     response_time_ms: number;
     success: boolean;
     webhook_id: string;
+};
+
+export type WorkloadEntry = {
+    open_tickets: number;
+    user_id: string;
 };
 
 export type GetAttachmentStatsData = {
@@ -2447,6 +3078,141 @@ export type AcceptInvitationResponses = {
 
 export type AcceptInvitationResponse = AcceptInvitationResponses[keyof AcceptInvitationResponses];
 
+export type ClassifyData = {
+    body: AiClassificationRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/ai/classify';
+};
+
+export type ClassifyResponses = {
+    200: ApiResponseAiClassificationResponse;
+};
+
+export type ClassifyResponse = ClassifyResponses[keyof ClassifyResponses];
+
+export type KbSuggestData = {
+    body: AiKbSuggestRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/ai/kb-suggest';
+};
+
+export type KbSuggestResponses = {
+    200: ApiResponseAiKbSuggestResponse;
+};
+
+export type KbSuggestResponse = KbSuggestResponses[keyof KbSuggestResponses];
+
+export type RedactData = {
+    body: AiRedactRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/ai/redact';
+};
+
+export type RedactResponses = {
+    200: ApiResponseAiRedactResponse;
+};
+
+export type RedactResponse = RedactResponses[keyof RedactResponses];
+
+export type RewriteData = {
+    body: AiRewriteRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/ai/rewrite';
+};
+
+export type RewriteResponses = {
+    200: ApiResponseAiRewriteResponse;
+};
+
+export type RewriteResponse = RewriteResponses[keyof RewriteResponses];
+
+export type SuggestReplyData = {
+    body: AiSuggestionRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/ai/suggest-reply';
+};
+
+export type SuggestReplyResponses = {
+    200: ApiResponseAiSuggestionResponse;
+};
+
+export type SuggestReplyResponse = SuggestReplyResponses[keyof SuggestReplyResponses];
+
+export type SuggestReplyStreamData = {
+    body: AiSuggestionRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/ai/suggest-reply/stream';
+};
+
+export type SuggestReplyStreamResponses = {
+    200: string;
+};
+
+export type SuggestReplyStreamResponse = SuggestReplyStreamResponses[keyof SuggestReplyStreamResponses];
+
+export type SummarizeData = {
+    body: AiSummaryRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/ai/summarize';
+};
+
+export type SummarizeResponses = {
+    200: ApiResponseAiSummaryResponse;
+};
+
+export type SummarizeResponse = SummarizeResponses[keyof SummarizeResponses];
+
+export type TelemetryData = {
+    body: AiTelemetryRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/ai/telemetry';
+};
+
+export type TelemetryResponses = {
+    200: ApiResponseEmptyResponse;
+};
+
+export type TelemetryResponse = TelemetryResponses[keyof TelemetryResponses];
+
+export type TranslateData = {
+    body: AiTranslateRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/ai/translate';
+};
+
+export type TranslateResponses = {
+    200: ApiResponseAiTranslateResponse;
+};
+
+export type TranslateResponse = TranslateResponses[keyof TranslateResponses];
+
 export type GetOrganizationAnalyticsData = {
     body?: never;
     path: {
@@ -2528,6 +3294,36 @@ export type GetAgentAnalyticsResponses = {
 };
 
 export type GetAgentAnalyticsResponse = GetAgentAnalyticsResponses[keyof GetAgentAnalyticsResponses];
+
+export type GetCsatByAgentData = {
+    body?: never;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/analytics/csat/by-agent';
+};
+
+export type GetCsatByAgentResponses = {
+    200: ApiResponseVecAgentSatisfactionScore;
+};
+
+export type GetCsatByAgentResponse = GetCsatByAgentResponses[keyof GetCsatByAgentResponses];
+
+export type GetCsatByMacroData = {
+    body?: never;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/analytics/csat/by-macro';
+};
+
+export type GetCsatByMacroResponses = {
+    200: ApiResponseVecCsatByMacroItem;
+};
+
+export type GetCsatByMacroResponse = GetCsatByMacroResponses[keyof GetCsatByMacroResponses];
 
 export type GetKnowledgeBaseAnalyticsData = {
     body?: never;
@@ -3067,7 +3863,7 @@ export type ListEventsErrors = {
      */
     401: unknown;
     /**
-     * Access denied to organization
+     * Access denied to organization or insufficient permissions
      */
     403: unknown;
 };
@@ -3160,17 +3956,19 @@ export type ExportEventsErrors = {
      */
     401: unknown;
     /**
-     * Access denied to organization
+     * Access denied to organization or insufficient permissions
      */
     403: unknown;
 };
 
 export type ExportEventsResponses = {
     /**
-     * Events exported successfully
+     * CSV export
      */
-    200: unknown;
+    200: string;
 };
+
+export type ExportEventsResponse = ExportEventsResponses[keyof ExportEventsResponses];
 
 export type GetEventStatsData = {
     body?: never;
@@ -3190,7 +3988,7 @@ export type GetEventStatsErrors = {
      */
     401: unknown;
     /**
-     * Access denied to organization
+     * Access denied to organization or insufficient permissions
      */
     403: unknown;
 };
@@ -3203,6 +4001,27 @@ export type GetEventStatsResponses = {
 };
 
 export type GetEventStatsResponse = GetEventStatsResponses[keyof GetEventStatsResponses];
+
+export type StreamEventsData = {
+    body?: never;
+    headers?: {
+        /**
+         * Resume from event id
+         */
+        'Last-Event-Id'?: string | null;
+    };
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/events/stream';
+};
+
+export type StreamEventsResponses = {
+    200: string;
+};
+
+export type StreamEventsResponse = StreamEventsResponses[keyof StreamEventsResponses];
 
 export type GetEventData = {
     body?: never;
@@ -3226,7 +4045,7 @@ export type GetEventErrors = {
      */
     401: unknown;
     /**
-     * Access denied to organization
+     * Access denied to organization or insufficient permissions
      */
     403: unknown;
     /**
@@ -3644,6 +4463,44 @@ export type CreateMacroResponses = {
 
 export type CreateMacroResponse = CreateMacroResponses[keyof CreateMacroResponses];
 
+export type DeleteMacroExperimentData = {
+    body?: never;
+    path: {
+        org_id: string;
+        experiment_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/macros/experiments/{experiment_id}';
+};
+
+export type DeleteMacroExperimentResponses = {
+    /**
+     * Experiment deleted
+     */
+    204: void;
+};
+
+export type DeleteMacroExperimentResponse = DeleteMacroExperimentResponses[keyof DeleteMacroExperimentResponses];
+
+export type UpdateMacroExperimentData = {
+    body: UpdateMacroExperimentRequest;
+    path: {
+        org_id: string;
+        experiment_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/macros/experiments/{experiment_id}';
+};
+
+export type UpdateMacroExperimentResponses = {
+    /**
+     * Experiment updated
+     */
+    200: ApiResponseMacroExperimentResponse;
+};
+
+export type UpdateMacroExperimentResponse = UpdateMacroExperimentResponses[keyof UpdateMacroExperimentResponses];
+
 export type GetPopularMacrosData = {
     body?: never;
     path: {
@@ -3849,6 +4706,122 @@ export type UpdateMacroResponses = {
 
 export type UpdateMacroResponse = UpdateMacroResponses[keyof UpdateMacroResponses];
 
+export type ListMacroExperimentsData = {
+    body?: never;
+    path: {
+        org_id: string;
+        macro_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/experiments';
+};
+
+export type ListMacroExperimentsResponses = {
+    /**
+     * Experiments
+     */
+    200: ApiResponseVecMacroExperimentResponse;
+};
+
+export type ListMacroExperimentsResponse = ListMacroExperimentsResponses[keyof ListMacroExperimentsResponses];
+
+export type CreateMacroExperimentData = {
+    body: CreateMacroExperimentRequest;
+    path: {
+        org_id: string;
+        macro_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/experiments';
+};
+
+export type CreateMacroExperimentResponses = {
+    /**
+     * Experiment created
+     */
+    201: ApiResponseMacroExperimentResponse;
+};
+
+export type CreateMacroExperimentResponse = CreateMacroExperimentResponses[keyof CreateMacroExperimentResponses];
+
+export type ListMacroVariantsData = {
+    body?: never;
+    path: {
+        org_id: string;
+        macro_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants';
+};
+
+export type ListMacroVariantsResponses = {
+    /**
+     * Variants
+     */
+    200: ApiResponseVecMacroVariantResponse;
+};
+
+export type ListMacroVariantsResponse = ListMacroVariantsResponses[keyof ListMacroVariantsResponses];
+
+export type CreateMacroVariantData = {
+    body: CreateMacroVariantRequest;
+    path: {
+        org_id: string;
+        macro_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants';
+};
+
+export type CreateMacroVariantResponses = {
+    /**
+     * Variant created
+     */
+    201: ApiResponseMacroVariantResponse;
+};
+
+export type CreateMacroVariantResponse = CreateMacroVariantResponses[keyof CreateMacroVariantResponses];
+
+export type DeleteMacroVariantData = {
+    body?: never;
+    path: {
+        org_id: string;
+        macro_id: string;
+        variant_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}';
+};
+
+export type DeleteMacroVariantResponses = {
+    /**
+     * Variant deleted
+     */
+    204: void;
+};
+
+export type DeleteMacroVariantResponse = DeleteMacroVariantResponses[keyof DeleteMacroVariantResponses];
+
+export type UpdateMacroVariantData = {
+    body: UpdateMacroVariantRequest;
+    path: {
+        org_id: string;
+        macro_id: string;
+        variant_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}';
+};
+
+export type UpdateMacroVariantResponses = {
+    /**
+     * Variant updated
+     */
+    200: ApiResponseMacroVariantResponse;
+};
+
+export type UpdateMacroVariantResponse = UpdateMacroVariantResponses[keyof UpdateMacroVariantResponses];
+
 export type GetMembersData = {
     body?: never;
     path: {
@@ -4051,6 +5024,36 @@ export type GetEffectivePermissionsResponses = {
 
 export type GetEffectivePermissionsResponse = GetEffectivePermissionsResponses[keyof GetEffectivePermissionsResponses];
 
+export type ListAgentsData = {
+    body?: never;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/presence/agents';
+};
+
+export type ListAgentsResponses = {
+    200: ApiResponseVecAgentPresence;
+};
+
+export type ListAgentsResponse = ListAgentsResponses[keyof ListAgentsResponses];
+
+export type HeartbeatData = {
+    body: PresenceHeartbeatRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/presence/heartbeat';
+};
+
+export type HeartbeatResponses = {
+    200: ApiResponsePresenceHeartbeatResponse;
+};
+
+export type HeartbeatResponse = HeartbeatResponses[keyof HeartbeatResponses];
+
 export type ListRolesData = {
     body?: never;
     path: {
@@ -4182,6 +5185,83 @@ export type RevokeRoleResponses = {
 
 export type RevokeRoleResponse = RevokeRoleResponses[keyof RevokeRoleResponses];
 
+export type ListRulesData = {
+    body?: never;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/routing/rules';
+};
+
+export type ListRulesResponses = {
+    200: ApiResponseVecRoutingRuleResponse;
+};
+
+export type ListRulesResponse = ListRulesResponses[keyof ListRulesResponses];
+
+export type CreateRuleData = {
+    body: CreateRoutingRuleRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/routing/rules';
+};
+
+export type CreateRuleResponses = {
+    201: ApiResponseRoutingRuleResponse;
+};
+
+export type CreateRuleResponse = CreateRuleResponses[keyof CreateRuleResponses];
+
+export type DeleteRuleData = {
+    body?: never;
+    path: {
+        org_id: string;
+        rule_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/routing/rules/{rule_id}';
+};
+
+export type DeleteRuleResponses = {
+    200: ApiResponseString;
+};
+
+export type DeleteRuleResponse = DeleteRuleResponses[keyof DeleteRuleResponses];
+
+export type UpdateRuleData = {
+    body: UpdateRoutingRuleRequest;
+    path: {
+        org_id: string;
+        rule_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/routing/rules/{rule_id}';
+};
+
+export type UpdateRuleResponses = {
+    200: ApiResponseRoutingRuleResponse;
+};
+
+export type UpdateRuleResponse = UpdateRuleResponses[keyof UpdateRuleResponses];
+
+export type WorkloadData = {
+    body?: never;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/routing/workload';
+};
+
+export type WorkloadResponses = {
+    200: ApiResponseVecWorkloadEntry;
+};
+
+export type WorkloadResponse = WorkloadResponses[keyof WorkloadResponses];
+
 export type GetAllOrganizationSettingsData = {
     body?: never;
     path: {
@@ -4309,6 +5389,67 @@ export type GetOrganizationSettingResponses = {
 };
 
 export type GetOrganizationSettingResponse = GetOrganizationSettingResponses[keyof GetOrganizationSettingResponses];
+
+export type CheckBreachesData = {
+    body?: never;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/sla/check-breaches';
+};
+
+export type CheckBreachesResponses = {
+    200: ApiResponseU64;
+};
+
+export type CheckBreachesResponse = CheckBreachesResponses[keyof CheckBreachesResponses];
+
+export type ListPoliciesData = {
+    body?: never;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/sla/policies';
+};
+
+export type ListPoliciesResponses = {
+    200: ApiResponseVecSlaPolicyResponse;
+};
+
+export type ListPoliciesResponse = ListPoliciesResponses[keyof ListPoliciesResponses];
+
+export type CreatePolicyData = {
+    body: CreateSlaPolicyRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/sla/policies';
+};
+
+export type CreatePolicyResponses = {
+    201: ApiResponseSlaPolicyResponse;
+};
+
+export type CreatePolicyResponse = CreatePolicyResponses[keyof CreatePolicyResponses];
+
+export type UpdatePolicyData = {
+    body: UpdateSlaPolicyRequest;
+    path: {
+        org_id: string;
+        policy_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/sla/policies/{policy_id}';
+};
+
+export type UpdatePolicyResponses = {
+    200: ApiResponseSlaPolicyResponse;
+};
+
+export type UpdatePolicyResponse = UpdatePolicyResponses[keyof UpdatePolicyResponses];
 
 export type ListSurveysData = {
     body?: never;
@@ -5023,6 +6164,86 @@ export type CreateTicketResponses = {
 
 export type CreateTicketResponse = CreateTicketResponses[keyof CreateTicketResponses];
 
+export type BulkUpdateTicketsData = {
+    body: BulkTicketUpdateRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/bulk';
+};
+
+export type BulkUpdateTicketsResponses = {
+    /**
+     * Tickets updated
+     */
+    200: unknown;
+};
+
+export type MergeTicketsData = {
+    body: MergeTicketsRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/merge';
+};
+
+export type MergeTicketsResponses = {
+    /**
+     * Tickets merged
+     */
+    200: unknown;
+};
+
+export type ListSavedViewsData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/views';
+};
+
+export type ListSavedViewsResponses = {
+    /**
+     * Saved views
+     */
+    200: ApiResponseVecSavedViewResponse;
+};
+
+export type ListSavedViewsResponse = ListSavedViewsResponses[keyof ListSavedViewsResponses];
+
+export type CreateSavedViewData = {
+    body: SavedViewRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/views';
+};
+
+export type CreateSavedViewResponses = {
+    /**
+     * Saved view created
+     */
+    201: ApiResponseSavedViewResponse;
+};
+
+export type CreateSavedViewResponse = CreateSavedViewResponses[keyof CreateSavedViewResponses];
+
 export type DeleteTicketData = {
     body?: never;
     path: {
@@ -5134,6 +6355,152 @@ export type UpdateTicketResponses = {
 };
 
 export type UpdateTicketResponse = UpdateTicketResponses[keyof UpdateTicketResponses];
+
+export type DeleteDraftData = {
+    body?: never;
+    path: {
+        org_id: string;
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/draft';
+};
+
+export type DeleteDraftResponses = {
+    /**
+     * Draft deleted
+     */
+    204: void;
+};
+
+export type DeleteDraftResponse = DeleteDraftResponses[keyof DeleteDraftResponses];
+
+export type GetDraftData = {
+    body?: never;
+    path: {
+        org_id: string;
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/draft';
+};
+
+export type GetDraftResponses = {
+    /**
+     * Draft fetched
+     */
+    200: ApiResponseOptionDraftResponse;
+};
+
+export type GetDraftResponse = GetDraftResponses[keyof GetDraftResponses];
+
+export type UpsertDraftData = {
+    body: UpsertDraftRequest;
+    path: {
+        org_id: string;
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/draft';
+};
+
+export type UpsertDraftResponses = {
+    /**
+     * Draft upserted
+     */
+    200: ApiResponseDraftResponse;
+};
+
+export type UpsertDraftResponse = UpsertDraftResponses[keyof UpsertDraftResponses];
+
+export type GetTicketHistoryData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Ticket ID
+         */
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/history';
+};
+
+export type GetTicketHistoryErrors = {
+    /**
+     * Access denied to organization
+     */
+    403: unknown;
+    /**
+     * Ticket not found
+     */
+    404: unknown;
+};
+
+export type GetTicketHistoryResponses = {
+    /**
+     * Ticket history events
+     */
+    200: ApiResponseVecEventLogResponse;
+};
+
+export type GetTicketHistoryResponse = GetTicketHistoryResponses[keyof GetTicketHistoryResponses];
+
+export type ReleaseTicketLockData = {
+    body?: never;
+    path: {
+        org_id: string;
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/lock';
+};
+
+export type ReleaseTicketLockResponses = {
+    /**
+     * Ticket lock released
+     */
+    204: void;
+};
+
+export type ReleaseTicketLockResponse = ReleaseTicketLockResponses[keyof ReleaseTicketLockResponses];
+
+export type LockTicketData = {
+    body: LockRequest;
+    path: {
+        org_id: string;
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/lock';
+};
+
+export type LockTicketResponses = {
+    /**
+     * Ticket locked
+     */
+    200: unknown;
+};
+
+export type TakeoverTicketLockData = {
+    body: LockRequest;
+    path: {
+        org_id: string;
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/lock/takeover';
+};
+
+export type TakeoverTicketLockResponses = {
+    /**
+     * Ticket lock taken over
+     */
+    200: unknown;
+};
 
 export type ListTicketMessagesData = {
     body?: never;
@@ -5563,6 +6930,38 @@ export type AddTagsToTicketResponses = {
      */
     200: unknown;
 };
+
+export type ListTypingData = {
+    body?: never;
+    path: {
+        org_id: string;
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/typing';
+};
+
+export type ListTypingResponses = {
+    200: ApiResponseTypingUsersResponse;
+};
+
+export type ListTypingResponse = ListTypingResponses[keyof ListTypingResponses];
+
+export type TypingUpdateData = {
+    body: TypingUpdateRequest;
+    path: {
+        org_id: string;
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/typing';
+};
+
+export type TypingUpdateResponses = {
+    200: ApiResponseEmptyResponse;
+};
+
+export type TypingUpdateResponse = TypingUpdateResponses[keyof TypingUpdateResponses];
 
 export type ListWebhooksData = {
     body?: never;
