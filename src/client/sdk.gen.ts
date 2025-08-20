@@ -26,7 +26,7 @@ export const getAttachmentStats = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/admin/attachments/stats',
+        url: '/api/v1/admin/attachments/stats',
         ...options
     });
 };
@@ -39,7 +39,7 @@ export const downloadAttachment = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/attachments/{attachment_id}/download',
+        url: '/api/v1/attachments/{attachment_id}/download',
         ...options
     });
 };
@@ -52,7 +52,7 @@ export const disable2Fa = <ThrowOnError extends boolean = false>(options?: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/auth/disable-2fa',
+        url: '/api/v1/auth/disable-2fa',
         ...options
     });
 };
@@ -65,7 +65,7 @@ export const enable2Fa = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/auth/enable-2fa',
+        url: '/api/v1/auth/enable-2fa',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ export const enable2Fa = <ThrowOnError extends boolean = false>(options: Options
 
 export const login = <ThrowOnError extends boolean = false>(options: Options<LoginData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<LoginResponses, LoginErrors, ThrowOnError>({
-        url: '/api/v0/auth/login',
+        url: '/api/v1/auth/login',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -93,14 +93,14 @@ export const logout = <ThrowOnError extends boolean = false>(options?: Options<L
                 type: 'http'
             }
         ],
-        url: '/api/v0/auth/logout',
+        url: '/api/v1/auth/logout',
         ...options
     });
 };
 
 export const register = <ThrowOnError extends boolean = false>(options: Options<RegisterData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<RegisterResponses, RegisterErrors, ThrowOnError>({
-        url: '/api/v0/auth/register',
+        url: '/api/v1/auth/register',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ export const register = <ThrowOnError extends boolean = false>(options: Options<
 
 export const requestPasswordReset = <ThrowOnError extends boolean = false>(options: Options<RequestPasswordResetData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<RequestPasswordResetResponses, RequestPasswordResetErrors, ThrowOnError>({
-        url: '/api/v0/auth/request-password-reset',
+        url: '/api/v1/auth/request-password-reset',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -122,7 +122,7 @@ export const requestPasswordReset = <ThrowOnError extends boolean = false>(optio
 
 export const resendVerification = <ThrowOnError extends boolean = false>(options: Options<ResendVerificationData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<ResendVerificationResponses, ResendVerificationErrors, ThrowOnError>({
-        url: '/api/v0/auth/resend-verification',
+        url: '/api/v1/auth/resend-verification',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ export const resendVerification = <ThrowOnError extends boolean = false>(options
 
 export const resetPassword = <ThrowOnError extends boolean = false>(options: Options<ResetPasswordData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<ResetPasswordResponses, ResetPasswordErrors, ThrowOnError>({
-        url: '/api/v0/auth/reset-password',
+        url: '/api/v1/auth/reset-password',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -150,14 +150,14 @@ export const setup2Fa = <ThrowOnError extends boolean = false>(options?: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/auth/setup-2fa',
+        url: '/api/v1/auth/setup-2fa',
         ...options
     });
 };
 
 export const verifyEmail = <ThrowOnError extends boolean = false>(options: Options<VerifyEmailData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<VerifyEmailResponses, VerifyEmailErrors, ThrowOnError>({
-        url: '/api/v0/auth/verify-email',
+        url: '/api/v1/auth/verify-email',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ export const verifyEmail = <ThrowOnError extends boolean = false>(options: Optio
 
 export const identifyUser = <ThrowOnError extends boolean = false>(options: Options<IdentifyUserData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<IdentifyUserResponses, IdentifyUserErrors, ThrowOnError>({
-        url: '/api/v0/client/identify',
+        url: '/api/v1/client/identify',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ export const identifyUser = <ThrowOnError extends boolean = false>(options: Opti
 
 export const sendMessage = <ThrowOnError extends boolean = false>(options: Options<SendMessageData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<SendMessageResponses, SendMessageErrors, ThrowOnError>({
-        url: '/api/v0/client/message',
+        url: '/api/v1/client/message',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -190,7 +190,7 @@ export const sendMessage = <ThrowOnError extends boolean = false>(options: Optio
 
 export const getUserTickets = <ThrowOnError extends boolean = false>(options: Options<GetUserTicketsData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetUserTicketsResponses, GetUserTicketsErrors, ThrowOnError>({
-        url: '/api/v0/client/tickets/{user_id}',
+        url: '/api/v1/client/tickets/{user_id}',
         ...options
     });
 };
@@ -203,7 +203,7 @@ export const getUserOrganizations = <ThrowOnError extends boolean = false>(optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations',
+        url: '/api/v1/organizations',
         ...options
     });
 };
@@ -216,7 +216,7 @@ export const createOrganization = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations',
+        url: '/api/v1/organizations',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -227,7 +227,7 @@ export const createOrganization = <ThrowOnError extends boolean = false>(options
 
 export const findOrganizationsByEmailDomain = <ThrowOnError extends boolean = false>(options: Options<FindOrganizationsByEmailDomainData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<FindOrganizationsByEmailDomainResponses, FindOrganizationsByEmailDomainErrors, ThrowOnError>({
-        url: '/api/v0/organizations/by-domain',
+        url: '/api/v1/organizations/by-domain',
         ...options
     });
 };
@@ -240,7 +240,7 @@ export const joinOrganization = <ThrowOnError extends boolean = false>(options: 
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/join',
+        url: '/api/v1/organizations/join',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -257,7 +257,7 @@ export const getOrganization = <ThrowOnError extends boolean = false>(options: O
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}',
+        url: '/api/v1/organizations/{org_id}',
         ...options
     });
 };
@@ -270,7 +270,7 @@ export const acceptInvitation = <ThrowOnError extends boolean = false>(options: 
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/accept-invitation',
+        url: '/api/v1/organizations/{org_id}/accept-invitation',
         ...options
     });
 };
@@ -283,7 +283,7 @@ export const classify = <ThrowOnError extends boolean = false>(options: Options<
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/ai/classify',
+        url: '/api/v1/organizations/{org_id}/ai/classify',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -300,7 +300,7 @@ export const kbSuggest = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/ai/kb-suggest',
+        url: '/api/v1/organizations/{org_id}/ai/kb-suggest',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -317,7 +317,7 @@ export const redact = <ThrowOnError extends boolean = false>(options: Options<Re
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/ai/redact',
+        url: '/api/v1/organizations/{org_id}/ai/redact',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -334,7 +334,7 @@ export const rewrite = <ThrowOnError extends boolean = false>(options: Options<R
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/ai/rewrite',
+        url: '/api/v1/organizations/{org_id}/ai/rewrite',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -351,7 +351,7 @@ export const suggestReply = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/ai/suggest-reply',
+        url: '/api/v1/organizations/{org_id}/ai/suggest-reply',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -368,7 +368,7 @@ export const suggestReplyStream = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/ai/suggest-reply/stream',
+        url: '/api/v1/organizations/{org_id}/ai/suggest-reply/stream',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -385,7 +385,7 @@ export const summarize = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/ai/summarize',
+        url: '/api/v1/organizations/{org_id}/ai/summarize',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -402,7 +402,7 @@ export const telemetry = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/ai/telemetry',
+        url: '/api/v1/organizations/{org_id}/ai/telemetry',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -419,7 +419,7 @@ export const translate = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/ai/translate',
+        url: '/api/v1/organizations/{org_id}/ai/translate',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -436,7 +436,7 @@ export const getOrganizationAnalytics = <ThrowOnError extends boolean = false>(o
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/analytics',
+        url: '/api/v1/organizations/{org_id}/analytics',
         ...options
     });
 };
@@ -449,7 +449,7 @@ export const getAgentAnalytics = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/analytics/agents',
+        url: '/api/v1/organizations/{org_id}/analytics/agents',
         ...options
     });
 };
@@ -462,7 +462,7 @@ export const getCsatByAgent = <ThrowOnError extends boolean = false>(options: Op
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/analytics/csat/by-agent',
+        url: '/api/v1/organizations/{org_id}/analytics/csat/by-agent',
         ...options
     });
 };
@@ -475,7 +475,7 @@ export const getCsatByMacro = <ThrowOnError extends boolean = false>(options: Op
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/analytics/csat/by-macro',
+        url: '/api/v1/organizations/{org_id}/analytics/csat/by-macro',
         ...options
     });
 };
@@ -488,7 +488,7 @@ export const getKnowledgeBaseAnalytics = <ThrowOnError extends boolean = false>(
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/analytics/knowledge-base',
+        url: '/api/v1/organizations/{org_id}/analytics/knowledge-base',
         ...options
     });
 };
@@ -501,7 +501,7 @@ export const getMacroAnalytics = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/analytics/macros',
+        url: '/api/v1/organizations/{org_id}/analytics/macros',
         ...options
     });
 };
@@ -514,7 +514,7 @@ export const getSystemAnalytics = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/analytics/system',
+        url: '/api/v1/organizations/{org_id}/analytics/system',
         ...options
     });
 };
@@ -527,7 +527,7 @@ export const getTicketAnalytics = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/analytics/tickets',
+        url: '/api/v1/organizations/{org_id}/analytics/tickets',
         ...options
     });
 };
@@ -540,7 +540,7 @@ export const getTrendAnalytics = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/analytics/trends',
+        url: '/api/v1/organizations/{org_id}/analytics/trends',
         ...options
     });
 };
@@ -553,7 +553,7 @@ export const executeAutomationRules = <ThrowOnError extends boolean = false>(opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/automation/execute',
+        url: '/api/v1/organizations/{org_id}/automation/execute',
         ...options
     });
 };
@@ -566,7 +566,7 @@ export const listAutomationRules = <ThrowOnError extends boolean = false>(option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/automation/rules',
+        url: '/api/v1/organizations/{org_id}/automation/rules',
         ...options
     });
 };
@@ -579,7 +579,7 @@ export const createAutomationRule = <ThrowOnError extends boolean = false>(optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/automation/rules',
+        url: '/api/v1/organizations/{org_id}/automation/rules',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -596,7 +596,7 @@ export const deleteAutomationRule = <ThrowOnError extends boolean = false>(optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/automation/rules/{rule_id}',
+        url: '/api/v1/organizations/{org_id}/automation/rules/{rule_id}',
         ...options
     });
 };
@@ -609,7 +609,7 @@ export const getAutomationRule = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/automation/rules/{rule_id}',
+        url: '/api/v1/organizations/{org_id}/automation/rules/{rule_id}',
         ...options
     });
 };
@@ -622,7 +622,7 @@ export const updateAutomationRule = <ThrowOnError extends boolean = false>(optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/automation/rules/{rule_id}',
+        url: '/api/v1/organizations/{org_id}/automation/rules/{rule_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -639,7 +639,7 @@ export const getAutomationStats = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/automation/stats',
+        url: '/api/v1/organizations/{org_id}/automation/stats',
         ...options
     });
 };
@@ -652,7 +652,7 @@ export const listEvents = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/events',
+        url: '/api/v1/organizations/{org_id}/events',
         ...options
     });
 };
@@ -665,7 +665,7 @@ export const createEvent = <ThrowOnError extends boolean = false>(options: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/events',
+        url: '/api/v1/organizations/{org_id}/events',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -682,7 +682,7 @@ export const exportEvents = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/events/export',
+        url: '/api/v1/organizations/{org_id}/events/export',
         ...options
     });
 };
@@ -695,7 +695,7 @@ export const getEventStats = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/events/stats',
+        url: '/api/v1/organizations/{org_id}/events/stats',
         ...options
     });
 };
@@ -708,7 +708,7 @@ export const streamEvents = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/events/stream',
+        url: '/api/v1/organizations/{org_id}/events/stream',
         ...options
     });
 };
@@ -721,7 +721,7 @@ export const getEvent = <ThrowOnError extends boolean = false>(options: Options<
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/events/{event_id}',
+        url: '/api/v1/organizations/{org_id}/events/{event_id}',
         ...options
     });
 };
@@ -734,7 +734,7 @@ export const inviteUser = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/invite',
+        url: '/api/v1/organizations/{org_id}/invite',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -751,7 +751,7 @@ export const listArticles = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/knowledge-base/articles',
+        url: '/api/v1/organizations/{org_id}/knowledge-base/articles',
         ...options
     });
 };
@@ -764,7 +764,7 @@ export const createArticle = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/knowledge-base/articles',
+        url: '/api/v1/organizations/{org_id}/knowledge-base/articles',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -781,7 +781,7 @@ export const deleteArticle = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}',
+        url: '/api/v1/organizations/{org_id}/knowledge-base/articles/{article_id}',
         ...options
     });
 };
@@ -794,7 +794,7 @@ export const getArticle = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}',
+        url: '/api/v1/organizations/{org_id}/knowledge-base/articles/{article_id}',
         ...options
     });
 };
@@ -807,7 +807,7 @@ export const updateArticle = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}',
+        url: '/api/v1/organizations/{org_id}/knowledge-base/articles/{article_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -824,7 +824,7 @@ export const getPublicArticles = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/knowledge-base/public',
+        url: '/api/v1/organizations/{org_id}/knowledge-base/public',
         ...options
     });
 };
@@ -837,7 +837,7 @@ export const searchPublicArticles = <ThrowOnError extends boolean = false>(optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/knowledge-base/search',
+        url: '/api/v1/organizations/{org_id}/knowledge-base/search',
         ...options
     });
 };
@@ -850,7 +850,7 @@ export const listMacros = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros',
+        url: '/api/v1/organizations/{org_id}/macros',
         ...options
     });
 };
@@ -863,7 +863,7 @@ export const createMacro = <ThrowOnError extends boolean = false>(options: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros',
+        url: '/api/v1/organizations/{org_id}/macros',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -880,7 +880,7 @@ export const deleteMacroExperiment = <ThrowOnError extends boolean = false>(opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/experiments/{experiment_id}',
+        url: '/api/v1/organizations/{org_id}/macros/experiments/{experiment_id}',
         ...options
     });
 };
@@ -893,7 +893,7 @@ export const updateMacroExperiment = <ThrowOnError extends boolean = false>(opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/experiments/{experiment_id}',
+        url: '/api/v1/organizations/{org_id}/macros/experiments/{experiment_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -910,7 +910,7 @@ export const getPopularMacros = <ThrowOnError extends boolean = false>(options: 
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/popular',
+        url: '/api/v1/organizations/{org_id}/macros/popular',
         ...options
     });
 };
@@ -923,7 +923,7 @@ export const renderMacroTemplate = <ThrowOnError extends boolean = false>(option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/render',
+        url: '/api/v1/organizations/{org_id}/macros/render',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -940,7 +940,7 @@ export const deleteMacro = <ThrowOnError extends boolean = false>(options: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/{macro_id}',
+        url: '/api/v1/organizations/{org_id}/macros/{macro_id}',
         ...options
     });
 };
@@ -953,7 +953,7 @@ export const getMacro = <ThrowOnError extends boolean = false>(options: Options<
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/{macro_id}',
+        url: '/api/v1/organizations/{org_id}/macros/{macro_id}',
         ...options
     });
 };
@@ -966,7 +966,7 @@ export const updateMacro = <ThrowOnError extends boolean = false>(options: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/{macro_id}',
+        url: '/api/v1/organizations/{org_id}/macros/{macro_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -983,7 +983,7 @@ export const listMacroExperiments = <ThrowOnError extends boolean = false>(optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/{macro_id}/experiments',
+        url: '/api/v1/organizations/{org_id}/macros/{macro_id}/experiments',
         ...options
     });
 };
@@ -996,7 +996,7 @@ export const createMacroExperiment = <ThrowOnError extends boolean = false>(opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/{macro_id}/experiments',
+        url: '/api/v1/organizations/{org_id}/macros/{macro_id}/experiments',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1013,7 +1013,7 @@ export const listMacroVariants = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants',
+        url: '/api/v1/organizations/{org_id}/macros/{macro_id}/variants',
         ...options
     });
 };
@@ -1026,7 +1026,7 @@ export const createMacroVariant = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants',
+        url: '/api/v1/organizations/{org_id}/macros/{macro_id}/variants',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1043,7 +1043,7 @@ export const deleteMacroVariant = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}',
+        url: '/api/v1/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}',
         ...options
     });
 };
@@ -1056,7 +1056,7 @@ export const updateMacroVariant = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}',
+        url: '/api/v1/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1073,7 +1073,7 @@ export const getMembers = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/members',
+        url: '/api/v1/organizations/{org_id}/members',
         ...options
     });
 };
@@ -1086,7 +1086,7 @@ export const removeMember = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/members/{member_id}',
+        url: '/api/v1/organizations/{org_id}/members/{member_id}',
         ...options
     });
 };
@@ -1099,7 +1099,7 @@ export const updateMembership = <ThrowOnError extends boolean = false>(options: 
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/members/{member_id}',
+        url: '/api/v1/organizations/{org_id}/members/{member_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1116,7 +1116,7 @@ export const deleteMessage = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/messages/{message_id}',
+        url: '/api/v1/organizations/{org_id}/messages/{message_id}',
         ...options
     });
 };
@@ -1129,7 +1129,7 @@ export const getMessage = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/messages/{message_id}',
+        url: '/api/v1/organizations/{org_id}/messages/{message_id}',
         ...options
     });
 };
@@ -1142,7 +1142,7 @@ export const getEffectivePermissions = <ThrowOnError extends boolean = false>(op
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/permissions/effective',
+        url: '/api/v1/organizations/{org_id}/permissions/effective',
         ...options
     });
 };
@@ -1155,7 +1155,7 @@ export const listAgents = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/presence/agents',
+        url: '/api/v1/organizations/{org_id}/presence/agents',
         ...options
     });
 };
@@ -1168,7 +1168,7 @@ export const heartbeat = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/presence/heartbeat',
+        url: '/api/v1/organizations/{org_id}/presence/heartbeat',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1185,7 +1185,7 @@ export const listRoles = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/roles',
+        url: '/api/v1/organizations/{org_id}/roles',
         ...options
     });
 };
@@ -1198,7 +1198,7 @@ export const createRole = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/roles',
+        url: '/api/v1/organizations/{org_id}/roles',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1215,7 +1215,7 @@ export const deleteRole = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/roles/{role_id}',
+        url: '/api/v1/organizations/{org_id}/roles/{role_id}',
         ...options
     });
 };
@@ -1228,7 +1228,7 @@ export const getRole = <ThrowOnError extends boolean = false>(options: Options<G
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/roles/{role_id}',
+        url: '/api/v1/organizations/{org_id}/roles/{role_id}',
         ...options
     });
 };
@@ -1241,7 +1241,7 @@ export const updateRole = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/roles/{role_id}',
+        url: '/api/v1/organizations/{org_id}/roles/{role_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1258,7 +1258,7 @@ export const assignRole = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/roles/{role_id}/assign',
+        url: '/api/v1/organizations/{org_id}/roles/{role_id}/assign',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1275,7 +1275,7 @@ export const revokeRole = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/roles/{role_id}/revoke',
+        url: '/api/v1/organizations/{org_id}/roles/{role_id}/revoke',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1292,7 +1292,7 @@ export const listRules = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/routing/rules',
+        url: '/api/v1/organizations/{org_id}/routing/rules',
         ...options
     });
 };
@@ -1305,7 +1305,7 @@ export const createRule = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/routing/rules',
+        url: '/api/v1/organizations/{org_id}/routing/rules',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1322,7 +1322,7 @@ export const deleteRule = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/routing/rules/{rule_id}',
+        url: '/api/v1/organizations/{org_id}/routing/rules/{rule_id}',
         ...options
     });
 };
@@ -1335,7 +1335,7 @@ export const updateRule = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/routing/rules/{rule_id}',
+        url: '/api/v1/organizations/{org_id}/routing/rules/{rule_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1352,7 +1352,7 @@ export const workload = <ThrowOnError extends boolean = false>(options: Options<
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/routing/workload',
+        url: '/api/v1/organizations/{org_id}/routing/workload',
         ...options
     });
 };
@@ -1365,7 +1365,7 @@ export const getAllOrganizationSettings = <ThrowOnError extends boolean = false>
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/settings',
+        url: '/api/v1/organizations/{org_id}/settings',
         ...options
     });
 };
@@ -1378,7 +1378,7 @@ export const setOrganizationSetting = <ThrowOnError extends boolean = false>(opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/settings',
+        url: '/api/v1/organizations/{org_id}/settings',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1395,7 +1395,7 @@ export const deleteOrganizationSetting = <ThrowOnError extends boolean = false>(
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/settings/{key}',
+        url: '/api/v1/organizations/{org_id}/settings/{key}',
         ...options
     });
 };
@@ -1408,7 +1408,7 @@ export const getOrganizationSetting = <ThrowOnError extends boolean = false>(opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/settings/{key}',
+        url: '/api/v1/organizations/{org_id}/settings/{key}',
         ...options
     });
 };
@@ -1421,7 +1421,7 @@ export const checkBreaches = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/sla/check-breaches',
+        url: '/api/v1/organizations/{org_id}/sla/check-breaches',
         ...options
     });
 };
@@ -1434,7 +1434,7 @@ export const listPolicies = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/sla/policies',
+        url: '/api/v1/organizations/{org_id}/sla/policies',
         ...options
     });
 };
@@ -1447,7 +1447,7 @@ export const createPolicy = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/sla/policies',
+        url: '/api/v1/organizations/{org_id}/sla/policies',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1464,7 +1464,7 @@ export const updatePolicy = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/sla/policies/{policy_id}',
+        url: '/api/v1/organizations/{org_id}/sla/policies/{policy_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1481,7 +1481,7 @@ export const listSurveys = <ThrowOnError extends boolean = false>(options: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/surveys',
+        url: '/api/v1/organizations/{org_id}/surveys',
         ...options
     });
 };
@@ -1494,7 +1494,7 @@ export const submitSurvey = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/surveys',
+        url: '/api/v1/organizations/{org_id}/surveys',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1511,7 +1511,7 @@ export const getSurveyAnalytics = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/surveys/analytics',
+        url: '/api/v1/organizations/{org_id}/surveys/analytics',
         ...options
     });
 };
@@ -1524,7 +1524,7 @@ export const exportSurveys = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/surveys/export',
+        url: '/api/v1/organizations/{org_id}/surveys/export',
         ...options
     });
 };
@@ -1537,7 +1537,7 @@ export const deleteSurvey = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/surveys/{survey_id}',
+        url: '/api/v1/organizations/{org_id}/surveys/{survey_id}',
         ...options
     });
 };
@@ -1550,7 +1550,7 @@ export const getSurvey = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/surveys/{survey_id}',
+        url: '/api/v1/organizations/{org_id}/surveys/{survey_id}',
         ...options
     });
 };
@@ -1563,7 +1563,7 @@ export const updateSurvey = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/surveys/{survey_id}',
+        url: '/api/v1/organizations/{org_id}/surveys/{survey_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1580,7 +1580,7 @@ export const listTags = <ThrowOnError extends boolean = false>(options: Options<
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tags',
+        url: '/api/v1/organizations/{org_id}/tags',
         ...options
     });
 };
@@ -1597,7 +1597,7 @@ export const createTag = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tags',
+        url: '/api/v1/organizations/{org_id}/tags',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1614,7 +1614,7 @@ export const getPopularTags = <ThrowOnError extends boolean = false>(options: Op
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tags/popular',
+        url: '/api/v1/organizations/{org_id}/tags/popular',
         ...options
     });
 };
@@ -1631,7 +1631,7 @@ export const deleteTag = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tags/{tag_id}',
+        url: '/api/v1/organizations/{org_id}/tags/{tag_id}',
         ...options
     });
 };
@@ -1644,7 +1644,7 @@ export const getTag = <ThrowOnError extends boolean = false>(options: Options<Ge
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tags/{tag_id}',
+        url: '/api/v1/organizations/{org_id}/tags/{tag_id}',
         ...options
     });
 };
@@ -1661,7 +1661,7 @@ export const updateTag = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tags/{tag_id}',
+        url: '/api/v1/organizations/{org_id}/tags/{tag_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1678,7 +1678,7 @@ export const getTagWithTickets = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tags/{tag_id}/tickets',
+        url: '/api/v1/organizations/{org_id}/tags/{tag_id}/tickets',
         ...options
     });
 };
@@ -1695,7 +1695,7 @@ export const listTickets = <ThrowOnError extends boolean = false>(options: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets',
+        url: '/api/v1/organizations/{org_id}/tickets',
         ...options
     });
 };
@@ -1712,7 +1712,7 @@ export const createTicket = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets',
+        url: '/api/v1/organizations/{org_id}/tickets',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1732,7 +1732,7 @@ export const bulkUpdateTickets = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/bulk',
+        url: '/api/v1/organizations/{org_id}/tickets/bulk',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1752,7 +1752,7 @@ export const mergeTickets = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/merge',
+        url: '/api/v1/organizations/{org_id}/tickets/merge',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1772,7 +1772,7 @@ export const listSavedViews = <ThrowOnError extends boolean = false>(options: Op
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/views',
+        url: '/api/v1/organizations/{org_id}/tickets/views',
         ...options
     });
 };
@@ -1788,7 +1788,7 @@ export const createSavedView = <ThrowOnError extends boolean = false>(options: O
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/views',
+        url: '/api/v1/organizations/{org_id}/tickets/views',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1805,7 +1805,7 @@ export const deleteTicket = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}',
         ...options
     });
 };
@@ -1822,7 +1822,7 @@ export const getTicket = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}',
         ...options
     });
 };
@@ -1835,7 +1835,7 @@ export const updateTicket = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1855,7 +1855,7 @@ export const deleteDraft = <ThrowOnError extends boolean = false>(options: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/draft',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/draft',
         ...options
     });
 };
@@ -1871,7 +1871,7 @@ export const getDraft = <ThrowOnError extends boolean = false>(options: Options<
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/draft',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/draft',
         ...options
     });
 };
@@ -1887,7 +1887,7 @@ export const upsertDraft = <ThrowOnError extends boolean = false>(options: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/draft',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/draft',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1908,7 +1908,7 @@ export const getTicketHistory = <ThrowOnError extends boolean = false>(options: 
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/history',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/history',
         ...options
     });
 };
@@ -1921,7 +1921,7 @@ export const releaseTicketLock = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/lock',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/lock',
         ...options
     });
 };
@@ -1934,7 +1934,7 @@ export const lockTicket = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/lock',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/lock',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1951,7 +1951,7 @@ export const takeoverTicketLock = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/lock/takeover',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/lock/takeover',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1968,7 +1968,7 @@ export const listTicketMessages = <ThrowOnError extends boolean = false>(options
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages',
         ...options
     });
 };
@@ -1981,7 +1981,7 @@ export const createMessage = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -1998,7 +1998,7 @@ export const getMessageCount = <ThrowOnError extends boolean = false>(options: O
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/count',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/count',
         ...options
     });
 };
@@ -2011,7 +2011,7 @@ export const getLatestMessage = <ThrowOnError extends boolean = false>(options: 
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/latest',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/latest',
         ...options
     });
 };
@@ -2024,7 +2024,7 @@ export const searchMessages = <ThrowOnError extends boolean = false>(options: Op
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/search',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/search',
         ...options
     });
 };
@@ -2037,7 +2037,7 @@ export const listMessageAttachments = <ThrowOnError extends boolean = false>(opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments',
         ...options
     });
 };
@@ -2051,7 +2051,7 @@ export const uploadAttachments = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments',
         ...options,
         headers: {
             'Content-Type': null,
@@ -2068,7 +2068,7 @@ export const deleteAttachment = <ThrowOnError extends boolean = false>(options: 
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments/{attachment_id}',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments/{attachment_id}',
         ...options
     });
 };
@@ -2081,7 +2081,7 @@ export const removeTagsFromTicket = <ThrowOnError extends boolean = false>(optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/tags',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/tags',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2098,7 +2098,7 @@ export const addTagsToTicket = <ThrowOnError extends boolean = false>(options: O
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/tags',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/tags',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2115,7 +2115,7 @@ export const listTyping = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/typing',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/typing',
         ...options
     });
 };
@@ -2128,7 +2128,7 @@ export const typingUpdate = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/typing',
+        url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/typing',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2145,7 +2145,7 @@ export const listWebhooks = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/webhooks',
+        url: '/api/v1/organizations/{org_id}/webhooks',
         ...options
     });
 };
@@ -2158,7 +2158,7 @@ export const createWebhook = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/webhooks',
+        url: '/api/v1/organizations/{org_id}/webhooks',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2175,7 +2175,7 @@ export const listWebhookEvents = <ThrowOnError extends boolean = false>(options:
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/webhooks/events',
+        url: '/api/v1/organizations/{org_id}/webhooks/events',
         ...options
     });
 };
@@ -2188,7 +2188,7 @@ export const sendWebhooks = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/webhooks/send',
+        url: '/api/v1/organizations/{org_id}/webhooks/send',
         ...options
     });
 };
@@ -2201,7 +2201,7 @@ export const getWebhookStats = <ThrowOnError extends boolean = false>(options: O
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/webhooks/stats',
+        url: '/api/v1/organizations/{org_id}/webhooks/stats',
         ...options
     });
 };
@@ -2214,7 +2214,7 @@ export const deleteWebhook = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/webhooks/{webhook_id}',
+        url: '/api/v1/organizations/{org_id}/webhooks/{webhook_id}',
         ...options
     });
 };
@@ -2227,7 +2227,7 @@ export const getWebhook = <ThrowOnError extends boolean = false>(options: Option
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/webhooks/{webhook_id}',
+        url: '/api/v1/organizations/{org_id}/webhooks/{webhook_id}',
         ...options
     });
 };
@@ -2240,7 +2240,7 @@ export const updateWebhook = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/webhooks/{webhook_id}',
+        url: '/api/v1/organizations/{org_id}/webhooks/{webhook_id}',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2257,7 +2257,7 @@ export const testWebhook = <ThrowOnError extends boolean = false>(options: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/organizations/{org_id}/webhooks/{webhook_id}/test',
+        url: '/api/v1/organizations/{org_id}/webhooks/{webhook_id}/test',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2268,28 +2268,28 @@ export const testWebhook = <ThrowOnError extends boolean = false>(options: Optio
 
 export const getPermissionsCatalog = <ThrowOnError extends boolean = false>(options?: Options<GetPermissionsCatalogData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetPermissionsCatalogResponses, unknown, ThrowOnError>({
-        url: '/api/v0/permissions/catalog',
+        url: '/api/v1/permissions/catalog',
         ...options
     });
 };
 
 export const listSessions = <ThrowOnError extends boolean = false>(options?: Options<ListSessionsData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<ListSessionsResponses, ListSessionsErrors, ThrowOnError>({
-        url: '/api/v0/sessions',
+        url: '/api/v1/sessions',
         ...options
     });
 };
 
 export const cleanupExpiredSessions = <ThrowOnError extends boolean = false>(options?: Options<CleanupExpiredSessionsData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<CleanupExpiredSessionsResponses, CleanupExpiredSessionsErrors, ThrowOnError>({
-        url: '/api/v0/sessions/cleanup',
+        url: '/api/v1/sessions/cleanup',
         ...options
     });
 };
 
 export const revokeAllSessions = <ThrowOnError extends boolean = false>(options: Options<RevokeAllSessionsData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<RevokeAllSessionsResponses, RevokeAllSessionsErrors, ThrowOnError>({
-        url: '/api/v0/sessions/revoke-all',
+        url: '/api/v1/sessions/revoke-all',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2300,28 +2300,28 @@ export const revokeAllSessions = <ThrowOnError extends boolean = false>(options:
 
 export const getSessionStats = <ThrowOnError extends boolean = false>(options?: Options<GetSessionStatsData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetSessionStatsResponses, GetSessionStatsErrors, ThrowOnError>({
-        url: '/api/v0/sessions/stats',
+        url: '/api/v1/sessions/stats',
         ...options
     });
 };
 
 export const revokeSession = <ThrowOnError extends boolean = false>(options: Options<RevokeSessionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).delete<RevokeSessionResponses, RevokeSessionErrors, ThrowOnError>({
-        url: '/api/v0/sessions/{session_id}',
+        url: '/api/v1/sessions/{session_id}',
         ...options
     });
 };
 
 export const getSession = <ThrowOnError extends boolean = false>(options: Options<GetSessionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).get<GetSessionResponses, GetSessionErrors, ThrowOnError>({
-        url: '/api/v0/sessions/{session_id}',
+        url: '/api/v1/sessions/{session_id}',
         ...options
     });
 };
 
 export const extendSession = <ThrowOnError extends boolean = false>(options: Options<ExtendSessionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<ExtendSessionResponses, ExtendSessionErrors, ThrowOnError>({
-        url: '/api/v0/sessions/{session_id}/extend',
+        url: '/api/v1/sessions/{session_id}/extend',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2338,7 +2338,7 @@ export const deleteAccount = <ThrowOnError extends boolean = false>(options?: Op
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/account',
+        url: '/api/v1/users/account',
         ...options
     });
 };
@@ -2351,7 +2351,7 @@ export const listApiKeys = <ThrowOnError extends boolean = false>(options?: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/api-keys',
+        url: '/api/v1/users/api-keys',
         ...options
     });
 };
@@ -2364,7 +2364,7 @@ export const createApiKey = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/api-keys',
+        url: '/api/v1/users/api-keys',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2381,7 +2381,7 @@ export const deleteApiKey = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/api-keys/{key_id}',
+        url: '/api/v1/users/api-keys/{key_id}',
         ...options
     });
 };
@@ -2394,7 +2394,7 @@ export const getApiKey = <ThrowOnError extends boolean = false>(options: Options
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/api-keys/{key_id}',
+        url: '/api/v1/users/api-keys/{key_id}',
         ...options
     });
 };
@@ -2407,7 +2407,7 @@ export const revokeApiKey = <ThrowOnError extends boolean = false>(options: Opti
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/api-keys/{key_id}/revoke',
+        url: '/api/v1/users/api-keys/{key_id}/revoke',
         ...options
     });
 };
@@ -2420,7 +2420,7 @@ export const getLoginAttempts = <ThrowOnError extends boolean = false>(options?:
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/login-attempts',
+        url: '/api/v1/users/login-attempts',
         ...options
     });
 };
@@ -2433,7 +2433,7 @@ export const getLoginHistory = <ThrowOnError extends boolean = false>(options?: 
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/login-history',
+        url: '/api/v1/users/login-history',
         ...options
     });
 };
@@ -2446,7 +2446,7 @@ export const changePassword = <ThrowOnError extends boolean = false>(options: Op
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/password',
+        url: '/api/v1/users/password',
         ...options,
         headers: {
             'Content-Type': 'application/json',
@@ -2463,7 +2463,7 @@ export const getProfile = <ThrowOnError extends boolean = false>(options?: Optio
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/profile',
+        url: '/api/v1/users/profile',
         ...options
     });
 };
@@ -2476,7 +2476,7 @@ export const updateProfile = <ThrowOnError extends boolean = false>(options: Opt
                 type: 'http'
             }
         ],
-        url: '/api/v0/users/profile',
+        url: '/api/v1/users/profile',
         ...options,
         headers: {
             'Content-Type': 'application/json',

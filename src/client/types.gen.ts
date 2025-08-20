@@ -2489,7 +2489,7 @@ export type GetAttachmentStatsData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/admin/attachments/stats';
+    url: '/api/v1/admin/attachments/stats';
 };
 
 export type GetAttachmentStatsErrors = {
@@ -2521,7 +2521,7 @@ export type DownloadAttachmentData = {
         attachment_id: string;
     };
     query?: never;
-    url: '/api/v0/attachments/{attachment_id}/download';
+    url: '/api/v1/attachments/{attachment_id}/download';
 };
 
 export type DownloadAttachmentErrors = {
@@ -2548,7 +2548,7 @@ export type Disable2FaData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/disable-2fa';
+    url: '/api/v1/auth/disable-2fa';
 };
 
 export type Disable2FaErrors = {
@@ -2575,7 +2575,7 @@ export type Enable2FaData = {
     body: Enable2FaRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/enable-2fa';
+    url: '/api/v1/auth/enable-2fa';
 };
 
 export type Enable2FaErrors = {
@@ -2606,7 +2606,7 @@ export type LoginData = {
     body: LoginRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/login';
+    url: '/api/v1/auth/login';
 };
 
 export type LoginErrors = {
@@ -2633,7 +2633,7 @@ export type LogoutData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/logout';
+    url: '/api/v1/auth/logout';
 };
 
 export type LogoutErrors = {
@@ -2656,7 +2656,7 @@ export type RegisterData = {
     body: RegisterRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/register';
+    url: '/api/v1/auth/register';
 };
 
 export type RegisterErrors = {
@@ -2683,7 +2683,7 @@ export type RequestPasswordResetData = {
     body: PasswordResetRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/request-password-reset';
+    url: '/api/v1/auth/request-password-reset';
 };
 
 export type RequestPasswordResetErrors = {
@@ -2706,7 +2706,7 @@ export type ResendVerificationData = {
     body: ResendVerificationRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/resend-verification';
+    url: '/api/v1/auth/resend-verification';
 };
 
 export type ResendVerificationErrors = {
@@ -2737,7 +2737,7 @@ export type ResetPasswordData = {
     body: ResetPasswordRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/reset-password';
+    url: '/api/v1/auth/reset-password';
 };
 
 export type ResetPasswordErrors = {
@@ -2760,7 +2760,7 @@ export type Setup2FaData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/setup-2fa';
+    url: '/api/v1/auth/setup-2fa';
 };
 
 export type Setup2FaErrors = {
@@ -2787,7 +2787,7 @@ export type VerifyEmailData = {
     body: VerifyEmailRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/auth/verify-email';
+    url: '/api/v1/auth/verify-email';
 };
 
 export type VerifyEmailErrors = {
@@ -2810,7 +2810,7 @@ export type IdentifyUserData = {
     body: ClientIdentifyRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/client/identify';
+    url: '/api/v1/client/identify';
 };
 
 export type IdentifyUserErrors = {
@@ -2837,7 +2837,7 @@ export type SendMessageData = {
     body: ClientMessageRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/client/message';
+    url: '/api/v1/client/message';
 };
 
 export type SendMessageErrors = {
@@ -2874,7 +2874,7 @@ export type GetUserTicketsData = {
          */
         org_domain: string;
     };
-    url: '/api/v0/client/tickets/{user_id}';
+    url: '/api/v1/client/tickets/{user_id}';
 };
 
 export type GetUserTicketsErrors = {
@@ -2897,7 +2897,7 @@ export type GetUserOrganizationsData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/organizations';
+    url: '/api/v1/organizations';
 };
 
 export type GetUserOrganizationsErrors = {
@@ -2920,7 +2920,7 @@ export type CreateOrganizationData = {
     body: CreateOrganizationRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/organizations';
+    url: '/api/v1/organizations';
 };
 
 export type CreateOrganizationErrors = {
@@ -2956,7 +2956,7 @@ export type FindOrganizationsByEmailDomainData = {
          */
         email: string;
     };
-    url: '/api/v0/organizations/by-domain';
+    url: '/api/v1/organizations/by-domain';
 };
 
 export type FindOrganizationsByEmailDomainErrors = {
@@ -2979,7 +2979,7 @@ export type JoinOrganizationData = {
     body: JoinOrganizationRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/organizations/join';
+    url: '/api/v1/organizations/join';
 };
 
 export type JoinOrganizationErrors = {
@@ -3019,7 +3019,7 @@ export type GetOrganizationData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}';
+    url: '/api/v1/organizations/{org_id}';
 };
 
 export type GetOrganizationErrors = {
@@ -3051,7 +3051,7 @@ export type AcceptInvitationData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/accept-invitation';
+    url: '/api/v1/organizations/{org_id}/accept-invitation';
 };
 
 export type AcceptInvitationErrors = {
@@ -3084,7 +3084,7 @@ export type ClassifyData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/ai/classify';
+    url: '/api/v1/organizations/{org_id}/ai/classify';
 };
 
 export type ClassifyResponses = {
@@ -3099,7 +3099,7 @@ export type KbSuggestData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/ai/kb-suggest';
+    url: '/api/v1/organizations/{org_id}/ai/kb-suggest';
 };
 
 export type KbSuggestResponses = {
@@ -3114,7 +3114,7 @@ export type RedactData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/ai/redact';
+    url: '/api/v1/organizations/{org_id}/ai/redact';
 };
 
 export type RedactResponses = {
@@ -3129,7 +3129,7 @@ export type RewriteData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/ai/rewrite';
+    url: '/api/v1/organizations/{org_id}/ai/rewrite';
 };
 
 export type RewriteResponses = {
@@ -3144,7 +3144,7 @@ export type SuggestReplyData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/ai/suggest-reply';
+    url: '/api/v1/organizations/{org_id}/ai/suggest-reply';
 };
 
 export type SuggestReplyResponses = {
@@ -3159,7 +3159,7 @@ export type SuggestReplyStreamData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/ai/suggest-reply/stream';
+    url: '/api/v1/organizations/{org_id}/ai/suggest-reply/stream';
 };
 
 export type SuggestReplyStreamResponses = {
@@ -3174,7 +3174,7 @@ export type SummarizeData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/ai/summarize';
+    url: '/api/v1/organizations/{org_id}/ai/summarize';
 };
 
 export type SummarizeResponses = {
@@ -3189,7 +3189,7 @@ export type TelemetryData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/ai/telemetry';
+    url: '/api/v1/organizations/{org_id}/ai/telemetry';
 };
 
 export type TelemetryResponses = {
@@ -3204,7 +3204,7 @@ export type TranslateData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/ai/translate';
+    url: '/api/v1/organizations/{org_id}/ai/translate';
 };
 
 export type TranslateResponses = {
@@ -3231,7 +3231,7 @@ export type GetOrganizationAnalyticsData = {
          */
         to_date?: string;
     };
-    url: '/api/v0/organizations/{org_id}/analytics';
+    url: '/api/v1/organizations/{org_id}/analytics';
 };
 
 export type GetOrganizationAnalyticsErrors = {
@@ -3272,7 +3272,7 @@ export type GetAgentAnalyticsData = {
          */
         to_date?: string;
     };
-    url: '/api/v0/organizations/{org_id}/analytics/agents';
+    url: '/api/v1/organizations/{org_id}/analytics/agents';
 };
 
 export type GetAgentAnalyticsErrors = {
@@ -3301,7 +3301,7 @@ export type GetCsatByAgentData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/analytics/csat/by-agent';
+    url: '/api/v1/organizations/{org_id}/analytics/csat/by-agent';
 };
 
 export type GetCsatByAgentResponses = {
@@ -3316,7 +3316,7 @@ export type GetCsatByMacroData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/analytics/csat/by-macro';
+    url: '/api/v1/organizations/{org_id}/analytics/csat/by-macro';
 };
 
 export type GetCsatByMacroResponses = {
@@ -3334,7 +3334,7 @@ export type GetKnowledgeBaseAnalyticsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/analytics/knowledge-base';
+    url: '/api/v1/organizations/{org_id}/analytics/knowledge-base';
 };
 
 export type GetKnowledgeBaseAnalyticsErrors = {
@@ -3366,7 +3366,7 @@ export type GetMacroAnalyticsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/analytics/macros';
+    url: '/api/v1/organizations/{org_id}/analytics/macros';
 };
 
 export type GetMacroAnalyticsErrors = {
@@ -3407,7 +3407,7 @@ export type GetSystemAnalyticsData = {
          */
         to_date?: string;
     };
-    url: '/api/v0/organizations/{org_id}/analytics/system';
+    url: '/api/v1/organizations/{org_id}/analytics/system';
 };
 
 export type GetSystemAnalyticsErrors = {
@@ -3448,7 +3448,7 @@ export type GetTicketAnalyticsData = {
          */
         to_date?: string;
     };
-    url: '/api/v0/organizations/{org_id}/analytics/tickets';
+    url: '/api/v1/organizations/{org_id}/analytics/tickets';
 };
 
 export type GetTicketAnalyticsErrors = {
@@ -3497,7 +3497,7 @@ export type GetTrendAnalyticsData = {
          */
         interval?: string;
     };
-    url: '/api/v0/organizations/{org_id}/analytics/trends';
+    url: '/api/v1/organizations/{org_id}/analytics/trends';
 };
 
 export type GetTrendAnalyticsErrors = {
@@ -3546,7 +3546,7 @@ export type ExecuteAutomationRulesData = {
          */
         csat_score?: number;
     };
-    url: '/api/v0/organizations/{org_id}/automation/execute';
+    url: '/api/v1/organizations/{org_id}/automation/execute';
 };
 
 export type ExecuteAutomationRulesErrors = {
@@ -3603,7 +3603,7 @@ export type ListAutomationRulesData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/automation/rules';
+    url: '/api/v1/organizations/{org_id}/automation/rules';
 };
 
 export type ListAutomationRulesErrors = {
@@ -3635,7 +3635,7 @@ export type CreateAutomationRuleData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/automation/rules';
+    url: '/api/v1/organizations/{org_id}/automation/rules';
 };
 
 export type CreateAutomationRuleErrors = {
@@ -3675,7 +3675,7 @@ export type DeleteAutomationRuleData = {
         rule_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/automation/rules/{rule_id}';
+    url: '/api/v1/organizations/{org_id}/automation/rules/{rule_id}';
 };
 
 export type DeleteAutomationRuleErrors = {
@@ -3713,7 +3713,7 @@ export type GetAutomationRuleData = {
         rule_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/automation/rules/{rule_id}';
+    url: '/api/v1/organizations/{org_id}/automation/rules/{rule_id}';
 };
 
 export type GetAutomationRuleErrors = {
@@ -3753,7 +3753,7 @@ export type UpdateAutomationRuleData = {
         rule_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/automation/rules/{rule_id}';
+    url: '/api/v1/organizations/{org_id}/automation/rules/{rule_id}';
 };
 
 export type UpdateAutomationRuleErrors = {
@@ -3793,7 +3793,7 @@ export type GetAutomationStatsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/automation/stats';
+    url: '/api/v1/organizations/{org_id}/automation/stats';
 };
 
 export type GetAutomationStatsErrors = {
@@ -3854,7 +3854,7 @@ export type ListEventsData = {
          */
         to_date?: string;
     };
-    url: '/api/v0/organizations/{org_id}/events';
+    url: '/api/v1/organizations/{org_id}/events';
 };
 
 export type ListEventsErrors = {
@@ -3886,7 +3886,7 @@ export type CreateEventData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/events';
+    url: '/api/v1/organizations/{org_id}/events';
 };
 
 export type CreateEventErrors = {
@@ -3947,7 +3947,7 @@ export type ExportEventsData = {
          */
         to_date?: string;
     };
-    url: '/api/v0/organizations/{org_id}/events/export';
+    url: '/api/v1/organizations/{org_id}/events/export';
 };
 
 export type ExportEventsErrors = {
@@ -3979,7 +3979,7 @@ export type GetEventStatsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/events/stats';
+    url: '/api/v1/organizations/{org_id}/events/stats';
 };
 
 export type GetEventStatsErrors = {
@@ -4014,7 +4014,7 @@ export type StreamEventsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/events/stream';
+    url: '/api/v1/organizations/{org_id}/events/stream';
 };
 
 export type StreamEventsResponses = {
@@ -4036,7 +4036,7 @@ export type GetEventData = {
         event_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/events/{event_id}';
+    url: '/api/v1/organizations/{org_id}/events/{event_id}';
 };
 
 export type GetEventErrors = {
@@ -4072,7 +4072,7 @@ export type InviteUserData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/invite';
+    url: '/api/v1/organizations/{org_id}/invite';
 };
 
 export type InviteUserErrors = {
@@ -4133,7 +4133,7 @@ export type ListArticlesData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/knowledge-base/articles';
+    url: '/api/v1/organizations/{org_id}/knowledge-base/articles';
 };
 
 export type ListArticlesErrors = {
@@ -4161,7 +4161,7 @@ export type CreateArticleData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/knowledge-base/articles';
+    url: '/api/v1/organizations/{org_id}/knowledge-base/articles';
 };
 
 export type CreateArticleErrors = {
@@ -4201,7 +4201,7 @@ export type DeleteArticleData = {
         article_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}';
+    url: '/api/v1/organizations/{org_id}/knowledge-base/articles/{article_id}';
 };
 
 export type DeleteArticleErrors = {
@@ -4237,7 +4237,7 @@ export type GetArticleData = {
         article_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}';
+    url: '/api/v1/organizations/{org_id}/knowledge-base/articles/{article_id}';
 };
 
 export type GetArticleErrors = {
@@ -4273,7 +4273,7 @@ export type UpdateArticleData = {
         article_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/knowledge-base/articles/{article_id}';
+    url: '/api/v1/organizations/{org_id}/knowledge-base/articles/{article_id}';
 };
 
 export type UpdateArticleErrors = {
@@ -4314,7 +4314,7 @@ export type GetPublicArticlesData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/knowledge-base/public';
+    url: '/api/v1/organizations/{org_id}/knowledge-base/public';
 };
 
 export type GetPublicArticlesErrors = {
@@ -4355,7 +4355,7 @@ export type SearchPublicArticlesData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/knowledge-base/search';
+    url: '/api/v1/organizations/{org_id}/knowledge-base/search';
 };
 
 export type SearchPublicArticlesErrors = {
@@ -4400,7 +4400,7 @@ export type ListMacrosData = {
          */
         created_by?: string;
     };
-    url: '/api/v0/organizations/{org_id}/macros';
+    url: '/api/v1/organizations/{org_id}/macros';
 };
 
 export type ListMacrosErrors = {
@@ -4432,7 +4432,7 @@ export type CreateMacroData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros';
+    url: '/api/v1/organizations/{org_id}/macros';
 };
 
 export type CreateMacroErrors = {
@@ -4470,7 +4470,7 @@ export type DeleteMacroExperimentData = {
         experiment_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/experiments/{experiment_id}';
+    url: '/api/v1/organizations/{org_id}/macros/experiments/{experiment_id}';
 };
 
 export type DeleteMacroExperimentResponses = {
@@ -4489,7 +4489,7 @@ export type UpdateMacroExperimentData = {
         experiment_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/experiments/{experiment_id}';
+    url: '/api/v1/organizations/{org_id}/macros/experiments/{experiment_id}';
 };
 
 export type UpdateMacroExperimentResponses = {
@@ -4515,7 +4515,7 @@ export type GetPopularMacrosData = {
          */
         limit?: number;
     };
-    url: '/api/v0/organizations/{org_id}/macros/popular';
+    url: '/api/v1/organizations/{org_id}/macros/popular';
 };
 
 export type GetPopularMacrosErrors = {
@@ -4547,7 +4547,7 @@ export type RenderMacroTemplateData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/render';
+    url: '/api/v1/organizations/{org_id}/macros/render';
 };
 
 export type RenderMacroTemplateErrors = {
@@ -4591,7 +4591,7 @@ export type DeleteMacroData = {
         macro_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/{macro_id}';
+    url: '/api/v1/organizations/{org_id}/macros/{macro_id}';
 };
 
 export type DeleteMacroErrors = {
@@ -4631,7 +4631,7 @@ export type GetMacroData = {
         macro_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/{macro_id}';
+    url: '/api/v1/organizations/{org_id}/macros/{macro_id}';
 };
 
 export type GetMacroErrors = {
@@ -4671,7 +4671,7 @@ export type UpdateMacroData = {
         macro_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/{macro_id}';
+    url: '/api/v1/organizations/{org_id}/macros/{macro_id}';
 };
 
 export type UpdateMacroErrors = {
@@ -4713,7 +4713,7 @@ export type ListMacroExperimentsData = {
         macro_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/experiments';
+    url: '/api/v1/organizations/{org_id}/macros/{macro_id}/experiments';
 };
 
 export type ListMacroExperimentsResponses = {
@@ -4732,7 +4732,7 @@ export type CreateMacroExperimentData = {
         macro_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/experiments';
+    url: '/api/v1/organizations/{org_id}/macros/{macro_id}/experiments';
 };
 
 export type CreateMacroExperimentResponses = {
@@ -4751,7 +4751,7 @@ export type ListMacroVariantsData = {
         macro_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants';
+    url: '/api/v1/organizations/{org_id}/macros/{macro_id}/variants';
 };
 
 export type ListMacroVariantsResponses = {
@@ -4770,7 +4770,7 @@ export type CreateMacroVariantData = {
         macro_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants';
+    url: '/api/v1/organizations/{org_id}/macros/{macro_id}/variants';
 };
 
 export type CreateMacroVariantResponses = {
@@ -4790,7 +4790,7 @@ export type DeleteMacroVariantData = {
         variant_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}';
+    url: '/api/v1/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}';
 };
 
 export type DeleteMacroVariantResponses = {
@@ -4810,7 +4810,7 @@ export type UpdateMacroVariantData = {
         variant_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}';
+    url: '/api/v1/organizations/{org_id}/macros/{macro_id}/variants/{variant_id}';
 };
 
 export type UpdateMacroVariantResponses = {
@@ -4831,7 +4831,7 @@ export type GetMembersData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/members';
+    url: '/api/v1/organizations/{org_id}/members';
 };
 
 export type GetMembersErrors = {
@@ -4867,7 +4867,7 @@ export type RemoveMemberData = {
         member_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/members/{member_id}';
+    url: '/api/v1/organizations/{org_id}/members/{member_id}';
 };
 
 export type RemoveMemberErrors = {
@@ -4907,7 +4907,7 @@ export type UpdateMembershipData = {
         member_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/members/{member_id}';
+    url: '/api/v1/organizations/{org_id}/members/{member_id}';
 };
 
 export type UpdateMembershipErrors = {
@@ -4947,7 +4947,7 @@ export type DeleteMessageData = {
         message_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/messages/{message_id}';
+    url: '/api/v1/organizations/{org_id}/messages/{message_id}';
 };
 
 export type DeleteMessageErrors = {
@@ -4983,7 +4983,7 @@ export type GetMessageData = {
         message_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/messages/{message_id}';
+    url: '/api/v1/organizations/{org_id}/messages/{message_id}';
 };
 
 export type GetMessageErrors = {
@@ -5012,7 +5012,7 @@ export type GetEffectivePermissionsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/permissions/effective';
+    url: '/api/v1/organizations/{org_id}/permissions/effective';
 };
 
 export type GetEffectivePermissionsResponses = {
@@ -5030,7 +5030,7 @@ export type ListAgentsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/presence/agents';
+    url: '/api/v1/organizations/{org_id}/presence/agents';
 };
 
 export type ListAgentsResponses = {
@@ -5045,7 +5045,7 @@ export type HeartbeatData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/presence/heartbeat';
+    url: '/api/v1/organizations/{org_id}/presence/heartbeat';
 };
 
 export type HeartbeatResponses = {
@@ -5060,7 +5060,7 @@ export type ListRolesData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/roles';
+    url: '/api/v1/organizations/{org_id}/roles';
 };
 
 export type ListRolesResponses = {
@@ -5078,7 +5078,7 @@ export type CreateRoleData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/roles';
+    url: '/api/v1/organizations/{org_id}/roles';
 };
 
 export type CreateRoleResponses = {
@@ -5097,7 +5097,7 @@ export type DeleteRoleData = {
         role_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/roles/{role_id}';
+    url: '/api/v1/organizations/{org_id}/roles/{role_id}';
 };
 
 export type DeleteRoleResponses = {
@@ -5116,7 +5116,7 @@ export type GetRoleData = {
         role_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/roles/{role_id}';
+    url: '/api/v1/organizations/{org_id}/roles/{role_id}';
 };
 
 export type GetRoleResponses = {
@@ -5135,7 +5135,7 @@ export type UpdateRoleData = {
         role_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/roles/{role_id}';
+    url: '/api/v1/organizations/{org_id}/roles/{role_id}';
 };
 
 export type UpdateRoleResponses = {
@@ -5154,7 +5154,7 @@ export type AssignRoleData = {
         role_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/roles/{role_id}/assign';
+    url: '/api/v1/organizations/{org_id}/roles/{role_id}/assign';
 };
 
 export type AssignRoleResponses = {
@@ -5173,7 +5173,7 @@ export type RevokeRoleData = {
         role_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/roles/{role_id}/revoke';
+    url: '/api/v1/organizations/{org_id}/roles/{role_id}/revoke';
 };
 
 export type RevokeRoleResponses = {
@@ -5191,7 +5191,7 @@ export type ListRulesData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/routing/rules';
+    url: '/api/v1/organizations/{org_id}/routing/rules';
 };
 
 export type ListRulesResponses = {
@@ -5206,7 +5206,7 @@ export type CreateRuleData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/routing/rules';
+    url: '/api/v1/organizations/{org_id}/routing/rules';
 };
 
 export type CreateRuleResponses = {
@@ -5222,7 +5222,7 @@ export type DeleteRuleData = {
         rule_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/routing/rules/{rule_id}';
+    url: '/api/v1/organizations/{org_id}/routing/rules/{rule_id}';
 };
 
 export type DeleteRuleResponses = {
@@ -5238,7 +5238,7 @@ export type UpdateRuleData = {
         rule_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/routing/rules/{rule_id}';
+    url: '/api/v1/organizations/{org_id}/routing/rules/{rule_id}';
 };
 
 export type UpdateRuleResponses = {
@@ -5253,7 +5253,7 @@ export type WorkloadData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/routing/workload';
+    url: '/api/v1/organizations/{org_id}/routing/workload';
 };
 
 export type WorkloadResponses = {
@@ -5271,7 +5271,7 @@ export type GetAllOrganizationSettingsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/settings';
+    url: '/api/v1/organizations/{org_id}/settings';
 };
 
 export type GetAllOrganizationSettingsErrors = {
@@ -5299,7 +5299,7 @@ export type SetOrganizationSettingData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/settings';
+    url: '/api/v1/organizations/{org_id}/settings';
 };
 
 export type SetOrganizationSettingErrors = {
@@ -5335,7 +5335,7 @@ export type DeleteOrganizationSettingData = {
         key: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/settings/{key}';
+    url: '/api/v1/organizations/{org_id}/settings/{key}';
 };
 
 export type DeleteOrganizationSettingErrors = {
@@ -5371,7 +5371,7 @@ export type GetOrganizationSettingData = {
         key: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/settings/{key}';
+    url: '/api/v1/organizations/{org_id}/settings/{key}';
 };
 
 export type GetOrganizationSettingErrors = {
@@ -5396,7 +5396,7 @@ export type CheckBreachesData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/sla/check-breaches';
+    url: '/api/v1/organizations/{org_id}/sla/check-breaches';
 };
 
 export type CheckBreachesResponses = {
@@ -5411,7 +5411,7 @@ export type ListPoliciesData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/sla/policies';
+    url: '/api/v1/organizations/{org_id}/sla/policies';
 };
 
 export type ListPoliciesResponses = {
@@ -5426,7 +5426,7 @@ export type CreatePolicyData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/sla/policies';
+    url: '/api/v1/organizations/{org_id}/sla/policies';
 };
 
 export type CreatePolicyResponses = {
@@ -5442,7 +5442,7 @@ export type UpdatePolicyData = {
         policy_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/sla/policies/{policy_id}';
+    url: '/api/v1/organizations/{org_id}/sla/policies/{policy_id}';
 };
 
 export type UpdatePolicyResponses = {
@@ -5497,7 +5497,7 @@ export type ListSurveysData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/surveys';
+    url: '/api/v1/organizations/{org_id}/surveys';
 };
 
 export type ListSurveysErrors = {
@@ -5529,7 +5529,7 @@ export type SubmitSurveyData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/surveys';
+    url: '/api/v1/organizations/{org_id}/surveys';
 };
 
 export type SubmitSurveyErrors = {
@@ -5582,7 +5582,7 @@ export type GetSurveyAnalyticsData = {
          */
         to_date?: string;
     };
-    url: '/api/v0/organizations/{org_id}/surveys/analytics';
+    url: '/api/v1/organizations/{org_id}/surveys/analytics';
 };
 
 export type GetSurveyAnalyticsErrors = {
@@ -5651,7 +5651,7 @@ export type ExportSurveysData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/surveys/export';
+    url: '/api/v1/organizations/{org_id}/surveys/export';
 };
 
 export type ExportSurveysErrors = {
@@ -5687,7 +5687,7 @@ export type DeleteSurveyData = {
         survey_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/surveys/{survey_id}';
+    url: '/api/v1/organizations/{org_id}/surveys/{survey_id}';
 };
 
 export type DeleteSurveyErrors = {
@@ -5725,7 +5725,7 @@ export type GetSurveyData = {
         survey_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/surveys/{survey_id}';
+    url: '/api/v1/organizations/{org_id}/surveys/{survey_id}';
 };
 
 export type GetSurveyErrors = {
@@ -5765,7 +5765,7 @@ export type UpdateSurveyData = {
         survey_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/surveys/{survey_id}';
+    url: '/api/v1/organizations/{org_id}/surveys/{survey_id}';
 };
 
 export type UpdateSurveyErrors = {
@@ -5814,7 +5814,7 @@ export type ListTagsData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/tags';
+    url: '/api/v1/organizations/{org_id}/tags';
 };
 
 export type ListTagsErrors = {
@@ -5842,7 +5842,7 @@ export type CreateTagData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tags';
+    url: '/api/v1/organizations/{org_id}/tags';
 };
 
 export type CreateTagErrors = {
@@ -5883,7 +5883,7 @@ export type GetPopularTagsData = {
          */
         limit?: number;
     };
-    url: '/api/v0/organizations/{org_id}/tags/popular';
+    url: '/api/v1/organizations/{org_id}/tags/popular';
 };
 
 export type GetPopularTagsErrors = {
@@ -5915,7 +5915,7 @@ export type DeleteTagData = {
         tag_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tags/{tag_id}';
+    url: '/api/v1/organizations/{org_id}/tags/{tag_id}';
 };
 
 export type DeleteTagErrors = {
@@ -5951,7 +5951,7 @@ export type GetTagData = {
         tag_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tags/{tag_id}';
+    url: '/api/v1/organizations/{org_id}/tags/{tag_id}';
 };
 
 export type GetTagErrors = {
@@ -5987,7 +5987,7 @@ export type UpdateTagData = {
         tag_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tags/{tag_id}';
+    url: '/api/v1/organizations/{org_id}/tags/{tag_id}';
 };
 
 export type UpdateTagErrors = {
@@ -6036,7 +6036,7 @@ export type GetTagWithTicketsData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/tags/{tag_id}/tickets';
+    url: '/api/v1/organizations/{org_id}/tags/{tag_id}/tickets';
 };
 
 export type GetTagWithTicketsErrors = {
@@ -6097,7 +6097,7 @@ export type ListTicketsData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/tickets';
+    url: '/api/v1/organizations/{org_id}/tickets';
 };
 
 export type ListTicketsErrors = {
@@ -6133,7 +6133,7 @@ export type CreateTicketData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets';
+    url: '/api/v1/organizations/{org_id}/tickets';
 };
 
 export type CreateTicketErrors = {
@@ -6173,7 +6173,7 @@ export type BulkUpdateTicketsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/bulk';
+    url: '/api/v1/organizations/{org_id}/tickets/bulk';
 };
 
 export type BulkUpdateTicketsResponses = {
@@ -6192,7 +6192,7 @@ export type MergeTicketsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/merge';
+    url: '/api/v1/organizations/{org_id}/tickets/merge';
 };
 
 export type MergeTicketsResponses = {
@@ -6211,7 +6211,7 @@ export type ListSavedViewsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/views';
+    url: '/api/v1/organizations/{org_id}/tickets/views';
 };
 
 export type ListSavedViewsResponses = {
@@ -6232,7 +6232,7 @@ export type CreateSavedViewData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/views';
+    url: '/api/v1/organizations/{org_id}/tickets/views';
 };
 
 export type CreateSavedViewResponses = {
@@ -6257,7 +6257,7 @@ export type DeleteTicketData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}';
 };
 
 export type DeleteTicketErrors = {
@@ -6293,7 +6293,7 @@ export type GetTicketData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}';
 };
 
 export type GetTicketErrors = {
@@ -6333,7 +6333,7 @@ export type UpdateTicketData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}';
 };
 
 export type UpdateTicketErrors = {
@@ -6363,7 +6363,7 @@ export type DeleteDraftData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/draft';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/draft';
 };
 
 export type DeleteDraftResponses = {
@@ -6382,7 +6382,7 @@ export type GetDraftData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/draft';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/draft';
 };
 
 export type GetDraftResponses = {
@@ -6401,7 +6401,7 @@ export type UpsertDraftData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/draft';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/draft';
 };
 
 export type UpsertDraftResponses = {
@@ -6426,7 +6426,7 @@ export type GetTicketHistoryData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/history';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/history';
 };
 
 export type GetTicketHistoryErrors = {
@@ -6456,7 +6456,7 @@ export type ReleaseTicketLockData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/lock';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/lock';
 };
 
 export type ReleaseTicketLockResponses = {
@@ -6475,7 +6475,7 @@ export type LockTicketData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/lock';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/lock';
 };
 
 export type LockTicketResponses = {
@@ -6492,7 +6492,7 @@ export type TakeoverTicketLockData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/lock/takeover';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/lock/takeover';
 };
 
 export type TakeoverTicketLockResponses = {
@@ -6532,7 +6532,7 @@ export type ListTicketMessagesData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages';
 };
 
 export type ListTicketMessagesErrors = {
@@ -6568,7 +6568,7 @@ export type CreateMessageData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages';
 };
 
 export type CreateMessageErrors = {
@@ -6612,7 +6612,7 @@ export type GetMessageCountData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/count';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/count';
 };
 
 export type GetMessageCountErrors = {
@@ -6648,7 +6648,7 @@ export type GetLatestMessageData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/latest';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/latest';
 };
 
 export type GetLatestMessageErrors = {
@@ -6697,7 +6697,7 @@ export type SearchMessagesData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/search';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/search';
 };
 
 export type SearchMessagesErrors = {
@@ -6737,7 +6737,7 @@ export type ListMessageAttachmentsData = {
         message_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments';
 };
 
 export type ListMessageAttachmentsErrors = {
@@ -6784,7 +6784,7 @@ export type UploadAttachmentsData = {
         message_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments';
 };
 
 export type UploadAttachmentsErrors = {
@@ -6836,7 +6836,7 @@ export type DeleteAttachmentData = {
         attachment_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments/{attachment_id}';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/messages/{message_id}/attachments/{attachment_id}';
 };
 
 export type DeleteAttachmentErrors = {
@@ -6876,7 +6876,7 @@ export type RemoveTagsFromTicketData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/tags';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/tags';
 };
 
 export type RemoveTagsFromTicketErrors = {
@@ -6910,7 +6910,7 @@ export type AddTagsToTicketData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/tags';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/tags';
 };
 
 export type AddTagsToTicketErrors = {
@@ -6938,7 +6938,7 @@ export type ListTypingData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/typing';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/typing';
 };
 
 export type ListTypingResponses = {
@@ -6954,7 +6954,7 @@ export type TypingUpdateData = {
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/tickets/{ticket_id}/typing';
+    url: '/api/v1/organizations/{org_id}/tickets/{ticket_id}/typing';
 };
 
 export type TypingUpdateResponses = {
@@ -6997,7 +6997,7 @@ export type ListWebhooksData = {
          */
         per_page?: number;
     };
-    url: '/api/v0/organizations/{org_id}/webhooks';
+    url: '/api/v1/organizations/{org_id}/webhooks';
 };
 
 export type ListWebhooksErrors = {
@@ -7029,7 +7029,7 @@ export type CreateWebhookData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/webhooks';
+    url: '/api/v1/organizations/{org_id}/webhooks';
 };
 
 export type CreateWebhookErrors = {
@@ -7065,7 +7065,7 @@ export type ListWebhookEventsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/webhooks/events';
+    url: '/api/v1/organizations/{org_id}/webhooks/events';
 };
 
 export type ListWebhookEventsErrors = {
@@ -7110,7 +7110,7 @@ export type SendWebhooksData = {
          */
         user_id?: string;
     };
-    url: '/api/v0/organizations/{org_id}/webhooks/send';
+    url: '/api/v1/organizations/{org_id}/webhooks/send';
 };
 
 export type SendWebhooksErrors = {
@@ -7146,7 +7146,7 @@ export type GetWebhookStatsData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/webhooks/stats';
+    url: '/api/v1/organizations/{org_id}/webhooks/stats';
 };
 
 export type GetWebhookStatsErrors = {
@@ -7182,7 +7182,7 @@ export type DeleteWebhookData = {
         webhook_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/webhooks/{webhook_id}';
+    url: '/api/v1/organizations/{org_id}/webhooks/{webhook_id}';
 };
 
 export type DeleteWebhookErrors = {
@@ -7220,7 +7220,7 @@ export type GetWebhookData = {
         webhook_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/webhooks/{webhook_id}';
+    url: '/api/v1/organizations/{org_id}/webhooks/{webhook_id}';
 };
 
 export type GetWebhookErrors = {
@@ -7260,7 +7260,7 @@ export type UpdateWebhookData = {
         webhook_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/webhooks/{webhook_id}';
+    url: '/api/v1/organizations/{org_id}/webhooks/{webhook_id}';
 };
 
 export type UpdateWebhookErrors = {
@@ -7304,7 +7304,7 @@ export type TestWebhookData = {
         webhook_id: string;
     };
     query?: never;
-    url: '/api/v0/organizations/{org_id}/webhooks/{webhook_id}/test';
+    url: '/api/v1/organizations/{org_id}/webhooks/{webhook_id}/test';
 };
 
 export type TestWebhookErrors = {
@@ -7339,7 +7339,7 @@ export type GetPermissionsCatalogData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/permissions/catalog';
+    url: '/api/v1/permissions/catalog';
 };
 
 export type GetPermissionsCatalogResponses = {
@@ -7355,7 +7355,7 @@ export type ListSessionsData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/sessions';
+    url: '/api/v1/sessions';
 };
 
 export type ListSessionsErrors = {
@@ -7378,7 +7378,7 @@ export type CleanupExpiredSessionsData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/sessions/cleanup';
+    url: '/api/v1/sessions/cleanup';
 };
 
 export type CleanupExpiredSessionsErrors = {
@@ -7399,7 +7399,7 @@ export type RevokeAllSessionsData = {
     body: RevokeAllSessionsRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/sessions/revoke-all';
+    url: '/api/v1/sessions/revoke-all';
 };
 
 export type RevokeAllSessionsErrors = {
@@ -7420,7 +7420,7 @@ export type GetSessionStatsData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/sessions/stats';
+    url: '/api/v1/sessions/stats';
 };
 
 export type GetSessionStatsErrors = {
@@ -7448,7 +7448,7 @@ export type RevokeSessionData = {
         session_id: string;
     };
     query?: never;
-    url: '/api/v0/sessions/{session_id}';
+    url: '/api/v1/sessions/{session_id}';
 };
 
 export type RevokeSessionErrors = {
@@ -7478,7 +7478,7 @@ export type GetSessionData = {
         session_id: string;
     };
     query?: never;
-    url: '/api/v0/sessions/{session_id}';
+    url: '/api/v1/sessions/{session_id}';
 };
 
 export type GetSessionErrors = {
@@ -7510,7 +7510,7 @@ export type ExtendSessionData = {
         session_id: string;
     };
     query?: never;
-    url: '/api/v0/sessions/{session_id}/extend';
+    url: '/api/v1/sessions/{session_id}/extend';
 };
 
 export type ExtendSessionErrors = {
@@ -7537,7 +7537,7 @@ export type DeleteAccountData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/users/account';
+    url: '/api/v1/users/account';
 };
 
 export type DeleteAccountErrors = {
@@ -7577,7 +7577,7 @@ export type ListApiKeysData = {
          */
         include_revoked?: boolean;
     };
-    url: '/api/v0/users/api-keys';
+    url: '/api/v1/users/api-keys';
 };
 
 export type ListApiKeysErrors = {
@@ -7600,7 +7600,7 @@ export type CreateApiKeyData = {
     body: CreateApiKeyRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/users/api-keys';
+    url: '/api/v1/users/api-keys';
 };
 
 export type CreateApiKeyErrors = {
@@ -7632,7 +7632,7 @@ export type DeleteApiKeyData = {
         key_id: string;
     };
     query?: never;
-    url: '/api/v0/users/api-keys/{key_id}';
+    url: '/api/v1/users/api-keys/{key_id}';
 };
 
 export type DeleteApiKeyErrors = {
@@ -7664,7 +7664,7 @@ export type GetApiKeyData = {
         key_id: string;
     };
     query?: never;
-    url: '/api/v0/users/api-keys/{key_id}';
+    url: '/api/v1/users/api-keys/{key_id}';
 };
 
 export type GetApiKeyErrors = {
@@ -7696,7 +7696,7 @@ export type RevokeApiKeyData = {
         key_id: string;
     };
     query?: never;
-    url: '/api/v0/users/api-keys/{key_id}/revoke';
+    url: '/api/v1/users/api-keys/{key_id}/revoke';
 };
 
 export type RevokeApiKeyErrors = {
@@ -7728,7 +7728,7 @@ export type GetLoginAttemptsData = {
          */
         limit?: number;
     };
-    url: '/api/v0/users/login-attempts';
+    url: '/api/v1/users/login-attempts';
 };
 
 export type GetLoginAttemptsErrors = {
@@ -7760,7 +7760,7 @@ export type GetLoginHistoryData = {
          */
         limit?: number;
     };
-    url: '/api/v0/users/login-history';
+    url: '/api/v1/users/login-history';
 };
 
 export type GetLoginHistoryErrors = {
@@ -7787,7 +7787,7 @@ export type ChangePasswordData = {
     body: ChangePasswordRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/users/password';
+    url: '/api/v1/users/password';
 };
 
 export type ChangePasswordErrors = {
@@ -7814,7 +7814,7 @@ export type GetProfileData = {
     body?: never;
     path?: never;
     query?: never;
-    url: '/api/v0/users/profile';
+    url: '/api/v1/users/profile';
 };
 
 export type GetProfileErrors = {
@@ -7837,7 +7837,7 @@ export type UpdateProfileData = {
     body: UpdateProfileRequest;
     path?: never;
     query?: never;
-    url: '/api/v0/users/profile';
+    url: '/api/v1/users/profile';
 };
 
 export type UpdateProfileErrors = {
