@@ -2,7 +2,7 @@
 
 import { type Options, getAttachmentStats, getAdminMetrics, downloadAttachment, disable2Fa, enable2Fa, login, logout, register, requestPasswordReset, resendVerification, resetPassword, setup2Fa, verifyEmail, createCheckout, createAdjustment, refundPayment, getPublicConfig, getSubscription, listSubscriptions, createSubscription, changeSubscription, cancelSubscription, resumeSubscription, paddleWebhook, identifyUser, sendMessage, getTicketHistoryPublic, getUserTickets, getUserOrganizations, createOrganization, findOrganizationsByEmailDomain, joinOrganization, getOrganization, acceptInvitation, autoTriage, classify, aiContext, kbSuggest, redact, rewrite, sentimentHandler, suggestReply, suggestReplyStream, summarize, summarizeStream, telemetry, translate, translateConversation, translateStream, getOrganizationAnalytics, getAgentAnalytics, getBacklogSize, getCsatByAgent, getCsatByMacro, getKnowledgeBaseAnalytics, getMacroAnalytics, getSystemAnalytics, getTicketAnalytics, getTrendAnalytics, executeAutomationRules, listAutomationRules, createAutomationRule, deleteAutomationRule, getAutomationRule, updateAutomationRule, getAutomationStats, listEvents, createEvent, exportEvents, getEventStats, streamEvents, wsPlaceholder, getEvent, inviteUser, listArticles, createArticle, deleteArticle, getArticle, updateArticle, recordArticleAccept, publishArticle, reindexArticleEmbedding, unpublishArticle, listVersions, voteArticle, listCategories, createCategory, deleteCategory, updateCategory, listSections, createSection, getPublicArticles, searchPublicArticles, deleteSection, updateSection, semanticSearch, listMacros, createMacro, deleteMacroExperiment, updateMacroExperiment, getPopularMacros, renderMacroTemplate, deleteMacro, getMacro, updateMacro, listMacroExperiments, createMacroExperiment, listMacroVariants, createMacroVariant, deleteMacroVariant, updateMacroVariant, getMembers, removeMember, updateMembership, deleteMessage, getMessage, getEffectivePermissions, listAgents, heartbeat, listRoles, createRole, deleteRole, getRole, updateRole, assignRole, revokeRole, listRules, createRule, deleteRule, updateRule, workload, getAllOrganizationSettings, setOrganizationSetting, applyDataRetention, getOrgEffectiveSettings, deleteOrganizationSetting, getOrganizationSetting, checkBreaches, countdownSse, listPolicies, createPolicy, updatePolicy, listSurveys, submitSurvey, getCsatAnalytics, deleteSurvey, getSurvey, updateSurvey, listTags, createTag, getPopularTags, deleteTag, getTag, updateTag, getTagWithTickets, listTeams, createTeam, updateTeam, listMembers, addMember, removeMember2, listTickets, createTicket, bulkUpdateTickets, mergeTickets, splitTicket, listSavedViews, createSavedView, deleteTicket, getTicket, updateTicket, assignTicketTeam, clearTicketTeamAssignment, getTicketTeamAssignment, deleteDraft, getDraft, upsertDraft, aiGenerateDraft, getTicketHistory, releaseTicketLock, lockTicket, takeoverTicketLock, listTicketMessages, createMessage, getMessageCount, createInternalNote, getLatestMessage, searchMessages, listMessageAttachments, uploadAttachments, deleteAttachment, removeTagsFromTicket, addTagsToTicket, listTyping, typingUpdate, listTicketWatchers, addTicketWatcher, removeTicketWatcher, listCustomFields, createCustomField, deleteCustomField, listSegments, createSegment, deleteSegment, updateSegment, evaluateSegment, getUserCustomFields, setUserCustomFields, listWebhooks, createWebhook, listWebhookEvents, sendWebhooks, getWebhookStats, deleteWebhook, getWebhook, updateWebhook, testWebhook, getPermissionsCatalog, listSessions, cleanupExpiredSessions, revokeAllSessions, getSessionStats, revokeSession, getSession, extendSession, getSettingsCatalog, deleteAccount, listApiKeys, createApiKey, deleteApiKey, getApiKey, revokeApiKey, getLoginAttempts, getLoginHistory, changePassword, getProfile, updateProfile } from '../sdk.gen';
 import { queryOptions, type UseMutationOptions, type DefaultError, infiniteQueryOptions, type InfiniteData } from '@tanstack/react-query';
-import type { GetAttachmentStatsData, GetAdminMetricsData, DownloadAttachmentData, Disable2FaData, Disable2FaError, Disable2FaResponse, Enable2FaData, Enable2FaError, Enable2FaResponse, LoginData, LoginError, LoginResponse, LogoutData, LogoutError, LogoutResponse, RegisterData, RegisterError, RegisterResponse2, RequestPasswordResetData, RequestPasswordResetError, RequestPasswordResetResponse, ResendVerificationData, ResendVerificationError, ResendVerificationResponse, ResetPasswordData, ResetPasswordError, ResetPasswordResponse, Setup2FaData, Setup2FaError, Setup2FaResponse2, VerifyEmailData, VerifyEmailError, VerifyEmailResponse, CreateCheckoutData, CreateCheckoutResponse2, CreateAdjustmentData, CreateAdjustmentResponse, RefundPaymentData, RefundPaymentResponse, GetPublicConfigData, GetSubscriptionData, ListSubscriptionsData, CreateSubscriptionData, ChangeSubscriptionData, CancelSubscriptionData, ResumeSubscriptionData, PaddleWebhookData, IdentifyUserData, IdentifyUserResponse, SendMessageData, SendMessageResponse, GetTicketHistoryPublicData, GetUserTicketsData, GetUserOrganizationsData, CreateOrganizationData, CreateOrganizationResponse, FindOrganizationsByEmailDomainData, JoinOrganizationData, JoinOrganizationResponse, GetOrganizationData, AcceptInvitationData, AcceptInvitationResponse, AutoTriageData, AutoTriageResponse, ClassifyData, ClassifyError, ClassifyResponse, AiContextData, AiContextResponse2, KbSuggestData, KbSuggestError, KbSuggestResponse, RedactData, RedactError, RedactResponse, RewriteData, RewriteError, RewriteResponse, SentimentHandlerData, SentimentHandlerResponse, SuggestReplyData, SuggestReplyError, SuggestReplyResponse, SuggestReplyStreamData, SuggestReplyStreamResponse, SummarizeData, SummarizeError, SummarizeResponse, SummarizeStreamData, SummarizeStreamResponse, TelemetryData, TelemetryError, TelemetryResponse, TranslateData, TranslateError, TranslateResponse, TranslateConversationData, TranslateConversationResponse, TranslateStreamData, TranslateStreamResponse, GetOrganizationAnalyticsData, GetAgentAnalyticsData, GetBacklogSizeData, GetCsatByAgentData, GetCsatByMacroData, GetKnowledgeBaseAnalyticsData, GetMacroAnalyticsData, GetSystemAnalyticsData, GetTicketAnalyticsData, GetTrendAnalyticsData, ExecuteAutomationRulesData, ExecuteAutomationRulesResponse, ListAutomationRulesData, ListAutomationRulesResponse, CreateAutomationRuleData, CreateAutomationRuleResponse, DeleteAutomationRuleData, GetAutomationRuleData, UpdateAutomationRuleData, UpdateAutomationRuleResponse, GetAutomationStatsData, ListEventsData, ListEventsError, ListEventsResponse, CreateEventData, CreateEventError, CreateEventResponse, ExportEventsData, GetEventStatsData, StreamEventsData, WsPlaceholderData, GetEventData, InviteUserData, InviteUserResponse, ListArticlesData, ListArticlesError, ListArticlesResponse, CreateArticleData, CreateArticleError, CreateArticleResponse, DeleteArticleData, DeleteArticleError, DeleteArticleResponse, GetArticleData, UpdateArticleData, UpdateArticleError, UpdateArticleResponse, RecordArticleAcceptData, RecordArticleAcceptResponse, PublishArticleData, PublishArticleResponse, ReindexArticleEmbeddingData, UnpublishArticleData, UnpublishArticleResponse, ListVersionsData, VoteArticleData, VoteArticleResponse, ListCategoriesData, CreateCategoryData, CreateCategoryResponse, DeleteCategoryData, DeleteCategoryResponse, UpdateCategoryData, UpdateCategoryResponse, ListSectionsData, CreateSectionData, CreateSectionResponse, GetPublicArticlesData, GetPublicArticlesError, GetPublicArticlesResponse, SearchPublicArticlesData, SearchPublicArticlesError, SearchPublicArticlesResponse, DeleteSectionData, DeleteSectionResponse, UpdateSectionData, UpdateSectionResponse, SemanticSearchData, ListMacrosData, ListMacrosError, ListMacrosResponse, CreateMacroData, CreateMacroError, CreateMacroResponse, DeleteMacroExperimentData, DeleteMacroExperimentResponse, UpdateMacroExperimentData, UpdateMacroExperimentResponse, GetPopularMacrosData, RenderMacroTemplateData, RenderMacroTemplateError, RenderMacroTemplateResponse, DeleteMacroData, DeleteMacroError, DeleteMacroResponse, GetMacroData, UpdateMacroData, UpdateMacroError, UpdateMacroResponse, ListMacroExperimentsData, CreateMacroExperimentData, CreateMacroExperimentResponse, ListMacroVariantsData, CreateMacroVariantData, CreateMacroVariantResponse, DeleteMacroVariantData, DeleteMacroVariantResponse, UpdateMacroVariantData, UpdateMacroVariantResponse, GetMembersData, RemoveMemberData, RemoveMemberResponse, UpdateMembershipData, UpdateMembershipResponse, DeleteMessageData, DeleteMessageError, DeleteMessageResponse, GetMessageData, GetEffectivePermissionsData, ListAgentsData, HeartbeatData, HeartbeatResponse, ListRolesData, CreateRoleData, CreateRoleResponse, DeleteRoleData, DeleteRoleResponse, GetRoleData, UpdateRoleData, UpdateRoleResponse, AssignRoleData, AssignRoleResponse, RevokeRoleData, RevokeRoleResponse, ListRulesData, CreateRuleData, CreateRuleResponse, DeleteRuleData, DeleteRuleResponse, UpdateRuleData, UpdateRuleResponse, WorkloadData, GetAllOrganizationSettingsData, SetOrganizationSettingData, SetOrganizationSettingResponse, ApplyDataRetentionData, ApplyDataRetentionResponse, GetOrgEffectiveSettingsData, DeleteOrganizationSettingData, DeleteOrganizationSettingResponse, GetOrganizationSettingData, CheckBreachesData, CheckBreachesResponse, CountdownSseData, ListPoliciesData, CreatePolicyData, CreatePolicyResponse, UpdatePolicyData, UpdatePolicyResponse, ListSurveysData, ListSurveysResponse, SubmitSurveyData, SubmitSurveyResponse, GetCsatAnalyticsData, DeleteSurveyData, GetSurveyData, UpdateSurveyData, UpdateSurveyResponse, ListTagsData, ListTagsResponse, CreateTagData, CreateTagResponse, GetPopularTagsData, DeleteTagData, DeleteTagResponse, GetTagData, UpdateTagData, UpdateTagResponse, GetTagWithTicketsData, GetTagWithTicketsResponse, ListTeamsData, CreateTeamData, CreateTeamResponse, UpdateTeamData, UpdateTeamResponse, ListMembersData, AddMemberData, AddMemberResponse, RemoveMember2Data, RemoveMember2Response, ListTicketsData, ListTicketsError, ListTicketsResponse, CreateTicketData, CreateTicketError, CreateTicketResponse, BulkUpdateTicketsData, MergeTicketsData, SplitTicketData, SplitTicketResponse, ListSavedViewsData, CreateSavedViewData, CreateSavedViewResponse, DeleteTicketData, DeleteTicketError, DeleteTicketResponse, GetTicketData, UpdateTicketData, UpdateTicketError, UpdateTicketResponse, AssignTicketTeamData, AssignTicketTeamError, AssignTicketTeamResponse, ClearTicketTeamAssignmentData, ClearTicketTeamAssignmentResponse, GetTicketTeamAssignmentData, DeleteDraftData, DeleteDraftResponse, GetDraftData, UpsertDraftData, UpsertDraftResponse, AiGenerateDraftData, AiGenerateDraftResponse, GetTicketHistoryData, ReleaseTicketLockData, ReleaseTicketLockResponse, LockTicketData, TakeoverTicketLockData, ListTicketMessagesData, ListTicketMessagesError, ListTicketMessagesResponse, CreateMessageData, CreateMessageError, CreateMessageResponse, GetMessageCountData, CreateInternalNoteData, CreateInternalNoteResponse, GetLatestMessageData, SearchMessagesData, SearchMessagesError, SearchMessagesResponse, ListMessageAttachmentsData, UploadAttachmentsData, UploadAttachmentsError, UploadAttachmentsResponse, DeleteAttachmentData, DeleteAttachmentError, DeleteAttachmentResponse, RemoveTagsFromTicketData, RemoveTagsFromTicketError, RemoveTagsFromTicketResponse, AddTagsToTicketData, AddTagsToTicketError, ListTypingData, TypingUpdateData, TypingUpdateResponse, ListTicketWatchersData, AddTicketWatcherData, AddTicketWatcherResponse, RemoveTicketWatcherData, RemoveTicketWatcherResponse, ListCustomFieldsData, CreateCustomFieldData, CreateCustomFieldResponse, DeleteCustomFieldData, DeleteCustomFieldResponse, ListSegmentsData, CreateSegmentData, CreateSegmentResponse, DeleteSegmentData, DeleteSegmentResponse, UpdateSegmentData, UpdateSegmentResponse, EvaluateSegmentData, EvaluateSegmentResponse2, GetUserCustomFieldsData, SetUserCustomFieldsData, SetUserCustomFieldsResponse, ListWebhooksData, ListWebhooksError, ListWebhooksResponse, CreateWebhookData, CreateWebhookError, CreateWebhookResponse, ListWebhookEventsData, SendWebhooksData, SendWebhooksResponse, GetWebhookStatsData, DeleteWebhookData, DeleteWebhookResponse, GetWebhookData, UpdateWebhookData, UpdateWebhookResponse, TestWebhookData, TestWebhookResponse, GetPermissionsCatalogData, ListSessionsData, CleanupExpiredSessionsData, RevokeAllSessionsData, GetSessionStatsData, RevokeSessionData, GetSessionData, ExtendSessionData, ExtendSessionResponse, GetSettingsCatalogData, DeleteAccountData, DeleteAccountResponse, ListApiKeysData, ListApiKeysError, ListApiKeysResponse, CreateApiKeyData, CreateApiKeyError, CreateApiKeyResponse2, DeleteApiKeyData, DeleteApiKeyResponse, GetApiKeyData, RevokeApiKeyData, RevokeApiKeyResponse, GetLoginAttemptsData, GetLoginHistoryData, ChangePasswordData, ChangePasswordError, ChangePasswordResponse, GetProfileData, UpdateProfileData, UpdateProfileResponse } from '../types.gen';
+import type { GetAttachmentStatsData, GetAdminMetricsData, DownloadAttachmentData, Disable2FaData, Disable2FaError, Disable2FaResponse, Enable2FaData, Enable2FaError, Enable2FaResponse, LoginData, LoginError, LoginResponse, LogoutData, LogoutError, LogoutResponse, RegisterData, RegisterError, RegisterResponse2, RequestPasswordResetData, RequestPasswordResetError, RequestPasswordResetResponse, ResendVerificationData, ResendVerificationError, ResendVerificationResponse, ResetPasswordData, ResetPasswordError, ResetPasswordResponse, Setup2FaData, Setup2FaError, Setup2FaResponse2, VerifyEmailData, VerifyEmailError, VerifyEmailResponse, CreateCheckoutData, CreateCheckoutResponse2, CreateAdjustmentData, CreateAdjustmentResponse, RefundPaymentData, RefundPaymentResponse, GetPublicConfigData, GetSubscriptionData, ListSubscriptionsData, ListSubscriptionsResponse, CreateSubscriptionData, ChangeSubscriptionData, CancelSubscriptionData, ResumeSubscriptionData, PaddleWebhookData, IdentifyUserData, IdentifyUserResponse, SendMessageData, SendMessageResponse, GetTicketHistoryPublicData, GetUserTicketsData, GetUserOrganizationsData, CreateOrganizationData, CreateOrganizationResponse, FindOrganizationsByEmailDomainData, JoinOrganizationData, JoinOrganizationResponse, GetOrganizationData, AcceptInvitationData, AcceptInvitationResponse, AutoTriageData, AutoTriageResponse, ClassifyData, ClassifyError, ClassifyResponse, AiContextData, AiContextResponse2, KbSuggestData, KbSuggestError, KbSuggestResponse, RedactData, RedactError, RedactResponse, RewriteData, RewriteError, RewriteResponse, SentimentHandlerData, SentimentHandlerResponse, SuggestReplyData, SuggestReplyError, SuggestReplyResponse, SuggestReplyStreamData, SuggestReplyStreamResponse, SummarizeData, SummarizeError, SummarizeResponse, SummarizeStreamData, SummarizeStreamResponse, TelemetryData, TelemetryError, TelemetryResponse, TranslateData, TranslateError, TranslateResponse, TranslateConversationData, TranslateConversationResponse, TranslateStreamData, TranslateStreamResponse, GetOrganizationAnalyticsData, GetAgentAnalyticsData, GetBacklogSizeData, GetCsatByAgentData, GetCsatByMacroData, GetKnowledgeBaseAnalyticsData, GetMacroAnalyticsData, GetSystemAnalyticsData, GetTicketAnalyticsData, GetTrendAnalyticsData, ExecuteAutomationRulesData, ExecuteAutomationRulesResponse, ListAutomationRulesData, ListAutomationRulesResponse, CreateAutomationRuleData, CreateAutomationRuleResponse, DeleteAutomationRuleData, GetAutomationRuleData, UpdateAutomationRuleData, UpdateAutomationRuleResponse, GetAutomationStatsData, ListEventsData, ListEventsError, ListEventsResponse, CreateEventData, CreateEventError, CreateEventResponse, ExportEventsData, GetEventStatsData, StreamEventsData, WsPlaceholderData, GetEventData, InviteUserData, InviteUserResponse, ListArticlesData, ListArticlesError, ListArticlesResponse, CreateArticleData, CreateArticleError, CreateArticleResponse, DeleteArticleData, DeleteArticleError, DeleteArticleResponse, GetArticleData, UpdateArticleData, UpdateArticleError, UpdateArticleResponse, RecordArticleAcceptData, RecordArticleAcceptResponse, PublishArticleData, PublishArticleResponse, ReindexArticleEmbeddingData, UnpublishArticleData, UnpublishArticleResponse, ListVersionsData, VoteArticleData, VoteArticleResponse, ListCategoriesData, CreateCategoryData, CreateCategoryResponse, DeleteCategoryData, DeleteCategoryResponse, UpdateCategoryData, UpdateCategoryResponse, ListSectionsData, CreateSectionData, CreateSectionResponse, GetPublicArticlesData, GetPublicArticlesError, GetPublicArticlesResponse, SearchPublicArticlesData, SearchPublicArticlesError, SearchPublicArticlesResponse, DeleteSectionData, DeleteSectionResponse, UpdateSectionData, UpdateSectionResponse, SemanticSearchData, ListMacrosData, ListMacrosError, ListMacrosResponse, CreateMacroData, CreateMacroError, CreateMacroResponse, DeleteMacroExperimentData, DeleteMacroExperimentResponse, UpdateMacroExperimentData, UpdateMacroExperimentResponse, GetPopularMacrosData, RenderMacroTemplateData, RenderMacroTemplateError, RenderMacroTemplateResponse, DeleteMacroData, DeleteMacroError, DeleteMacroResponse, GetMacroData, UpdateMacroData, UpdateMacroError, UpdateMacroResponse, ListMacroExperimentsData, CreateMacroExperimentData, CreateMacroExperimentResponse, ListMacroVariantsData, CreateMacroVariantData, CreateMacroVariantResponse, DeleteMacroVariantData, DeleteMacroVariantResponse, UpdateMacroVariantData, UpdateMacroVariantResponse, GetMembersData, RemoveMemberData, RemoveMemberResponse, UpdateMembershipData, UpdateMembershipResponse, DeleteMessageData, DeleteMessageError, DeleteMessageResponse, GetMessageData, GetEffectivePermissionsData, ListAgentsData, HeartbeatData, HeartbeatResponse, ListRolesData, CreateRoleData, CreateRoleResponse, DeleteRoleData, DeleteRoleResponse, GetRoleData, UpdateRoleData, UpdateRoleResponse, AssignRoleData, AssignRoleResponse, RevokeRoleData, RevokeRoleResponse, ListRulesData, CreateRuleData, CreateRuleResponse, DeleteRuleData, DeleteRuleResponse, UpdateRuleData, UpdateRuleResponse, WorkloadData, GetAllOrganizationSettingsData, SetOrganizationSettingData, SetOrganizationSettingResponse, ApplyDataRetentionData, ApplyDataRetentionResponse, GetOrgEffectiveSettingsData, DeleteOrganizationSettingData, DeleteOrganizationSettingResponse, GetOrganizationSettingData, CheckBreachesData, CheckBreachesResponse, CountdownSseData, ListPoliciesData, CreatePolicyData, CreatePolicyResponse, UpdatePolicyData, UpdatePolicyResponse, ListSurveysData, ListSurveysResponse, SubmitSurveyData, SubmitSurveyResponse, GetCsatAnalyticsData, DeleteSurveyData, GetSurveyData, UpdateSurveyData, UpdateSurveyResponse, ListTagsData, ListTagsResponse, CreateTagData, CreateTagResponse, GetPopularTagsData, DeleteTagData, DeleteTagResponse, GetTagData, UpdateTagData, UpdateTagResponse, GetTagWithTicketsData, GetTagWithTicketsResponse, ListTeamsData, CreateTeamData, CreateTeamResponse, UpdateTeamData, UpdateTeamResponse, ListMembersData, AddMemberData, AddMemberResponse, RemoveMember2Data, RemoveMember2Response, ListTicketsData, ListTicketsError, ListTicketsResponse, CreateTicketData, CreateTicketError, CreateTicketResponse, BulkUpdateTicketsData, MergeTicketsData, SplitTicketData, SplitTicketResponse, ListSavedViewsData, CreateSavedViewData, CreateSavedViewResponse, DeleteTicketData, DeleteTicketError, DeleteTicketResponse, GetTicketData, UpdateTicketData, UpdateTicketError, UpdateTicketResponse, AssignTicketTeamData, AssignTicketTeamError, AssignTicketTeamResponse, ClearTicketTeamAssignmentData, ClearTicketTeamAssignmentResponse, GetTicketTeamAssignmentData, DeleteDraftData, DeleteDraftResponse, GetDraftData, UpsertDraftData, UpsertDraftResponse, AiGenerateDraftData, AiGenerateDraftResponse, GetTicketHistoryData, ReleaseTicketLockData, ReleaseTicketLockResponse, LockTicketData, TakeoverTicketLockData, ListTicketMessagesData, ListTicketMessagesError, ListTicketMessagesResponse, CreateMessageData, CreateMessageError, CreateMessageResponse, GetMessageCountData, CreateInternalNoteData, CreateInternalNoteResponse, GetLatestMessageData, SearchMessagesData, SearchMessagesError, SearchMessagesResponse, ListMessageAttachmentsData, UploadAttachmentsData, UploadAttachmentsError, UploadAttachmentsResponse, DeleteAttachmentData, DeleteAttachmentError, DeleteAttachmentResponse, RemoveTagsFromTicketData, RemoveTagsFromTicketError, RemoveTagsFromTicketResponse, AddTagsToTicketData, AddTagsToTicketError, ListTypingData, TypingUpdateData, TypingUpdateResponse, ListTicketWatchersData, AddTicketWatcherData, AddTicketWatcherResponse, RemoveTicketWatcherData, RemoveTicketWatcherResponse, ListCustomFieldsData, CreateCustomFieldData, CreateCustomFieldResponse, DeleteCustomFieldData, DeleteCustomFieldResponse, ListSegmentsData, CreateSegmentData, CreateSegmentResponse, DeleteSegmentData, DeleteSegmentResponse, UpdateSegmentData, UpdateSegmentResponse, EvaluateSegmentData, EvaluateSegmentResponse2, GetUserCustomFieldsData, SetUserCustomFieldsData, SetUserCustomFieldsResponse, ListWebhooksData, ListWebhooksError, ListWebhooksResponse, CreateWebhookData, CreateWebhookError, CreateWebhookResponse, ListWebhookEventsData, SendWebhooksData, SendWebhooksResponse, GetWebhookStatsData, DeleteWebhookData, DeleteWebhookResponse, GetWebhookData, UpdateWebhookData, UpdateWebhookResponse, TestWebhookData, TestWebhookResponse, GetPermissionsCatalogData, ListSessionsData, CleanupExpiredSessionsData, RevokeAllSessionsData, GetSessionStatsData, RevokeSessionData, GetSessionData, ExtendSessionData, ExtendSessionResponse, GetSettingsCatalogData, DeleteAccountData, DeleteAccountResponse, ListApiKeysData, ListApiKeysError, ListApiKeysResponse, CreateApiKeyData, CreateApiKeyError, CreateApiKeyResponse2, DeleteApiKeyData, DeleteApiKeyResponse, GetApiKeyData, RevokeApiKeyData, RevokeApiKeyResponse, GetLoginAttemptsData, GetLoginHistoryData, ChangePasswordData, ChangePasswordError, ChangePasswordResponse, GetProfileData, UpdateProfileData, UpdateProfileResponse } from '../types.gen';
 import { client as _heyApiClient } from '../client.gen';
 
 export type QueryKey<TOptions extends Options> = [
@@ -485,6 +485,7 @@ export const createCheckoutQueryKey = (options: Options<CreateCheckoutData>) => 
 
 /**
  * Create Paddle checkout
+ * Creates a Paddle payment link for the given price. Optionally associates the link to a customer and organization. Use the returned URL to redirect the user to checkout.
  */
 export const createCheckoutOptions = (options: Options<CreateCheckoutData>) => {
     return queryOptions({
@@ -503,6 +504,7 @@ export const createCheckoutOptions = (options: Options<CreateCheckoutData>) => {
 
 /**
  * Create Paddle checkout
+ * Creates a Paddle payment link for the given price. Optionally associates the link to a customer and organization. Use the returned URL to redirect the user to checkout.
  */
 export const createCheckoutMutation = (options?: Partial<Options<CreateCheckoutData>>): UseMutationOptions<CreateCheckoutResponse2, DefaultError, Options<CreateCheckoutData>> => {
     const mutationOptions: UseMutationOptions<CreateCheckoutResponse2, DefaultError, Options<CreateCheckoutData>> = {
@@ -522,6 +524,7 @@ export const createAdjustmentQueryKey = (options: Options<CreateAdjustmentData>)
 
 /**
  * Create invoice adjustment
+ * Creates a credit or debit adjustment for the specified invoice.
  */
 export const createAdjustmentOptions = (options: Options<CreateAdjustmentData>) => {
     return queryOptions({
@@ -540,6 +543,7 @@ export const createAdjustmentOptions = (options: Options<CreateAdjustmentData>) 
 
 /**
  * Create invoice adjustment
+ * Creates a credit or debit adjustment for the specified invoice.
  */
 export const createAdjustmentMutation = (options?: Partial<Options<CreateAdjustmentData>>): UseMutationOptions<CreateAdjustmentResponse, DefaultError, Options<CreateAdjustmentData>> => {
     const mutationOptions: UseMutationOptions<CreateAdjustmentResponse, DefaultError, Options<CreateAdjustmentData>> = {
@@ -559,6 +563,7 @@ export const refundPaymentQueryKey = (options: Options<RefundPaymentData>) => cr
 
 /**
  * Refund a payment
+ * Requests a refund for a given payment. Amount can be full or partial.
  */
 export const refundPaymentOptions = (options: Options<RefundPaymentData>) => {
     return queryOptions({
@@ -577,6 +582,7 @@ export const refundPaymentOptions = (options: Options<RefundPaymentData>) => {
 
 /**
  * Refund a payment
+ * Requests a refund for a given payment. Amount can be full or partial.
  */
 export const refundPaymentMutation = (options?: Partial<Options<RefundPaymentData>>): UseMutationOptions<RefundPaymentResponse, DefaultError, Options<RefundPaymentData>> => {
     const mutationOptions: UseMutationOptions<RefundPaymentResponse, DefaultError, Options<RefundPaymentData>> = {
@@ -596,7 +602,7 @@ export const getPublicConfigQueryKey = (options?: Options<GetPublicConfigData>) 
 
 /**
  * Public billing configuration
- * Returns Paddle client token and environment for Paddle.js initialization
+ * Returns Paddle client token and environment for Paddle.js initialization.
  */
 export const getPublicConfigOptions = (options?: Options<GetPublicConfigData>) => {
     return queryOptions({
@@ -617,6 +623,7 @@ export const getSubscriptionQueryKey = (options?: Options<GetSubscriptionData>) 
 
 /**
  * Get latest subscription snapshot for primary org
+ * Returns a lightweight snapshot of the organization's latest subscription, or `status=none` if none exists.
  */
 export const getSubscriptionOptions = (options?: Options<GetSubscriptionData>) => {
     return queryOptions({
@@ -637,6 +644,7 @@ export const listSubscriptionsQueryKey = (options?: Options<ListSubscriptionsDat
 
 /**
  * List subscriptions
+ * Lists subscriptions for the primary organization. Filter by status and limit results.
  */
 export const listSubscriptionsOptions = (options?: Options<ListSubscriptionsData>) => {
     return queryOptions({
@@ -653,10 +661,72 @@ export const listSubscriptionsOptions = (options?: Options<ListSubscriptionsData
     });
 };
 
+const createInfiniteParams = <K extends Pick<QueryKey<Options>[0], 'body' | 'headers' | 'path' | 'query'>>(queryKey: QueryKey<Options>, page: K) => {
+    const params = {
+        ...queryKey[0]
+    };
+    if (page.body) {
+        params.body = {
+            ...queryKey[0].body as any,
+            ...page.body as any
+        };
+    }
+    if (page.headers) {
+        params.headers = {
+            ...queryKey[0].headers,
+            ...page.headers
+        };
+    }
+    if (page.path) {
+        params.path = {
+            ...queryKey[0].path as any,
+            ...page.path as any
+        };
+    }
+    if (page.query) {
+        params.query = {
+            ...queryKey[0].query as any,
+            ...page.query as any
+        };
+    }
+    return params as unknown as typeof page;
+};
+
+export const listSubscriptionsInfiniteQueryKey = (options?: Options<ListSubscriptionsData>): QueryKey<Options<ListSubscriptionsData>> => createQueryKey('listSubscriptions', options, true);
+
+/**
+ * List subscriptions
+ * Lists subscriptions for the primary organization. Filter by status and limit results.
+ */
+export const listSubscriptionsInfiniteOptions = (options?: Options<ListSubscriptionsData>) => {
+    return infiniteQueryOptions<ListSubscriptionsResponse, DefaultError, InfiniteData<ListSubscriptionsResponse>, QueryKey<Options<ListSubscriptionsData>>, string | Pick<QueryKey<Options<ListSubscriptionsData>>[0], 'body' | 'headers' | 'path' | 'query'>>(
+    // @ts-ignore
+    {
+        queryFn: async ({ pageParam, queryKey, signal }) => {
+            // @ts-ignore
+            const page: Pick<QueryKey<Options<ListSubscriptionsData>>[0], 'body' | 'headers' | 'path' | 'query'> = typeof pageParam === 'object' ? pageParam : {
+                query: {
+                    cursor: pageParam
+                }
+            };
+            const params = createInfiniteParams(queryKey, page);
+            const { data } = await listSubscriptions({
+                ...options,
+                ...params,
+                signal,
+                throwOnError: true
+            });
+            return data;
+        },
+        queryKey: listSubscriptionsInfiniteQueryKey(options)
+    });
+};
+
 export const createSubscriptionQueryKey = (options: Options<CreateSubscriptionData>) => createQueryKey('createSubscription', options);
 
 /**
  * Create subscription
+ * Creates a subscription for the primary organization. Requires appropriate permissions.
  */
 export const createSubscriptionOptions = (options: Options<CreateSubscriptionData>) => {
     return queryOptions({
@@ -675,6 +745,7 @@ export const createSubscriptionOptions = (options: Options<CreateSubscriptionDat
 
 /**
  * Create subscription
+ * Creates a subscription for the primary organization. Requires appropriate permissions.
  */
 export const createSubscriptionMutation = (options?: Partial<Options<CreateSubscriptionData>>): UseMutationOptions<unknown, DefaultError, Options<CreateSubscriptionData>> => {
     const mutationOptions: UseMutationOptions<unknown, DefaultError, Options<CreateSubscriptionData>> = {
@@ -694,6 +765,7 @@ export const changeSubscriptionQueryKey = (options: Options<ChangeSubscriptionDa
 
 /**
  * Change subscription
+ * Updates subscription quantity and/or price. Proration behavior can be specified.
  */
 export const changeSubscriptionOptions = (options: Options<ChangeSubscriptionData>) => {
     return queryOptions({
@@ -712,6 +784,7 @@ export const changeSubscriptionOptions = (options: Options<ChangeSubscriptionDat
 
 /**
  * Change subscription
+ * Updates subscription quantity and/or price. Proration behavior can be specified.
  */
 export const changeSubscriptionMutation = (options?: Partial<Options<ChangeSubscriptionData>>): UseMutationOptions<unknown, DefaultError, Options<ChangeSubscriptionData>> => {
     const mutationOptions: UseMutationOptions<unknown, DefaultError, Options<ChangeSubscriptionData>> = {
@@ -731,6 +804,7 @@ export const cancelSubscriptionQueryKey = (options: Options<CancelSubscriptionDa
 
 /**
  * Cancel subscription
+ * Cancels a subscription immediately or schedules cancellation at period end.
  */
 export const cancelSubscriptionOptions = (options: Options<CancelSubscriptionData>) => {
     return queryOptions({
@@ -749,6 +823,7 @@ export const cancelSubscriptionOptions = (options: Options<CancelSubscriptionDat
 
 /**
  * Cancel subscription
+ * Cancels a subscription immediately or schedules cancellation at period end.
  */
 export const cancelSubscriptionMutation = (options?: Partial<Options<CancelSubscriptionData>>): UseMutationOptions<unknown, DefaultError, Options<CancelSubscriptionData>> => {
     const mutationOptions: UseMutationOptions<unknown, DefaultError, Options<CancelSubscriptionData>> = {
@@ -768,6 +843,7 @@ export const resumeSubscriptionQueryKey = (options: Options<ResumeSubscriptionDa
 
 /**
  * Resume subscription
+ * Resumes a subscription that was scheduled to be canceled at period end.
  */
 export const resumeSubscriptionOptions = (options: Options<ResumeSubscriptionData>) => {
     return queryOptions({
@@ -786,6 +862,7 @@ export const resumeSubscriptionOptions = (options: Options<ResumeSubscriptionDat
 
 /**
  * Resume subscription
+ * Resumes a subscription that was scheduled to be canceled at period end.
  */
 export const resumeSubscriptionMutation = (options?: Partial<Options<ResumeSubscriptionData>>): UseMutationOptions<unknown, DefaultError, Options<ResumeSubscriptionData>> => {
     const mutationOptions: UseMutationOptions<unknown, DefaultError, Options<ResumeSubscriptionData>> = {
@@ -805,7 +882,7 @@ export const paddleWebhookQueryKey = (options?: Options<PaddleWebhookData>) => c
 
 /**
  * Paddle webhook endpoint
- * Validates Paddle signature and processes billing events
+ * Validates Paddle signature and processes billing events. This endpoint is intended to be called by Paddle.
  */
 export const paddleWebhookOptions = (options?: Options<PaddleWebhookData>) => {
     return queryOptions({
@@ -824,7 +901,7 @@ export const paddleWebhookOptions = (options?: Options<PaddleWebhookData>) => {
 
 /**
  * Paddle webhook endpoint
- * Validates Paddle signature and processes billing events
+ * Validates Paddle signature and processes billing events. This endpoint is intended to be called by Paddle.
  */
 export const paddleWebhookMutation = (options?: Partial<Options<PaddleWebhookData>>): UseMutationOptions<unknown, DefaultError, Options<PaddleWebhookData>> => {
     const mutationOptions: UseMutationOptions<unknown, DefaultError, Options<PaddleWebhookData>> = {
@@ -1993,37 +2070,6 @@ export const listAutomationRulesOptions = (options: Options<ListAutomationRulesD
         },
         queryKey: listAutomationRulesQueryKey(options)
     });
-};
-
-const createInfiniteParams = <K extends Pick<QueryKey<Options>[0], 'body' | 'headers' | 'path' | 'query'>>(queryKey: QueryKey<Options>, page: K) => {
-    const params = {
-        ...queryKey[0]
-    };
-    if (page.body) {
-        params.body = {
-            ...queryKey[0].body as any,
-            ...page.body as any
-        };
-    }
-    if (page.headers) {
-        params.headers = {
-            ...queryKey[0].headers,
-            ...page.headers
-        };
-    }
-    if (page.path) {
-        params.path = {
-            ...queryKey[0].path as any,
-            ...page.path as any
-        };
-    }
-    if (page.query) {
-        params.query = {
-            ...queryKey[0].query as any,
-            ...page.query as any
-        };
-    }
-    return params as unknown as typeof page;
 };
 
 export const listAutomationRulesInfiniteQueryKey = (options: Options<ListAutomationRulesData>): QueryKey<Options<ListAutomationRulesData>> => createQueryKey('listAutomationRules', options, true);

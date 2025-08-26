@@ -1889,6 +1889,10 @@ export type AutomationStats = {
     trigger_distribution: Array<TriggerCount>;
 };
 
+export type BillingPeriod = {
+    ends_at?: string | null;
+};
+
 export type BillingSubscriptionResponse = {
     cancel_at?: string | null;
     canceled_at?: string | null;
@@ -2291,6 +2295,12 @@ export type KnowledgeBaseStats = {
     total_articles: number;
 };
 
+export type ListSubscriptionsQuery = {
+    cursor?: string | null;
+    limit?: number | null;
+    status?: string | null;
+};
+
 export type LockRequest = {
     ttl_seconds: number;
 };
@@ -2472,6 +2482,27 @@ export type PasswordResetRequest = {
     email: string;
 };
 
+export type PaymentLinkCreateRequest = {
+    custom_data?: unknown;
+    customer_id?: string | null;
+    items: Array<PaymentLinkItem>;
+    return_url?: string | null;
+};
+
+export type PaymentLinkCreateResponse = {
+    data: PaymentLinkCreateResponseData;
+};
+
+export type PaymentLinkCreateResponseData = {
+    id: string;
+    url: string;
+};
+
+export type PaymentLinkItem = {
+    price_id: string;
+    quantity?: number | null;
+};
+
 export type PermissionCatalogEntry = {
     key: string;
     value: number;
@@ -2506,6 +2537,23 @@ export type RedactionSpan = {
     end: number;
     label: string;
     start: number;
+};
+
+export type RefundAmount = {
+    amount: number;
+};
+
+export type RefundCreateRequest = {
+    amount?: null | RefundAmount;
+    reason?: string | null;
+};
+
+export type RefundCreateResponse = {
+    data: RefundCreateResponseData;
+};
+
+export type RefundCreateResponseData = {
+    id: string;
 };
 
 export type RefundRequest = {
@@ -2721,12 +2769,42 @@ export type SubmitSurveyRequest = {
     ticket_id: string;
 };
 
+export type SubscriptionCancelRequest = {
+    at_period_end: boolean;
+};
+
+export type SubscriptionData = {
+    current_billing_period?: null | BillingPeriod;
+    id: string;
+    items?: Array<SubscriptionItem> | null;
+    status: string;
+};
+
+export type SubscriptionGetResponse = {
+    data: SubscriptionData;
+};
+
+export type SubscriptionItem = {
+    price_id?: string | null;
+    quantity?: number | null;
+};
+
+export type SubscriptionResumeRequest = {
+    [key: string]: unknown;
+};
+
 export type SubscriptionSnapshot = {
     current_period_end?: string | null;
     price_id?: string | null;
     product_id?: string | null;
     quantity?: number | null;
     status: string;
+};
+
+export type SubscriptionUpdateRequest = {
+    price_id?: string | null;
+    proration_behavior?: string | null;
+    quantity?: number | null;
 };
 
 export type SurveyExport = {
@@ -3031,6 +3109,16 @@ export type UploadResponse = {
 export type UpsertDraftRequest = {
     attachments?: unknown;
     content: string;
+};
+
+export type UsageReportRequest = {
+    quantity: number;
+    subscription_item_id: string;
+    timestamp?: string | null;
+};
+
+export type UsageReportResponse = {
+    data: unknown;
 };
 
 export type UserCustomFieldResponse = {
@@ -3562,6 +3650,9 @@ export type CreateCheckoutResponse2 = CreateCheckoutResponses[keyof CreateChecko
 export type CreateAdjustmentData = {
     body: CreateAdjustmentRequest;
     path: {
+        /**
+         * Invoice identifier
+         */
         id: string;
     };
     query?: never;
@@ -3635,7 +3726,20 @@ export type GetSubscriptionResponse = GetSubscriptionResponses[keyof GetSubscrip
 export type ListSubscriptionsData = {
     body?: never;
     path?: never;
-    query?: never;
+    query?: {
+        /**
+         * Filter by status, e.g. Active, PastDue, Canceled
+         */
+        status?: string;
+        /**
+         * Opaque cursor for pagination (not currently used)
+         */
+        cursor?: string;
+        /**
+         * Max items to return (default 50, max 100)
+         */
+        limit?: number;
+    };
     url: '/api/v1/billing/subscriptions';
 };
 
@@ -3665,6 +3769,9 @@ export type CreateSubscriptionResponses = {
 export type ChangeSubscriptionData = {
     body: ChangeSubscriptionRequest;
     path: {
+        /**
+         * Internal subscription UUID
+         */
         id: string;
     };
     query?: never;
@@ -3678,6 +3785,9 @@ export type ChangeSubscriptionResponses = {
 export type CancelSubscriptionData = {
     body: CancelSubscriptionRequest;
     path: {
+        /**
+         * Internal subscription UUID
+         */
         id: string;
     };
     query?: never;
@@ -3691,6 +3801,9 @@ export type CancelSubscriptionResponses = {
 export type ResumeSubscriptionData = {
     body: ResumeSubscriptionRequest;
     path: {
+        /**
+         * Internal subscription UUID
+         */
         id: string;
     };
     query?: never;

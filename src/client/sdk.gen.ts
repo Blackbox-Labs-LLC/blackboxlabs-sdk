@@ -215,6 +215,7 @@ export const verifyEmail = <ThrowOnError extends boolean = false>(options: Optio
 
 /**
  * Create Paddle checkout
+ * Creates a Paddle payment link for the given price. Optionally associates the link to a customer and organization. Use the returned URL to redirect the user to checkout.
  */
 export const createCheckout = <ThrowOnError extends boolean = false>(options: Options<CreateCheckoutData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<CreateCheckoutResponses, CreateCheckoutErrors, ThrowOnError>({
@@ -229,6 +230,7 @@ export const createCheckout = <ThrowOnError extends boolean = false>(options: Op
 
 /**
  * Create invoice adjustment
+ * Creates a credit or debit adjustment for the specified invoice.
  */
 export const createAdjustment = <ThrowOnError extends boolean = false>(options: Options<CreateAdjustmentData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<CreateAdjustmentResponses, unknown, ThrowOnError>({
@@ -243,6 +245,7 @@ export const createAdjustment = <ThrowOnError extends boolean = false>(options: 
 
 /**
  * Refund a payment
+ * Requests a refund for a given payment. Amount can be full or partial.
  */
 export const refundPayment = <ThrowOnError extends boolean = false>(options: Options<RefundPaymentData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<RefundPaymentResponses, unknown, ThrowOnError>({
@@ -257,7 +260,7 @@ export const refundPayment = <ThrowOnError extends boolean = false>(options: Opt
 
 /**
  * Public billing configuration
- * Returns Paddle client token and environment for Paddle.js initialization
+ * Returns Paddle client token and environment for Paddle.js initialization.
  */
 export const getPublicConfig = <ThrowOnError extends boolean = false>(options?: Options<GetPublicConfigData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetPublicConfigResponses, unknown, ThrowOnError>({
@@ -268,6 +271,7 @@ export const getPublicConfig = <ThrowOnError extends boolean = false>(options?: 
 
 /**
  * Get latest subscription snapshot for primary org
+ * Returns a lightweight snapshot of the organization's latest subscription, or `status=none` if none exists.
  */
 export const getSubscription = <ThrowOnError extends boolean = false>(options?: Options<GetSubscriptionData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<GetSubscriptionResponses, GetSubscriptionErrors, ThrowOnError>({
@@ -278,6 +282,7 @@ export const getSubscription = <ThrowOnError extends boolean = false>(options?: 
 
 /**
  * List subscriptions
+ * Lists subscriptions for the primary organization. Filter by status and limit results.
  */
 export const listSubscriptions = <ThrowOnError extends boolean = false>(options?: Options<ListSubscriptionsData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).get<ListSubscriptionsResponses, unknown, ThrowOnError>({
@@ -288,6 +293,7 @@ export const listSubscriptions = <ThrowOnError extends boolean = false>(options?
 
 /**
  * Create subscription
+ * Creates a subscription for the primary organization. Requires appropriate permissions.
  */
 export const createSubscription = <ThrowOnError extends boolean = false>(options: Options<CreateSubscriptionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<CreateSubscriptionResponses, unknown, ThrowOnError>({
@@ -302,6 +308,7 @@ export const createSubscription = <ThrowOnError extends boolean = false>(options
 
 /**
  * Change subscription
+ * Updates subscription quantity and/or price. Proration behavior can be specified.
  */
 export const changeSubscription = <ThrowOnError extends boolean = false>(options: Options<ChangeSubscriptionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<ChangeSubscriptionResponses, unknown, ThrowOnError>({
@@ -316,6 +323,7 @@ export const changeSubscription = <ThrowOnError extends boolean = false>(options
 
 /**
  * Cancel subscription
+ * Cancels a subscription immediately or schedules cancellation at period end.
  */
 export const cancelSubscription = <ThrowOnError extends boolean = false>(options: Options<CancelSubscriptionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<CancelSubscriptionResponses, unknown, ThrowOnError>({
@@ -330,6 +338,7 @@ export const cancelSubscription = <ThrowOnError extends boolean = false>(options
 
 /**
  * Resume subscription
+ * Resumes a subscription that was scheduled to be canceled at period end.
  */
 export const resumeSubscription = <ThrowOnError extends boolean = false>(options: Options<ResumeSubscriptionData, ThrowOnError>) => {
     return (options.client ?? _heyApiClient).post<ResumeSubscriptionResponses, unknown, ThrowOnError>({
@@ -344,7 +353,7 @@ export const resumeSubscription = <ThrowOnError extends boolean = false>(options
 
 /**
  * Paddle webhook endpoint
- * Validates Paddle signature and processes billing events
+ * Validates Paddle signature and processes billing events. This endpoint is intended to be called by Paddle.
  */
 export const paddleWebhook = <ThrowOnError extends boolean = false>(options?: Options<PaddleWebhookData, ThrowOnError>) => {
     return (options?.client ?? _heyApiClient).post<PaddleWebhookResponses, PaddleWebhookErrors, ThrowOnError>({
