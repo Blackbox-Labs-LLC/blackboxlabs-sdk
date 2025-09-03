@@ -1036,6 +1036,7 @@ export type ApiResponseTicketAnalytics = {
 
 export type ApiResponseTicketResponse = {
     data?: {
+        assigned_team?: null | TeamAssignmentResponse;
         assigned_to?: string | null;
         assigned_to_name?: string | null;
         created_at: string;
@@ -1582,6 +1583,7 @@ export type ApiResponseVecTeamResponse = {
 
 export type ApiResponseVecTicketResponse = {
     data?: Array<{
+        assigned_team?: null | TeamAssignmentResponse;
         assigned_to?: string | null;
         assigned_to_name?: string | null;
         created_at: string;
@@ -2932,6 +2934,7 @@ export type TicketListFilter = {
 };
 
 export type TicketResponse = {
+    assigned_team?: null | TeamAssignmentResponse;
     assigned_to?: string | null;
     assigned_to_name?: string | null;
     created_at: string;
