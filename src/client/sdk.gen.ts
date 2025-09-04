@@ -1161,7 +1161,7 @@ export const wsAuth = <ThrowOnError extends boolean = false>(options: Options<Ws
                 type: 'http'
             }
         ],
-        url: '/api/v1/organizations/{org_id}/events/ws/init',
+        url: '/api/v1/organizations/{org_id}/events/ws/auth',
         ...options
     });
 };

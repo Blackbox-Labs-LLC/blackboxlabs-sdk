@@ -5443,7 +5443,7 @@ export type WsAuthData = {
         org_id: string;
     };
     query?: never;
-    url: '/api/v1/organizations/{org_id}/events/ws/init';
+    url: '/api/v1/organizations/{org_id}/events/ws/auth';
 };
 
 export type WsAuthResponses = {
