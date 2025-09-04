@@ -5412,7 +5412,7 @@ export type StreamEventsResponses = {
 
 export type StreamEventsResponse = StreamEventsResponses[keyof StreamEventsResponses];
 
-export type WsPlaceholderData = {
+export type WsEventsData = {
     body?: never;
     path: {
         org_id: string;
