@@ -1751,16 +1751,6 @@ export type ApiResponseWebhookTestResult = {
     success: boolean;
 };
 
-export type ApiResponseWsTokenResponse = {
-    data?: {
-        expires_at: string;
-        token: string;
-        url: string;
-    };
-    message?: string | null;
-    success: boolean;
-};
-
 export type ApiResponseU64 = {
     data?: number;
     message?: string | null;
@@ -3266,12 +3256,6 @@ export type WebhookTestResult = {
 export type WorkloadEntry = {
     open_tickets: number;
     user_id: string;
-};
-
-export type WsTokenResponse = {
-    expires_at: string;
-    token: string;
-    url: string;
 };
 
 export type GetAttachmentStatsData = {
@@ -5436,24 +5420,6 @@ export type WsEventsData = {
     query?: never;
     url: '/api/v1/organizations/{org_id}/events/ws';
 };
-
-export type InitWsTokenData = {
-    body?: never;
-    path: {
-        org_id: string;
-    };
-    query?: never;
-    url: '/api/v1/organizations/{org_id}/events/ws/init';
-};
-
-export type InitWsTokenResponses = {
-    /**
-     * WS endpoint URL and short-lived JWT
-     */
-    200: ApiResponseWsTokenResponse;
-};
-
-export type InitWsTokenResponse = InitWsTokenResponses[keyof InitWsTokenResponses];
 
 export type GetEventData = {
     body?: never;
