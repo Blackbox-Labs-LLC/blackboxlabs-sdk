@@ -2849,6 +2849,52 @@ export type SurveyResponse = {
     user_name: string;
 };
 
+export type SyncOp = {
+    changes: unknown;
+    entity: string;
+    expected_version?: number | null;
+    id: string;
+    idempotency_key?: string | null;
+};
+
+export type SyncOpResult = {
+    entity: string;
+    id: string;
+    message?: string | null;
+    new_version?: number | null;
+    seq?: number | null;
+    status: string;
+};
+
+export type SyncOpsRequest = {
+    ops: Array<SyncOp>;
+};
+
+export type SyncOpsResponse = {
+    head_seq: number;
+    partial_success: boolean;
+    results: Array<SyncOpResult>;
+};
+
+export type SyncSnapshotResponse = {
+    head_seq: number;
+    max_backlog?: number | null;
+    ops_since?: Array<unknown> | null;
+    since_covered?: boolean | null;
+    tickets?: Array<SyncTicket> | null;
+};
+
+export type SyncTicket = {
+    assigned_to?: string | null;
+    description: string;
+    id: string;
+    priority: string;
+    status: string;
+    subject: string;
+    updated_at: string;
+    version: number;
+};
+
 export type SystemUsage = {
     active_sessions: number;
     api_calls_today: number;
@@ -7630,6 +7676,39 @@ export type UpdateSurveyResponses = {
 };
 
 export type UpdateSurveyResponse = UpdateSurveyResponses[keyof UpdateSurveyResponses];
+
+export type SyncOpsData = {
+    body: SyncOpsRequest;
+    path: {
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v1/organizations/{org_id}/sync/ops';
+};
+
+export type SyncOpsResponses = {
+    200: SyncOpsResponse;
+};
+
+export type SyncOpsResponse2 = SyncOpsResponses[keyof SyncOpsResponses];
+
+export type SyncSnapshotData = {
+    body?: never;
+    path: {
+        org_id: string;
+    };
+    query?: {
+        types?: string;
+        since?: number;
+    };
+    url: '/api/v1/organizations/{org_id}/sync/snapshot';
+};
+
+export type SyncSnapshotResponses = {
+    200: SyncSnapshotResponse;
+};
+
+export type SyncSnapshotResponse2 = SyncSnapshotResponses[keyof SyncSnapshotResponses];
 
 export type ListTagsData = {
     body?: never;
