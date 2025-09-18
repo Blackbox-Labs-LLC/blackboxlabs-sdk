@@ -7,5 +7,6 @@ createClient({
     '@hey-api/typescript',
     '@hey-api/client-next',
     '@tanstack/react-query', 
+    '@tanstack/svelte-query'
   ],
 });
