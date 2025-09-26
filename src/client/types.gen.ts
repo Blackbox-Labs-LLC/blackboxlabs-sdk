@@ -57,6 +57,24 @@ export type ApiKeyResponse = {
     scopes: Array<string>;
 };
 
+export type ApiResponseActionCatalogResponse = {
+    data?: {
+        items: Array<ActionCatalogItem>;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseActionExecuteResponse = {
+    data?: {
+        eta_seconds?: number | null;
+        receipt_id: string;
+        status: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
 export type ApiResponseApiKeyResponse = {
     data?: {
         created_at: string;
@@ -169,6 +187,14 @@ export type ApiResponseEventLogResponse = {
 export type ApiResponseEventLogStats = {
     data?: {
         total: number;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseLinkResourcesResponse = {
+    data?: {
+        linked_count: number;
     };
     message?: string | null;
     success: boolean;
@@ -504,6 +530,17 @@ export type ApiResponseUploadResponse = {
     success: boolean;
 };
 
+export type ApiResponseUploadSignResponse = {
+    data?: {
+        upload_fields: {
+            [key: string]: unknown;
+        } | null;
+        url: string;
+    };
+    message?: string | null;
+    success: boolean;
+};
+
 export type ApiResponseUserCustomFieldResponse = {
     data?: {
         created_at: string;
@@ -619,6 +656,16 @@ export type ApiResponseVecEventLogResponse = {
         organization_id: string;
         ticket_id?: string | null;
         user_id?: string | null;
+    }>;
+    message?: string | null;
+    success: boolean;
+};
+
+export type ApiResponseVecGenericObject = {
+    data?: Array<{
+        data: {
+            [key: string]: unknown;
+        };
     }>;
     message?: string | null;
     success: boolean;
@@ -2678,6 +2725,47 @@ export type PaddleWebhookResponses = {
     200: unknown;
 };
 
+export type GetActionsCatalogData = {
+    body?: never;
+    path?: never;
+    query: {
+        /**
+         * Organization domain
+         */
+        org_domain: string;
+        /**
+         * ticket_id|user_id
+         */
+        context: string;
+    };
+    url: '/api/v1/client/actions/catalog';
+};
+
+export type GetActionsCatalogResponses = {
+    /**
+     * Actions catalog
+     */
+    200: ApiResponseActionCatalogResponse;
+};
+
+export type GetActionsCatalogResponse = GetActionsCatalogResponses[keyof GetActionsCatalogResponses];
+
+export type ExecuteActionData = {
+    body: ActionExecuteRequest;
+    path?: never;
+    query?: never;
+    url: '/api/v1/client/actions/execute';
+};
+
+export type ExecuteActionResponses = {
+    /**
+     * Execution result
+     */
+    200: ApiResponseActionExecuteResponse;
+};
+
+export type ExecuteActionResponse = ExecuteActionResponses[keyof ExecuteActionResponses];
+
 export type IdentifyUserData = {
     body: ClientIdentifyRequest;
     path?: never;
@@ -2705,6 +2793,22 @@ export type IdentifyUserResponses = {
 
 export type IdentifyUserResponse = IdentifyUserResponses[keyof IdentifyUserResponses];
 
+export type LinkResourcesData = {
+    body: LinkResourcesRequest;
+    path?: never;
+    query?: never;
+    url: '/api/v1/client/link_resources';
+};
+
+export type LinkResourcesResponses = {
+    /**
+     * Resources linked
+     */
+    200: ApiResponseLinkResourcesResponse;
+};
+
+export type LinkResourcesResponse2 = LinkResourcesResponses[keyof LinkResourcesResponses];
+
 export type SendMessageData = {
     body: ClientMessageRequest;
     path?: never;
@@ -2731,6 +2835,42 @@ export type SendMessageResponses = {
 };
 
 export type SendMessageResponse = SendMessageResponses[keyof SendMessageResponses];
+
+export type ClientRealtimeWsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/api/v1/client/realtime';
+};
+
+export type ListResourcesData = {
+    body?: never;
+    path?: never;
+    query: {
+        /**
+         * Ticket ID
+         */
+        ticket_id: string;
+        /**
+         * User ID
+         */
+        user_id: string;
+        /**
+         * CSV of types
+         */
+        types: string | null;
+    };
+    url: '/api/v1/client/resources';
+};
+
+export type ListResourcesResponses = {
+    /**
+     * Resources list
+     */
+    200: ApiResponseVecGenericObject;
+};
+
+export type ListResourcesResponse = ListResourcesResponses[keyof ListResourcesResponses];
 
 export type GetTicketHistoryPublicData = {
     body?: never;
@@ -2830,6 +2970,22 @@ export type GetUserTicketsResponses = {
 };
 
 export type GetUserTicketsResponse = GetUserTicketsResponses[keyof GetUserTicketsResponses];
+
+export type SignUploadData = {
+    body: UploadSignRequest;
+    path?: never;
+    query?: never;
+    url: '/api/v1/client/uploads/sign';
+};
+
+export type SignUploadResponses = {
+    /**
+     * Signed upload URL
+     */
+    200: ApiResponseUploadSignResponse;
+};
+
+export type SignUploadResponse = SignUploadResponses[keyof SignUploadResponses];
 
 export type GetUserOrganizationsData = {
     body?: never;
