@@ -26,6 +26,25 @@ export type ApiErrorEnvelope = {
     success: boolean;
 };
 
+export type ApiKeyResponse = {
+    created_at: string;
+    expires_at?: string | null;
+    id: string;
+    last_used?: string | null;
+    name: string;
+    revoked: boolean;
+    scopes: Array<string>;
+};
+
+export type AttachmentResponse = {
+    content_type: string;
+    file_name: string;
+    file_size: number;
+    id: string;
+    uploaded_at: string;
+    uploaded_by: string;
+};
+
 export type AuthResponse = {
     email_verified: boolean;
     organizations: Array<string>;
@@ -53,6 +72,28 @@ export type ClientTicketItem = {
     subject: string;
 };
 
+export type CreateApiKeyRequest = {
+    expires_in_days?: number | null;
+    name: string;
+    scopes: Array<string>;
+};
+
+export type CreateApiKeyResponse = {
+    created_at: string;
+    expires_at?: string | null;
+    id: string;
+    key: string;
+    name: string;
+    scopes: Array<string>;
+};
+
+export type CreateAttachmentRequest = {
+    content_type: string;
+    file_name: string;
+    file_size: number;
+    upload_id: string;
+};
+
 export type CreateMessageRequest = {
     channel?: string | null;
     content: string;
@@ -62,6 +103,14 @@ export type CreateMessageRequest = {
 export type CreateOrgRequest = {
     domain: string;
     name: string;
+};
+
+export type CreateRoleRequest = {
+    color?: string | null;
+    managed?: boolean | null;
+    name: string;
+    permissions: number;
+    position?: number | null;
 };
 
 export type CreateTicketRequest = {
@@ -99,6 +148,21 @@ export type IdentifyContactResponse = {
     token: string;
 };
 
+export type LoginAttemptItem = {
+    attempted_at: string;
+    id: string;
+    ip_address: string;
+    success: boolean;
+    user_agent: string;
+};
+
+export type LoginHistoryItem = {
+    id: string;
+    ip_address: string;
+    logged_in_at: string;
+    user_agent: string;
+};
+
 export type LoginRequest = {
     email: string;
     password: string;
@@ -127,6 +191,16 @@ export type OrgItem = {
     name: string;
 };
 
+export type OrgSettingItem = {
+    key: string;
+    value: unknown;
+};
+
+export type OrgSettingsResponse = {
+    organization_id: string;
+    settings: Array<OrgSettingItem>;
+};
+
 export type Priority = 'low' | 'medium' | 'high' | 'urgent';
 
 export type PublicClientConfig = {
@@ -149,6 +223,18 @@ export type ResetPasswordRequest = {
     token: string;
 };
 
+export type RoleResponse = {
+    color: string;
+    created_at: string;
+    id: string;
+    managed: boolean;
+    name: string;
+    organization_id: string;
+    permissions: number;
+    position: number;
+    updated_at: string;
+};
+
 export type SessionItem = {
     created_at: string;
     expires_at: string;
@@ -165,6 +251,12 @@ export type Setup2FaRequest = {
 export type Setup2FaResponse = {
     provisioning_uri: string;
     secret: string;
+};
+
+export type SignUploadRequest = {
+    content_type: string;
+    file_name: string;
+    file_size: number;
 };
 
 export type TagItem = {
@@ -192,12 +284,69 @@ export type TicketSummary = {
     subject: string;
 };
 
+export type UpdateOrgRequest = {
+    domain?: string | null;
+    name?: string | null;
+};
+
+export type UpdateOrgSettingsRequest = {
+    settings: Array<OrgSettingItem>;
+};
+
+export type UpdateProfileRequest = {
+    email?: string | null;
+    name?: string | null;
+};
+
+export type UpdateRoleRequest = {
+    color?: string | null;
+    name?: string | null;
+    permissions?: number | null;
+    position?: number | null;
+};
+
 export type UpdateTicketRequest = {
     assigned_to_user_id?: string | null;
     description?: string | null;
     priority?: string | null;
     status?: string | null;
     subject?: string | null;
+};
+
+export type UploadAvatarRequest = {
+    content_type: string;
+    file_name: string;
+    file_size: number;
+};
+
+export type UploadAvatarResponse = {
+    expires_at: string;
+    upload_id: string;
+    upload_url: string;
+};
+
+export type UploadSignResponse = {
+    expires_at: string;
+    upload_id: string;
+    upload_url: string;
+};
+
+export type UserOrgMembership = {
+    joined_at: string;
+    organization_domain: string;
+    organization_id: string;
+    organization_name: string;
+    status: string;
+};
+
+export type UserProfile = {
+    created_at: string;
+    email: string;
+    email_verified: boolean;
+    id: string;
+    name: string;
+    organizations: Array<UserOrgMembership>;
+    two_fa_enabled: boolean;
 };
 
 export type VerifyEmailRequest = {
@@ -675,6 +824,42 @@ export type CreateOrgResponses = {
 
 export type CreateOrgResponse = CreateOrgResponses[keyof CreateOrgResponses];
 
+export type DeleteOrgData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}';
+};
+
+export type DeleteOrgErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Organization not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type DeleteOrgError = DeleteOrgErrors[keyof DeleteOrgErrors];
+
+export type DeleteOrgResponses = {
+    /**
+     * Organization deleted
+     */
+    200: unknown;
+};
+
 export type GetOrgData = {
     body?: never;
     path: {
@@ -702,6 +887,42 @@ export type GetOrgResponses = {
 };
 
 export type GetOrgResponse = GetOrgResponses[keyof GetOrgResponses];
+
+export type UpdateOrgData = {
+    body: UpdateOrgRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}';
+};
+
+export type UpdateOrgErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Organization not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type UpdateOrgError = UpdateOrgErrors[keyof UpdateOrgErrors];
+
+export type UpdateOrgResponses = {
+    /**
+     * Organization updated
+     */
+    200: unknown;
+};
 
 export type ListMembersData = {
     body?: never;
@@ -769,6 +990,486 @@ export type RemoveMemberErrors = {
 export type RemoveMemberResponses = {
     /**
      * Removed
+     */
+    200: unknown;
+};
+
+export type CreateAttachmentData = {
+    body: CreateAttachmentRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Message ID
+         */
+        message_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/messages/{message_id}/attachments';
+};
+
+export type CreateAttachmentErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Organization or message not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type CreateAttachmentError = CreateAttachmentErrors[keyof CreateAttachmentErrors];
+
+export type CreateAttachmentResponses = {
+    /**
+     * Attachment created
+     */
+    201: AttachmentResponse;
+};
+
+export type CreateAttachmentResponse = CreateAttachmentResponses[keyof CreateAttachmentResponses];
+
+export type DownloadAttachmentData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Message ID
+         */
+        message_id: string;
+        /**
+         * Attachment ID
+         */
+        attachment_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/messages/{message_id}/attachments/{attachment_id}/download';
+};
+
+export type DownloadAttachmentErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Attachment or message not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type DownloadAttachmentError = DownloadAttachmentErrors[keyof DownloadAttachmentErrors];
+
+export type DownloadAttachmentResponses = {
+    /**
+     * File download
+     */
+    200: Blob | File;
+};
+
+export type DownloadAttachmentResponse = DownloadAttachmentResponses[keyof DownloadAttachmentResponses];
+
+export type SignUploadData = {
+    body: SignUploadRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Message ID
+         */
+        message_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/messages/{message_id}/uploads/sign';
+};
+
+export type SignUploadErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Organization or message not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type SignUploadError = SignUploadErrors[keyof SignUploadErrors];
+
+export type SignUploadResponses = {
+    /**
+     * Upload URL generated
+     */
+    200: UploadSignResponse;
+};
+
+export type SignUploadResponse = SignUploadResponses[keyof SignUploadResponses];
+
+export type ListRolesData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/roles';
+};
+
+export type ListRolesErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Organization not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type ListRolesError = ListRolesErrors[keyof ListRolesErrors];
+
+export type ListRolesResponses = {
+    /**
+     * Roles retrieved
+     */
+    200: Array<RoleResponse>;
+};
+
+export type ListRolesResponse = ListRolesResponses[keyof ListRolesResponses];
+
+export type CreateRoleData = {
+    body: CreateRoleRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/roles';
+};
+
+export type CreateRoleErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Organization not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type CreateRoleError = CreateRoleErrors[keyof CreateRoleErrors];
+
+export type CreateRoleResponses = {
+    /**
+     * Role created
+     */
+    200: RoleResponse;
+};
+
+export type CreateRoleResponse = CreateRoleResponses[keyof CreateRoleResponses];
+
+export type DeleteRoleData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Role ID
+         */
+        role_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/roles/{role_id}';
+};
+
+export type DeleteRoleErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Role not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type DeleteRoleError = DeleteRoleErrors[keyof DeleteRoleErrors];
+
+export type DeleteRoleResponses = {
+    /**
+     * Role deleted
+     */
+    200: unknown;
+};
+
+export type GetRoleData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Role ID
+         */
+        role_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/roles/{role_id}';
+};
+
+export type GetRoleErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Role not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type GetRoleError = GetRoleErrors[keyof GetRoleErrors];
+
+export type GetRoleResponses = {
+    /**
+     * Role retrieved
+     */
+    200: RoleResponse;
+};
+
+export type GetRoleResponse = GetRoleResponses[keyof GetRoleResponses];
+
+export type UpdateRoleData = {
+    body: UpdateRoleRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Role ID
+         */
+        role_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/roles/{role_id}';
+};
+
+export type UpdateRoleErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Role not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type UpdateRoleError = UpdateRoleErrors[keyof UpdateRoleErrors];
+
+export type UpdateRoleResponses = {
+    /**
+     * Role updated
+     */
+    200: RoleResponse;
+};
+
+export type UpdateRoleResponse = UpdateRoleResponses[keyof UpdateRoleResponses];
+
+export type AssignRoleData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Role ID
+         */
+        role_id: string;
+        /**
+         * User ID
+         */
+        user_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/roles/{role_id}/assign/{user_id}';
+};
+
+export type AssignRoleErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Role or user not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type AssignRoleError = AssignRoleErrors[keyof AssignRoleErrors];
+
+export type AssignRoleResponses = {
+    /**
+     * Role assigned
+     */
+    200: unknown;
+};
+
+export type UnassignRoleData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Role ID
+         */
+        role_id: string;
+        /**
+         * User ID
+         */
+        user_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/roles/{role_id}/unassign/{user_id}';
+};
+
+export type UnassignRoleErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Role or user not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type UnassignRoleError = UnassignRoleErrors[keyof UnassignRoleErrors];
+
+export type UnassignRoleResponses = {
+    /**
+     * Role unassigned
+     */
+    200: unknown;
+};
+
+export type GetOrgSettingsData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/settings';
+};
+
+export type GetOrgSettingsErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Organization not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type GetOrgSettingsError = GetOrgSettingsErrors[keyof GetOrgSettingsErrors];
+
+export type GetOrgSettingsResponses = {
+    /**
+     * Settings retrieved
+     */
+    200: OrgSettingsResponse;
+};
+
+export type GetOrgSettingsResponse = GetOrgSettingsResponses[keyof GetOrgSettingsResponses];
+
+export type UpdateOrgSettingsData = {
+    body: UpdateOrgSettingsRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/settings';
+};
+
+export type UpdateOrgSettingsErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Forbidden
+     */
+    403: ApiErrorEnvelope;
+    /**
+     * Organization not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type UpdateOrgSettingsError = UpdateOrgSettingsErrors[keyof UpdateOrgSettingsErrors];
+
+export type UpdateOrgSettingsResponses = {
+    /**
+     * Settings updated
      */
     200: unknown;
 };
@@ -1096,6 +1797,345 @@ export type RemoveWatcherResponses = {
      */
     200: unknown;
 };
+
+export type ListApiKeysData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Page number
+         */
+        page?: number;
+        /**
+         * Items per page
+         */
+        per_page?: number;
+        /**
+         * Include revoked keys
+         */
+        include_revoked?: boolean;
+    };
+    url: '/api/v1/users/api-keys';
+};
+
+export type ListApiKeysErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+};
+
+export type ListApiKeysError = ListApiKeysErrors[keyof ListApiKeysErrors];
+
+export type ListApiKeysResponses = {
+    /**
+     * API keys retrieved
+     */
+    200: Array<ApiKeyResponse>;
+};
+
+export type ListApiKeysResponse = ListApiKeysResponses[keyof ListApiKeysResponses];
+
+export type CreateApiKeyData = {
+    body: CreateApiKeyRequest;
+    path?: never;
+    query?: never;
+    url: '/api/v1/users/api-keys';
+};
+
+export type CreateApiKeyErrors = {
+    /**
+     * Invalid input
+     */
+    400: ApiErrorEnvelope;
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+};
+
+export type CreateApiKeyError = CreateApiKeyErrors[keyof CreateApiKeyErrors];
+
+export type CreateApiKeyResponses = {
+    /**
+     * API key created
+     */
+    200: CreateApiKeyResponse;
+};
+
+export type CreateApiKeyResponse2 = CreateApiKeyResponses[keyof CreateApiKeyResponses];
+
+export type DeleteApiKeyData = {
+    body?: never;
+    path: {
+        /**
+         * API key ID
+         */
+        key_id: string;
+    };
+    query?: never;
+    url: '/api/v1/users/api-keys/{key_id}';
+};
+
+export type DeleteApiKeyErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * API key not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type DeleteApiKeyError = DeleteApiKeyErrors[keyof DeleteApiKeyErrors];
+
+export type DeleteApiKeyResponses = {
+    /**
+     * API key deleted
+     */
+    200: unknown;
+};
+
+export type GetApiKeyData = {
+    body?: never;
+    path: {
+        /**
+         * API key ID
+         */
+        key_id: string;
+    };
+    query?: never;
+    url: '/api/v1/users/api-keys/{key_id}';
+};
+
+export type GetApiKeyErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * API key not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type GetApiKeyError = GetApiKeyErrors[keyof GetApiKeyErrors];
+
+export type GetApiKeyResponses = {
+    /**
+     * API key retrieved
+     */
+    200: ApiKeyResponse;
+};
+
+export type GetApiKeyResponse = GetApiKeyResponses[keyof GetApiKeyResponses];
+
+export type RevokeApiKeyData = {
+    body?: never;
+    path: {
+        /**
+         * API key ID
+         */
+        key_id: string;
+    };
+    query?: never;
+    url: '/api/v1/users/api-keys/{key_id}/revoke';
+};
+
+export type RevokeApiKeyErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * API key not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type RevokeApiKeyError = RevokeApiKeyErrors[keyof RevokeApiKeyErrors];
+
+export type RevokeApiKeyResponses = {
+    /**
+     * API key revoked
+     */
+    200: unknown;
+};
+
+export type UploadAvatarData = {
+    body: UploadAvatarRequest;
+    path?: never;
+    query?: never;
+    url: '/api/v1/users/avatar/upload';
+};
+
+export type UploadAvatarErrors = {
+    /**
+     * Invalid input
+     */
+    400: ApiErrorEnvelope;
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+};
+
+export type UploadAvatarError = UploadAvatarErrors[keyof UploadAvatarErrors];
+
+export type UploadAvatarResponses = {
+    /**
+     * Upload URL generated
+     */
+    200: UploadAvatarResponse;
+};
+
+export type UploadAvatarResponse2 = UploadAvatarResponses[keyof UploadAvatarResponses];
+
+export type GetLoginAttemptsData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Maximum number of entries to return
+         */
+        limit?: number;
+    };
+    url: '/api/v1/users/login-attempts';
+};
+
+export type GetLoginAttemptsErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+};
+
+export type GetLoginAttemptsError = GetLoginAttemptsErrors[keyof GetLoginAttemptsErrors];
+
+export type GetLoginAttemptsResponses = {
+    /**
+     * Login attempts retrieved
+     */
+    200: Array<LoginAttemptItem>;
+};
+
+export type GetLoginAttemptsResponse = GetLoginAttemptsResponses[keyof GetLoginAttemptsResponses];
+
+export type GetLoginHistoryData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Maximum number of entries to return
+         */
+        limit?: number;
+    };
+    url: '/api/v1/users/login-history';
+};
+
+export type GetLoginHistoryErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+};
+
+export type GetLoginHistoryError = GetLoginHistoryErrors[keyof GetLoginHistoryErrors];
+
+export type GetLoginHistoryResponses = {
+    /**
+     * Login history retrieved
+     */
+    200: Array<LoginHistoryItem>;
+};
+
+export type GetLoginHistoryResponse = GetLoginHistoryResponses[keyof GetLoginHistoryResponses];
+
+export type ChangePassword2Data = {
+    body: ChangePasswordRequest;
+    path?: never;
+    query?: never;
+    url: '/api/v1/users/password';
+};
+
+export type ChangePassword2Errors = {
+    /**
+     * Invalid input
+     */
+    400: ApiErrorEnvelope;
+    /**
+     * Unauthorized or invalid current password
+     */
+    401: ApiErrorEnvelope;
+};
+
+export type ChangePassword2Error = ChangePassword2Errors[keyof ChangePassword2Errors];
+
+export type ChangePassword2Responses = {
+    /**
+     * Password changed
+     */
+    200: unknown;
+};
+
+export type GetProfileData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/api/v1/users/profile';
+};
+
+export type GetProfileErrors = {
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+};
+
+export type GetProfileError = GetProfileErrors[keyof GetProfileErrors];
+
+export type GetProfileResponses = {
+    /**
+     * Profile retrieved
+     */
+    200: UserProfile;
+};
+
+export type GetProfileResponse = GetProfileResponses[keyof GetProfileResponses];
+
+export type UpdateProfileData = {
+    body: UpdateProfileRequest;
+    path?: never;
+    query?: never;
+    url: '/api/v1/users/profile';
+};
+
+export type UpdateProfileErrors = {
+    /**
+     * Invalid input
+     */
+    400: ApiErrorEnvelope;
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Email already exists
+     */
+    409: ApiErrorEnvelope;
+};
+
+export type UpdateProfileError = UpdateProfileErrors[keyof UpdateProfileErrors];
+
+export type UpdateProfileResponses = {
+    /**
+     * Profile updated
+     */
+    200: UserProfile;
+};
+
+export type UpdateProfileResponse = UpdateProfileResponses[keyof UpdateProfileResponses];
 
 export type ClientOptions = {
     baseUrl: 'https://api.blckbox.dev' | (string & {});
