@@ -350,7 +350,7 @@ export type UserProfile = {
 };
 
 export type VerifyEmailRequest = {
-    token: string;
+    code: string;
 };
 
 export type WatcherItem = {
