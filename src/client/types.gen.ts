@@ -148,6 +148,13 @@ export type IdentifyContactResponse = {
     token: string;
 };
 
+export type ListOrgsResponse = {
+    organizations: Array<OrgItem>;
+    page: number;
+    per_page: number;
+    total: number;
+};
+
 export type LoginAttemptItem = {
     attempted_at: string;
     id: string;
@@ -795,18 +802,36 @@ export type PostMessageContactResponse = PostMessageContactResponses[keyof PostM
 export type ListOrgsData = {
     body?: never;
     path?: never;
-    query?: never;
+    query: {
+        /**
+         * Page number (1-based)
+         */
+        page: number;
+        /**
+         * Items per page
+         */
+        per_page: number;
+    };
     url: '/api/v1/orgs';
 };
 
-export type ListOrgsResponses = {
+export type ListOrgsErrors = {
     /**
-     * OK
+     * Unauthorized
      */
-    200: Array<OrgItem>;
+    401: ApiErrorEnvelope;
 };
 
-export type ListOrgsResponse = ListOrgsResponses[keyof ListOrgsResponses];
+export type ListOrgsError = ListOrgsErrors[keyof ListOrgsErrors];
+
+export type ListOrgsResponses = {
+    /**
+     * Organizations retrieved
+     */
+    200: ListOrgsResponse;
+};
+
+export type ListOrgsResponse2 = ListOrgsResponses[keyof ListOrgsResponses];
 
 export type CreateOrgData = {
     body: CreateOrgRequest;
@@ -1476,7 +1501,12 @@ export type UpdateOrgSettingsResponses = {
 
 export type ListTicketsData = {
     body?: never;
-    path?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
     query: {
         /**
          * Filter by status
@@ -1495,7 +1525,7 @@ export type ListTicketsData = {
          */
         per_page: number;
     };
-    url: '/api/v1/tickets';
+    url: '/api/v1/orgs/{org_id}/tickets';
 };
 
 export type ListTicketsResponses = {
@@ -1509,9 +1539,14 @@ export type ListTicketsResponse = ListTicketsResponses[keyof ListTicketsResponse
 
 export type CreateTicketData = {
     body: CreateTicketRequest;
-    path?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+    };
     query?: never;
-    url: '/api/v1/tickets';
+    url: '/api/v1/orgs/{org_id}/tickets';
 };
 
 export type CreateTicketErrors = {
@@ -1540,12 +1575,16 @@ export type GetTicketData = {
     body?: never;
     path: {
         /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
          * Ticket ID
          */
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v1/tickets/{ticket_id}';
+    url: '/api/v1/orgs/{org_id}/tickets/{ticket_id}';
 };
 
 export type GetTicketErrors = {
@@ -1570,12 +1609,16 @@ export type UpdateTicketData = {
     body: UpdateTicketRequest;
     path: {
         /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
          * Ticket ID
          */
         ticket_id: string;
     };
     query?: never;
-    url: '/api/v1/tickets/{ticket_id}';
+    url: '/api/v1/orgs/{org_id}/tickets/{ticket_id}';
 };
 
 export type UpdateTicketErrors = {
@@ -1599,6 +1642,73 @@ export type UpdateTicketResponses = {
 };
 
 export type UpdateTicketResponse = UpdateTicketResponses[keyof UpdateTicketResponses];
+
+export type AddTagData = {
+    body: AddTagRequest;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Ticket ID
+         */
+        ticket_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/tickets/{ticket_id}/tags';
+};
+
+export type AddTagErrors = {
+    /**
+     * Invalid input
+     */
+    400: ApiErrorEnvelope;
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
+    /**
+     * Ticket not found
+     */
+    404: ApiErrorEnvelope;
+};
+
+export type AddTagError = AddTagErrors[keyof AddTagErrors];
+
+export type AddTagResponses = {
+    /**
+     * Tag added
+     */
+    200: unknown;
+};
+
+export type RemoveTagData = {
+    body?: never;
+    path: {
+        /**
+         * Organization ID
+         */
+        org_id: string;
+        /**
+         * Ticket ID
+         */
+        ticket_id: string;
+        /**
+         * Tag ID
+         */
+        tag_id: string;
+    };
+    query?: never;
+    url: '/api/v1/orgs/{org_id}/tickets/{ticket_id}/tags/{tag_id}';
+};
+
+export type RemoveTagResponses = {
+    /**
+     * Tag removed
+     */
+    200: unknown;
+};
 
 export type ListMessagesData = {
     body?: never;
@@ -1689,65 +1799,6 @@ export type ListTagsResponses = {
 };
 
 export type ListTagsResponse = ListTagsResponses[keyof ListTagsResponses];
-
-export type AddTagData = {
-    body: AddTagRequest;
-    path: {
-        /**
-         * Ticket ID
-         */
-        ticket_id: string;
-    };
-    query?: never;
-    url: '/api/v1/tickets/{ticket_id}/tags';
-};
-
-export type AddTagErrors = {
-    /**
-     * Invalid input
-     */
-    400: ApiErrorEnvelope;
-    /**
-     * Unauthorized
-     */
-    401: ApiErrorEnvelope;
-    /**
-     * Ticket not found
-     */
-    404: ApiErrorEnvelope;
-};
-
-export type AddTagError = AddTagErrors[keyof AddTagErrors];
-
-export type AddTagResponses = {
-    /**
-     * Tag added
-     */
-    200: unknown;
-};
-
-export type RemoveTagData = {
-    body?: never;
-    path: {
-        /**
-         * Ticket ID
-         */
-        ticket_id: string;
-        /**
-         * Tag ID
-         */
-        tag_id: string;
-    };
-    query?: never;
-    url: '/api/v1/tickets/{ticket_id}/tags/{tag_id}';
-};
-
-export type RemoveTagResponses = {
-    /**
-     * Tag removed
-     */
-    200: unknown;
-};
 
 export type ListWatchersData = {
     body?: never;
