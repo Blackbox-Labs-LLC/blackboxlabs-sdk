@@ -119,14 +119,9 @@ export type CreateTicketRequest = {
     subject?: string | null;
 };
 
-export type Disable2FaRequest = {
-    user_id: string;
-};
-
 export type Enable2FaRequest = {
     code: string;
     secret: string;
-    user_id: string;
 };
 
 export type ExtendSessionRequest = {
@@ -248,11 +243,6 @@ export type SessionItem = {
     id: string;
     ip_address: string;
     user_agent: string;
-};
-
-export type Setup2FaRequest = {
-    issuer?: string | null;
-    user_id: string;
 };
 
 export type Setup2FaResponse = {
@@ -393,7 +383,7 @@ export type ChangePasswordResponses = {
 };
 
 export type Disable2FaData = {
-    body: Disable2FaRequest;
+    body?: never;
     path?: never;
     query?: never;
     url: '/api/v1/auth/disable-2fa';
@@ -401,9 +391,9 @@ export type Disable2FaData = {
 
 export type Disable2FaErrors = {
     /**
-     * Invalid input
+     * Unauthorized
      */
-    400: ApiErrorEnvelope;
+    401: ApiErrorEnvelope;
 };
 
 export type Disable2FaError = Disable2FaErrors[keyof Disable2FaErrors];
@@ -427,6 +417,10 @@ export type Enable2FaErrors = {
      * Invalid secret/code
      */
     400: ApiErrorEnvelope;
+    /**
+     * Unauthorized
+     */
+    401: ApiErrorEnvelope;
 };
 
 export type Enable2FaError = Enable2FaErrors[keyof Enable2FaErrors];
@@ -634,7 +628,7 @@ export type ExtendSessionResponses = {
 };
 
 export type Setup2FaData = {
-    body: Setup2FaRequest;
+    body?: never;
     path?: never;
     query?: never;
     url: '/api/v1/auth/setup-2fa';
@@ -642,9 +636,9 @@ export type Setup2FaData = {
 
 export type Setup2FaErrors = {
     /**
-     * Invalid input
+     * Unauthorized
      */
-    400: ApiErrorEnvelope;
+    401: ApiErrorEnvelope;
 };
 
 export type Setup2FaError = Setup2FaErrors[keyof Setup2FaErrors];
@@ -802,15 +796,15 @@ export type PostMessageContactResponse = PostMessageContactResponses[keyof PostM
 export type ListOrgsData = {
     body?: never;
     path?: never;
-    query: {
+    query?: {
         /**
          * Page number (1-based)
          */
-        page: number;
+        page?: number;
         /**
          * Items per page
          */
-        per_page: number;
+        per_page?: number;
     };
     url: '/api/v1/orgs';
 };

@@ -79,13 +79,13 @@ export const changePasswordMutation = (options?: Partial<Options<ChangePasswordD
     return mutationOptions;
 };
 
-export const disable2FaQueryKey = (options: Options<Disable2FaData>) => createQueryKey('disable2Fa', options);
+export const disable2FaQueryKey = (options?: Options<Disable2FaData>) => createQueryKey('disable2Fa', options);
 
 /**
  * Disable 2FA
  * Disable 2FA for the user.
  */
-export const disable2FaOptions = (options: Options<Disable2FaData>) => {
+export const disable2FaOptions = (options?: Options<Disable2FaData>) => {
     return queryOptions({
         queryFn: async ({ queryKey, signal }) => {
             const { data } = await disable2Fa({
@@ -469,13 +469,13 @@ export const extendSessionMutation = (options?: Partial<Options<ExtendSessionDat
     return mutationOptions;
 };
 
-export const setup2FaQueryKey = (options: Options<Setup2FaData>) => createQueryKey('setup2Fa', options);
+export const setup2FaQueryKey = (options?: Options<Setup2FaData>) => createQueryKey('setup2Fa', options);
 
 /**
  * Setup 2FA (TOTP)
  * Generate a TOTP secret and provisioning URI (otpauth://). Requires an authenticated agent context.
  */
-export const setup2FaOptions = (options: Options<Setup2FaData>) => {
+export const setup2FaOptions = (options?: Options<Setup2FaData>) => {
     return queryOptions({
         queryFn: async ({ queryKey, signal }) => {
             const { data } = await setup2Fa({
@@ -720,13 +720,13 @@ export const postMessageContactMutation = (options?: Partial<Options<PostMessage
     return mutationOptions;
 };
 
-export const listOrgsQueryKey = (options: Options<ListOrgsData>) => createQueryKey('listOrgs', options);
+export const listOrgsQueryKey = (options?: Options<ListOrgsData>) => createQueryKey('listOrgs', options);
 
 /**
  * List user's organizations
  * List organizations that the authenticated user is a member of.
  */
-export const listOrgsOptions = (options: Options<ListOrgsData>) => {
+export const listOrgsOptions = (options?: Options<ListOrgsData>) => {
     return queryOptions({
         queryFn: async ({ queryKey, signal }) => {
             const { data } = await listOrgs({
@@ -772,13 +772,13 @@ const createInfiniteParams = <K extends Pick<QueryKey<Options>[0], 'body' | 'hea
     return params as unknown as typeof page;
 };
 
-export const listOrgsInfiniteQueryKey = (options: Options<ListOrgsData>): QueryKey<Options<ListOrgsData>> => createQueryKey('listOrgs', options, true);
+export const listOrgsInfiniteQueryKey = (options?: Options<ListOrgsData>): QueryKey<Options<ListOrgsData>> => createQueryKey('listOrgs', options, true);
 
 /**
  * List user's organizations
  * List organizations that the authenticated user is a member of.
  */
-export const listOrgsInfiniteOptions = (options: Options<ListOrgsData>) => {
+export const listOrgsInfiniteOptions = (options?: Options<ListOrgsData>) => {
     return infiniteQueryOptions<ListOrgsResponse2, ListOrgsError, InfiniteData<ListOrgsResponse2>, QueryKey<Options<ListOrgsData>>, number | Pick<QueryKey<Options<ListOrgsData>>[0], 'body' | 'headers' | 'path' | 'query'>>(
     // @ts-ignore
     {

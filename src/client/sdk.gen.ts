@@ -37,14 +37,10 @@ export const changePassword = <ThrowOnError extends boolean = false>(options: Op
  * Disable 2FA
  * Disable 2FA for the user.
  */
-export const disable2Fa = <ThrowOnError extends boolean = false>(options: Options<Disable2FaData, ThrowOnError>) => {
-    return (options.client ?? _heyApiClient).post<Disable2FaResponses, Disable2FaErrors, ThrowOnError>({
+export const disable2Fa = <ThrowOnError extends boolean = false>(options?: Options<Disable2FaData, ThrowOnError>) => {
+    return (options?.client ?? _heyApiClient).post<Disable2FaResponses, Disable2FaErrors, ThrowOnError>({
         url: '/api/v1/auth/disable-2fa',
-        ...options,
-        headers: {
-            'Content-Type': 'application/json',
-            ...options.headers
-        }
+        ...options
     });
 };
 
@@ -186,14 +182,10 @@ export const extendSession = <ThrowOnError extends boolean = false>(options: Opt
  * Setup 2FA (TOTP)
  * Generate a TOTP secret and provisioning URI (otpauth://). Requires an authenticated agent context.
  */
-export const setup2Fa = <ThrowOnError extends boolean = false>(options: Options<Setup2FaData, ThrowOnError>) => {
-    return (options.client ?? _heyApiClient).post<Setup2FaResponses, Setup2FaErrors, ThrowOnError>({
+export const setup2Fa = <ThrowOnError extends boolean = false>(options?: Options<Setup2FaData, ThrowOnError>) => {
+    return (options?.client ?? _heyApiClient).post<Setup2FaResponses, Setup2FaErrors, ThrowOnError>({
         url: '/api/v1/auth/setup-2fa',
-        ...options,
-        headers: {
-            'Content-Type': 'application/json',
-            ...options.headers
-        }
+        ...options
     });
 };
 
@@ -289,8 +281,8 @@ export const postMessageContact = <ThrowOnError extends boolean = false>(options
  * List user's organizations
  * List organizations that the authenticated user is a member of.
  */
-export const listOrgs = <ThrowOnError extends boolean = false>(options: Options<ListOrgsData, ThrowOnError>) => {
-    return (options.client ?? _heyApiClient).get<ListOrgsResponses, ListOrgsErrors, ThrowOnError>({
+export const listOrgs = <ThrowOnError extends boolean = false>(options?: Options<ListOrgsData, ThrowOnError>) => {
+    return (options?.client ?? _heyApiClient).get<ListOrgsResponses, ListOrgsErrors, ThrowOnError>({
         url: '/api/v1/orgs',
         ...options
     });
